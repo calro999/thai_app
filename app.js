@@ -44,16 +44,16 @@ const state = {
     gameMode: 'quiz', // 'learning' or 'quiz'
     characterState: 'normal',
     characterAnimationId: null,
-    ttsRate: parseFloat(localStorage.getItem('jlpt_gal_ttsRate')) || 0.8,
-    ttsVolume: parseFloat(localStorage.getItem('jlpt_gal_ttsVolume')) || 1.0,
+    ttsRate: parseFloat(localStorage.getItem('jlpt_with_gyaru_ttsRate')) || 0.8,
+    ttsVolume: parseFloat(localStorage.getItem('jlpt_with_gyaru_ttsVolume')) || 1.0,
 
     // Lock/Unlock System
-    adPoints: parseInt(localStorage.getItem('jlpt_gal_ad_points') || '0'),
-    unlockedCourses: JSON.parse(localStorage.getItem('jlpt_gal_unlocked_courses') || '["hiragana", "katakana", "n5", "n4", "n3"]'),
+    adPoints: parseInt(localStorage.getItem('jlpt_with_gyaru_ad_points') || '0'),
+    unlockedCourses: JSON.parse(localStorage.getItem('jlpt_with_gyaru_unlocked_courses') || '["hiragana", "katakana", "n5", "n4", "n3"]'),
 
     // Outfit States
-    selectedCharacter: localStorage.getItem('jlpt_gal_selectedCharacter') || 'default',
-    unlockedOutfits: JSON.parse(localStorage.getItem('jlpt_gal_unlocked_outfits') || '["default"]'),
+    selectedCharacter: localStorage.getItem('jlpt_with_gyaru_selectedCharacter') || 'default',
+    unlockedOutfits: JSON.parse(localStorage.getItem('jlpt_with_gyaru_unlocked_outfits') || '["default"]'),
     previewIndex: 0,
     unlockPendingItem: null, // To track which item is being unlocked in modal
     currentTargetAudio: null // For replaying audio in listening mode
@@ -88,9 +88,9 @@ window.onload = () => {
             const outfit = config.outfits.find(o => o.id === itemId);
             if (outfit && !state.unlockedOutfits.includes(itemId)) {
                 state.unlockedOutfits.push(itemId);
-                localStorage.setItem('jlpt_gal_unlocked_outfits', JSON.stringify(state.unlockedOutfits));
+                localStorage.setItem('jlpt_with_gyaru_unlocked_outfits', JSON.stringify(state.unlockedOutfits));
                 state.selectedCharacter = itemId;
-                localStorage.setItem('jlpt_gal_selectedCharacter', itemId);
+                localStorage.setItem('jlpt_with_gyaru_selectedCharacter', itemId);
                 alert(`ปลดล็อกชุด ${outfit.name} เรียบร้อยแล้วค่ะ!`);
             }
         }
@@ -104,7 +104,7 @@ window.onload = () => {
         ttsRange.oninput = (e) => {
             state.ttsRate = parseFloat(e.target.value);
             document.getElementById('tts-rate-value').innerText = state.ttsRate.toFixed(1);
-            localStorage.setItem('jlpt_gal_ttsRate', state.ttsRate);
+            localStorage.setItem('jlpt_with_gyaru_ttsRate', state.ttsRate);
         };
     }
     const ttsVolRange = document.getElementById('tts-volume-range');
@@ -113,7 +113,7 @@ window.onload = () => {
         ttsVolRange.oninput = (e) => {
             state.ttsVolume = parseFloat(e.target.value);
             document.getElementById('tts-volume-value').innerText = state.ttsVolume.toFixed(1);
-            localStorage.setItem('jlpt_gal_ttsVolume', state.ttsVolume);
+            localStorage.setItem('jlpt_with_gyaru_ttsVolume', state.ttsVolume);
         };
     }
 
@@ -133,7 +133,7 @@ function _bgmInit() {
     if (!bgm) return;
 
     // localStorageから音量復元
-    const saved = parseFloat(localStorage.getItem('jlpt_gal_bgmVolume'));
+    const saved = parseFloat(localStorage.getItem('jlpt_with_gyaru_bgmVolume'));
     const vol = isNaN(saved) ? _BGM_DEFAULT_VOL : saved;
     bgm.volume = vol;
 
@@ -160,7 +160,7 @@ function setBgmVolume(rawVal) {
     if (bgm) bgm.volume = vol;
     const label = document.getElementById('bgm-volume-value');
     if (label) label.innerText = rawVal;
-    localStorage.setItem('jlpt_gal_bgmVolume', vol);
+    localStorage.setItem('jlpt_with_gyaru_bgmVolume', vol);
     // 音量0以外のときは必ず再生する
     if (vol > 0 && bgm && bgm.paused) {
         bgm.play().catch(() => { });
@@ -219,7 +219,7 @@ function unlockWithPoints() {
 
     if (state.adPoints >= required) {
         state.adPoints -= required;
-        localStorage.setItem('jlpt_gal_ad_points', state.adPoints);
+        localStorage.setItem('jlpt_with_gyaru_ad_points', state.adPoints);
 
         if (type === 'course') {
             unlockCourse(id, true);
@@ -231,27 +231,51 @@ function unlockWithPoints() {
 }
 
 function purchaseItemDirect() {
-    if (typeof gdsdk !== 'undefined' && gdsdk.showAd) {
-        gdsdk.showAd('rewarded')
-            .then(response => {
-                // Reward logic handled in SDK_REWARDED_WATCH_COMPLETE event listener
-            })
-            .catch(error => {
-                alert('โฆษณาไม่พร้อมใช้งานในขณะนี้ กรุณาลองใหม่ภายหลัง');
-            });
+    if (typeof GamePix !== 'undefined') {
+        GamePix.rewardAd().then(res => {
+            if (res.success) {
+                // Not used for points directly, but we can do it here or route through watchAdForPoints
+                // However, purchaseItemDirect was originally just opening the checkout
+                // Now we will just call watchAdForPoints so there's one code path
+                watchAdForPoints();
+            }
+        });
     } else {
-        alert('GD SDK ไม่พร้อมใช้งาน');
+        alert('GamePix SDK ไม่พร้อมใช้งาน');
     }
 }
 
 function watchAdForPoints() {
-    if (typeof gdsdk !== 'undefined' && gdsdk.showAd) {
-        state.adPointsRequested = true;
-        gdsdk.showAd('rewarded').catch(e => alert('Ad not ready'));
+    if (typeof GamePix !== 'undefined') {
+        GamePix.rewardAd().then(res => {
+            if (res.success) {
+                state.adPoints += 5;
+                localStorage.setItem('jlpt_with_gyaru_ad_points', state.adPoints);
+                document.getElementById('current-points').innerText = state.adPoints;
+                if (window.openUnlockModal && window.state.unlockPendingItem) {
+                    window.openUnlockModal(window.state.unlockPendingItem.id, window.state.unlockPendingItem.type);
+                } else if (state.unlockPendingItem) {
+                    const id = state.unlockPendingItem.id;
+                    const type = state.unlockPendingItem.type;
+                    if (type === 'course') {
+                        if (window.unlockCourse) window.unlockCourse(id, true);
+                    } else if (type === 'outfit') {
+                        if (window.unlockOutfit) window.unlockOutfit(id, true);
+                    }
+                    if (window.closeUnlockModal) window.closeUnlockModal();
+                    if (window.closeOshikatsuSalesBox) window.closeOshikatsuSalesBox();
+                    if (window.closeSpecialTravelSalesBox) window.closeSpecialTravelSalesBox();
+                    if (window.closeSpecialFoodSalesBox) window.closeSpecialFoodSalesBox();
+                    if (window.closeSpecialMedicalSalesBox) window.closeSpecialMedicalSalesBox();
+                }
+            } else {
+                alert('ดูวิดีโอไม่สำเร็จ หรือโฆษณาไม่พร้อมใช้งาน');
+            }
+        }).catch(e => alert('Ad not ready'));
     } else {
         showRewardAd(() => {
             state.adPoints += 5;
-            localStorage.setItem('jlpt_gal_ad_points', state.adPoints);
+            localStorage.setItem('jlpt_with_gyaru_ad_points', state.adPoints);
             document.getElementById('current-points').innerText = state.adPoints;
             openUnlockModal(state.unlockPendingItem.id, state.unlockPendingItem.type);
         });
@@ -269,7 +293,7 @@ function showRewardAd(callback) {
 function unlockCourse(id, showAlert) {
     if (!state.unlockedCourses.includes(id)) {
         state.unlockedCourses.push(id);
-        localStorage.setItem('jlpt_gal_unlocked_courses', JSON.stringify(state.unlockedCourses));
+        localStorage.setItem('jlpt_with_gyaru_unlocked_courses', JSON.stringify(state.unlockedCourses));
     }
     if (showAlert) alert(`ปลดล็อกคอร์ส ${id} เรียบร้อยแล้วค่ะ!`);
     openModeSelect();
@@ -278,7 +302,7 @@ function unlockCourse(id, showAlert) {
 function unlockOutfit(id, showAlert) {
     if (!state.unlockedOutfits.includes(id)) {
         state.unlockedOutfits.push(id);
-        localStorage.setItem('jlpt_gal_unlocked_outfits', JSON.stringify(state.unlockedOutfits));
+        localStorage.setItem('jlpt_with_gyaru_unlocked_outfits', JSON.stringify(state.unlockedOutfits));
     }
     if (showAlert) alert(`ปลดล็อกชุดเรียบร้อยแล้วค่ะ!`);
     updateShopUI();
@@ -1099,7 +1123,7 @@ async function openStorySelect(level) {
     } catch (e) { }
 
     for (let i = 1; i <= count; i++) {
-        const score = localStorage.getItem(`jlpt_gal_score_${level}_${state.gameMode}_u${i}`);
+        const score = localStorage.getItem(`jlpt_with_gyaru_score_${level}_${state.gameMode}_u${i}`);
         const btn = document.createElement('button');
         btn.className = 'story-btn';
 
@@ -1484,7 +1508,7 @@ function checkAnswer(choice, step) {
 }
 
 function finishUnit() {
-    localStorage.setItem(`jlpt_gal_score_${state.selectedLevel}_${state.gameMode}_u${state.selectedStoryNum}`, state.correctCount);
+    localStorage.setItem(`jlpt_with_gyaru_score_${state.selectedLevel}_${state.gameMode}_u${state.selectedStoryNum}`, state.correctCount);
     document.getElementById('answer-grid').style.display = 'none';
     hideProgressBar();
     showResultModal(state.correctCount, state.storyData.length);
@@ -1566,7 +1590,7 @@ function handleShopClick(id) {
 
 function changeCharacter(id) {
     state.selectedCharacter = id;
-    localStorage.setItem('jlpt_gal_selectedCharacter', id);
+    localStorage.setItem('jlpt_with_gyaru_selectedCharacter', id);
     setCharacterState('normal');
     alert("เปลี่ยนชุดเรียบร้อยแล้วค่ะ");
 }
