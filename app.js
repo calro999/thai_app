@@ -237,7 +237,7 @@ function purchaseItemDirect() {
 
 function watchAdForPoints() {
     state.adPointsRequested = true;
-    
+
     // Try GamePix first
     if (typeof GamePix !== 'undefined') {
         GamePix.rewardAd().then(res => {
@@ -271,13 +271,13 @@ function tryGD() {
 function triggerRewardSuccess() {
     // Check if onEvent exists on GD_OPTIONS and call it to reuse original unlock logic
     if (window.GD_OPTIONS && window.GD_OPTIONS.onEvent) {
-        window.GD_OPTIONS.onEvent({name: "SDK_REWARDED_WATCH_COMPLETE"});
+        window.GD_OPTIONS.onEvent({ name: "SDK_REWARDED_WATCH_COMPLETE" });
     } else {
         state.adPoints += 5;
         localStorage.setItem('jlpt_with_gyaru_ad_points', state.adPoints);
         const cp = document.getElementById('current-points');
         if (cp) cp.innerText = state.adPoints;
-        
+
         if (window.openUnlockModal && window.state.unlockPendingItem) {
             window.openUnlockModal(window.state.unlockPendingItem.id, window.state.unlockPendingItem.type);
         } else if (state.unlockPendingItem) {
@@ -763,7 +763,7 @@ function openListeningSelect() {
     };
     grid.appendChild(n4Btn);
 
-    
+
 
 
     const n2Info = courseConfig['listening_n2'];
@@ -1652,6 +1652,15 @@ function shuffleArray(a) { return a.sort(() => Math.random() - 0.5); }
 // GC防止: utteranceをグローバル変数で保持
 const _uList = [];
 
+/**
+ * ふりがな付きの漢字（例: 軌道（きどう））がある場合、
+ * 読み上げ時に漢字部分を削除し、括弧内のふりがなだけを残す
+ */
+function cleanTTS(t) {
+    if (!t) return t;
+    return t.replace(/([\u4E00-\u9FA5\u3005]+)[（\(]([ぁ-んァ-ンー]+)[）\)]/g, '$2');
+}
+
 function speakThai(t) {
     if (!t) return;
     stopAllSpeech();
@@ -1664,6 +1673,7 @@ function speakThai(t) {
 
 function speakJapanese(t) {
     if (!t) return;
+    t = cleanTTS(t);
     // バックアップと同じ: cancel()を呼ばずに直接speak()
     const u = new SpeechSynthesisUtterance(t);
     u.lang = 'ja-JP';
@@ -1680,7 +1690,7 @@ function speakSequence(thaiText, japaneseText) {
         u1.lang = 'th-TH';
         u1.volume = parseFloat(state.ttsVolume) || 1.0;
         _uList.push(u1);
-        const u2 = japaneseText ? new SpeechSynthesisUtterance(japaneseText) : null;
+        const u2 = japaneseText ? new SpeechSynthesisUtterance(cleanTTS(japaneseText)) : null;
         if (u2) { u2.lang = 'ja-JP'; u2.rate = parseFloat(state.ttsRate) || 0.8; u2.volume = parseFloat(state.ttsVolume) || 1.0; _uList.push(u2); }
         // Thai後にJapaneseをonendでチェーン（cancel後のロックを回避）
         if (u2) u1.onend = () => window.speechSynthesis.speak(u2);
@@ -1809,7 +1819,7 @@ function speakListeningN5Sequence(steps) {
             return;
         }
         const step = steps[currentIdx];
-        const text = step.text;
+        const text = cleanTTS(step.text);
         const role = step.role;
 
         const u = new SpeechSynthesisUtterance(text);
