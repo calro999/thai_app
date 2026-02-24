@@ -231,56 +231,72 @@ function unlockWithPoints() {
 }
 
 function purchaseItemDirect() {
+    watchAdForPoints();
+}
+
+
+function watchAdForPoints() {
+    state.adPointsRequested = true;
+    
+    // Try GamePix first
     if (typeof GamePix !== 'undefined') {
         GamePix.rewardAd().then(res => {
             if (res.success) {
-                // Not used for points directly, but we can do it here or route through watchAdForPoints
-                // However, purchaseItemDirect was originally just opening the checkout
-                // Now we will just call watchAdForPoints so there's one code path
-                watchAdForPoints();
+                triggerRewardSuccess();
+            } else {
+                tryGD();
             }
+        }).catch(e => {
+            tryGD();
         });
     } else {
-        alert('GamePix SDK ไม่พร้อมใช้งาน');
+        tryGD();
     }
 }
 
-function watchAdForPoints() {
-    if (typeof GamePix !== 'undefined') {
-        GamePix.rewardAd().then(res => {
-            if (res.success) {
-                state.adPoints += 5;
-                localStorage.setItem('jlpt_with_gyaru_ad_points', state.adPoints);
-                document.getElementById('current-points').innerText = state.adPoints;
-                if (window.openUnlockModal && window.state.unlockPendingItem) {
-                    window.openUnlockModal(window.state.unlockPendingItem.id, window.state.unlockPendingItem.type);
-                } else if (state.unlockPendingItem) {
-                    const id = state.unlockPendingItem.id;
-                    const type = state.unlockPendingItem.type;
-                    if (type === 'course') {
-                        if (window.unlockCourse) window.unlockCourse(id, true);
-                    } else if (type === 'outfit') {
-                        if (window.unlockOutfit) window.unlockOutfit(id, true);
-                    }
-                    if (window.closeUnlockModal) window.closeUnlockModal();
-                    if (window.closeOshikatsuSalesBox) window.closeOshikatsuSalesBox();
-                    if (window.closeSpecialTravelSalesBox) window.closeSpecialTravelSalesBox();
-                    if (window.closeSpecialFoodSalesBox) window.closeSpecialFoodSalesBox();
-                    if (window.closeSpecialMedicalSalesBox) window.closeSpecialMedicalSalesBox();
-                }
-            } else {
-                alert('ดูวิดีโอไม่สำเร็จ หรือโฆษณาไม่พร้อมใช้งาน');
-            }
-        }).catch(e => alert('Ad not ready'));
+function tryGD() {
+    if (typeof gdsdk !== 'undefined' && gdsdk.showAd) {
+        gdsdk.showAd('rewarded')
+            .then(response => {
+                // GD onEvent handles success natively if SDK_REWARDED_WATCH_COMPLETE is emitted
+            })
+            .catch(error => {
+                showRewardAd(() => triggerRewardSuccess());
+            });
     } else {
-        showRewardAd(() => {
-            state.adPoints += 5;
-            localStorage.setItem('jlpt_with_gyaru_ad_points', state.adPoints);
-            document.getElementById('current-points').innerText = state.adPoints;
-            openUnlockModal(state.unlockPendingItem.id, state.unlockPendingItem.type);
-        });
+        showRewardAd(() => triggerRewardSuccess());
     }
 }
+
+function triggerRewardSuccess() {
+    // Check if onEvent exists on GD_OPTIONS and call it to reuse original unlock logic
+    if (window.GD_OPTIONS && window.GD_OPTIONS.onEvent) {
+        window.GD_OPTIONS.onEvent({name: "SDK_REWARDED_WATCH_COMPLETE"});
+    } else {
+        state.adPoints += 5;
+        localStorage.setItem('jlpt_with_gyaru_ad_points', state.adPoints);
+        const cp = document.getElementById('current-points');
+        if (cp) cp.innerText = state.adPoints;
+        
+        if (window.openUnlockModal && window.state.unlockPendingItem) {
+            window.openUnlockModal(window.state.unlockPendingItem.id, window.state.unlockPendingItem.type);
+        } else if (state.unlockPendingItem) {
+            const id = state.unlockPendingItem.id;
+            const type = state.unlockPendingItem.type;
+            if (type === 'course') {
+                if (window.unlockCourse) window.unlockCourse(id, true);
+            } else if (type === 'outfit') {
+                if (window.unlockOutfit) window.unlockOutfit(id, true);
+            }
+            if (window.closeUnlockModal) window.closeUnlockModal();
+            if (window.closeOshikatsuSalesBox) window.closeOshikatsuSalesBox();
+            if (window.closeSpecialTravelSalesBox) window.closeSpecialTravelSalesBox();
+            if (window.closeSpecialFoodSalesBox) window.closeSpecialFoodSalesBox();
+            if (window.closeSpecialMedicalSalesBox) window.closeSpecialMedicalSalesBox();
+        }
+    }
+}
+
 
 function showRewardAd(callback) {
     alert("กำลังโหลดโฆษณา... (GameDistribution/Azerion Mock)");
