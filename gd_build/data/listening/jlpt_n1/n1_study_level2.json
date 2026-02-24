@@ -1,126 +1,127 @@
 {
     "level": 2,
     "type": "study",
+    "title": "組織の問題",
     "sentences": [
         {
             "id": 11,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "組織の問題は、多くの場合コミュニケーション不足から生じます。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "เกิดขึ้น",
+            "focus_word": "生じる",
+            "focus_thai_key": "เกิดขึ้น"
         },
         {
             "id": 12,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "このトラブルは単なる個人のミスではなく、組織の問題だ。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "เพียงแค่",
+            "focus_word": "単なる",
+            "focus_thai_key": "เพียงแค่"
         },
         {
             "id": 13,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "組織の問題を解決するには、根本的な改革が求められます。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "ที่เป็นรากฐาน",
+            "focus_word": "根本的",
+            "focus_thai_key": "ที่เป็นรากฐาน"
         },
         {
             "id": 14,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "表面的な対応では、組織の問題を根本から絶つことはできない。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "ตัดทิ้ง",
+            "focus_word": "絶つ",
+            "focus_thai_key": "ตัดทิ้ง"
         },
         {
             "id": 15,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "外部のコンサルタントを招いて、組織の問題点を洗い出した。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "ค้นหาออกมาให้ชัดเจน",
+            "focus_word": "洗い出す",
+            "focus_thai_key": "ค้นหาออกมาให้ชัดเจน"
         },
         {
             "id": 16,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "組織の問題を放置すれば、いずれ大きな不祥事に発展しかねません。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "การปล่อยปละละเลย",
+            "focus_word": "放置",
+            "focus_thai_key": "การปล่อยปละละเลย"
         },
         {
             "id": 17,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "社員のモチベーション低下は、深刻な組織の問題です。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "การลดลง",
+            "focus_word": "低下",
+            "focus_thai_key": "การลดลง"
         },
         {
             "id": 18,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "縦割り行政という組織の問題が、対応の遅れを招いている。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "การแบ่งแยกส่วนงานอย่างเด็ดขาด",
+            "focus_word": "縦割り",
+            "focus_thai_key": "การแบ่งแยกส่วนงานอย่างเด็ดขาด"
         },
         {
             "id": 19,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "組織の問題に見て見ぬふりをするのは、リーダーとして失格だ。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "การหมดสิทธิ์, ขาดคุณสมบัติ",
+            "focus_word": "失格",
+            "focus_thai_key": "การหมดสิทธิ์, ขาดคุณสมบัติ"
         },
         {
             "id": 20,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "今回の不祥事は、長年隠蔽されてきた組織の問題が露呈したものだ。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "การเปิดเผยให้เห็น",
+            "focus_word": "露呈",
+            "focus_thai_key": "การเปิดเผยให้เห็น"
         }
     ]
 }

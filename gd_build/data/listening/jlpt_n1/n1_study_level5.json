@@ -1,126 +1,127 @@
 {
     "level": 5,
     "type": "study",
+    "title": "粘り勝ち",
     "sentences": [
         {
             "id": 41,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "最後まで諦めずに交渉を続けた結果、我々の粘り勝ちとなった。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "การเจรจา",
+            "focus_word": "交渉",
+            "focus_thai_key": "การเจรจา"
         },
         {
             "id": 42,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "圧倒的に不利な状況から逆転できたのは、まさに粘り勝ちだ。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "การพลิกกลับมาชนะ",
+            "focus_word": "逆転",
+            "focus_thai_key": "การพลิกกลับมาชนะ"
         },
         {
             "id": 43,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "長年の努力がようやく実を結び、見事な粘り勝ちを収めた。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "ออกดอกออกผล (ประสบความสำเร็จ)",
+            "focus_word": "実を結ぶ",
+            "focus_thai_key": "ออกดอกออกผล (ประสบความสำเร็จ)"
         },
         {
             "id": 44,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "今回の訴訟は、相手の体力切れを狙った粘り勝ちと言えるだろう。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "หมดแรง",
+            "focus_word": "体力切れ",
+            "focus_thai_key": "หมดแรง"
         },
         {
             "id": 45,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "どんなに困難な壁にぶつかっても、最後は粘り勝ちの精神で乗り越えよう。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "ก้าวข้าม, ข้ามผ่าน",
+            "focus_word": "乗り越える",
+            "focus_thai_key": "ก้าวข้าม, ข้ามผ่าน"
         },
         {
             "id": 46,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "初めは反対の声が強かったが、丁寧な説明を続けたことによる粘り勝ちだ。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "อย่างสุภาพ, อย่างละเอียด",
+            "focus_word": "丁寧",
+            "focus_thai_key": "อย่างสุภาพ, อย่างละเอียด"
         },
         {
             "id": 47,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "競合他社との激しい価格競争は、最終的に当社の粘り勝ちに終わった。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "การแข่งขันทางธุรกิจ",
+            "focus_word": "競合",
+            "focus_thai_key": "การแข่งขันทางธุรกิจ"
         },
         {
             "id": 48,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "劣勢に立たされてからも決して弱音を吐かず、見事な粘り勝ちを見せてくれた。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "บ่นว่าไม่ไหว",
+            "focus_word": "弱音を吐く",
+            "focus_thai_key": "บ่นว่าไม่ไหว"
         },
         {
             "id": 49,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "地道な研究を何年も続けた末の、まさに粘り勝ちと言える大発見だ。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "สม่ำเสมอและไม่ยอมแพ้",
+            "focus_word": "地道",
+            "focus_thai_key": "สม่ำเสมอและไม่ยอมแพ้"
         },
         {
             "id": 50,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "テスト音声です。復元するためのダミーテキストです。"
+                    "text": "すぐに結果が出なくても、コツコツと継続することが粘り勝ちにつながる。"
                 }
             ],
-            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
-            "focus_word": "復元",
-            "focus_thai_key": "การกู้คืน"
+            "thai_translation": "การทำอย่างต่อเนื่อง",
+            "focus_word": "継続",
+            "focus_thai_key": "การทำอย่างต่อเนื่อง"
         }
     ]
 }
