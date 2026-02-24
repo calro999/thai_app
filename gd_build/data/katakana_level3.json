@@ -1,0 +1,92 @@
+[
+  {
+    "id": "k3_q1",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ชื่อ' พูดว่าอะไรนะ?",
+    "display_text": "○ エ",
+    "correct_answer": "ナ",
+    "options": ["ナ", "ニ", "ヌ", "ネ"],
+    "thai_hint": "ตัวอักษรที่ 1 ของแถว ナ"
+  },
+  {
+    "id": "k3_q2",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'เนื้อ' พูดว่าอะไรนะ?",
+    "display_text": "○ ク",
+    "correct_answer": "ニ",
+    "options": ["ニ", "ナ", "ヌ", "ネ"],
+    "thai_hint": "ตัวอักษรที่ 2 ของแถว ナ"
+  },
+  {
+    "id": "k3_q3",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'สุนัข' พูดว่าอะไรนะ?",
+    "display_text": "イ ○",
+    "correct_answer": "ヌ",
+    "options": ["ヌ", "ナ", "ニ", "ネ"],
+    "thai_hint": "ตัวอักษรที่ 3 ของแถว ナ"
+  },
+  {
+    "id": "k3_q4",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'แมว' พูดว่าอะไรนะ?",
+    "display_text": "○ コ",
+    "correct_answer": "ネ",
+    "options": ["ネ", "ナ", "ニ", "ヌ"],
+    "thai_hint": "ตัวอักษรที่ 4 ของแถว ナ"
+  },
+  {
+    "id": "k3_q5",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'พัด' พูดว่าอะไรนะ?",
+    "display_text": "ヌ ○",
+    "correct_answer": "ノ",
+    "options": ["ノ", "ナ", "ニ", "ネ"],
+    "thai_hint": "ตัวอักษรที่ 5 ของแถว ナ"
+  },
+  {
+    "id": "k3_q6",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ฤดูใบไม้ผลิ' พูดว่าอะไรนะ?",
+    "display_text": "○ ル",
+    "correct_answer": "ハ",
+    "options": ["ハ", "ヒ", "フ", "ヘ"],
+    "thai_hint": "ตัวอักษรที่ 1 ของแถว ハ"
+  },
+  {
+    "id": "k3_q7",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'กลางวัน' พูดว่าอะไรนะ?",
+    "display_text": "○ ル",
+    "correct_answer": "ヒ",
+    "options": ["ヒ", "ハ", "フ", "ヘ"],
+    "thai_hint": "ตัวอักษรที่ 2 ของแถว ハ"
+  },
+  {
+    "id": "k3_q8",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'เรือ' พูดว่าอะไรนะ?",
+    "display_text": "○ ネ",
+    "correct_answer": "フ",
+    "options": ["フ", "ハ", "ヒ", "ヘ"],
+    "thai_hint": "ตัวอักษรที่ 3 ของแถว ハ"
+  },
+  {
+    "id": "k3_q9",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'งู' พูดว่าอะไรนะ?",
+    "display_text": "○ ビ",
+    "correct_answer": "ヘ",
+    "options": ["ヘ", "ハ", "ヒ", "ホ"],
+    "thai_hint": "ตัวอักษรที่ 4 ของแถว ハ"
+  },
+  {
+    "id": "k3_q10",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ดาว' พูดว่าอะไรนะ?",
+    "display_text": "○ シ",
+    "correct_answer": "ホ",
+    "options": ["ホ", "ハ", "ヒ", "ヘ"],
+    "thai_hint": "ตัวอักษรที่ 5 ของแถว ハ"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "nt_l1_q1_quiz",
+    "display_text": "มีแมวกี่ตัว? (何匹いますか？)",
+    "correct_answer": "5",
+    "options": ["4", "5", "15", "50"],
+    "dialogue": "猫は五匹います。何匹いますか？",
+    "explanation": "Gohiki (五匹) หมายถึง 5"
+  },
+  {
+    "id": "nt_l1_q2_quiz",
+    "display_text": "ราคากี่เยน? (いくらですか？)",
+    "correct_answer": "3",
+    "options": ["2", "3", "8", "30"],
+    "dialogue": "これは三円です。いくらですか？",
+    "explanation": "San-en (三円) หมายถึง 3"
+  },
+  {
+    "id": "nt_l1_q3_quiz",
+    "display_text": "มีคนกี่คน? (何人いますか？)",
+    "correct_answer": "9",
+    "options": ["7", "8", "9", "10"],
+    "dialogue": "人は九人います。何人いますか？",
+    "explanation": "Kyuu-nin (九人) หมายถึง 9"
+  },
+  {
+    "id": "nt_l1_q4_quiz",
+    "display_text": "มีปากกากี่ด้าม? (何本ありますか？)",
+    "correct_answer": "2",
+    "options": ["1", "2", "6", "10"],
+    "dialogue": "ペンは二本あります。何本ありますか？",
+    "explanation": "Nihon (二本) หมายถึง 2"
+  },
+  {
+    "id": "nt_l1_q5_quiz",
+    "display_text": "มีขนมกี่ชิ้น? (何個ありますか？)",
+    "correct_answer": "10",
+    "options": ["1", "5", "8", "10"],
+    "dialogue": "お菓子は十個あります。何個ありますか？",
+    "explanation": "Jukko (十個) หมายถึง 10"
+  },
+  {
+    "id": "nt_l1_q6_quiz",
+    "display_text": "แอปเปิ้ลมีกี่ลูก? (何個ありますか？)",
+    "correct_answer": "1",
+    "options": ["1", "7", "8", "9"],
+    "dialogue": "りんごは一つあります。何個ありますか？",
+    "explanation": "Hitotsu (一つ) หมายถึง 1"
+  },
+  {
+    "id": "nt_l1_q7_quiz",
+    "display_text": "มีรถกี่คัน? (何台ありますか？)",
+    "correct_answer": "8",
+    "options": ["3", "6", "8", "10"],
+    "dialogue": "車は八台あります。何台ありますか？",
+    "explanation": "Hachidai (八台) หมายถึง 8"
+  },
+  {
+    "id": "nt_l1_q8_quiz",
+    "display_text": "ตอนนี้กี่โมง? (何時ですか？)",
+    "correct_answer": "4",
+    "options": ["4", "7", "9", "10"],
+    "dialogue": "今は四時です。何時ですか？",
+    "explanation": "Yoji (四時) หมายถึง 4"
+  },
+  {
+    "id": "nt_l1_q9_quiz",
+    "display_text": "มีแก้วกี่ใบ? (何個ありますか？)",
+    "correct_answer": "6",
+    "options": ["6", "9", "10", "1"],
+    "dialogue": "コップは六つあります。何個ありますか？",
+    "explanation": "Mutsu (六つ) หมายถึง 6"
+  },
+  {
+    "id": "nt_l1_q10_quiz",
+    "display_text": "รออีกกี่นาที? (何分待ちますか？)",
+    "correct_answer": "7",
+    "options": ["1", "4", "7", "10"],
+    "dialogue": "あと七分待ちます。何分待ちますか？",
+    "explanation": "Nana-fun (七分) หมายถึง 7"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "m1_l1",
+    "display_text": "หัว",
+    "correct_answer": "あたま",
+    "options": ["あたま"],
+    "dialogue": "หากมีอาการปวดหัวหรือมึนหัว ให้ชี้ที่หัวแล้วบอกพนักงานร้านยาว่าคำนี้",
+    "explanation": "Atama (あたま) = หัว / ศีรษะ"
+  },
+  {
+    "id": "m1_l2",
+    "display_text": "คอ / เจ็บคอ",
+    "correct_answer": "のど",
+    "options": ["のど"],
+    "dialogue": "ใช้เวลาเจ็บคอหรือรู้สึกระคายเคืองข้างในคอ",
+    "explanation": "Nodo (のど) = คอ / ลำคอ"
+  },
+  {
+    "id": "m1_l3",
+    "display_text": "ฟัน",
+    "correct_answer": "は",
+    "options": ["は"],
+    "dialogue": "ถ้าจู่ๆ ปวดฟันระหว่างเที่ยว ต้องมองหายาแก้ปวดโดยใช้คำนี้",
+    "explanation": "Ha (は) = ฟัน"
+  },
+  {
+    "id": "m1_l4",
+    "display_text": "ตา",
+    "correct_answer": "め",
+    "options": ["め"],
+    "dialogue": "ใช้เมื่อตาแดง ตาอักเสบ หรือต้องการซื้อยาหยอดตา",
+    "explanation": "Me (め) = ตา"
+  },
+  {
+    "id": "m1_l5",
+    "display_text": "หู",
+    "correct_answer": "みみ",
+    "options": ["みみ"],
+    "dialogue": "ใช้เมื่อมีอาการหูอื้อ หรือปวดในรูหู",
+    "explanation": "Mimi (みみ) = หู"
+  },
+  {
+    "id": "m1_l6",
+    "display_text": "เอว / หลัง",
+    "correct_answer": "こし",
+    "options": ["こし"],
+    "dialogue": "เดินเที่ยวเยอะจนปวดหลังหรือปวดเอว ต้องใช้คำนี้เพื่อซื้อพลาสเตอร์ยา",
+    "explanation": "Koshi (こし) = เอว / หลังส่วนล่าง"
+  },
+  {
+    "id": "m1_l7",
+    "display_text": "ข้อต่อ",
+    "correct_answer": "かんせつ",
+    "options": ["かんせつ"],
+    "dialogue": "ใช้บอกอาการปวดตามข้อต่างๆ เช่น หัวเข่า หรือข้อศอก",
+    "explanation": "Kansetsu (かんせつ) = ข้อต่อ"
+  },
+  {
+    "id": "m1_l8",
+    "display_text": "เจ็บ / ปวด",
+    "correct_answer": "いたい",
+    "options": ["いたい"],
+    "dialogue": "คำสำคัญที่สุด! ใช้ต่อท้ายชื่ออวัยวะ เช่น 'Atama itai' (ปวดหัว)",
+    "explanation": "Itai (いたい) = เจ็บ / ปวด"
+  },
+  {
+    "id": "m1_l9",
+    "display_text": "ปวดรุนแรง",
+    "correct_answer": "つよいいたみ",
+    "options": ["つよいいたみ"],
+    "dialogue": "ใช้บอกเมื่ออาการปวดนั้นหนักมากจนทนไม่ไหว",
+    "explanation": "Tsuyoi itami (つよいいたみ) = ความเจ็บปวดที่รุนแรง"
+  },
+  {
+    "id": "m1_l10",
+    "display_text": "ทรมาน / ไม่ไหวแล้ว",
+    "correct_answer": "つらい",
+    "options": ["つらい"],
+    "dialogue": "ใช้บอกความรู้สึกโดยรวมว่าอาการป่วยครั้งนี้มันหนักและทำให้ร่างกายแย่มาก",
+    "explanation": "Tsurai (つらい) = ทรมาน / ลำบาก / ชวนให้รู้สึกแย่"
+  }
+]

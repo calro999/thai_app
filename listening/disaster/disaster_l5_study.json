@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ds_l5_s1",
+    "display_text": "การบาดเจ็บ (怪我)",
+    "correct_answer": "怪我",
+    "options": ["怪我", "病気", "病院", "薬"],
+    "dialogue": "怪我（けが）はありませんか？大丈夫ですか？",
+    "explanation": "Kega (怪我) หมายถึง การบาดเจ็บ หรือ บาดแผล"
+  },
+  {
+    "id": "ds_l5_s2",
+    "display_text": "รถพยาบาล (救急車)",
+    "correct_answer": "救急車",
+    "options": ["救急車", "パトカー", "消防車", "タクシー"],
+    "dialogue": "急病です！救急車（きゅうきゅうしゃ）を呼んでください！",
+    "explanation": "Kyuukyuusha (救急車) หมายถึง รถพยาบาล (เบอร์ 119 ในญี่ปุ่น)"
+  },
+  {
+    "id": "ds_l5_s3",
+    "display_text": "ตำรวจ (警察)",
+    "correct_answer": "警察",
+    "options": ["警察", "病院", "避難所", "学校"],
+    "dialogue": "警察（けいさつ）に連絡してください。",
+    "explanation": "Keisatsu (警察) หมายถึง ตำรวจ (เบอร์ 110 ในญี่ปุ่น)"
+  },
+  {
+    "id": "ds_l5_s4",
+    "display_text": "การติดต่อ (連絡)",
+    "correct_answer": "連絡",
+    "options": ["連絡", "電話", "確認", "放送"],
+    "dialogue": "家族に連絡（れんらく）をとります。",
+    "explanation": "Renraku (連絡) หมายถึง การติดต่อสื่อสาร"
+  },
+  {
+    "id": "ds_l5_s5",
+    "display_text": "โทรศัพท์ (電話)",
+    "correct_answer": "電話",
+    "options": ["電話", "メッセージ", "ニュース", "充電器"],
+    "dialogue": "公衆電話（でんわ）を使ってください。",
+    "explanation": "Denwa (電話) หมายถึง โทรศัพท์"
+  },
+  {
+    "id": "ds_l5_s6",
+    "display_text": "ไม่เป็นไร / ตกลง (大丈夫)",
+    "correct_answer": "大丈夫",
+    "options": ["大丈夫", "危ない", "安全", "無事"],
+    "dialogue": "私は大丈夫（だいじょうぶ）です。安心してください。",
+    "explanation": "Daijoubu (大丈夫) หมายถึง ไม่เป็นไร หรือ สบายดี"
+  },
+  {
+    "id": "ds_l5_s7",
+    "display_text": "ครอบครัว (家族)",
+    "correct_answer": "家族",
+    "options": ["家族", "友達", "先生", "警察"],
+    "dialogue": "家族（かぞく）の安全を確認します。",
+    "explanation": "Kazoku (家族) หมายถึง ครอบครัว"
+  },
+  {
+    "id": "ds_l5_s8",
+    "display_text": "โรงพยาบาล (病院)",
+    "correct_answer": "病院",
+    "options": ["病院", "警察", "避難所", "薬"],
+    "dialogue": "怪我をしたので病院（びょういん）へ行きます。",
+    "explanation": "Byouin (病院) หมายถึง โรงพยาบาล"
+  },
+  {
+    "id": "ds_l5_s9",
+    "display_text": "ข้อความ (メッセージ)",
+    "correct_answer": "メッセージ",
+    "options": ["メッセージ", "電話", "ニュース", "放送"],
+    "dialogue": "LINEでメッセージ（めっせーじ）を送ります。",
+    "explanation": "Message (メッセージ) หมายถึง ข้อความ"
+  },
+  {
+    "id": "ds_l5_s10",
+    "display_text": "ปลอดภัยดี / ไม่เป็นอะไร (無事)",
+    "correct_answer": "無事",
+    "options": ["無事", "大丈夫", "安全", "確認"],
+    "dialogue": "家族は全員無事（ぶじ）です。",
+    "explanation": "Buji (無事) หมายถึง ปลอดภัยดี (ใช้ยืนยันสถานะหลังเกิดเหตุ)"
+  }
+]

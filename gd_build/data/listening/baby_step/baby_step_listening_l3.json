@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bs_l3_q21",
+    "display_text": "หมา",
+    "correct_answer": "いぬ",
+    "options": ["いぬ", "ねこ", "とり", "さかな"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'หมา' คือคำไหน?",
+    "explanation": "Inu (いぬ) แปลว่า หมา"
+  },
+  {
+    "id": "bs_l3_q22",
+    "display_text": "แมว",
+    "correct_answer": "ねこ",
+    "options": ["ねこ", "いぬ", "うさぎ", "さる"],
+    "dialogue": "คำว่า 'แมว' ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Neko (ねこ) แปลว่า แมว"
+  },
+  {
+    "id": "bs_l3_q23",
+    "display_text": "นก",
+    "correct_answer": "とり",
+    "options": ["とり", "さかな", "うま", "くま"],
+    "dialogue": "คำเรียกสัตว์ที่บินได้บนท้องฟ้าคือข้อไหน?",
+    "explanation": "Tori (とり) แปลว่า นก"
+  },
+  {
+    "id": "bs_l3_q24",
+    "display_text": "ปลา",
+    "correct_answer": "さかな",
+    "options": ["さかな", "とり", "いぬ", "さる"],
+    "dialogue": "สัตว์ที่ว่ายน้ำอยู่ในน้ำ เรียกว่าอะไร?",
+    "explanation": "Sakana (さかな) แปลว่า ปลา"
+  },
+  {
+    "id": "bs_l3_q25",
+    "display_text": "กระต่าย",
+    "correct_answer": "うさぎ",
+    "options": ["うさぎ", "ぱんだ", "ねこ", "しか"],
+    "dialogue": "สัตว์ที่มีหูยาวๆ และชอบกระโดดคือ?",
+    "explanation": "Usagi (うさぎ) แปลว่า กระต่าย"
+  },
+  {
+    "id": "bs_l3_q26",
+    "display_text": "แพนด้า",
+    "correct_answer": "ぱんだ",
+    "options": ["ぱんだ", "くま", "さる", "いぬ"],
+    "dialogue": "สัตว์ตัวสีขาวดำที่เป็นขวัญใจเด็กๆ คือข้อไหน?",
+    "explanation": "Panda (ぱんだ) เป็นคำทับศัพท์ แปลว่า แพนด้า"
+  },
+  {
+    "id": "bs_l3_q27",
+    "display_text": "ลิง",
+    "correct_answer": "さる",
+    "options": ["さる", "くま", "しか", "うま"],
+    "dialogue": "สัตว์ที่ชอบกินกล้วยและปีนต้นไม้เก่งคือ?",
+    "explanation": "Saru (さる) แปลว่า ลิง"
+  },
+  {
+    "id": "bs_l3_q28",
+    "display_text": "ม้า",
+    "correct_answer": "うま",
+    "options": ["うま", "しか", "くま", "とり"],
+    "dialogue": "สัตว์ที่วิ่งเร็วและคนสามารถขี่ได้คือข้อไหน?",
+    "explanation": "Uma (うま) แปลว่า ม้า"
+  },
+  {
+    "id": "bs_l3_q29",
+    "display_text": "กวาง",
+    "correct_answer": "しか",
+    "options": ["しか", "うま", "さる", "うさぎ"],
+    "dialogue": "สัตว์ที่เป็นสัญลักษณ์ของเมืองนารา มีเขาที่สวยงามคือ?",
+    "explanation": "Shika (しか) แปลว่า กวาง"
+  },
+  {
+    "id": "bs_l3_q30",
+    "display_text": "หมี",
+    "correct_answer": "くま",
+    "options": ["くま", "ぱんだ", "いぬ", "ねこ"],
+    "dialogue": "สัตว์ตัวใหญ่ที่อาศัยอยู่ในป่าหรือภูเขาคือข้อไหน?",
+    "explanation": "Kuma (くま) แปลว่า หมี"
+  }
+]

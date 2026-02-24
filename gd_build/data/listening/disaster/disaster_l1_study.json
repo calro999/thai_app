@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ds_l1_s1",
+    "display_text": "แผ่นดินไหว (地震)",
+    "correct_answer": "地震",
+    "options": ["地震", "火事", "津波", "台風"],
+    "dialogue": "地震（じしん）が発生しました。落ち着いてください。",
+    "explanation": "Jishin (地震) หมายถึง แผ่นดินไหว"
+  },
+  {
+    "id": "ds_l1_s2",
+    "display_text": "ไฟไหม้ (火事)",
+    "correct_answer": "火事",
+    "options": ["火事", "地震", "大雨", "火"],
+    "dialogue": "火事（かじ）です！火が出ています！",
+    "explanation": "Kaji (火事) หมายถึง ไฟไหม้"
+  },
+  {
+    "id": "ds_l1_s3",
+    "display_text": "สึนามิ (津波)",
+    "correct_answer": "津波",
+    "options": ["津波", "大雨", "台風", "地震"],
+    "dialogue": "津波（つなみ）が来ます。高い所へ逃げてください。",
+    "explanation": "Tsunami (津波) หมายถึง สึนามิ"
+  },
+  {
+    "id": "ds_l1_s4",
+    "display_text": "พายุไต้ฝุ่น (台風)",
+    "correct_answer": "台風",
+    "options": ["台風", "大雨", "地震", "津波"],
+    "dialogue": "大きな台風（たいふう）が近づいています。",
+    "explanation": "Taifuu (台風) หมายถึง พายุไต้ฝุ่น"
+  },
+  {
+    "id": "ds_l1_s5",
+    "display_text": "ฝนตกหนัก (大雨)",
+    "correct_answer": "大雨",
+    "options": ["大雨", "台風", "水", "火事"],
+    "dialogue": "大雨（おおあめ）の影響で川が増水しています。",
+    "explanation": "Ooame (大雨) หมายถึง ฝนตกหนัก"
+  },
+  {
+    "id": "ds_l1_s6",
+    "display_text": "อันตราย (危ない)",
+    "correct_answer": "危ない",
+    "options": ["危ない", "安全", "逃げて", "止まって"],
+    "dialogue": "そこは危ない（あぶない）です！離れてください！",
+    "explanation": "Abunai (危ない) หมายถึง อันตราย"
+  },
+  {
+    "id": "ds_l1_s7",
+    "display_text": "หนีไป! (逃げて！)",
+    "correct_answer": "逃げて",
+    "options": ["逃げて", "止まって", "隠れて", "助けて"],
+    "dialogue": "早く逃げて（にげて）！急いで！",
+    "explanation": "Nigete (逃げて) หมายถึง หนีไป!"
+  },
+  {
+    "id": "ds_l1_s8",
+    "display_text": "ช่วยด้วย! (助けて！)",
+    "correct_answer": "助けて",
+    "options": ["助けて", "逃げて", "危ない", "警察"],
+    "dialogue": "誰か、助けて（たすけて）ください！",
+    "explanation": "Tasukete (助けて) หมายถึง ช่วยด้วย!"
+  },
+  {
+    "id": "ds_l1_s9",
+    "display_text": "หยุด (止まって)",
+    "correct_answer": "止まって",
+    "options": ["止まって", "動いて", "逃げて", "走って"],
+    "dialogue": "危ないから止まって（とまって）！",
+    "explanation": "Tomatte (止まって) หมายถึง หยุด"
+  },
+  {
+    "id": "ds_l1_s10",
+    "display_text": "ไฟ (火)",
+    "correct_answer": "火",
+    "options": ["火", "水", "風", "土"],
+    "dialogue": "火（ひ）に気をつけてください。",
+    "explanation": "Hi (火) หมายถึง ไฟ"
+  }
+]

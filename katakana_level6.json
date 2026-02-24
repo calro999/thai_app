@@ -1,0 +1,92 @@
+[
+  {
+    "id": "k6_q1",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'แก๊ส' พูดว่าอะไรนะ?",
+    "display_text": "○ ス",
+    "correct_answer": "ガ",
+    "options": ["ガ", "ギ", "グ", "ゲ"],
+    "thai_hint": "ตัวอักษร カ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "k6_q2",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'กุญแจ' พูดว่าอะไรนะ?",
+    "display_text": "カ ○",
+    "correct_answer": "ギ",
+    "options": ["ギ", "ガ", "グ", "ゲ"],
+    "thai_hint": "ตัวอักษร キ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "k6_q3",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'กองทัพ' พูดว่าอะไรนะ?",
+    "display_text": "○ ン",
+    "correct_answer": "グ",
+    "options": ["グ", "ガ", "ギ", "ゲ"],
+    "thai_hint": "ตัวอักษร ク ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "k6_q4",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'เครา' พูดว่าอะไรนะ?",
+    "display_text": "ヒ ○",
+    "correct_answer": "ゲ",
+    "options": ["ゲ", "ガ", "ギ", "グ"],
+    "thai_hint": "ตัวอักษร ケ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "k6_q5",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ตะกร้า' พูดว่าอะไรนะ?",
+    "display_text": "カ ○",
+    "correct_answer": "ゴ",
+    "options": ["ゴ", "ガ", "ギ", "グ"],
+    "thai_hint": "ตัวอักษร コ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "k6_q6",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'เข่า' พูดว่าอะไรนะ?",
+    "display_text": "ヒ ○",
+    "correct_answer": "ザ",
+    "options": ["ザ", "ジ", "ズ", "ゼ"],
+    "thai_hint": "ตัวอักษร サ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "k6_q7",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ตัวอักษร' พูดว่าอะไรนะ?",
+    "display_text": "モ ○",
+    "correct_answer": "ジ",
+    "options": ["ジ", "ザ", "ズ", "ゼ"],
+    "thai_hint": "ตัวอักษร シ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "k6_q8",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'แผนที่' พูดว่าอะไรนะ?",
+    "display_text": "チ ○",
+    "correct_answer": "ズ",
+    "options": ["ズ", "ザ", "ジ", "ゼ"],
+    "thai_hint": "ตัวอักษร ス ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "k6_q9",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ลม' พูดว่าอะไรนะ?",
+    "display_text": "カ ○",
+    "correct_answer": "ゼ",
+    "options": ["ゼ", "ザ", "ジ", "ズ"],
+    "thai_hint": "ตัวอักษร セ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "k6_q10",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ช้าง' พูดว่าอะไรนะ?",
+    "display_text": "○ ウ",
+    "correct_answer": "ゾ",
+    "options": ["ゾ", "ザ", "ジ", "ズ"],
+    "thai_hint": "ตัวอักษร ソ ที่มีจุด (Tenten)"
+  }
+]

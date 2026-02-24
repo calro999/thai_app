@@ -1,0 +1,82 @@
+[
+  {
+    "id": "t2_l11",
+    "display_text": "ふくろ",
+    "correct_answer": "ふくろ",
+    "options": ["ふくろ"],
+    "dialogue": "ที่ญี่ปุ่นถุงพลาสติกต้องเสียเงิน! พนักงานจะถามว่า 'Fukuro irimasu ka?' (รับถุงไหมคะ?)",
+    "explanation": "Fukuro (ふくろ) = ถุง ถ้าไม่เอาให้พูดว่า 'Iranai desu'"
+  },
+  {
+    "id": "t2_l12",
+    "display_text": "あたため",
+    "correct_answer": "あたため",
+    "options": ["あたため"],
+    "dialogue": "ซื้อข้าวกล่องในเซเว่น พนักงานจะถามว่า 'Atatame masu ka?' เพื่อจะเอาไปเวฟให้",
+    "explanation": "Atatame (あたため) = การทำให้ร้อน/การเวฟอาหาร"
+  },
+  {
+    "id": "t2_l13",
+    "display_text": "げんきん",
+    "correct_answer": "げんきん",
+    "options": ["げんきん"],
+    "dialogue": "ร้านอาหารเก่าแก่หรือร้านเล็กๆ บางแห่งยังรับแค่ 'เงินสด' เท่านั้นนะ เช็กให้ดี!",
+    "explanation": "Genkin (げんきん) = เงินสด"
+  },
+  {
+    "id": "t2_l14",
+    "display_text": "おさつ",
+    "correct_answer": "おさつ",
+    "options": ["おさつ"],
+    "dialogue": "แบงก์ 1,000 หรือแบงก์ 10,000 เราเรียกรวมๆ ว่า Osatsu",
+    "explanation": "Osatsu (おさつ) = ธนบัตร หรือ แบงก์"
+  },
+  {
+    "id": "t2_l15",
+    "display_text": "おつり",
+    "correct_answer": "おつり",
+    "options": ["おつり"],
+    "dialogue": "เงินทอนที่ได้จากพนักงาน อย่าลืมเช็กความถูกต้องก่อนออกจากเคาน์เตอร์นะ",
+    "explanation": "Otsuri (おつり) = เงินทอน"
+  },
+  {
+    "id": "t2_l16",
+    "display_text": "おかいけい",
+    "correct_answer": "おかいけい",
+    "options": ["おかいけい"],
+    "dialogue": "เวลาจะจ่ายเงิน ให้พูดคำนี้พนักงานจะเดินมาที่เครื่องคิดเงินทันที",
+    "explanation": "Okaikei (おかいけい) = การชำระเงิน/เช็กบิล"
+  },
+  {
+    "id": "t2_l17",
+    "display_text": "げんてい",
+    "correct_answer": "げんてい",
+    "options": ["げんてい"],
+    "dialogue": "คำนี้อันตรายต่อเงินในกระเป๋ามาก! '期間限定' แปลว่ามีขายแค่ช่วงนี้เท่านั้น!",
+    "explanation": "Gentei (げんてい) = การจำกัด/Limited Edition"
+  },
+  {
+    "id": "t2_l18",
+    "display_text": "レシート",
+    "correct_answer": "レシート",
+    "options": ["レシート"],
+    "dialogue": "พนักงานจะถามว่า 'Receipt irimasu ka?' ถ้าต้องใช้ทำ Tax Refund อย่าลืมเก็บไว้",
+    "explanation": "Reshiito (レシート) = ใบเสร็จรับเงิน"
+  },
+  {
+    "id": "t2_l19",
+    "display_text": "ポイントカード",
+    "correct_answer": "ポイントカード",
+    "options": ["ポイントカード"],
+    "dialogue": "พนักงานจะถามแทบทุกครั้ง 'Point card omochi desu ka?' ถ้าไม่มีก็บอก 'Nai desu'",
+    "explanation": "Pointo kaado (ポイントカード) = บัตรสะสมแต้ม"
+  },
+  {
+    "id": "t2_l20",
+    "display_text": "クレジットカード",
+    "correct_answer": "クレジットカード",
+    "options": ["クレジットカード"],
+    "dialogue": "ถ้าอยากจ่ายด้วยบัตร ให้ถามพนักงานว่า 'Credit card tsukae masu ka?'",
+    "explanation": "Kurejitto kaado (クレジットカード) = บัตรเครดิต"
+  }
+]

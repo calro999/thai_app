@@ -1,0 +1,82 @@
+[
+  {
+    "id": "dl_l2_q11",
+    "display_text": "กิน",
+    "correct_answer": "たべる",
+    "options": ["たべる", "のむ", "かう", "みる"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'กิน' คือคำไหน?",
+    "explanation": "Taberu (たべる) แปลว่า กิน"
+  },
+  {
+    "id": "dl_l2_q12",
+    "display_text": "ดื่ม",
+    "correct_answer": "のむ",
+    "options": ["のむ", "たべる", "きく", "よむ"],
+    "dialogue": "คำว่า 'ดื่ม' ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Nomu (のむ) แปลว่า ดื่ม"
+  },
+  {
+    "id": "dl_l2_q13",
+    "display_text": "ดู / มอง",
+    "correct_answer": "みる",
+    "options": ["みる", "きく", "かく", "ねる"],
+    "dialogue": "การใช้สายตามองหรือ 'ดู' คือคำไหน?",
+    "explanation": "Miru (みる) แปลว่า ดู หรือ มอง"
+  },
+  {
+    "id": "dl_l2_q14",
+    "display_text": "ฟัง",
+    "correct_answer": "きく",
+    "options": ["きく", "みる", "かく", "いう"],
+    "dialogue": "การใช้หู 'ฟัง' คือข้อไหน?",
+    "explanation": "Kiku (きく) แปลว่า ฟัง"
+  },
+  {
+    "id": "dl_l2_q15",
+    "display_text": "อ่าน",
+    "correct_answer": "よむ",
+    "options": ["よむ", "かく", "きく", "みる"],
+    "dialogue": "การ 'อ่าน' หนังสือ คือข้อไหน?",
+    "explanation": "Yomu (よむ) แปลว่า อ่าน"
+  },
+  {
+    "id": "dl_l2_q16",
+    "display_text": "เขียน",
+    "correct_answer": "かく",
+    "options": ["かく", "よむ", "きく", "いう"],
+    "dialogue": "การ 'เขียน' ตัวหนังสือหรือจดหมาย คือคำไหน?",
+    "explanation": "Kaku (かく) แปลว่า เขียน"
+  },
+  {
+    "id": "dl_l2_q17",
+    "display_text": "พูด",
+    "correct_answer": "いう",
+    "options": ["いう", "きく", "よむ", "みる"],
+    "dialogue": "คำว่า 'พูด' ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Iu (いう) แปลว่า พูด"
+  },
+  {
+    "id": "dl_l2_q18",
+    "display_text": "ซื้อ",
+    "correct_answer": "かう",
+    "options": ["かう", "うる", "もつ", "まつ"],
+    "dialogue": "การจ่ายเงินเพื่อ 'ซื้อ' ของ คือคำไหน?",
+    "explanation": "Kau (かう) แปลว่า ซื้อ"
+  },
+  {
+    "id": "dl_l2_q19",
+    "display_text": "ล้าง",
+    "correct_answer": "あらう",
+    "options": ["あらう", "あう", "いう", "かう"],
+    "dialogue": "การ 'ล้าง' มือหรือล้างหน้า คือข้อไหน?",
+    "explanation": "Arau (あらう) แปลว่า ล้าง"
+  },
+  {
+    "id": "dl_l2_q20",
+    "display_text": "เจอ / พบ",
+    "correct_answer": "あう",
+    "options": ["あう", "あらう", "いう", "かう"],
+    "dialogue": "การ 'เจอ' หรือ 'พบ' เพื่อน คือคำไหน?",
+    "explanation": "Au (あう) แปลว่า เจอ หรือ พบ"
+  }
+]

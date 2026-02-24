@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ds_l1_q1_quiz",
+    "display_text": "คำนี้หมายถึงอะไร? (แผ่นดินไหว)",
+    "correct_answer": "แผ่นดินไหว",
+    "options": ["แผ่นดินไหว", "ไฟไหม้", "สึนามิ", "พายุ"],
+    "dialogue": "地震",
+    "explanation": "Jishin หมายถึง แผ่นดินไหว"
+  },
+  {
+    "id": "ds_l1_q2_quiz",
+    "display_text": "คำนี้หมายถึงอะไร? (ไฟไหม้)",
+    "correct_answer": "ไฟไหม้",
+    "options": ["แผ่นดินไหว", "ไฟไหม้", "อันตราย", "หนีไป"],
+    "dialogue": "火事",
+    "explanation": "Kaji หมายถึง ไฟไหม้"
+  },
+  {
+    "id": "ds_l1_q3_quiz",
+    "display_text": "คำนี้หมายถึงอะไร? (อันตราย)",
+    "correct_answer": "อันตราย",
+    "options": ["ปลอดภัย", "อันตราย", "หยุด", "ช่วยด้วย"],
+    "dialogue": "危ない",
+    "explanation": "Abunai หมายถึง อันตราย"
+  },
+  {
+    "id": "ds_l1_q4_quiz",
+    "display_text": "คำนี้หมายถึงอะไร? (ช่วยด้วย)",
+    "correct_answer": "ช่วยด้วย",
+    "options": ["ช่วยด้วย", "หนีไป", "หยุด", "ตำรวจ"],
+    "dialogue": "助けて",
+    "explanation": "Tasukete หมายถึง ช่วยด้วย"
+  },
+  {
+    "id": "ds_l1_q5_quiz",
+    "display_text": "คำนี้หมายถึงอะไร? (พายุไต้ฝุ่น)",
+    "correct_answer": "พายุไต้ฝุ่น",
+    "options": ["ฝนตกหนัก", "พายุไต้ฝุ่น", "สึนามิ", "แผ่นดินไหว"],
+    "dialogue": "台風",
+    "explanation": "Taifuu หมายถึง พายุไต้ฝุ่น"
+  }
+]

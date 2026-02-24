@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ds_l4_s1",
+    "display_text": "ข่าว (ニュース)",
+    "correct_answer": "ニュース",
+    "options": ["ニュース", "放送", "速報", "確認"],
+    "dialogue": "テレビのニュース（にゅーす）で情報を確認してください。",
+    "explanation": "News (ニュース) หมายถึง ข่าวสาร"
+  },
+  {
+    "id": "ds_l4_s2",
+    "display_text": "ประกาศเตือนภัย (注意報)",
+    "correct_answer": "注意報",
+    "options": ["注意報", "警報", "速報", "安全"],
+    "dialogue": "大雨注意報（ちゅういほう）が出されました。",
+    "explanation": "Chuuihou (注意報) หมายถึง ประกาศเตือนภัยระดับเฝ้าระวัง"
+  },
+  {
+    "id": "ds_l4_s3",
+    "display_text": "ประกาศเตือนภัยรุนแรง (警報)",
+    "correct_answer": "警報",
+    "options": ["警報", "注意報", "ニュース", "放送"],
+    "dialogue": "大雨特別警報（けいほう）が出ています。直ちに避難してください。",
+    "explanation": "Keihou (警報) หมายถึง ประกาศเตือนภัยระดับรุนแรง"
+  },
+  {
+    "id": "ds_l4_s4",
+    "display_text": "ระดับความรุนแรงของแผ่นดินไหว (震度)",
+    "correct_answer": "震度",
+    "options": ["震度", "地震", "津波", "安全"],
+    "dialogue": "震度（しんど）5の地震が発生しました。",
+    "explanation": "Shindo (震度) หมายถึง ระดับความสั่นสะเทือนของแผ่นดินไหว"
+  },
+  {
+    "id": "ds_l4_s5",
+    "display_text": "ข่าวด่วน (速報)",
+    "correct_answer": "速報",
+    "options": ["速報", "ニュース", "放送", "確認"],
+    "dialogue": "地震の緊急速報（そくほう）です。",
+    "explanation": "Sokuhou (速報) หมายถึง ข่าวด่วนที่แจ้งทันที"
+  },
+  {
+    "id": "ds_l4_s6",
+    "display_text": "ปลอดภัย (安全)",
+    "correct_answer": "安全",
+    "options": ["安全", "危ない", "注意", "避難"],
+    "dialogue": "安全（あんぜん）な場所に移動してください。",
+    "explanation": "Anzen (安全) หมายถึง ปลอดภัย"
+  },
+  {
+    "id": "ds_l4_s7",
+    "display_text": "ตรวจสอบ (確認)",
+    "correct_answer": "確認",
+    "options": ["確認", "放送", "ニュース", "安全"],
+    "dialogue": "火の元を確認（かくにん）してください。",
+    "explanation": "Kakunin (確認) หมายถึง การตรวจสอบ"
+  },
+  {
+    "id": "ds_l4_s8",
+    "display_text": "ประกาศ (ตามสาย/ทีวี) (放送)",
+    "correct_answer": "放送",
+    "options": ["放送", "ニュース", "速報", "電話"],
+    "dialogue": "避難所の放送（ほうそう）をよく聞いてください。",
+    "explanation": "Housou (放送) หมายถึง การประกาศหรือการแพร่ภาพกระจายเสียง"
+  },
+  {
+    "id": "ds_l4_s9",
+    "display_text": "ลิฟต์ (エレベーター)",
+    "correct_answer": "エレベーター",
+    "options": ["エレベーター", "階段", "出口", "窓"],
+    "dialogue": "地震の時はエレベーター（えれべーたー）を使わないで！",
+    "explanation": "Elevator (エレベーター) หมายถึง ลิฟต์"
+  },
+  {
+    "id": "ds_l4_s10",
+    "display_text": "บันได (階段)",
+    "correct_answer": "階段",
+    "options": ["階段", "エレベーター", "窓", "机"],
+    "dialogue": "階段（かいだん）を使って避難してください。",
+    "explanation": "Kaidan (階段) หมายถึง บันได"
+  }
+]

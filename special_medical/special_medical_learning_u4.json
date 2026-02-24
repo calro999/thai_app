@@ -1,0 +1,82 @@
+[
+  {
+    "id": "m4_l31",
+    "display_text": "บาดแผล / บาดเจ็บ",
+    "correct_answer": "けが",
+    "options": ["けが"],
+    "dialogue": "คำทั่วไปที่ใช้เรียกการบาดเจ็บทางร่างกาย",
+    "explanation": "Kega (けが) = แผล / การบาดเจ็บ"
+  },
+  {
+    "id": "m4_l32",
+    "display_text": "เลือด",
+    "correct_answer": "ち",
+    "options": ["ち"],
+    "dialogue": "ถ้ามีเลือดออก ให้ชี้ที่แผลแล้วบอกว่า 'Chi' พนักงานจะรีบหาสิ่งที่ช่วยห้ามเลือดให้",
+    "explanation": "Chi (ち) = เลือด"
+  },
+  {
+    "id": "m4_l33",
+    "display_text": "ข้อเท้าแพลง / เคล็ด",
+    "correct_answer": "ねんざ",
+    "options": ["ねんざ"],
+    "dialogue": "เดินสะดุดหรือตกบันไดจนข้อเท้าแพลง ต้องใช้คำนี้เพื่อซื้อยาพ่นหรือยาแนวแก้เคล็ด",
+    "explanation": "Nenza (ねんざ) = ข้อเท้าแพลง / อาการเคล็ด"
+  },
+  {
+    "id": "m4_l34",
+    "display_text": "แผลพุพอง / ไฟไหม้",
+    "correct_answer": "やけど",
+    "options": ["やけど"],
+    "dialogue": "ใช้เมื่อโดนน้ำร้อนลวกหรือแตะโดนของร้อนๆ",
+    "explanation": "Yakedo (やけど) = ไฟไหม้ / น้ำร้อนลวก"
+  },
+  {
+    "id": "m4_l35",
+    "display_text": "แผลถูกบาด",
+    "correct_answer": "きりきず",
+    "options": ["きりきず"],
+    "dialogue": "ใช้กับแผลที่โดนของมีคมบาด เช่น มีด หรือ ขอบกระดาษ",
+    "explanation": "Kirikizu (きりきず) = แผลถูกบาด"
+  },
+  {
+    "id": "m4_l36",
+    "display_text": "แผลถลอก",
+    "correct_answer": "すりきず",
+    "options": ["すりきず"],
+    "dialogue": "แผลที่เกิดจากการครูดหรือถลอก เช่น ล้มเข่ากระแทกพื้น",
+    "explanation": "Surikizu (すりきず) = แผลถลอก"
+  },
+  {
+    "id": "m4_l37",
+    "display_text": "แมลงกัดต่อย",
+    "correct_answer": "むしさされ",
+    "options": ["むしさされ"],
+    "dialogue": "ใช้เมื่อโดนยุงหรือแมลงกัด แล้วต้องการยามาทาแก้คัน",
+    "explanation": "Mushisasere (むしさされ) = แมลงกัดต่อย"
+  },
+  {
+    "id": "m4_l38",
+    "display_text": "ผื่นคัน / ผื่นผิวหนัง",
+    "correct_answer": "しっしん",
+    "options": ["しっしん"],
+    "dialogue": "ใช้เมื่อมีผื่นแดงขึ้นตามตัวโดยไม่ทราบสาเหตุ",
+    "explanation": "Shisshin (しっしん) = ผื่น / โรคผิวหนังอักเสบ"
+  },
+  {
+    "id": "m4_l39",
+    "display_text": "คัน",
+    "correct_answer": "かゆい",
+    "options": ["かゆい"],
+    "dialogue": "ความรู้สึกคันที่ผิวหนัง อยากจะเกา",
+    "explanation": "Kayui (かゆい) = คัน"
+  },
+  {
+    "id": "m4_l40",
+    "display_text": "บวม",
+    "correct_answer": "はれる",
+    "options": ["はれる"],
+    "dialogue": "ใช้บอกอาการที่ผิวหนังนูนเป่งขึ้นมาจากการอักเสบหรือกระแทก",
+    "explanation": "Hareru (はれる) = บวม"
+  }
+]

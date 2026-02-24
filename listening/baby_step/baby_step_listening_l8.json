@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bs_l8_q71",
+    "display_text": "ท้องฟ้า",
+    "correct_answer": "そら",
+    "options": ["そら", "うみ", "やま", "き"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'ท้องฟ้า' ที่อยู่ด้านบนคือคำไหน?",
+    "explanation": "Sora (そら) แปลว่า ท้องฟ้า"
+  },
+  {
+    "id": "bs_l8_q72",
+    "display_text": "ดอกไม้",
+    "correct_answer": "はな",
+    "options": ["はな", "き", "そら", "あめ"],
+    "dialogue": "สิ่งที่บานสะพรั่งและมีสีสันสวยงามคือข้อไหน?",
+    "explanation": "Hana (はな) แปลว่า ดอกไม้ (ออกเสียงเหมือนจมูก)"
+  },
+  {
+    "id": "bs_l8_q73",
+    "display_text": "ต้นไม้",
+    "correct_answer": "き",
+    "options": ["き", "はな", "そら", "かぜ"],
+    "dialogue": "เสียงสั้นๆ นี้หมายถึง 'ต้นไม้' คือข้อไหน?",
+    "explanation": "Ki (き) แปลว่า ต้นไม้"
+  },
+  {
+    "id": "bs_l8_q74",
+    "display_text": "ฝน",
+    "correct_answer": "あめ",
+    "options": ["あめ", "ゆき", "かぜ", "そら"],
+    "dialogue": "น้ำที่ตกลงมาจากฟ้าคือข้อไหน?",
+    "explanation": "Ame (あめ) แปลว่า ฝน"
+  },
+  {
+    "id": "bs_l8_q75",
+    "display_text": "หิมะ",
+    "correct_answer": "ゆき",
+    "options": ["ゆき", "あめ", "かぜ", "はな"],
+    "dialogue": "สิ่งสีขาวเย็นๆ ที่ตกลงมาในฤดูหนาวคือ?",
+    "explanation": "Yuki (ゆき) แปลว่า หิมะ"
+  },
+  {
+    "id": "bs_l8_q76",
+    "display_text": "พระอาทิตย์",
+    "correct_answer": "たいよう",
+    "options": ["たいよう", "つき", "そら", "あつい"],
+    "dialogue": "สิ่งที่ให้แสงสว่างในตอนกลางวันคือข้อไหน?",
+    "explanation": "Taiyou (たいよう) แปลว่า พระอาทิตย์"
+  },
+  {
+    "id": "bs_l8_q77",
+    "display_text": "พระจันทร์",
+    "correct_answer": "つき",
+    "options": ["つき", "たいよう", "そら", "ゆき"],
+    "dialogue": "สิ่งที่ส่องแสงนวลในตอนกลางคืนคือข้อไหน?",
+    "explanation": "Tsuki (つき) แปลว่า พระจันทร์"
+  },
+  {
+    "id": "bs_l8_q78",
+    "display_text": "ลม",
+    "correct_answer": "かぜ",
+    "options": ["かぜ", "あめ", "ゆき", "そら"],
+    "dialogue": "อากาศที่เคลื่อนที่จนเรารู้สึกได้คือข้อไหน?",
+    "explanation": "Kaze (かぜ) แปลว่า ลม"
+  },
+  {
+    "id": "bs_l8_q79",
+    "display_text": "ร้อน",
+    "correct_answer": "あつい",
+    "options": ["あつい", "さむい", "おいしい", "いたい"],
+    "dialogue": "ความรู้สึกเมื่ออุณหภูมิสูงมากคือ?",
+    "explanation": "Atsui (あつい) แปลว่า ร้อน"
+  },
+  {
+    "id": "bs_l8_q80",
+    "display_text": "หนาว",
+    "correct_answer": "さむい",
+    "options": ["さむい", "あつい", "おいしい", "だるい"],
+    "dialogue": "ความรู้สึกเมื่ออุณหภูมิต่ำหรืออยู่ในฤดูหนาวคือ?",
+    "explanation": "Samui (さむい) แปลว่า หนาว"
+  }
+]

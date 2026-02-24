@@ -1,0 +1,47 @@
+[
+  {
+    "id": "h8_q1",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ขนมปัง' พูดว่าอะไรนะ?",
+    "display_text": "○ ん",
+    "correct_answer": "ぱ",
+    "options": ["ぱ", "ぴ", "ぷ", "ぺ"],
+    "thai_hint": "ตัวอักษร は ที่มีวงกลม (Maru)"
+  },
+  {
+    "id": "h8_q2",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'พิซซ่า' พูดว่าอะไรนะ?",
+    "display_text": "○ ざ",
+    "correct_answer": "ぴ",
+    "options": ["ぴ", "ぱ", "ぷ", "ぺ"],
+    "thai_hint": "ตัวอักษร ひ ที่มีวงกลม (Maru)"
+  },
+  {
+    "id": "h8_q3",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'พุดดิ้ง' พูดว่าอะไรนะ?",
+    "display_text": "○ りん",
+    "correct_answer": "ぷ",
+    "options": ["ぷ", "ぱ", "ぴ", "ぺ"],
+    "thai_hint": "ตัวอักษร ふ ที่มีวงกลม (Maru)"
+  },
+  {
+    "id": "h8_q4",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'สี (ทาบ้าน)' พูดว่าอะไรนะ?",
+    "display_text": "○ んき",
+    "correct_answer": "ぺ",
+    "options": ["ぺ", "ぱ", "ぴ", "ぷ"],
+    "thai_hint": "ตัวอักษร へ ที่มีวงกลม (Maru)"
+  },
+  {
+    "id": "h8_q5",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'เสา' พูดว่าอะไรนะ?",
+    "display_text": "○ ─る",
+    "correct_answer": "ぽ",
+    "options": ["ぽ", "ぱ", "ぴ", "ぷ"],
+    "thai_hint": "ตัวอักษร ほ ที่มีวงกลม (Maru)"
+  }
+]

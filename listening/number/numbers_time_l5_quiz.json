@@ -1,0 +1,82 @@
+[
+  {
+    "id": "nt_l5_q1_quiz",
+    "display_text": "いつやりますか？",
+    "correct_answer": "ทีหลัง",
+    "options": ["ตอนนี้", "เมื่อกี้", "ทีหลัง", "พรุ่งนี้"],
+    "dialogue": "あとでやります。いつやりますか？",
+    "explanation": "Atode (あとで) คือ ทีหลัง"
+  },
+  {
+    "id": "nt_l5_q2_quiz",
+    "display_text": "何時ですか？",
+    "correct_answer": "8:30",
+    "options": ["8:00", "8:30", "9:00", "9:30"],
+    "dialogue": "今は八時半です。何時ですか？",
+    "explanation": "Han (半) คือ 30 นาที"
+  },
+  {
+    "id": "nt_l5_q3_quiz",
+    "display_text": "どのくらいかかりますか？",
+    "correct_answer": "1 ชั่วโมง",
+    "options": ["10 นาที", "30 นาที", "1 ชั่วโมง", "1 วัน"],
+    "dialogue": "一時間かかります。どのくらいかかりますか？",
+    "explanation": "Ichijikan (一時間) คือ 1 ชั่วโมง"
+  },
+  {
+    "id": "nt_l5_q4_quiz",
+    "display_text": "何分待ちますか？",
+    "correct_answer": "5 นาที",
+    "options": ["5 นาที", "15 นาที", "50 นาที", "1 ชั่วโมง"],
+    "dialogue": "あと五分待ちます。何分待ちますか？",
+    "explanation": "Gofun (五分) คือ 5 นาที"
+  },
+  {
+    "id": "nt_l5_q5_quiz",
+    "display_text": "いつ見ましたか？",
+    "correct_answer": "เมื่อกี้",
+    "options": ["ตอนนี้", "เมื่อกี้", "ทีหลัง", "พรุ่งนี้"],
+    "dialogue": "さっき見ました。いつ見ましたか？",
+    "explanation": "Sakki (さっき) คือ เมื่อกี้"
+  },
+  {
+    "id": "nt_l5_q6_quiz",
+    "display_text": "何時に起きますか？",
+    "correct_answer": "7:00",
+    "options": ["6:00", "7:00", "8:00", "9:00"],
+    "dialogue": "毎朝七時に起きます。何時に起きますか？",
+    "explanation": "Shichiji (七時) คือ 7 โมง"
+  },
+  {
+    "id": "nt_l5_q7_quiz",
+    "display_text": "何分かかりますか？",
+    "correct_answer": "15 นาที",
+    "options": ["5 นาที", "15 นาที", "50 นาที", "55 นาที"],
+    "dialogue": "十五分かかります。何分かかりますか？",
+    "explanation": "Juugofun (十五分) คือ 15 นาที"
+  },
+  {
+    "id": "nt_l5_q8_quiz",
+    "display_text": "何日かかりますか？",
+    "correct_answer": "3 วัน",
+    "options": ["2 วัน", "3 วัน", "4 วัน", "5 วัน"],
+    "dialogue": "三日かかります。何日かかりますか？",
+    "explanation": "Mikka (三日) คือ 3 วัน"
+  },
+  {
+    "id": "nt_l5_q9_quiz",
+    "display_text": "いつやりますか？",
+    "correct_answer": "ตอนนี้",
+    "options": ["ตอนนี้", "เมื่อกี้", "ทีหลัง", "พรุ่งนี้"],
+    "dialogue": "今すぐやります。いつやりますか？",
+    "explanation": "Ima (今) คือ ตอนนี้"
+  },
+  {
+    "id": "nt_l5_q10_quiz",
+    "display_text": "何時ごろですか？",
+    "correct_answer": "เที่ยง",
+    "options": ["11 โมง", "เที่ยง", "บ่ายโมง", "บ่ายสอง"],
+    "dialogue": "お昼の十二時ごろです。何時ごろですか？",
+    "explanation": "Juuniji (十二時) คือ เที่ยงวัน"
+  }
+]

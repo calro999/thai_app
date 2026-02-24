@@ -1,0 +1,82 @@
+[
+  {
+    "id": "nt_l4_s1",
+    "display_text": "เดือนนี้คือเดือนอะไร? (มกราคม)",
+    "correct_answer": "1",
+    "options": ["1", "2", "3", "4"],
+    "dialogue": "今は一月です。何月ですか？",
+    "explanation": "Ichigatsu (一月) หมายถึง เดือน 1 (มกราคม)"
+  },
+  {
+    "id": "nt_l4_s2",
+    "display_text": "เดือนนี้คือเดือนอะไร? (กุมภาพันธ์)",
+    "correct_answer": "2",
+    "options": ["1", "2", "3", "4"],
+    "dialogue": "今は二月です。何月ですか？",
+    "explanation": "Nigatsu (二月) หมายถึง เดือน 2 (กุมภาพันธ์)"
+  },
+  {
+    "id": "nt_l4_s3",
+    "display_text": "เดือนนี้คือเดือนอะไร? (มีนาคม)",
+    "correct_answer": "3",
+    "options": ["1", "2", "3", "4"],
+    "dialogue": "今は三月です。何月ですか？",
+    "explanation": "Sangatsu (三月) หมายถึง เดือน 3 (มีนาคม)"
+  },
+  {
+    "id": "nt_l4_s4",
+    "display_text": "เดือนนี้คือเดือนอะไร? (เมษายน)",
+    "correct_answer": "4",
+    "options": ["3", "4", "5", "6"],
+    "dialogue": "今は四月です。何月ですか？",
+    "explanation": "Shigatsu (四月) หมายถึง เดือน 4 (เมษายน) *ระวังการออกเสียง 'Shi'"
+  },
+  {
+    "id": "nt_l4_s5",
+    "display_text": "เดือนนี้คือเดือนอะไร? (พฤษภาคม)",
+    "correct_answer": "5",
+    "options": ["4", "5", "6", "7"],
+    "dialogue": "今は五月です。何月ですか？",
+    "explanation": "Gogatsu (五月) หมายถึง เดือน 5 (พฤษภาคม)"
+  },
+  {
+    "id": "nt_l4_s6",
+    "display_text": "เดือนนี้คือเดือนอะไร? (มิถุนายน)",
+    "correct_answer": "6",
+    "options": ["5", "6", "7", "8"],
+    "dialogue": "今は六月です。何月ですか？",
+    "explanation": "Rokugatsu (六月) หมายถึง เดือน 6 (มิถุนายน)"
+  },
+  {
+    "id": "nt_l4_s7",
+    "display_text": "เดือนนี้คือเดือนอะไร? (กรกฎาคม)",
+    "correct_answer": "7",
+    "options": ["6", "7", "8", "9"],
+    "dialogue": "今は七月です。何月ですか？",
+    "explanation": "Shichigatsu (七月) หมายถึง เดือน 7 (กรกฎาคม) *ระวังการออกเสียง 'Shichi'"
+  },
+  {
+    "id": "nt_l4_s8",
+    "display_text": "เดือนนี้คือเดือนอะไร? (สิงหาคม)",
+    "correct_answer": "8",
+    "options": ["7", "8", "9", "10"],
+    "dialogue": "今は八月です。何月ですか？",
+    "explanation": "Hachigatsu (八月) หมายถึง เดือน 8 (สิงหาคม)"
+  },
+  {
+    "id": "nt_l4_s9",
+    "display_text": "เดือนนี้คือเดือนอะไร? (กันยายน)",
+    "correct_answer": "9",
+    "options": ["8", "9", "10", "11"],
+    "dialogue": "今は九月です。何月ですか？",
+    "explanation": "Kugatsu (九月) หมายถึง เดือน 9 (กันยายน) *ระวังการออกเสียง 'Ku'"
+  },
+  {
+    "id": "nt_l4_s10",
+    "display_text": "เดือนนี้คือเดือนอะไร? (ธันวาคม)",
+    "correct_answer": "12",
+    "options": ["10", "11", "12", "1"],
+    "dialogue": "今は十二月です。何月ですか？",
+    "explanation": "Juunigatsu (十二月) หมายถึง เดือน 12 (ธันวาคม)"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "f3_l21",
+    "display_text": "เนื้อวัว",
+    "correct_answer": "ぎゅうにく",
+    "options": ["ぎゅうにく"],
+    "dialogue": "สำหรับสายเนื้อ ถ้าจะสั่งสเต็กหรือเนื้อย่างพรีเมียมต้องจำคำนี้ไว้!",
+    "explanation": "Gyuuniku (ぎゅうにく) = เนื้อวัว"
+  },
+  {
+    "id": "f3_l22",
+    "display_text": "เนื้อหมู",
+    "correct_answer": "ぶたにく",
+    "options": ["ぶたにく"],
+    "dialogue": "เมนูยอดฮิตอย่างทงคัตสึหรือชาบูส่วนใหญ่ใช้เนื้อชนิดนี้",
+    "explanation": "Butaniku (ぶたにく) = เนื้อหมู"
+  },
+  {
+    "id": "f3_l23",
+    "display_text": "เนื้อไก่",
+    "correct_answer": "とりにく",
+    "options": ["とりにく"],
+    "dialogue": "ใช้ในเมนูไก่ทอด (Karaage) หรือไก่ย่าง (Yakitori)",
+    "explanation": "Toriniku (とりにく) = เนื้อไก่"
+  },
+  {
+    "id": "f3_l24",
+    "display_text": "ของสด / ของดิบ",
+    "correct_answer": "なまもの",
+    "options": ["なまもの"],
+    "dialogue": "ใช้เรียกอาหารที่ไม่ผ่านความร้อน เช่น ซาซิมิ ถ้าท้องไส้ไม่ดีควรระวังคำนี้",
+    "explanation": "Namamono (なまもの) = ของสด / ของดิบ"
+  },
+  {
+    "id": "f3_l25",
+    "display_text": "ย่างไฟ / เผาผิว",
+    "correct_answer": "あぶり",
+    "options": ["あぶり"],
+    "dialogue": "การใช้ไฟเผาที่ผิวหน้าอาหารเบาๆ ให้มีกลิ่นหอม เช่น ซูชิหน้าเอนกาวะลนไฟ",
+    "explanation": "Aburi (あぶり) = การลนไฟ / การย่างที่ผิวหน้า"
+  },
+  {
+    "id": "f3_l26",
+    "display_text": "ของทอด",
+    "correct_answer": "あげ",
+    "options": ["あげ"],
+    "dialogue": "เมนูยอดนิยมของคนไทย เช่น กุ้งเทมปุระ หรือไก่ทอด",
+    "explanation": "Age (あげ) = การทอด / ของทอด"
+  },
+  {
+    "id": "f3_l27",
+    "display_text": "นึ่ง",
+    "correct_answer": "むし",
+    "options": ["むし"],
+    "dialogue": "ใช้กับเมนูสุขภาพ หรือไข่ตุ๋น (Chawanmushi)",
+    "explanation": "Mushi (むし) = การนึ่ง"
+  },
+  {
+    "id": "f3_l28",
+    "display_text": "ต้ม / ตุ๋น",
+    "correct_answer": "にもの",
+    "options": ["にもの"],
+    "dialogue": "อาหารประเภทต้มซีอิ๊วหรือตุ๋นจนนุ่มแบบคุณแม่ญี่ปุ่นทำให้ทาน",
+    "explanation": "Nimono (にもの) = ของต้ม / ของตุ๋น"
+  },
+  {
+    "id": "f3_l29",
+    "display_text": "การปรุงอาหาร",
+    "correct_answer": "ちょうり",
+    "options": ["ちょうり"],
+    "dialogue": "คำศัพท์ที่เป็นทางการหมายถึงขั้นตอนการทำอาหาร",
+    "explanation": "Chouri (ちょうり) = การปรุงอาหาร"
+  },
+  {
+    "id": "f3_l30",
+    "display_text": "ทำเอง / โฮมเมด",
+    "correct_answer": "じかせい",
+    "options": ["じかせい"],
+    "dialogue": "มักเจอในร้านราเมงที่ทำเส้นเอง หรือร้านที่ทำซอสสูตรพิเศษของตัวเอง",
+    "explanation": "Jikasei (じかせい) = ทำเอง / ผลิตเองในร้าน"
+  }
+]

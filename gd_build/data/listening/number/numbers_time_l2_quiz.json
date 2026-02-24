@@ -1,0 +1,82 @@
+[
+  {
+    "id": "nt_l2_q1_quiz",
+    "display_text": "ราคากี่เยน? (いくらですか？)",
+    "correct_answer": "1000",
+    "options": ["100", "1000", "10000", "100000"],
+    "dialogue": "これは千円です。いくらですか？",
+    "explanation": "Sen (千) หมายถึง 1,000"
+  },
+  {
+    "id": "nt_l2_q2_quiz",
+    "display_text": "มีคนกี่คน? (何人いますか？)",
+    "correct_answer": "20",
+    "options": ["2", "12", "20", "200"],
+    "dialogue": "人は二十人います。何人いますか？",
+    "explanation": "Nijuu (二十) หมายถึง 20"
+  },
+  {
+    "id": "nt_l2_q3_quiz",
+    "display_text": "ราคากี่เยน? (いくらですか？)",
+    "correct_answer": "10000",
+    "options": ["1000", "10000", "100000", "1000000"],
+    "dialogue": "これは一万円です。いくらですか？",
+    "explanation": "Ichiman (一万) หมายถึง 10,000"
+  },
+  {
+    "id": "nt_l2_q4_quiz",
+    "display_text": "มีกี่แผ่น? (何枚ありますか？)",
+    "correct_answer": "300",
+    "options": ["30", "300", "3000", "30000"],
+    "dialogue": "紙は三百枚あります。何枚ありますか？",
+    "explanation": "Sanbyaku (三百) หมายถึง 300"
+  },
+  {
+    "id": "nt_l2_q5_quiz",
+    "display_text": "ราคากี่เยน? (いくらですか？)",
+    "correct_answer": "1000000",
+    "options": ["10000", "100000", "1000000", "10000000"],
+    "dialogue": "これは百万円です。いくらですか？",
+    "explanation": "Hyakuman (百万) หมายถึง 1,000,000"
+  },
+  {
+    "id": "nt_l2_q6_quiz",
+    "display_text": "ราคากี่เยน? (いくらですか？)",
+    "correct_answer": "10",
+    "options": ["1", "10", "100", "1000"],
+    "dialogue": "これは十円です。いくらですか？",
+    "explanation": "Juu (十) หมายถึง 10"
+  },
+  {
+    "id": "nt_l2_q7_quiz",
+    "display_text": "มีกี่คน? (何人いますか？)",
+    "correct_answer": "8000",
+    "options": ["800", "8000", "18000", "80000"],
+    "dialogue": "人は八千人います。何人いますか？",
+    "explanation": "Hassen (八千) หมายถึง 8,000"
+  },
+  {
+    "id": "nt_l2_q8_quiz",
+    "display_text": "ราคากี่เยน? (いくらですか？)",
+    "correct_answer": "100",
+    "options": ["10", "100", "1000", "10000"],
+    "dialogue": "これは百円です。いくらですか？",
+    "explanation": "Hyaku (百) หมายถึง 100"
+  },
+  {
+    "id": "nt_l2_q9_quiz",
+    "display_text": "มีกี่เล่ม? (何冊ありますか？)",
+    "correct_answer": "50000",
+    "options": ["500", "5000", "50000", "500000"],
+    "dialogue": "本は五万冊あります。何冊ありますか？",
+    "explanation": "Goman (五万) หมายถึง 50,000"
+  },
+  {
+    "id": "nt_l2_q10_quiz",
+    "display_text": "ราคากี่เยน? (いくらですか？)",
+    "correct_answer": "100000",
+    "options": ["10000", "100000", "1000000", "10000000"],
+    "dialogue": "これは十万円です。いくらですか？",
+    "explanation": "Juuman (十万) หมายถึง 100,000"
+  }
+]

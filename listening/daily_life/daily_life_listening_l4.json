@@ -1,0 +1,82 @@
+[
+  {
+    "id": "dl_l4_q31",
+    "display_text": "ขวา",
+    "correct_answer": "みぎ",
+    "options": ["みぎ", "ひだり", "まえ", "うしろ"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'ขวา' คือคำไหน?",
+    "explanation": "Migi (みぎ) แปลว่า ขวา"
+  },
+  {
+    "id": "dl_l4_q32",
+    "display_text": "ซ้าย",
+    "correct_answer": "ひだり",
+    "options": ["ひだり", "みぎ", "なか", "そと"],
+    "dialogue": "คำว่า 'ซ้าย' ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Hidari (ひだり) แปลว่า ซ้าย"
+  },
+  {
+    "id": "dl_l4_q33",
+    "display_text": "ข้างหน้า",
+    "correct_answer": "まえ",
+    "options": ["まえ", "うしろ", "うえ", "した"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'ข้างหน้า' คือข้อไหน?",
+    "explanation": "Mae (まえ) แปลว่า ข้างหน้า"
+  },
+  {
+    "id": "dl_l4_q34",
+    "display_text": "ข้างหลัง",
+    "correct_answer": "うしろ",
+    "options": ["うしろ", "まえ", "よこ", "なか"],
+    "dialogue": "คำว่า 'ข้างหลัง' ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Ushiro (うしろ) แปลว่า ข้างหลัง"
+  },
+  {
+    "id": "dl_l4_q35",
+    "display_text": "ข้างบน",
+    "correct_answer": "うえ",
+    "options": ["うえ", "した", "なか", "そと"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'ข้างบน' คือข้อไหน?",
+    "explanation": "Ue (うえ) แปลว่า ข้างบน"
+  },
+  {
+    "id": "dl_l4_q36",
+    "display_text": "ข้างล่าง",
+    "correct_answer": "した",
+    "options": ["した", "うえ", "よこ", "まえ"],
+    "dialogue": "คำว่า 'ข้างล่าง' ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Shita (した) แปลว่า ข้างล่าง"
+  },
+  {
+    "id": "dl_l4_q37",
+    "display_text": "ข้างใน",
+    "correct_answer": "なか",
+    "options": ["なか", "そと", "よこ", "まえ"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'ข้างใน' คือข้อไหน?",
+    "explanation": "Naka (なか) แปลว่า ข้างใน"
+  },
+  {
+    "id": "dl_l4_q38",
+    "display_text": "ข้างนอก",
+    "correct_answer": "そと",
+    "options": ["そと", "なか", "うえ", "した"],
+    "dialogue": "คำว่า 'ข้างนอก' ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Soto (そと) แปลว่า ข้างนอก"
+  },
+  {
+    "id": "dl_l4_q39",
+    "display_text": "ข้างๆ",
+    "correct_answer": "よこ",
+    "options": ["よこ", "まえ", "うしろ", "なか"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'ข้างๆ' คือข้อไหน?",
+    "explanation": "Yoko (よこ) แปลว่า ข้างๆ"
+  },
+  {
+    "id": "dl_l4_q40",
+    "display_text": "ตรงไป",
+    "correct_answer": "まっすぐ",
+    "options": ["まっすぐ", "ゆっくり", "はやく", "びっくり"],
+    "dialogue": "การบอกทางให้ 'ตรงไป' คือคำไหน?",
+    "explanation": "Massugu (まっすぐ) แปลว่า ตรงไป"
+  }
+]

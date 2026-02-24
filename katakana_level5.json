@@ -1,0 +1,65 @@
+[
+  {
+    "id": "k5_q1",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ท้องระฆัง/ส่วนล่าง' พูดว่าอะไรนะ?",
+    "display_text": "ハ ○",
+    "correct_answer": "ラ",
+    "options": ["ラ", "リ", "ル", "レ"],
+    "thai_hint": "ตัวอักษรที่ 1 ของแถว ラ"
+  },
+  {
+    "id": "k5_q2",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'แอปเปิ้ล' พูดว่าอะไรนะ?",
+    "display_text": "○ ンゴ",
+    "correct_answer": "リ",
+    "options": ["リ", "ラ", "ル", "レ"],
+    "thai_hint": "ตัวอักษรที่ 2 ของแถว ラ"
+  },
+  {
+    "id": "k5_q3",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ลิง' พูดว่าอะไรนะ?",
+    "display_text": "サ ○",
+    "correct_answer": "ル",
+    "options": ["ル", "ラ", "リ", "レ"],
+    "thai_hint": "ตัวอักษรที่ 3 ของแถว ラ"
+  },
+  {
+    "id": "k5_q4",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ประวัติศาสตร์' พูดว่าอะไรนะ?",
+    "display_text": "○ キシ",
+    "correct_answer": "レ",
+    "options": ["レ", "ラ", "リ", "ル"],
+    "thai_hint": "ตัวอักษรที่ 4 ของแถว ラ"
+  },
+  {
+    "id": "k5_q5",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'สีขาว' พูดว่าอะไรนะ?",
+    "display_text": "シ ○",
+    "correct_answer": "ロ",
+    "options": ["ロ", "ラ", "リ", "ル"],
+    "thai_hint": "ตัวอักษรที่ 5 ของแถว ラ"
+  },
+  {
+    "id": "k5_q6",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ฉัน' พูดว่าอะไรนะ?",
+    "display_text": "○ タシ",
+    "correct_answer": "ワ",
+    "options": ["ワ", "ヲ", "ン", "ア"],
+    "thai_hint": "ตัวอักษรที่ 1 ของแถว ワ"
+  },
+  {
+    "id": "k5_q7",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'หนังสือ' พูดว่าอะไรนะ?",
+    "display_text": "ホ ○",
+    "correct_answer": "ン",
+    "options": ["ン", "ワ", "ヲ", "ノ"],
+    "thai_hint": "ตัวสะกด ン"
+  }
+]

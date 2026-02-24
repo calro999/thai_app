@@ -1,0 +1,82 @@
+[
+  {
+    "id": "m2_l11",
+    "display_text": "ไข้ / ตัวร้อน",
+    "correct_answer": "ねつ",
+    "options": ["ねつ"],
+    "dialogue": "ถ้าครั่นเนื้อครั่นตัวเหมือนจะมีไข้ ให้ใช้คำนี้บอกพนักงานเพื่อขอยาหรือปรอทวัดไข้",
+    "explanation": "Netsu (ねつ) = ไข้ / ความร้อน"
+  },
+  {
+    "id": "m2_l12",
+    "display_text": "ไอ",
+    "correct_answer": "せき",
+    "options": ["せき"],
+    "dialogue": "ใช้เมื่อมีอาการไอสุนัขหรือไอโขลกๆ เพื่อหายาแก้ไอ",
+    "explanation": "Seki (せき) = ไอ"
+  },
+  {
+    "id": "m2_l13",
+    "display_text": "น้ำมูก",
+    "correct_answer": "はなみず",
+    "options": ["はなみず"],
+    "dialogue": "คำนี้แปลตรงตัวว่า 'น้ำในจมูก' ใช้บอกอาการน้ำมูกไหล",
+    "explanation": "Hanamizu (はなみず) = น้ำมูก"
+  },
+  {
+    "id": "m2_l14",
+    "display_text": "คัดจมูก",
+    "correct_answer": "はなづまり",
+    "options": ["はなづまり"],
+    "dialogue": "ใช้เมื่อจมูกตัน หายใจไม่ออกข้างในจมูก",
+    "explanation": "Hanadzumari (はなづまり) = คัดจมูก / จมูกตัน"
+  },
+  {
+    "id": "m2_l15",
+    "display_text": "เสมหะ",
+    "correct_answer": "たん",
+    "options": ["たん"],
+    "dialogue": "ใช้เมื่อมีเสมหะติดคอ ต้องการยาละลายเสมหะ",
+    "explanation": "Tan (たん) = เสมหะ / เสลด"
+  },
+  {
+    "id": "m2_l16",
+    "display_text": "หนาวสั่น",
+    "correct_answer": "さむけ",
+    "options": ["さむけ"],
+    "dialogue": "อาการหนาวจากข้างในร่างกายเหมือนจะเป็นไข้ แม้เปิดฮีตเตอร์แล้ว",
+    "explanation": "Samuke (さむけ) = อาหารหนาวสั่น / หนาวสะท้าน"
+  },
+  {
+    "id": "m2_l17",
+    "display_text": "อ่อนเพลีย / ตัวหนัก",
+    "correct_answer": "だるい",
+    "options": ["だるい"],
+    "dialogue": "ความรู้สึกไม่มีแรง ร่างกายหนักอึ้งเหมือนจะป่วย",
+    "explanation": "Darui (だるい) = อ่อนเพลีย / เมื่อยล้า / หนักตัว"
+  },
+  {
+    "id": "m2_l18",
+    "display_text": "เวียนหัว / หน้ามืด",
+    "correct_answer": "ふらふら",
+    "options": ["ふらふら"],
+    "dialogue": "ใช้บอกอาการทรงตัวไม่อยู่ โลกหมุน หรือจะเป็นลม",
+    "explanation": "Furafura (ふらふら) = เวียนหัว / ทรงตัวไม่อยู่"
+  },
+  {
+    "id": "m2_l19",
+    "display_text": "จาม",
+    "correct_answer": "くしゃみ",
+    "options": ["くしゃみ"],
+    "dialogue": "อาการจามจากหวัดหรือภูมิแพ้",
+    "explanation": "Kushami (くしゃみ) = จาม"
+  },
+  {
+    "id": "m2_l20",
+    "display_text": "หายใจลำบาก",
+    "correct_answer": "いきぐるしい",
+    "options": ["いきぐるしい"],
+    "dialogue": "ใช้บอกอาการแน่นหน้าอก หรือหายใจได้ไม่เต็มปอด",
+    "explanation": "Ikigurushii (いきぐるしい) = อึดอัด / หายใจลำบาก"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "h7_q1",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ใคร' พูดว่าอะไรนะ?",
+    "display_text": "○ れ",
+    "correct_answer": "だ",
+    "options": ["だ", "ぢ", "づ", "で"],
+    "thai_hint": "ตัวอักษร た ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "h7_q2",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'จมูกเลือดออก' พูดว่าอะไรนะ?",
+    "display_text": "はな ○",
+    "correct_answer": "ぢ",
+    "options": ["ぢ", "だ", "づ", "で"],
+    "thai_hint": "ตัวอักษร チ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "h7_q3",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'พระจันทร์เต็มดวง' พูดว่าอะไรนะ?",
+    "display_text": "みか ○ き",
+    "correct_answer": "づ",
+    "options": ["づ", "だ", "ぢ", "で"],
+    "thai_hint": "ตัวอักษร つ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "h7_q4",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'โทรศัพท์' พูดว่าอะไรนะ?",
+    "display_text": "○ んわ",
+    "correct_answer": "で",
+    "options": ["で", "だ", "ぢ", "づ"],
+    "thai_hint": "ตัวอักษร て ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "h7_q5",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ที่ไหน' พูดว่าอะไรนะ?",
+    "display_text": "○ こ",
+    "correct_answer": "ど",
+    "options": ["ど", "だ", "ぢ", "づ"],
+    "thai_hint": "ตัวอักษร と ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "h7_q6",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ใบไม้' พูดว่าอะไรนะ?",
+    "display_text": "は ○",
+    "correct_answer": "ば",
+    "options": ["ば", "び", "ぶ", "べ"],
+    "thai_hint": "ตัวอักษร は ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "h7_q7",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'งู' พูดว่าอะไรนะ?",
+    "display_text": "へ ○",
+    "correct_answer": "び",
+    "options": ["び", "ば", "ぶ", "べ"],
+    "thai_hint": "ตัวอักษร ひ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "h7_q8",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'หมู' พูดว่าอะไรนะ?",
+    "display_text": "○ た",
+    "correct_answer": "ぶ",
+    "options": ["ぶ", "ば", "び", "べ"],
+    "thai_hint": "ตัวอักษร ふ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "h7_q9",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'กำแพง' พูดว่าอะไรนะ?",
+    "display_text": "か ○",
+    "correct_answer": "べ",
+    "options": ["べ", "ば", "び", "ぶ"],
+    "thai_hint": "ตัวอักษร へ ที่มีจุด (Tenten)"
+  },
+  {
+    "id": "h7_q10",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ท่อนไม้' พูดว่าอะไรนะ?",
+    "display_text": "○ う",
+    "correct_answer": "ぼ",
+    "options": ["ぼ", "ば", "び", "べ"],
+    "thai_hint": "ตัวอักษร ほ ที่มีจุด (Tenten)"
+  }
+]

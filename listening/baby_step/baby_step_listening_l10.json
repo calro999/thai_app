@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bs_l10_q91",
+    "display_text": "กิน",
+    "correct_answer": "たべる",
+    "options": ["たべる", "のむ", "ねる", "みる"],
+    "dialogue": "เสียงที่ได้ยินหมายถึงการรับประทานอาหารคือคำไหน?",
+    "explanation": "Taberu (たべる) แปลว่า กิน"
+  },
+  {
+    "id": "bs_l10_q92",
+    "display_text": "ดื่ม",
+    "correct_answer": "のむ",
+    "options": ["のむ", "たべる", "いく", "きく"],
+    "dialogue": "การดื่มน้ำหรือเครื่องดื่มต่างๆ คือข้อไหน?",
+    "explanation": "Nomu (のむ) แปลว่า ดื่ม"
+  },
+  {
+    "id": "bs_l10_q93",
+    "display_text": "นอน",
+    "correct_answer": "ねる",
+    "options": ["ねる", "たべる", "くる", "みる"],
+    "dialogue": "การพักผ่อนในตอนกลางคืนคือคำว่าอะไร?",
+    "explanation": "Neru (ねる) แปลว่า นอน"
+  },
+  {
+    "id": "bs_l10_q94",
+    "display_text": "ไป",
+    "correct_answer": "いく",
+    "options": ["いく", "くる", "あるく", "かう"],
+    "dialogue": "การเคลื่อนที่จากที่นี่ไปยังที่อื่นคือข้อไหน?",
+    "explanation": "Iku (いく) แปลว่า ไป"
+  },
+  {
+    "id": "bs_l10_q95",
+    "display_text": "มา",
+    "correct_answer": "くる",
+    "options": ["くる", "いく", "ねる", "みる"],
+    "dialogue": "การเคลื่อนที่จากที่อื่นมายังที่นี่คือข้อไหน?",
+    "explanation": "Kuru (くる) แปลว่า มา"
+  },
+  {
+    "id": "bs_l10_q96",
+    "display_text": "ดู / มอง",
+    "correct_answer": "みる",
+    "options": ["みる", "きく", "ねる", "たべる"],
+    "dialogue": "การใช้สายตามองสิ่งต่างๆ คือข้อไหน?",
+    "explanation": "Miru (みる) แปลว่า ดู หรือ มอง"
+  },
+  {
+    "id": "bs_l10_q97",
+    "display_text": "ฟัง",
+    "correct_answer": "きく",
+    "options": ["きく", "みる", "いく", "のむ"],
+    "dialogue": "การใช้หูรับเสียงต่างๆ คือข้อไหน?",
+    "explanation": "Kiku (きき) แปลว่า ฟัง"
+  },
+  {
+    "id": "bs_l10_q98",
+    "display_text": "ซื้อ",
+    "correct_answer": "かう",
+    "options": ["かう", "いく", "くる", "みる"],
+    "dialogue": "การจ่ายเงินเพื่อแลกกับสิ่งของคือคำว่าอะไร?",
+    "explanation": "Kau (かう) แปลว่า ซื้อ"
+  },
+  {
+    "id": "bs_l10_q99",
+    "display_text": "เดิน",
+    "correct_answer": "あるく",
+    "options": ["あるく", "いく", "くる", "ねる"],
+    "dialogue": "การก้าวเท้าเคลื่อนที่ไปข้างหน้าอย่างช้าๆ คือ?",
+    "explanation": "Aruku (あるく) แปลว่า เดิน"
+  },
+  {
+    "id": "bs_l10_q100",
+    "display_text": "เข้าใจ / รู้",
+    "correct_answer": "わかる",
+    "options": ["わかる", "きく", "みる", "たべる"],
+    "dialogue": "คำที่ใช้บอกว่าเราทราบหรือเข้าใจในสิ่งที่ได้ยินคือ?",
+    "explanation": "Wakaru (わかる) แปลว่า เข้าใจ หรือ รู้"
+  }
+]

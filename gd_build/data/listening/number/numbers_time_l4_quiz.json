@@ -1,0 +1,82 @@
+[
+  {
+    "id": "nt_l4_q1_quiz",
+    "display_text": "何月ですか？",
+    "correct_answer": "4",
+    "options": ["4", "7", "9", "10"],
+    "dialogue": "今は四月です。何月ですか？",
+    "explanation": "Shigatsu (四月) คือ เดือน 4"
+  },
+  {
+    "id": "nt_l4_q2_quiz",
+    "display_text": "何月ですか？",
+    "correct_answer": "11",
+    "options": ["1", "10", "11", "12"],
+    "dialogue": "今は十一月です。何月ですか？",
+    "explanation": "Juuichigatsu (十一月) คือ เดือน 11"
+  },
+  {
+    "id": "nt_l4_q3_quiz",
+    "display_text": "何月ですか？",
+    "correct_answer": "7",
+    "options": ["1", "4", "7", "8"],
+    "dialogue": "今は七月です。何月ですか？",
+    "explanation": "Shichigatsu (七月) คือ เดือน 7"
+  },
+  {
+    "id": "nt_l4_q4_quiz",
+    "display_text": "何月ですか？",
+    "correct_answer": "2",
+    "options": ["2", "12", "3", "5"],
+    "dialogue": "今は二月です。何月ですか？",
+    "explanation": "Nigatsu (二月) คือ เดือน 2"
+  },
+  {
+    "id": "nt_l4_q5_quiz",
+    "display_text": "何月ですか？",
+    "correct_answer": "9",
+    "options": ["7", "8", "9", "10"],
+    "dialogue": "今は九月です。何月ですか？",
+    "explanation": "Kugatsu (九月) คือ เดือน 9"
+  },
+  {
+    "id": "nt_l4_q6_quiz",
+    "display_text": "何月ですか？",
+    "correct_answer": "12",
+    "options": ["2", "11", "12", "1"],
+    "dialogue": "今は十二月です。何月ですか？",
+    "explanation": "Juunigatsu (十二月) คือ เดือน 12"
+  },
+  {
+    "id": "nt_l4_q7_quiz",
+    "display_text": "何月ですか？",
+    "correct_answer": "6",
+    "options": ["5", "6", "8", "9"],
+    "dialogue": "今は六月です。何月ですか？",
+    "explanation": "Rokugatsu (六月) คือ เดือน 6"
+  },
+  {
+    "id": "nt_l4_q8_quiz",
+    "display_text": "何月ですか？",
+    "correct_answer": "1",
+    "options": ["1", "11", "10", "4"],
+    "dialogue": "今は一月です。何月ですか？",
+    "explanation": "Ichigatsu (一月) คือ เดือน 1"
+  },
+  {
+    "id": "nt_l4_q9_quiz",
+    "display_text": "何月ですか？",
+    "correct_answer": "10",
+    "options": ["1", "10", "11", "12"],
+    "dialogue": "今は十月です。何月ですか？",
+    "explanation": "Juugatsu (十月) คือ เดือน 10"
+  },
+  {
+    "id": "nt_l4_q10_quiz",
+    "display_text": "何月ですか？",
+    "correct_answer": "8",
+    "options": ["3", "6", "7", "8"],
+    "dialogue": "今は八月です。何月ですか？",
+    "explanation": "Hachigatsu (八月) คือ เดือน 8"
+  }
+]

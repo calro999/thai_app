@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bs_l5_q41",
+    "display_text": "ตา",
+    "correct_answer": "め",
+    "options": ["め", "て", "は", "け"],
+    "dialogue": "เสียงสั้นๆ ที่ได้ยินนี้หมายถึงอวัยวะที่ใช้มองคือข้อไหน?",
+    "explanation": "Me (め) แปลว่า ตา"
+  },
+  {
+    "id": "bs_l5_q42",
+    "display_text": "หู",
+    "correct_answer": "みみ",
+    "options": ["みみ", "くち", "はな", "かお"],
+    "dialogue": "อวัยวะที่ใช้สำหรับการฟังคือคำไหน?",
+    "explanation": "Mimi (みみ) แปลว่า หู"
+  },
+  {
+    "id": "bs_l5_q43",
+    "display_text": "จมูก",
+    "correct_answer": "はな",
+    "options": ["はな", "くち", "みみ", "あし"],
+    "dialogue": "คำว่า 'จมูก' ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Hana (はな) แปลว่า จมูก (ออกเสียงเหมือนดอกไม้)"
+  },
+  {
+    "id": "bs_l5_q44",
+    "display_text": "ปาก",
+    "correct_answer": "くち",
+    "options": ["くち", "みみ", "め", "て"],
+    "dialogue": "เสียงที่ได้ยินหมายถึงอวัยวะที่ใช้พูดและกินคือ?",
+    "explanation": "Kuchi (くち) แปลว่า ปาก"
+  },
+  {
+    "id": "bs_l5_q45",
+    "display_text": "มือ",
+    "correct_answer": "て",
+    "options": ["て", "め", "あし", "け"],
+    "dialogue": "อวัยวะที่ใช้สำหรับหยิบจับสิ่งของคือข้อไหน?",
+    "explanation": "Te (て) แปลว่า มือ"
+  },
+  {
+    "id": "bs_l5_q46",
+    "display_text": "เท้า / ขา",
+    "correct_answer": "あし",
+    "options": ["あし", "あたま", "かお", "て"],
+    "dialogue": "ส่วนของร่างกายที่ใช้สำหรับเดินและวิ่งคือ?",
+    "explanation": "Ashi (あし) แปลว่า เท้า หรือ ขา"
+  },
+  {
+    "id": "bs_l5_q47",
+    "display_text": "หัว",
+    "correct_answer": "あたま",
+    "options": ["あたま", "あし", "かお", "こころ"],
+    "dialogue": "ส่วนที่อยู่บนสุดของร่างกายคือข้อไหน?",
+    "explanation": "Atama (あたま) แปลว่า หัว"
+  },
+  {
+    "id": "bs_l5_q48",
+    "display_text": "หน้า",
+    "correct_answer": "かお",
+    "options": ["かお", "あたま", "かみ", "みみ"],
+    "dialogue": "คำที่ใช้เรียกใบหน้าทั้งหมดคือข้อไหน?",
+    "explanation": "Kao (かお) แปลว่า หน้า"
+  },
+  {
+    "id": "bs_l5_q49",
+    "display_text": "ผม",
+    "correct_answer": "かみ",
+    "options": ["かみ", "かお", "みみ", "はな"],
+    "dialogue": "สิ่งที่อยู่บนหัวของเราคือข้อไหน?",
+    "explanation": "Kami (かみ) แปลว่า ผม"
+  },
+  {
+    "id": "bs_l5_q50",
+    "display_text": "หัวใจ",
+    "correct_answer": "こころ",
+    "options": ["こころ", "あたま", "かお", "あし"],
+    "dialogue": "คำที่เป็นนามธรรม หมายถึง 'จิตใจ' หรือ 'หัวใจ' คือ?",
+    "explanation": "Kokoro (こころ) แปลว่า หัวใจ หรือ จิตใจ"
+  }
+]

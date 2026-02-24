@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ds_l2_q1_quiz",
+    "display_text": "คำนี้หมายถึงอะไร? (ศูนย์อพยพ)",
+    "correct_answer": "ศูนย์อพยพ",
+    "options": ["ศูนย์อพยพ", "โรงพยาบาล", "โรงเรียน", "บ้าน"],
+    "dialogue": "避難所",
+    "explanation": "Hinanjyo หมายถึง ศูนย์อพยพ"
+  },
+  {
+    "id": "ds_l2_q2_quiz",
+    "display_text": "คำนี้หมายถึงอะไร? (ไฟฉาย)",
+    "correct_answer": "ไฟฉาย",
+    "options": ["ไฟฉาย", "ถ่านไฟฉาย", "ที่ชาร์จ", "ไฟฟ้า"],
+    "dialogue": "懐中電灯",
+    "explanation": "Kaichuudentou หมายถึง ไฟฉาย"
+  },
+  {
+    "id": "ds_l2_q3_quiz",
+    "display_text": "คำนี้หมายถึงอะไร? (ยา)",
+    "correct_answer": "ยา",
+    "options": ["น้ำ", "อาหาร", "ยา", "ผ้าห่ม"],
+    "dialogue": "薬",
+    "explanation": "Kusuri หมายถึง ยา"
+  },
+  {
+    "id": "ds_l2_q4_quiz",
+    "display_text": "คำนี้หมายถึงอะไร? (รองเท้า)",
+    "correct_answer": "รองเท้า",
+    "options": ["รองเท้า", "กระเป๋า", "ผ้าห่ม", "เสื้อผ้า"],
+    "dialogue": "靴",
+    "explanation": "Kutsu หมายถึง รองเท้า"
+  },
+  {
+    "id": "ds_l2_q5_quiz",
+    "display_text": "คำนี้หมายถึงอะไร? (อาหารฉุกเฉิน)",
+    "correct_answer": "อาหารฉุกเฉิน",
+    "options": ["อาหารฉุกเฉิน", "น้ำดื่ม", "ผลไม้", "ยา"],
+    "dialogue": "非常食",
+    "explanation": "Hijyoushoku หมายถึง อาหารฉุกเฉิน"
+  }
+]

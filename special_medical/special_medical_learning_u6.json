@@ -1,0 +1,82 @@
+[
+  {
+    "id": "m6_l51",
+    "display_text": "ยากิน",
+    "correct_answer": "のみぐすり",
+    "options": ["のみぐすり"],
+    "dialogue": "ยาสำหรับรับประทาน ไม่ว่าจะเป็นชนิดน้ำหรือเม็ด",
+    "explanation": "Nomigusuri (のみぐすり) = ยากิน"
+  },
+  {
+    "id": "m6_l52",
+    "display_text": "ยาทา",
+    "correct_answer": "ぬりぐすり",
+    "options": ["ぬりぐすり"],
+    "dialogue": "ยาใช้ภายนอกประเภทครีมหรือขี้ผึ้ง สำหรับทาผิวหนัง",
+    "explanation": "Nurigusuri (ぬりぐすり) = ยาทา"
+  },
+  {
+    "id": "m6_l53",
+    "display_text": "ยาแปะ / แผ่นแปะแก้ปวด",
+    "correct_answer": "はりぐすり",
+    "options": ["はりぐすり"],
+    "dialogue": "แผ่นแปะบรรเทาปวด (กอเอี๊ยะ/ชิปปุ) ที่คนไทยชอบซื้อเป็นของฝาก",
+    "explanation": "Harigusuri (はりぐすり) = ยาแปะ / แผ่นแปะ"
+  },
+  {
+    "id": "m6_l54",
+    "display_text": "ยาหยอดตา",
+    "correct_answer": "めぐすり",
+    "options": ["めぐすり"],
+    "dialogue": "ใช้เมื่อตาแห้งหรือระคายเคืองตา สินค้ายอดฮิตในดรักสโตร์ญี่ปุ่น",
+    "explanation": "Megusuri (めぐすり) = ยาหยอดตา"
+  },
+  {
+    "id": "m6_l55",
+    "display_text": "ยาผง",
+    "correct_answer": "こなぐすり",
+    "options": ["こなぐすり"],
+    "dialogue": "ยาที่มีลักษณะเป็นผงละเอียด มักมาเป็นซองเล็กๆ",
+    "explanation": "Konagusuri (こなぐすり) = ยาผง"
+  },
+  {
+    "id": "m6_l56",
+    "display_text": "ยาเม็ด",
+    "correct_answer": "じょうざい",
+    "options": ["じょうざい"],
+    "dialogue": "ยาชนิดเม็ดที่กลืนง่าย พบได้บ่อยที่สุด",
+    "explanation": "Jouzai (じょうざい) = ยาเม็ด / ยาแท็บเล็ต"
+  },
+  {
+    "id": "m6_l57",
+    "display_text": "ก่อนอาหาร",
+    "correct_answer": "しょくぜん",
+    "options": ["しょくぜん"],
+    "dialogue": "ให้ทานยาก่อนเริ่มรับประทานอาหารประมาณ 30 นาที",
+    "explanation": "Shokuzen (しょくぜん) = ก่อนอาหาร"
+  },
+  {
+    "id": "m6_l58",
+    "display_text": "หลังอาหาร",
+    "correct_answer": "しょくご",
+    "options": ["しょくご"],
+    "dialogue": "ให้ทานยาหลังรับประทานอาหารเสร็จทันทีหรือภายใน 30 นาที",
+    "explanation": "Shokugo (しょくご) = หลังอาหาร"
+  },
+  {
+    "id": "m6_l59",
+    "display_text": "ก่อนนอน",
+    "correct_answer": "ねるまえ",
+    "options": ["ねるまえ"],
+    "dialogue": "ให้ทานยาก่อนที่จะเข้านอน เพื่อให้ยาออกฤทธิ์ขณะหลับ",
+    "explanation": "Nerumae (ねるまえ) = ก่อนนอน"
+  },
+  {
+    "id": "m6_l60",
+    "display_text": "กะทันหัน / จู่ๆ ก็...",
+    "correct_answer": "きゅうに",
+    "options": ["きゅうに"],
+    "dialogue": "ใช้บอกว่าอาการเจ็บป่วยนี้เกิดขึ้นอย่างรวดเร็วโดยไม่ทันตั้งตัว",
+    "explanation": "Kyuu ni (きゅうに) = กะทันหัน / อย่างรวดเร็ว"
+  }
+]

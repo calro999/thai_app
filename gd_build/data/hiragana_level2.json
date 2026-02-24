@@ -1,0 +1,92 @@
+[
+  {
+    "id": "h2_q1",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'เกลือ' พูดว่าอะไรนะ?",
+    "display_text": "○ お",
+    "correct_answer": "し",
+    "options": ["し", "さ", "す", "せ"],
+    "thai_hint": "ตัวอักษรที่ 2 ของแถว さ"
+  },
+  {
+    "id": "h2_q2",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ปลา' พูดว่าอะไรนะ?",
+    "display_text": "○ かな",
+    "correct_answer": "さ",
+    "options": ["さ", "し", "す", "せ"],
+    "thai_hint": "ตัวอักษรแรกสุดของแถว さ"
+  },
+  {
+    "id": "h2_q3",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ซูชิ' พูดว่าอะไรนะ?",
+    "display_text": "○ し",
+    "correct_answer": "す",
+    "options": ["す", "さ", "し", "せ"],
+    "thai_hint": "ตัวอักษรที่ 3 ของแถว さ"
+  },
+  {
+    "id": "h2_q4",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'โลก' พูดว่าอะไรนะ?",
+    "display_text": "○ かい",
+    "correct_answer": "せ",
+    "options": ["せ", "さ", "し", "す"],
+    "thai_hint": "ตัวอักษรที่ 4 ของแถว さ"
+  },
+  {
+    "id": "h2_q5",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ข้างนอก' พูดว่าอะไรนะ?",
+    "display_text": "○ と",
+    "correct_answer": "そ",
+    "options": ["そ", "さ", "し", "す"],
+    "thai_hint": "ตัวอักษรที่ 5 ของแถว さ"
+  },
+  {
+    "id": "h2_q6",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'มือ' พูดว่าอะไรนะ?",
+    "display_text": "○",
+    "correct_answer": "て",
+    "options": ["て", "た", "ち", "つ"],
+    "thai_hint": "ตัวอักษรที่ 4 ของแถว た"
+  },
+  {
+    "id": "h2_q7",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ใต้ดิน' พูดว่าอะไรนะ?",
+    "display_text": "○ か",
+    "correct_answer": "ち",
+    "options": ["ち", "た", "つ", "て"],
+    "thai_hint": "ตัวอักษรที่ 2 ของแถว た"
+  },
+  {
+    "id": "h2_q8",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ตะเกียบ' พูดว่าอะไรนะ?",
+    "display_text": "○ し",
+    "correct_answer": "は",
+    "options": ["は", "ひ", "ふ", "へ"],
+    "thai_hint": "ตัวอักษรที่ 1 ของแถว は (ทบทวนแถวใหม่ล่วงหน้า)"
+  },
+  {
+    "id": "h2_q9",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ปลาหมึก' พูดว่าอะไรนะ?",
+    "display_text": "い ○",
+    "correct_answer": "か",
+    "options": ["か", "さ", "た", "な"],
+    "thai_hint": "ตัวอักษรแรกของแถว か"
+  },
+  {
+    "id": "h2_q10",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ฤดู' พูดว่าอะไรนะ?",
+    "display_text": "○ き",
+    "correct_answer": "つ",
+    "options": ["つ", "た", "ち", "て"],
+    "thai_hint": "ตัวอักษรที่ 3 ของแถว た"
+  }
+]

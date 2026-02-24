@@ -1,0 +1,92 @@
+[
+  {
+    "id": "h1_q1",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'สีน้ำเงิน' (Blue) พูดว่าอะไรนะ?",
+    "display_text": "○ お",
+    "correct_answer": "あ",
+    "options": ["あ", "い", "う", "え"],
+    "thai_hint": "ตัวอักษรแรกสุดของแถว あ"
+  },
+  {
+    "id": "h1_q2",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'บ้าน' (House) พูดว่าอะไรนะ?",
+    "display_text": "○ え",
+    "correct_answer": "い",
+    "options": ["い", "う", "か", "け"],
+    "thai_hint": "ตัวอักษรที่ 2 ของแถว あ"
+  },
+  {
+    "id": "h1_q3",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'หอย' (Shell) พูดว่าอะไรนะ?",
+    "display_text": "○ い",
+    "correct_answer": "か",
+    "options": ["か", "き", "く", "こ"],
+    "thai_hint": "ตัวอักษรแรกของแถว か"
+  },
+  {
+    "id": "h1_q4",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ข้างบน' (Up) พูดว่าอะไรนะ?",
+    "display_text": "○ え",
+    "correct_answer": "う",
+    "options": ["う", "あ", "い", "お"],
+    "thai_hint": "ตัวอักษรที่ 3 ของแถว あ"
+  },
+  {
+    "id": "h1_q5",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'เสียง' (Voice) พูดว่าอะไรนะ?",
+    "display_text": "○ え",
+    "correct_answer": "こ",
+    "options": ["こ", "け", "く", "き"],
+    "thai_hint": "ตัวอักษรที่ 5 ของแถว か"
+  },
+  {
+    "id": "h1_q6",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ที่นั่น' (Over there) พูดว่าอะไรนะ?",
+    "display_text": "あそ ○",
+    "correct_answer": "こ",
+    "options": ["こ", "か", "き", "く"],
+    "thai_hint": "ตัวอักษรสุดท้ายของแถว か"
+  },
+  {
+    "id": "h1_q7",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ปลาหมึก' (Squid) พูดว่าอะไรนะ?",
+    "display_text": "い ○",
+    "correct_answer": "か",
+    "options": ["か", "き", "く", "け"],
+    "thai_hint": "ตัวอักษรแรกของแถว か"
+  },
+  {
+    "id": "h1_q8",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'สถานี' (Station) พูดว่าอะไรนะ?",
+    "display_text": "○ き",
+    "correct_answer": "え",
+    "options": ["え", "あ", "い", "う"],
+    "thai_hint": "ตัวอักษรที่ 4 ของแถว あ"
+  },
+  {
+    "id": "h1_q9",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ความรัก' (Love) พูดว่าอะไรนะ?",
+    "display_text": "あ ○",
+    "correct_answer": "い",
+    "options": ["い", "う", "え", "お"],
+    "thai_hint": "ตัวอักษรที่ 2 ของแถว あ"
+  },
+  {
+    "id": "h1_q10",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ใบหน้า' (Face) พูดว่าอะไรนะ?",
+    "display_text": "○ お",
+    "correct_answer": "か",
+    "options": ["か", "き", "く", "け"],
+    "thai_hint": "ตัวอักษรแรกของแถว か"
+  }
+]

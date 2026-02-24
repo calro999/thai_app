@@ -1,0 +1,82 @@
+[
+  {
+    "id": "dl_l8_q71",
+    "display_text": "ฝน",
+    "correct_answer": "あめ",
+    "options": ["あめ", "ゆき", "かぜ", "はれ"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'ฝน' คือคำไหน?",
+    "explanation": "Ame (あめ) แปลว่า ฝน"
+  },
+  {
+    "id": "dl_l8_q72",
+    "display_text": "หิมะ",
+    "correct_answer": "ゆき",
+    "options": ["ゆき", "あめ", "くも", "はれ"],
+    "dialogue": "สิ่งที่ตกลงมาเป็นสีขาวเย็นๆ ในฤดูหนาวคือ?",
+    "explanation": "Yuki (ゆき) แปลว่า หิมะ"
+  },
+  {
+    "id": "dl_l8_q73",
+    "display_text": "แดดออก / ฟ้าใส",
+    "correct_answer": "はれ",
+    "options": ["はれ", "あめ", "くもり", "ゆき"],
+    "dialogue": "วันที่อากาศแจ่มใส แดดออก เรียกว่าอะไร?",
+    "explanation": "Hare (はれ) แปลว่า แดดออก หรือ ฟ้าใส"
+  },
+  {
+    "id": "dl_l8_q74",
+    "display_text": "มีเมฆมาก",
+    "correct_answer": "くもり",
+    "options": ["くもり", "はれ", "あめ", "かぜ"],
+    "dialogue": "วันที่ท้องฟ้ามืดครึ้มเพราะมีเมฆมากคือข้อไหน?",
+    "explanation": "Kumori (くもり) แปลว่า มีเมฆมาก"
+  },
+  {
+    "id": "dl_l8_q75",
+    "display_text": "ลม",
+    "correct_answer": "かぜ",
+    "options": ["かぜ", "あめ", "そら", "き"],
+    "dialogue": "สิ่งที่พัดมาแล้วทำให้รู้สึกเย็นสบายหรือหนาวคือ?",
+    "explanation": "Kaze (かぜ) แปลว่า ลม"
+  },
+  {
+    "id": "dl_l8_q76",
+    "display_text": "ร่ม",
+    "correct_answer": "かさ",
+    "options": ["かさ", "くつ", "かばん", "ふく"],
+    "dialogue": "อุปกรณ์ที่ต้องพกไปเมื่อฝนตกคือข้อไหน?",
+    "explanation": "Kasa (かさ) แปลว่า ร่ม"
+  },
+  {
+    "id": "dl_l8_q77",
+    "display_text": "ท้องฟ้า",
+    "correct_answer": "そら",
+    "options": ["そら", "うみ", "やま", "はな"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'ท้องฟ้า' คือคำไหน?",
+    "explanation": "Sora (そら) แปลว่า ท้องฟ้า"
+  },
+  {
+    "id": "dl_l8_q78",
+    "display_text": "พยากรณ์อากาศ",
+    "correct_answer": "てんきよほう",
+    "options": ["てんきよほう", "ニュース", "てれび", "しんぶん"],
+    "dialogue": "การเช็คว่าพรุ่งนี้ฝนจะตกไหม เรียกว่าอะไร?",
+    "explanation": "Tenki yohou (てんきよほう) แปลว่า พยากรณ์อากาศ"
+  },
+  {
+    "id": "dl_l8_q79",
+    "display_text": "ฝนตก",
+    "correct_answer": "あめがふる",
+    "options": ["あめがふる", "ゆきがふる", "かぜがふく", "はれる"],
+    "dialogue": "ประโยคที่บอกว่า 'ฝนตก' คือข้อไหน?",
+    "explanation": "Ame ga furu (あめがふる) แปลว่า ฝนตก"
+  },
+  {
+    "id": "dl_l8_q80",
+    "display_text": "อากาศดี",
+    "correct_answer": "いいてんき",
+    "options": ["いいてんき", "あついです", "さむいです", "わるいてんき"],
+    "dialogue": "คำชมว่าวันนี้ 'อากาศดีจัง' คือประโยคไหน?",
+    "explanation": "Ii tenki (いいてんき) แปลว่า อากาศดี"
+  }
+]

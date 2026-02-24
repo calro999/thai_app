@@ -1,0 +1,82 @@
+[
+  {
+    "id": "f1_l1",
+    "display_text": "เกลือ",
+    "correct_answer": "しお",
+    "options": ["しお"],
+    "dialogue": "รสชาติพื้นฐานที่สุดของอาหารญี่ปุ่น ถ้าไม่อยากกินรสจัดต้องสั่งแบบนี้",
+    "explanation": "Shio (しお) = เกลือ / รสเกลือ"
+  },
+  {
+    "id": "f1_l2",
+    "display_text": "โชยุ",
+    "correct_answer": "しょうゆ",
+    "options": ["しょうゆ"],
+    "dialogue": "ซอสถั่วเหลืองญี่ปุ่นที่ขาดไม่ได้ ไม่ว่าจะกินซูชิหรือราเมง",
+    "explanation": "Shouyu (しょうゆ) = โชยุ / ซอสถั่วเหลือง"
+  },
+  {
+    "id": "f1_l3",
+    "display_text": "มิโซะ",
+    "correct_answer": "みそ",
+    "options": ["みそ"],
+    "dialogue": "ถั่วหมักญี่ปุ่นที่ใช้ทำซุปหรือปรุงรสอาหารให้กลมกล่อม",
+    "explanation": "Miso (みそ) = มิโซะ / เต้าเจี้ยวญี่ปุ่น"
+  },
+  {
+    "id": "f1_l4",
+    "display_text": "ซอส / ทาริ",
+    "correct_answer": "たれ",
+    "options": ["たれ"],
+    "dialogue": "ซอสรสเข้มข้นที่มักใช้ทาบนของย่างเช่น ยากิโทริ หรือ ข้าวหน้าปลาไหล",
+    "explanation": "Tare (たれ) = ซอสปรุงรสเข้มข้น"
+  },
+  {
+    "id": "f1_l5",
+    "display_text": "หวาน",
+    "correct_answer": "あまい",
+    "options": ["あまい"],
+    "dialogue": "ใช้บอกรสชาติอาหารหรือขนมที่ถูกปากสายหวาน",
+    "explanation": "Amai (あまい) = หวาน"
+  },
+  {
+    "id": "f1_l6",
+    "display_text": "เปรี้ยว",
+    "correct_answer": "すっぱい",
+    "options": ["すっぱい"],
+    "dialogue": "รสชาติของบ๊วยดองหรือน้ำส้มสายชูในข้าวซูชิ",
+    "explanation": "Suppai (すっぱい) = เปรี้ยว"
+  },
+  {
+    "id": "f1_l7",
+    "display_text": "ขม",
+    "correct_answer": "にがい",
+    "options": ["にがい"],
+    "dialogue": "รสชาติของผักบางชนิดหรือมัทฉะแท้ๆ",
+    "explanation": "Nigai (にがい) = ขม"
+  },
+  {
+    "id": "f1_l8",
+    "display_text": "เค็ม",
+    "correct_answer": "しょっぱい",
+    "options": ["しょっぱい"],
+    "dialogue": "ถ้ากินราเมงแล้วรู้สึกว่ารสจัดเกินไป ให้ใช้คำนี้บอกคนญี่ปุ่นได้",
+    "explanation": "Shoppai (しょっぱい) = เค็ม"
+  },
+  {
+    "id": "f1_l9",
+    "display_text": "รสจัด / รสเข้ม",
+    "correct_answer": "こい",
+    "options": ["こい"],
+    "dialogue": "ใช้บอกเมื่อต้องการรสชาติที่เข้มข้นกว่าปกติ เช่น น้ำซุปราเมง",
+    "explanation": "Koi (こい) = เข้มข้น / รสจัด"
+  },
+  {
+    "id": "f1_l10",
+    "display_text": "รสอ่อน / รสจาง",
+    "correct_answer": "うすい",
+    "options": ["うすい"],
+    "dialogue": "ใช้บอกเมื่ออาหารรสชาติจืดไป หรือต้องการน้ำซุปที่ใสและเบากว่า",
+    "explanation": "Usui (うすい) = จาง / อ่อน / จืด"
+  }
+]

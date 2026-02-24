@@ -1,0 +1,666 @@
+/**
+ * JLPT Visual Novel Engine - Oshikatsu & Reward Ad Update
+ */
+
+const APP_CONFIG = {
+    mode: 'DIRECT',
+    oshikatsuUnlockPoints: 50,
+    outfitUnlockPoints: 30,
+    oshikatsuLink: 'https://buy.stripe.com/test_28E6oG1MA15m2tveZI9sk05'
+};
+
+const config = {
+    imgDir: 'images/',
+    reactionTime: 3000,
+    questionsPerStory: 10,
+    outfits: [
+        { id: 'default', name: 'Default', price: 'Free', thumbnail: 'images/normal.png', link: '#' },
+        { id: 'yukata', name: 'Yukata', price: 'THB 100', thumbnail: 'images/yukata/yukata-nikkori.png', link: 'https://buy.stripe.com/test_eVq8wO3UI6pGd899Fo9sk01' },
+        { id: 'gos', name: 'Gos', price: 'THB 100', thumbnail: 'images/gos/gos_0000_normal.png', link: 'https://buy.stripe.com/test_7sYaEWdviaFW7NP3h09sk02' },
+        { id: 'maid', name: 'Maid', price: 'THB 100', thumbnail: 'images/maid/maid_0000_normal.png', link: 'https://buy.stripe.com/test_fZu3cu4YMeWc0lncRA9sk03' },
+        { id: 'miko', name: 'Miko', price: 'THB 100', thumbnail: 'images/miko/miko_0000_normal.png', link: 'https://buy.stripe.com/test_9B6aEWezmbK09VX3h09sk04' }
+    ]
+};
+
+const state = {
+    isAnimating: false,
+    selectedLevel: null,
+    selectedStoryNum: 1,
+    masterData: [],
+    storyData: [],
+    storyStep: 0,
+    currentQuestion: null,
+    correctCount: 0,
+    consecutiveCorrect: 0,
+    consecutiveIncorrect: 0,
+    lastIncorrectState: 'odoroki',
+    isReviewMode: false,
+    gameMode: 'quiz', // 'learning' or 'quiz'
+    characterState: 'normal',
+    characterAnimationId: null,
+    ttsRate: parseFloat(localStorage.getItem('ttsRate')) || 0.8,
+
+    // Lock/Unlock System
+    adPoints: parseInt(localStorage.getItem('ad_points') || '0'),
+    unlockedCourses: JSON.parse(localStorage.getItem('unlocked_courses') || '["hiragana", "katakana", "n5", "n4", "n3"]'),
+
+    // Outfit States
+    selectedCharacter: localStorage.getItem('selectedCharacter') || 'default',
+    unlockedOutfits: JSON.parse(localStorage.getItem('unlocked_outfits') || '["default"]'),
+    previewIndex: 0,
+    unlockPendingItem: null // To track which item is being unlocked in modal
+};
+
+const characterAssets = {
+    gos: { normal: 'gos_0000_normal.png', nikkori: 'gos_0001_nikkori.png', good: 'gos_0002_good.png', naku: 'gos_0003_naku.png', hart: 'gos_0004_hart.png', neko: 'gos_0005_neko.png', tere: 'gos_0006_tere.png', odoroki: 'gos_0007_odoroki.png', zannen: 'gos_0007_odoroki.png' },
+    maid: { normal: 'maid_0000_normal.png', nikkori: 'maid_0001_nikkori.png', good: 'maid_0002_good.png', zannen: 'maid_0003_zannen.png', naku: 'maid_0004_naku.png', hart: 'maid_0008_hart.png', odoroki: 'maid_0009_odoroki.png', tere: 'maid_0006_tere.png', neko: 'maid_0007_neko.png' },
+    miko: { normal: 'miko_0000_normal.png', nikkori: 'miko_0001_nikkori.png', good: 'miko_0002_good.png', hart: 'miko_0003_hart.png', odoroki: 'miko_0004_odoroki.png', zannen: 'miko_0005_zannen.png', naku: 'miko_0006_naku.png', tere: 'miko_0007_tere.png', neko: 'miko_0008_neko.png' },
+    yukata: { normal: 'yukata-nikkori.png', nikkori: 'yukata-nikkori.png', good: 'yukata-good.png', hart: 'yukata-hart.png', odoroki: 'yukata-odoroki.png', zannen: 'yukata-zannen.png', naku: 'yukata-naku.png', tere: 'yukata-tere.png', neko: 'yukata-neko.png' }
+};
+
+/** Initialize */
+window.onload = () => {
+    const params = new URLSearchParams(window.location.search);
+    const itemId = params.get('item_id');
+    const status = params.get('status');
+
+    if (itemId && status === 'success') {
+        if (itemId === 'oshikatsu') {
+            unlockCourse('oshikatsu', true);
+        } else {
+            const outfit = config.outfits.find(o => o.id === itemId);
+            if (outfit && !state.unlockedOutfits.includes(itemId)) {
+                state.unlockedOutfits.push(itemId);
+                localStorage.setItem('unlocked_outfits', JSON.stringify(state.unlockedOutfits));
+                state.selectedCharacter = itemId;
+                localStorage.setItem('selectedCharacter', itemId);
+                alert(`ปลดล็อกชุด ${outfit.name} เรียบร้อยแล้วค่ะ!`);
+            }
+        }
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+    if (document.getElementById('settings-btn')) document.getElementById('settings-btn').onclick = openSettings;
+    const ttsRange = document.getElementById('tts-rate-range');
+    if (ttsRange) {
+        ttsRange.value = state.ttsRate;
+        ttsRange.oninput = (e) => {
+            state.ttsRate = parseFloat(e.target.value);
+            document.getElementById('tts-rate-value').innerText = state.ttsRate.toFixed(1);
+            localStorage.setItem('ttsRate', state.ttsRate);
+        };
+    }
+    startCharacterAnimation();
+    setCharacterState('normal');
+};
+
+/** Course & Level Selection */
+function isCourseUnlocked(id) {
+    return state.unlockedCourses.includes(id);
+}
+
+function selectCourse(id) {
+    if (isCourseUnlocked(id)) {
+        openSubModeSelect(id);
+    } else {
+        openUnlockModal(id, 'course');
+    }
+}
+
+function openUnlockModal(id, type) {
+    state.unlockPendingItem = { id, type };
+    document.getElementById('unlock-modal').style.display = 'flex';
+    document.getElementById('current-points').innerText = state.adPoints;
+
+    const required = (id === 'oshikatsu') ? APP_CONFIG.oshikatsuUnlockPoints : APP_CONFIG.outfitUnlockPoints;
+    document.getElementById('required-points').innerText = required;
+
+    const useBtn = document.getElementById('use-points-btn');
+    if (state.adPoints >= required) {
+        useBtn.disabled = false;
+        useBtn.innerText = `ใช้ ${required} แต้มเพื่อปลดล็อก (Unlock Now)`;
+        useBtn.classList.add('highlight');
+    } else {
+        useBtn.disabled = true;
+        useBtn.innerText = `แต้มไม่พอ (Need ${required} pts)`;
+        useBtn.classList.remove('highlight');
+    }
+}
+
+function closeUnlockModal() {
+    document.getElementById('unlock-modal').style.display = 'none';
+}
+
+function unlockWithPoints() {
+    const { id, type } = state.unlockPendingItem;
+    const required = (id === 'oshikatsu') ? APP_CONFIG.oshikatsuUnlockPoints : APP_CONFIG.outfitUnlockPoints;
+
+    if (state.adPoints >= required) {
+        state.adPoints -= required;
+        localStorage.setItem('ad_points', state.adPoints);
+
+        if (type === 'course') {
+            unlockCourse(id, true);
+        } else if (type === 'outfit') {
+            unlockOutfit(id, true);
+        }
+        closeUnlockModal();
+    }
+}
+
+function purchaseItemDirect() {
+    const { id, type } = state.unlockPendingItem;
+    if (id === 'oshikatsu') {
+        window.open(APP_CONFIG.oshikatsuLink, '_blank');
+    } else {
+        const outfit = config.outfits.find(o => o.id === id);
+        if (outfit) window.open(outfit.link, '_blank');
+    }
+    alert("หลังจากชำระเงินเรียบร้อย กรุณาใช้ลิงก์ย้อนกลับที่มีพารามิเตอร์ success ค่ะ");
+}
+
+function watchAdForPoints() {
+    showRewardAd(() => {
+        state.adPoints += 5;
+        localStorage.setItem('ad_points', state.adPoints);
+        document.getElementById('current-points').innerText = state.adPoints;
+        // Refresh modal button state
+        openUnlockModal(state.unlockPendingItem.id, state.unlockPendingItem.type);
+    });
+}
+
+function showRewardAd(callback) {
+    alert("กำลังโหลดโฆษณา... (GameDistribution/Azerion Mock)");
+    setTimeout(() => {
+        alert("ดูโฆษณาจบแล้ว! ได้รับ 5 แต้มสะสม");
+        callback();
+    }, 2000);
+}
+
+function unlockCourse(id, showAlert) {
+    if (!state.unlockedCourses.includes(id)) {
+        state.unlockedCourses.push(id);
+        localStorage.setItem('unlocked_courses', JSON.stringify(state.unlockedCourses));
+    }
+    if (showAlert) alert(`ปลดล็อกคอร์ส ${id} เรียบร้อยแล้วค่ะ!`);
+    openModeSelect();
+}
+
+function unlockOutfit(id, showAlert) {
+    if (!state.unlockedOutfits.includes(id)) {
+        state.unlockedOutfits.push(id);
+        localStorage.setItem('unlocked_outfits', JSON.stringify(state.unlockedOutfits));
+    }
+    if (showAlert) alert(`ปลดล็อกชุดเรียบร้อยแล้วค่ะ!`);
+    updateShopUI();
+}
+
+const courseConfig = {
+    hiragana: { name: 'Hiragana', price: 'Free', points: 0 },
+    katakana: { name: 'Katakana', price: 'Free', points: 0 },
+    n5: { name: 'JLPT N5', price: 'Free', points: 0 },
+    n4: { name: 'JLPT N4', price: 'Free', points: 0 },
+    n3: { name: 'JLPT N3', price: 'Free', points: 0 },
+    oshikatsu: { name: 'กิจกรรมของโอตาคุ', price: 'THB 100', points: 50 }
+};
+
+const oshikatsuUnitInfo = {
+    1: { title: "ชมความงามของเมน (พื้นฐาน)" },
+    2: { title: "บอกความรู้สึกจากใจ (อารมณ์)" },
+    3: { title: "คำชมระดับเทพ (ขั้นสูง)" },
+    4: { title: "ศัพท์ฮิตใน SNS และอนิเมะ" },
+    5: { title: "ประโยคใช้จริงในคอนเสิร์ต" }
+};
+
+/** Course & Level Selection */
+function isCourseUnlocked(id) {
+    return state.unlockedCourses.includes(id);
+}
+
+function selectCourse(id) {
+    if (isCourseUnlocked(id)) {
+        if (id === 'oshikatsu') {
+            state.selectedLevel = id;
+            document.getElementById('mode-selection').style.display = 'none';
+            document.getElementById('sub-selection').style.display = 'flex'; // show learning/quiz
+        } else {
+            state.selectedLevel = id;
+            state.gameMode = 'story';
+            document.getElementById('mode-selection').style.display = 'none';
+            openStorySelect(id);
+        }
+    } else {
+        if (id === 'oshikatsu') {
+            openOshikatsuSalesBox();
+        } else {
+            // Unlock modal handles both purchase and points
+            openUnlockModal(id, 'course');
+        }
+    }
+}
+
+function openOshikatsuSalesBox() {
+    document.getElementById('oshikatsu-sales-box').style.display = 'flex';
+}
+
+function closeOshikatsuSalesBox() {
+    document.getElementById('oshikatsu-sales-box').style.display = 'none';
+}
+
+function openModeSelect() {
+    stopAllSpeech();
+    stopCharacterAnimation();
+    document.getElementById('mode-selection').style.display = 'flex';
+    document.getElementById('lobby-ui').style.visibility = 'hidden';
+
+    // Update all course buttons dynamically
+    const grid = document.querySelector('#mode-selection .mode-grid');
+    grid.innerHTML = ""; // Clear existing hardcoded buttons
+
+    const courses = ['hiragana', 'katakana', 'n5', 'n4', 'n3', 'oshikatsu'];
+    courses.forEach(id => {
+        const info = courseConfig[id];
+        const unlocked = isCourseUnlocked(id);
+        const btn = document.createElement('button');
+        btn.className = 'mode-btn';
+        if (unlocked) btn.classList.add('highlight');
+
+        let label = info.name;
+        if (!unlocked) {
+            // Force key and price display for locked courses
+            label = `🔑 ${info.name}<br><small>(${info.price})</small>`;
+        }
+
+        btn.innerHTML = label;
+        if (id === 'oshikatsu') {
+            btn.style.gridColumn = "span 2";
+            btn.style.borderColor = "#FF80AB";
+            btn.style.color = "#D81B60";
+            btn.style.background = unlocked ? "#FCE4EC" : "white";
+            if (!unlocked) {
+                btn.innerHTML = `🔑 กิจกรรมของโอตาคุ<br><small>(THB 100)</small>`;
+            } else {
+                btn.innerHTML = "กิจกรรมของโอตาคุ (Oshikatsu)";
+            }
+        }
+        btn.onclick = () => selectCourse(id);
+        grid.appendChild(btn);
+    });
+
+    // Add Shop Button at the bottom
+    const shopBtn = document.createElement('button');
+    shopBtn.className = 'mode-btn highlight';
+    shopBtn.style.gridColumn = "span 2";
+    shopBtn.style.marginTop = "10px";
+    shopBtn.style.background = "#FFF9C4";
+    shopBtn.innerHTML = "🛍️ ไปที่ร้าค้า (Outfit Shop)";
+    shopBtn.onclick = () => { closeModeSelect(); openShop(); };
+    grid.appendChild(shopBtn);
+
+    const cancelBtn = document.createElement('button');
+    cancelBtn.className = 'mode-btn cancel';
+    cancelBtn.style.gridColumn = "span 2";
+    cancelBtn.innerText = "ยกเลิก (Cancel)";
+    cancelBtn.onclick = closeModeSelect;
+    grid.appendChild(cancelBtn);
+}
+
+function closeModeSelect() {
+    document.getElementById('mode-selection').style.display = 'none';
+    document.getElementById('lobby-ui').style.visibility = 'visible';
+}
+
+function openSubModeSelect(level) {
+    state.selectedLevel = level;
+    document.getElementById('mode-selection').style.display = 'none';
+    document.getElementById('sub-selection').style.display = 'flex';
+}
+
+function setGameMode(mode) {
+    state.gameMode = mode;
+    document.getElementById('sub-selection').style.display = 'none';
+    openStorySelect(state.selectedLevel);
+}
+
+function openStorySelect(level) {
+    document.getElementById('story-selection').style.display = 'flex';
+    document.getElementById('story-level-title').innerText = level.toUpperCase();
+    const container = document.getElementById('story-list-container');
+    container.innerHTML = "";
+
+    let count = 10;
+    if (level === 'oshikatsu') count = 5;
+    if (['n5', 'n4', 'n3'].includes(level)) count = 20;
+
+    for (let i = 1; i <= count; i++) {
+        const score = localStorage.getItem(`score_${level}_${state.gameMode}_u${i}`);
+        const btn = document.createElement('button');
+        btn.className = 'story-btn';
+
+        let maxScore = 5;
+        if (level === 'oshikatsu') maxScore = 10;
+
+        if (score >= maxScore) btn.classList.add('perfect');
+
+        if (level === 'oshikatsu') {
+            btn.style.gridColumn = "span 5";
+            btn.style.width = "100%";
+            btn.style.aspectRatio = "auto";
+            btn.style.padding = "15px";
+            btn.style.marginBottom = "5px";
+            btn.innerHTML = `
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="unit-title" style="font-size:0.95rem; font-weight:bold;">${oshikatsuUnitInfo[i].title}</span>
+                    <span class="score" style="background:white; padding:4px 10px; border-radius:12px; font-weight:bold; color:#D81B60;">
+                        ${score !== null ? score + '/' + maxScore : '-'}
+                    </span>
+                </div>
+            `;
+        } else {
+            btn.innerHTML = `<span class="num">${i}</span><span class="score">${score !== null ? score + '/' + maxScore : '-'}</span>`;
+        }
+
+        btn.onclick = () => { closeStorySelect(); startUnit(level, i); };
+        container.appendChild(btn);
+    }
+}
+
+function closeStorySelect() { document.getElementById('story-selection').style.display = 'none'; }
+
+/** Game Core */
+async function startUnit(level, unitNum) {
+    state.selectedStoryNum = unitNum;
+    state.storyStep = 0; state.correctCount = 0;
+
+    let path = "";
+    const padNum = String(unitNum).padStart(2, '0');
+
+    if (level === 'oshikatsu') {
+        path = `special_oshikatsu/${level}_${state.gameMode}_u${unitNum}.json`;
+    } else if (level === 'hiragana' || level === 'katakana') {
+        path = `${level}_level${unitNum}.json`;
+    } else {
+        path = `story_${level}_${padNum}.json`;
+    }
+
+    try {
+        if (level !== 'oshikatsu') {
+            let masterFile = (level === 'hiragana' || level === 'katakana') ? `${level}_alphabet.json` : `${level}.json`;
+            const mRes = await fetch(masterFile);
+            state.masterData = await mRes.json();
+            state.selectedLevel = level;
+        }
+
+        const res = await fetch(path);
+        if (!res.ok) throw new Error("File not found");
+        state.storyData = await res.json();
+
+        showProgressBar(state.storyData.length);
+        document.getElementById('lobby-ui').style.visibility = 'visible';
+        document.getElementById('main-action').style.display = 'none';
+        document.getElementById('answer-grid').style.display = 'grid';
+        loadScene();
+    } catch (e) {
+        console.error(e);
+        alert("ขออภัย ไม่พบไฟล์ข้อมูลของบทเรียนนี้ค่ะ");
+        openModeSelect();
+    }
+}
+
+function loadScene() {
+    const step = state.storyData[state.storyStep];
+    const diag = document.getElementById('dialogue-text');
+    const grid = document.getElementById('answer-grid');
+    grid.innerHTML = "";
+
+    // Update Progress UI
+    const progressText = document.getElementById('progress-text');
+    if (progressText) progressText.innerText = `${state.storyStep + 1}/${state.storyData.length}`;
+
+    if (state.selectedLevel === 'oshikatsu') {
+        diag.innerHTML = `Unit ${state.selectedStoryNum} - ${state.gameMode.toUpperCase()}<br>${step.dialogue}<br><br><b style="font-size:1.4rem;">${step.display_text}</b>`;
+
+        speakThai(step.dialogue);
+        setTimeout(() => speakJapanese(step.display_text), 2000);
+
+        const choices = state.gameMode === 'learning' ? [step.correct_answer] : shuffleArray([...step.options]);
+        choices.forEach(c => {
+            const b = document.createElement('button');
+            b.className = 'mode-btn highlight';
+            b.innerText = c;
+            b.onclick = () => checkAnswer(c, step);
+            grid.appendChild(b);
+        });
+    } else {
+        diag.innerHTML = `<b>${step.speaker_th}</b><br>${step.question_th}`;
+        speakThai(step.speaker_th);
+
+        const targetWord = state.masterData.find(w => w.id === step.target_id);
+
+        // Generate options (1 correct, 3 random incorrect)
+        let options = [targetWord];
+        let others = state.masterData.filter(w => w.id !== targetWord.id);
+        others = shuffleArray(others);
+        options.push(...others.slice(0, 3));
+        options = shuffleArray(options);
+
+        options.forEach(opt => {
+            const b = document.createElement('button');
+            b.className = 'mode-btn highlight';
+            const mainText = opt.kanji || opt.character || opt.thai;
+            const subText = opt.hiragana || opt.romaji || '';
+            b.innerHTML = `<span style="font-size:1.2rem; font-weight:bold;">${mainText}</span><br><small style="color:#666;">${subText}</small>`;
+            b.onclick = () => checkNormalAnswer(opt, targetWord);
+            grid.appendChild(b);
+        });
+    }
+}
+
+function checkNormalAnswer(selectedOpt, targetWord) {
+    if (state.isAnimating) return;
+    state.isAnimating = true;
+    const isCorrect = (selectedOpt.id === targetWord.id);
+
+    if (isCorrect) {
+        state.correctCount++;
+        showCharacterReaction('hart', 1500);
+        speakThai("เก่งมากค่ะ!");
+    } else {
+        showCharacterReaction('naku', 1500);
+        speakThai("พยายามใหม่นะคะ");
+    }
+
+    const diag = document.getElementById('dialogue-text');
+    const mainWord = targetWord.kanji || targetWord.character || targetWord.hiragana;
+    const subWord = targetWord.hiragana || targetWord.romaji || '';
+    diag.innerHTML = `<b>${isCorrect ? 'ถูกต้อง!' : 'เสียดาย...'}</b><br>คำตอบคือ: ${mainWord} ${subWord ? `(${subWord})` : ''} = ${targetWord.thai}`;
+
+    // Play Japanese pronunciation for the correct answer
+    speakJapanese(mainWord);
+
+    setTimeout(() => {
+        state.isAnimating = false;
+        state.storyStep++;
+        if (state.storyStep < state.storyData.length) loadScene();
+        else finishUnit();
+    }, 3500);
+}
+
+function checkAnswer(choice, step) {
+    if (state.isAnimating) return;
+    state.isAnimating = true;
+    const isCorrect = (choice === step.correct_answer);
+
+    if (isCorrect) {
+        state.correctCount++;
+        showCharacterReaction('hart', 1500);
+        speakThai("เก่งมากค่ะ!");
+    } else {
+        showCharacterReaction('naku', 1500);
+        speakThai("พยายามใหม่นะคะ");
+    }
+
+    const diag = document.getElementById('dialogue-text');
+    diag.innerHTML = `<b>${isCorrect ? 'ถูกต้อง!' : 'เสียดาย...'}</b><br>${step.explanation}`;
+
+    setTimeout(() => {
+        state.isAnimating = false;
+        state.storyStep++;
+        if (state.storyStep < state.storyData.length) loadScene();
+        else finishUnit();
+    }, 3500);
+}
+
+function finishUnit() {
+    localStorage.setItem(`score_${state.selectedLevel}_${state.gameMode}_u${state.selectedStoryNum}`, state.correctCount);
+    document.getElementById('answer-grid').style.display = 'none';
+    hideProgressBar();
+    showResultModal(state.correctCount, state.storyData.length);
+}
+
+function showResultModal(c, t) {
+    const modal = document.getElementById('result-modal');
+    document.getElementById('result-score').innerText = `${c} / ${t}`;
+    modal.style.display = 'flex';
+    document.getElementById('result-close').onclick = () => {
+        modal.style.display = 'none';
+        document.getElementById('main-action').style.display = 'block';
+        openModeSelect();
+    };
+}
+
+/** Shop & Outfits */
+function openShop() {
+    updateShopUI();
+    document.getElementById('shop-modal').style.display = 'flex';
+}
+function closeShop() { document.getElementById('shop-modal').style.display = 'none'; }
+
+function updateShopUI() {
+    const list = document.getElementById('shop-list');
+    list.innerHTML = "";
+    config.outfits.forEach(o => {
+        if (o.id === 'default') return;
+        const owned = state.unlockedOutfits.includes(o.id);
+        const div = document.createElement('div');
+        div.className = 'shop-item';
+        div.innerHTML = `
+            <img src="${o.thumbnail}">
+            <div class="shop-item-info">
+                <div class="shop-item-name">${o.name}</div>
+                <div style="font-size:0.8rem; color:#666;">${o.price}</div>
+            </div>
+            <button class="shop-item-btn ${owned ? 'owned' : ''}" onclick="handleShopClick('${o.id}')">
+                ${owned ? '着替える' : 'ปลดล็อก'}
+            </button>
+        `;
+        list.appendChild(div);
+    });
+}
+
+function handleShopClick(id) {
+    if (state.unlockedOutfits.includes(id)) {
+        changeCharacter(id);
+        closeShop();
+    } else {
+        openUnlockModal(id, 'outfit');
+    }
+}
+
+function changeCharacter(id) {
+    state.selectedCharacter = id;
+    localStorage.setItem('selectedCharacter', id);
+    setCharacterState('normal');
+    alert("เปลี่ยนชุดเรียบร้อยแล้วค่ะ");
+}
+
+/** Character & Anim */
+function setCharacterState(s) {
+    const img = document.getElementById('heroine-img');
+    const base = (state.selectedCharacter === 'default') ? 'images/' : `images/${state.selectedCharacter}/`;
+
+    // Map states to files
+    let file = 'normal.png';
+    if (state.selectedCharacter === 'default') {
+        if (s === 'nikkori') file = 'smile.png';
+        if (s === 'good' || s === 'hart') file = 'good.png';
+        if (s === 'naku' || s === 'odoroki') file = 'no.png';
+    } else {
+        const assets = characterAssets[state.selectedCharacter];
+        file = assets[s] || assets['normal'];
+    }
+    img.src = base + file;
+}
+
+function showCharacterReaction(t, d) {
+    setCharacterState(t);
+    setTimeout(() => setCharacterState('normal'), d);
+}
+
+function startCharacterAnimation() {
+    clearInterval(state.characterAnimationId);
+    let toggle = false;
+    state.characterAnimationId = setInterval(() => {
+        toggle = !toggle;
+        setCharacterState(toggle ? 'nikkori' : 'normal');
+    }, 1500);
+}
+
+function stopCharacterAnimation() { clearInterval(state.characterAnimationId); }
+
+/** Utility */
+function shuffleArray(a) { return a.sort(() => Math.random() - 0.5); }
+function speakThai(t) { stopAllSpeech(); const u = new SpeechSynthesisUtterance(t); u.lang = 'th-TH'; window.speechSynthesis.speak(u); }
+function speakJapanese(t) { const u = new SpeechSynthesisUtterance(t); u.lang = 'ja-JP'; u.rate = state.ttsRate; window.speechSynthesis.speak(u); }
+function stopAllSpeech() { window.speechSynthesis.cancel(); }
+function showProgressBar(t) { document.getElementById('progress-container').style.display = 'flex'; document.getElementById('progress-container').dataset.total = t; }
+function hideProgressBar() { document.getElementById('progress-container').style.display = 'none'; }
+function openMainMenu() { document.getElementById('main-menu').style.display = 'flex'; }
+function closeMainMenu() { document.getElementById('main-menu').style.display = 'none'; }
+function openSettings() {
+    state.previewIndex = config.outfits.findIndex(o => o.id === state.selectedCharacter);
+    updateSettingsPreview();
+    document.getElementById('settings-modal').style.display = 'flex';
+}
+
+function closeSettings() {
+    document.getElementById('settings-modal').style.display = 'none';
+}
+
+function updateSettingsPreview() {
+    const outfit = config.outfits[state.previewIndex];
+    const img = document.getElementById('settings-preview-img');
+    const nameText = document.getElementById('preview-outfit-name');
+    const applyBtn = document.getElementById('apply-outfit-btn');
+
+    img.src = outfit.thumbnail;
+    nameText.innerText = outfit.name;
+
+    const isUnlocked = state.unlockedOutfits.includes(outfit.id);
+    if (isUnlocked) {
+        applyBtn.innerText = "เปลี่ยนชุด (Apply)";
+        applyBtn.classList.add('highlight');
+        applyBtn.disabled = false;
+    } else {
+        applyBtn.innerText = "ยังไม่ได้ปลดล็อก (Locked)";
+        applyBtn.classList.remove('highlight');
+        applyBtn.disabled = true;
+    }
+}
+
+function previewPrev() {
+    state.previewIndex = (state.previewIndex - 1 + config.outfits.length) % config.outfits.length;
+    updateSettingsPreview();
+}
+
+function previewNext() {
+    state.previewIndex = (state.previewIndex + 1) % config.outfits.length;
+    updateSettingsPreview();
+}
+
+function applyPreviewedOutfit() {
+    const outfit = config.outfits[state.previewIndex];
+    if (state.unlockedOutfits.includes(outfit.id)) {
+        changeCharacter(outfit.id);
+    }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "dl_l1_q1",
+    "display_text": "ตื่นนอน",
+    "correct_answer": "おきる",
+    "options": ["おきる", "ねる", "いく", "くる"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'ตื่นนอน' คือคำไหน?",
+    "explanation": "Okiru (おきる) แปลว่า ตื่นนอน"
+  },
+  {
+    "id": "dl_l1_q2",
+    "display_text": "นอน",
+    "correct_answer": "ねる",
+    "options": ["ねる", "おきる", "やすむ", "くる"],
+    "dialogue": "คำว่า 'นอน' ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Neru (ねる) แปลว่า นอน"
+  },
+  {
+    "id": "dl_l1_q3",
+    "display_text": "ไป",
+    "correct_answer": "いく",
+    "options": ["いく", "くる", "かえる", "あるく"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'ไป' คือคำไหน?",
+    "explanation": "Iku (いく) แปลว่า ไป"
+  },
+  {
+    "id": "dl_l1_q4",
+    "display_text": "มา",
+    "correct_answer": "くる",
+    "options": ["くる", "いく", "かえる", "はいる"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'มา' คือคำไหน?",
+    "explanation": "Kuru (くる) แปลว่า มา"
+  },
+  {
+    "id": "dl_l1_q5",
+    "display_text": "กลับ",
+    "correct_answer": "かえる",
+    "options": ["かえる", "いく", "くる", "ねる"],
+    "dialogue": "คำว่า 'กลับ (บ้าน)' ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Kaeru (かえる) แปลว่า กลับ"
+  },
+  {
+    "id": "dl_l1_q6",
+    "display_text": "เปิด",
+    "correct_answer": "あける",
+    "options": ["あける", "しめる", "いれる", "だす"],
+    "dialogue": "การ 'เปิด' ประตูหรือหน้าต่าง คือคำไหน?",
+    "explanation": "Akeru (あける) แปลว่า เปิด"
+  },
+  {
+    "id": "dl_l1_q7",
+    "display_text": "ปิด",
+    "correct_answer": "しめる",
+    "options": ["しめる", "あける", "とめる", "まつ"],
+    "dialogue": "การ 'ปิด' ประตูหรือหน้าต่าง คือคำไหน?",
+    "explanation": "Shimeru (しめる) แปลว่า ปิด"
+  },
+  {
+    "id": "dl_l1_q8",
+    "display_text": "รอ",
+    "correct_answer": "まつ",
+    "options": ["まつ", "もつ", "たつ", "あう"],
+    "dialogue": "คำว่า 'รอ' ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Matsu (まつ) แปลว่า รอ"
+  },
+  {
+    "id": "dl_l1_q9",
+    "display_text": "เอาออก / ส่ง",
+    "correct_answer": "だす",
+    "options": ["だす", "いれる", "おす", "けす"],
+    "dialogue": "การ 'เอาออก' หรือ 'ส่ง (การบ้าน)' คือคำไหน?",
+    "explanation": "Dasu (だす) แปลว่า เอาออก หรือ ส่ง"
+  },
+  {
+    "id": "dl_l1_q10",
+    "display_text": "ใส่เข้าไป",
+    "correct_answer": "いれる",
+    "options": ["いれる", "だす", "きる", "ねる"],
+    "dialogue": "การ 'ใส่' ของลงไปข้างใน คือคำไหน?",
+    "explanation": "Ireru (いれる) แปลว่า ใส่เข้าไป"
+  }
+]

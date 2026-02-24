@@ -1,0 +1,92 @@
+[
+  {
+    "id": "k1_q1",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ไอศกรีม' (Ice) พูดว่าอะไรนะ?",
+    "display_text": "○ イス",
+    "correct_answer": "ア",
+    "options": ["ア", "イ", "ウ", "エ"],
+    "thai_hint": "ตัวอักษรแรกสุดของแถว ア"
+  },
+  {
+    "id": "k1_q2",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'อากาศ' (Air) พูดว่าอะไรนะ?",
+    "display_text": "○ アコン",
+    "correct_answer": "エ",
+    "options": ["エ", "ア", "イ", "ウ"],
+    "thai_hint": "ตัวอักษรที่ 4 ของแถว ア"
+  },
+  {
+    "id": "k1_q3",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'เค้ก' (Cake) พูดว่าอะไรนะ?",
+    "display_text": "○ ーキ",
+    "correct_answer": "ケ",
+    "options": ["ケ", "カ", "キ", "ク"],
+    "thai_hint": "ตัวอักษรที่ 4 ของแถว カ"
+  },
+  {
+    "id": "k1_q4",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'กาแฟ' (Coffee) พูดว่าอะไรนะ?",
+    "display_text": "○ ーヒー",
+    "correct_answer": "コ",
+    "options": ["コ", "カ", "キ", "ク"],
+    "thai_hint": "ตัวอักษรสุดท้ายของแถว カ"
+  },
+  {
+    "id": "k1_q5",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'กล้อง' (Camera) พูดว่าอะไรนะ?",
+    "display_text": "○ メラ",
+    "correct_answer": "カ",
+    "options": ["カ", "キ", "ク", "ケ"],
+    "thai_hint": "ตัวอักษรแรกของแถว カ"
+  },
+  {
+    "id": "k1_q6",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'แกงกะหรี่' (Curry) พูดว่าอะไรนะ?",
+    "display_text": "○ ー",
+    "correct_answer": "カ",
+    "options": ["カ", "キ", "ク", "ケ"],
+    "thai_hint": "ตัวอักษรแรกของแถว カ"
+  },
+  {
+    "id": "k1_q7",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'ออเคストラ' (Orchestra) พูดว่าอะไรนะ?",
+    "display_text": "○ け",
+    "correct_answer": "お",
+    "options": ["オ", "ア", "イ", "ウ"],
+    "thai_hint": "ตัวอักษรที่ 5 ของแถว ア"
+  },
+  {
+    "id": "k1_q8",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'อูคูเลเล่' (Ukulele) พูดว่าอะไรนะ?",
+    "display_text": "○ クレレ",
+    "correct_answer": "ウ",
+    "options": ["ウ", "ア", "イ", "エ"],
+    "thai_hint": "ตัวอักษรที่ 3 ของแถว ア"
+  },
+  {
+    "id": "k1_q9",
+    "character": "Peem",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'คุกกี้' (Cookie) พูดว่าอะไรนะ?",
+    "display_text": "○ ッキー",
+    "correct_answer": "ク",
+    "options": ["ク", "カ", "キ", "ケ"],
+    "thai_hint": "ตัวอักษรที่ 3 ของแถว カ"
+  },
+  {
+    "id": "k1_q10",
+    "character": "Mei",
+    "dialogue": "ภาษาญี่ปุ่นคำว่า 'คิง' (King) พูดว่าอะไรนะ?",
+    "display_text": "○ ング",
+    "correct_answer": "キ",
+    "options": ["キ", "カ", "ク", "コ"],
+    "thai_hint": "ตัวอักษรที่ 2 ของแถว カ"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "nt_l2_s1",
+    "display_text": "ราคากี่เยน? (10)",
+    "correct_answer": "10",
+    "options": ["10", "1", "100", "1000"],
+    "dialogue": "これは十円です。いくらですか？",
+    "explanation": "Juu (十) หมายถึง 10"
+  },
+  {
+    "id": "nt_l2_s2",
+    "display_text": "มีคนกี่คน? (20)",
+    "correct_answer": "20",
+    "options": ["10", "20", "30", "40"],
+    "dialogue": "人は二十人います。何人いますか？",
+    "explanation": "Nijuu (二十) หมายถึง 20"
+  },
+  {
+    "id": "nt_l2_s3",
+    "display_text": "ราคากี่เยน? (100)",
+    "correct_answer": "100",
+    "options": ["10", "100", "1000", "10000"],
+    "dialogue": "これは百円です。いくらですか？",
+    "explanation": "Hyaku (百) หมายถึง 100"
+  },
+  {
+    "id": "nt_l2_s4",
+    "display_text": "มีกี่แผ่น? (300)",
+    "correct_answer": "300",
+    "options": ["100", "200", "300", "400"],
+    "dialogue": "紙は三百枚あります。何枚ありますか？",
+    "explanation": "Sanbyaku (三百) หมายถึง 300"
+  },
+  {
+    "id": "nt_l2_s5",
+    "display_text": "ราคากี่เยน? (1000)",
+    "correct_answer": "1000",
+    "options": ["100", "1000", "10000", "100000"],
+    "dialogue": "これは千円です。いくらですか？",
+    "explanation": "Sen (千) หมายถึง 1000"
+  },
+  {
+    "id": "nt_l2_s6",
+    "display_text": "มีกี่คน? (8000)",
+    "correct_answer": "8000",
+    "options": ["1000", "5000", "8000", "9000"],
+    "dialogue": "人は八千人います。何人いますか？",
+    "explanation": "Hassen (八千) หมายถึง 8000"
+  },
+  {
+    "id": "nt_l2_s7",
+    "display_text": "ราคากี่เยน? (10000)",
+    "correct_answer": "10000",
+    "options": ["1000", "10000", "100000", "1000000"],
+    "dialogue": "これは一万円です。いくらですか？",
+    "explanation": "Ichiman (一万) หมายถึง 10000"
+  },
+  {
+    "id": "nt_l2_s8",
+    "display_text": "มีกี่เล่ม? (50000)",
+    "correct_answer": "50000",
+    "options": ["10000", "30000", "50000", "80000"],
+    "dialogue": "本は五万冊あります。何冊ありますか？",
+    "explanation": "Goman (五万) หมายถึง 50000"
+  },
+  {
+    "id": "nt_l2_s9",
+    "display_text": "ราคากี่เยน? (100000)",
+    "correct_answer": "100000",
+    "options": ["10000", "100000", "1000000", "10000000"],
+    "dialogue": "これは十万円です。いくらですか？",
+    "explanation": "Juuman (十万) หมายถึง 100000"
+  },
+  {
+    "id": "nt_l2_s10",
+    "display_text": "ราคากี่เยน? (1000000)",
+    "correct_answer": "1000000",
+    "options": ["100000", "1000000", "10000000", "100000000"],
+    "dialogue": "これは百万円です。いくらですか？",
+    "explanation": "Hyakuman (百万) หมายถึง 1000000"
+  }
+]

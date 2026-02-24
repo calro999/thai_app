@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bs_l9_q81",
+    "display_text": "หนึ่ง",
+    "correct_answer": "いち",
+    "options": ["いち", "に", "さん", "よん"],
+    "dialogue": "ตัวเลขลำดับแรกสุดในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Ichi (いち) แปลว่า หนึ่ง"
+  },
+  {
+    "id": "bs_l9_q82",
+    "display_text": "สอง",
+    "correct_answer": "に",
+    "options": ["に", "いち", "さん", "ご"],
+    "dialogue": "เสียงสั้นๆ นี้คือตัวเลขลำดับที่สอง คือคำไหน?",
+    "explanation": "Ni (に) แปลว่า สอง"
+  },
+  {
+    "id": "bs_l9_q83",
+    "display_text": "สาม",
+    "correct_answer": "さん",
+    "options": ["さん", "に", "よん", "ご"],
+    "dialogue": "ตัวเลขลำดับที่สามคือข้อไหน?",
+    "explanation": "San (さん) แปลว่า สาม"
+  },
+  {
+    "id": "bs_l9_q84",
+    "display_text": "สี่",
+    "correct_answer": "よん",
+    "options": ["よん", "さん", "ご", "いち"],
+    "dialogue": "ตัวเลขลำดับที่สี่ในภาษาญี่ปุ่นคือข้อไหน?",
+    "explanation": "Yon (よん) แปลว่า สี่"
+  },
+  {
+    "id": "bs_l9_q85",
+    "display_text": "ห้า",
+    "correct_answer": "ご",
+    "options": ["ご", "よん", "さん", "に"],
+    "dialogue": "เสียงสั้นๆ นี้คือตัวเลขลำดับที่ห้า คือคำไหน?",
+    "explanation": "Go (ご) แปลว่า ห้า"
+  },
+  {
+    "id": "bs_l9_q86",
+    "display_text": "วันนี้",
+    "correct_answer": "きょう",
+    "options": ["きょう", "あした", "きのう", "いま"],
+    "dialogue": "คำที่ใช้เรียกวันปัจจุบันคือข้อไหน?",
+    "explanation": "Kyou (きょう) แปลว่า วันนี้"
+  },
+  {
+    "id": "bs_l9_q87",
+    "display_text": "พรุ่งนี้",
+    "correct_answer": "あした",
+    "options": ["あした", "きょう", "きのう", "あさ"],
+    "dialogue": "วันถัดจากวันนี้ไปหนึ่งวัน คือคำไหน?",
+    "explanation": "Ashita (あした) แปลว่า พรุ่งนี้"
+  },
+  {
+    "id": "bs_l9_q88",
+    "display_text": "เมื่อวาน",
+    "correct_answer": "きのう",
+    "options": ["きのう", "きょう", "あした", "いま"],
+    "dialogue": "วันก่อนหน้าที่ผ่านพ้นมาแล้ว คือข้อไหน?",
+    "explanation": "Kinou (きのう) แปลว่า เมื่อวาน"
+  },
+  {
+    "id": "bs_l9_q89",
+    "display_text": "ตอนนี้",
+    "correct_answer": "いま",
+    "options": ["いま", "きょう", "あさ", "よる"],
+    "dialogue": "คำที่ระบุถึงเวลาปัจจุบันขณะนี้คือข้อไหน?",
+    "explanation": "Ima (いま) แปลว่า ตอนนี้"
+  },
+  {
+    "id": "bs_l9_q90",
+    "display_text": "ตอนเช้า",
+    "correct_answer": "あさ",
+    "options": ["あさ", "よる", "いま", "きょう"],
+    "dialogue": "ช่วงเวลาเริ่มต้นของวันคือข้อไหน?",
+    "explanation": "Asa (あさ) แปลว่า ตอนเช้า"
+  }
+]

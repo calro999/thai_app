@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ds_l2_s1",
+    "display_text": "ศูนย์อพยพ (避難所)",
+    "correct_answer": "避難所",
+    "options": ["避難所", "病院", "警察", "学校"],
+    "dialogue": "近くの避難所（ひなんじょ）を確認しておきましょう。",
+    "explanation": "Hinanjyo (避難所) หมายถึง สถานที่ปลอดภัยสำหรับอพยพ"
+  },
+  {
+    "id": "ds_l2_s2",
+    "display_text": "ไฟฉาย (懐中電灯)",
+    "correct_answer": "懐中電灯",
+    "options": ["懐中電灯", "電池", "充電器", "電気"],
+    "dialogue": "停電の時は、懐中電灯（かいちゅうでんとう）を使ってください。",
+    "explanation": "Kaichuudentou (懐中電灯) หมายถึง ไฟฉาย"
+  },
+  {
+    "id": "ds_l2_s3",
+    "display_text": "น้ำ (水)",
+    "correct_answer": "水",
+    "options": ["水", "非常食", "薬", "お茶"],
+    "dialogue": "飲み水（みず）を準備してください。",
+    "explanation": "Mizu (水) หมายถึง น้ำ"
+  },
+  {
+    "id": "ds_l2_s4",
+    "display_text": "ยา (薬)",
+    "correct_answer": "薬",
+    "options": ["薬", "水", "電池", "カバン"],
+    "dialogue": "いつも飲んでいる薬（くすり）を忘れないで。",
+    "explanation": "Kusuri (薬) หมายถึง ยา"
+  },
+  {
+    "id": "ds_l2_s5",
+    "display_text": "ถ่านไฟฉาย (電池)",
+    "correct_answer": "電池",
+    "options": ["電池", "懐中電灯", "充電器", "電気"],
+    "dialogue": "電池（でんち）の予備はありますか？",
+    "explanation": "Denchi (電池) หมายถึง ถ่านไฟฉายหรือแบตเตอรี่"
+  },
+  {
+    "id": "ds_l2_s6",
+    "display_text": "ที่ชาร์จ (充電器)",
+    "correct_answer": "充電器",
+    "options": ["充電器", "電池", "電話", "パソコン"],
+    "dialogue": "スマホの充電器（じゅうでんき）を持って行きましょう。",
+    "explanation": "Juudenki (充電器) หมายถึง ที่ชาร์จแบตเตอรี่"
+  },
+  {
+    "id": "ds_l2_s7",
+    "display_text": "ผ้าห่ม (毛布)",
+    "correct_answer": "毛布",
+    "options": ["毛布", "靴", "カバン", "服"],
+    "dialogue": "寒い時は毛布（もうふ）を使ってください。",
+    "explanation": "Moufu (毛布) หมายถึง ผ้าห่ม"
+  },
+  {
+    "id": "ds_l2_s8",
+    "display_text": "กระเป๋า (カバン)",
+    "correct_answer": "カバン",
+    "options": ["カバン", "靴", "毛布", "電池"],
+    "dialogue": "重いカバン（かばん）に注意してください。",
+    "explanation": "Kaban (カバン) หมายถึง กระเป๋า"
+  },
+  {
+    "id": "ds_l2_s9",
+    "display_text": "รองเท้า (靴)",
+    "correct_answer": "靴",
+    "options": ["靴", "スリッパ", "カバン", "服"],
+    "dialogue": "ガラスが危ないので、靴（くつ）を履いてください。",
+    "explanation": "Kutsu (靴) หมายถึง รองเท้า"
+  },
+  {
+    "id": "ds_l2_s10",
+    "display_text": "อาหารฉุกเฉิน (非常食)",
+    "correct_answer": "非常食",
+    "options": ["非常食", "水", "お菓子", "薬"],
+    "dialogue": "非常食（ひじょうしょく）を用意していますか？",
+    "explanation": "Hijyoushoku (非常食) หมายถึง อาหารสำรองยามฉุกเฉิน"
+  }
+]

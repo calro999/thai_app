@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bs_l6_q51",
+    "display_text": "กระเป๋า",
+    "correct_answer": "かばん",
+    "options": ["かばん", "くつ", "かさ", "かぎ"],
+    "dialogue": "เสียงที่ได้ยินหมายถึง 'กระเป๋า' คือคำไหน?",
+    "explanation": "Kaban (かばん) แปลว่า กระเป๋า"
+  },
+  {
+    "id": "bs_l6_q52",
+    "display_text": "รองเท้า",
+    "correct_answer": "くつ",
+    "options": ["くつ", "かばん", "めがね", "とけい"],
+    "dialogue": "สิ่งที่สวมใส่ที่เท้าก่อนออกจากบ้านคือข้อไหน?",
+    "explanation": "Kutsu (くつ) แปลว่า รองเท้า"
+  },
+  {
+    "id": "bs_l6_q53",
+    "display_text": "หนังสือ",
+    "correct_answer": "ほん",
+    "options": ["ほん", "でんわ", "とけい", "かばん"],
+    "dialogue": "สิ่งที่ใช้สำหรับอ่านเพื่อหาความรู้คือ?",
+    "explanation": "Hon (ほん) แปลว่า หนังสือ"
+  },
+  {
+    "id": "bs_l6_q54",
+    "display_text": "รถยนต์",
+    "correct_answer": "くるま",
+    "options": ["くるま", "くつ", "かさ", "おかね"],
+    "dialogue": "ยานพาหนะที่ใช้ขับเคลื่อนบนท้องถนนคือข้อไหน?",
+    "explanation": "Kuruma (くるま) แปลว่า รถยนต์"
+  },
+  {
+    "id": "bs_l6_q55",
+    "display_text": "โทรศัพท์",
+    "correct_answer": "でんわ",
+    "options": ["でんわ", "とけい", "めがね", "ほん"],
+    "dialogue": "อุปกรณ์ที่ใช้สำหรับติดต่อสื่อสารพูดคุยคือ?",
+    "explanation": "Denwa (でんわ) แปลว่า โทรศัพท์"
+  },
+  {
+    "id": "bs_l6_q56",
+    "display_text": "นาฬิกา",
+    "correct_answer": "とけい",
+    "options": ["とけい", "めがね", "でんわ", "かぎ"],
+    "dialogue": "สิ่งที่ใช้สำหรับดูเวลาคือข้อไหน?",
+    "explanation": "Tokei (とけい) แปลว่า นาฬิกา"
+  },
+  {
+    "id": "bs_l6_q57",
+    "display_text": "ร่ม",
+    "correct_answer": "かさ",
+    "options": ["かさ", "かばん", "かぎ", "くつ"],
+    "dialogue": "อุปกรณ์ที่ใช้กันฝนหรือกันแดดคือ?",
+    "explanation": "Kasa (かさ) แปลว่า ร่ม"
+  },
+  {
+    "id": "bs_l6_q58",
+    "display_text": "กุญแจ",
+    "correct_answer": "かぎ",
+    "options": ["かぎ", "かさ", "とけい", "おかね"],
+    "dialogue": "สิ่งที่ใช้สำหรับไขล็อกประตูคือข้อไหน?",
+    "explanation": "Kagi (かぎ) แปลว่า กุญแจ"
+  },
+  {
+    "id": "bs_l6_q59",
+    "display_text": "แว่นตา",
+    "correct_answer": "めがね",
+    "options": ["めがね", "とけい", "でんわ", "くつ"],
+    "dialogue": "อุปกรณ์ที่ช่วยให้มองเห็นได้ชัดเจนขึ้นคือ?",
+    "explanation": "Megane (めがね) แปลว่า แว่นตา"
+  },
+  {
+    "id": "bs_l6_q60",
+    "display_text": "เงิน",
+    "correct_answer": "おかね",
+    "options": ["おかね", "くるま", "かばん", "ほん"],
+    "dialogue": "สิ่งสำคัญที่ใช้สำหรับซื้อของและบริการคือข้อไหน?",
+    "explanation": "Okane (おかね) แปลว่า เงิน"
+  }
+]
