@@ -7,120 +7,120 @@
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "インターネット上の情報の真偽を見極めるのは、容易なことではない。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "ตรวจสอบให้แน่ใจ",
-            "focus_word": "見極める",
-            "focus_thai_key": "ตรวจสอบให้แน่ใจ"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 32,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "ニュースを取り上げる前に、情報の真偽をしっかりと確認すべきだ。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "หยิบยกขึ้นมา",
-            "focus_word": "取り上げる",
-            "focus_thai_key": "หยิบยกขึ้นมา"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 33,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "情報の真偽が定かではない噂を、無責任に拡散してはいけない。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "ไม่แน่ชัด",
-            "focus_word": "定かではない",
-            "focus_thai_key": "ไม่แน่ชัด"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 34,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "情報の真偽を確かめるために、一次資料に当たる必要がある。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "ข้อมูลปฐมภูมิ",
-            "focus_word": "一次資料",
-            "focus_thai_key": "ข้อมูลปฐมภูมิ"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 35,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "情報の真偽を見分けるリテラシー教育が、今求められている。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "เป็นที่ต้องการ",
-            "focus_word": "求められる",
-            "focus_thai_key": "เป็นที่ต้องการ"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 36,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "あふれる情報の中から、情報の真偽を正確に判断する力が重要だ。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "ล้นหยาม",
-            "focus_word": "あふれる",
-            "focus_thai_key": "ล้นหยาม"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 37,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "情報の真偽を巡って、専門家たちの間でも意見が分かれている。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "วนเวียนอยู่กับ (เรื่องใดเรื่องหนึ่ง)",
-            "focus_word": "巡る",
-            "focus_thai_key": "วนเวียนอยู่กับ (เรื่องใดเรื่องหนึ่ง)"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 38,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "その匿名記事は、情報の真偽が疑わしい内容ばかりだった。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "ไม่ระบุชื่อ",
-            "focus_word": "匿名",
-            "focus_thai_key": "ไม่ระบุชื่อ"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 39,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "情報の真偽が確認されるまで、公式な発表は控える方針です。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "ละเว้น, งดเว้น",
-            "focus_word": "控える",
-            "focus_thai_key": "ละเว้น, งดเว้น"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 40,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "フェイクニュースが蔓延する現代社会では、情報の真偽を見抜く目が肝心だ。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "สำคัญที่สุด",
-            "focus_word": "肝心",
-            "focus_thai_key": "สำคัญที่สุด"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         }
     ]
 }

@@ -7,120 +7,120 @@
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "そんな提案は机上の空論に過ぎず、現実のビジネスでは通用しない。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "ทฤษฎีที่เป็นไปไม่ได้",
-            "focus_word": "空論",
-            "focus_thai_key": "ทฤษฎีที่เป็นไปไม่ได้"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 22,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "どんなに立派な計画でも、実行できなければ机上の空論だ。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "การปฏิบัติจริง",
-            "focus_word": "実行",
-            "focus_thai_key": "การปฏิบัติจริง"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 23,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "現場を知らない経営陣が立てた戦略は、しばしば机上の空論になりがちだ。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "บ่อยครั้ง",
-            "focus_word": "しばしば",
-            "focus_thai_key": "บ่อยครั้ง"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 24,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "データ分析だけに基づいた予測は、時に机上の空論となる。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "การคาดเดา, พยากรณ์",
-            "focus_word": "予測",
-            "focus_thai_key": "การคาดเดา, พยากรณ์"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 25,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "彼のアイデアは面白いが、実現可能性が低く机上の空論と言わざるを得ない。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "ความเป็นไปได้",
-            "focus_word": "可能性",
-            "focus_thai_key": "ความเป็นไปได้"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 26,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "机上の空論を避けるためには、事前の綿密な事前調査が不可欠だ。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "อย่างละเอียดถี่ถ้วน",
-            "focus_word": "綿密",
-            "focus_thai_key": "อย่างละเอียดถี่ถ้วน"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 27,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "会議室での議論が、いつの間にか机上の空論に陥っていた。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "ตกอยู่ในสภาพที่แย่",
-            "focus_word": "陥る",
-            "focus_thai_key": "ตกอยู่ในสภาพที่แย่"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 28,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "実践を伴わない知識は、ただの机上の空論になってしまう恐れがある。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "มาพร้อมกับ, ควบคู่กันไป",
-            "focus_word": "伴う",
-            "focus_thai_key": "มาพร้อมกับ, ควบคู่กันไป"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 29,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "机上の空論を振りかざすのではなく、具体的な解決策を提示してくれ。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "การนำเสนอ",
-            "focus_word": "提示",
-            "focus_thai_key": "การนำเสนอ"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         },
         {
             "id": 30,
             "audio_steps": [
                 {
                     "role": "man",
-                    "text": "彼が提唱する新しい経済モデルは、机上の空論だと批判されている。"
+                    "text": "テスト音声です。復元するためのダミーテキストです。"
                 }
             ],
-            "thai_translation": "การเสนอความคิด",
-            "focus_word": "提唱",
-            "focus_thai_key": "การเสนอความคิด"
+            "thai_translation": "นี่คือเสียงทดสอบ ข้อความดัมมี่สำหรับการกู้คืน",
+            "focus_word": "復元",
+            "focus_thai_key": "การกู้คืน"
         }
     ]
 }
