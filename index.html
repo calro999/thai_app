@@ -9,6 +9,9 @@
     <link rel="icon" type="image/png" href="images/bar.png">
     <link rel="apple-touch-icon" href="images/bar.png">
 
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
     <!-- GamePix SDK -->
     <script src="https://integration.gamepix.com/sdk/v3/gamepix.sdk.js"></script>
 
@@ -16,11 +19,11 @@
     <script>
         window["GD_OPTIONS"] = {
             "gameId": "b8d80c10b719463ca0cceb709dc8296a", // MOCK ID, MUST REPLACE WITH REAL ID IN GD PORTAL
-            "onEvent": function(event) {
+            "onEvent": function (event) {
                 switch (event.name) {
                     case "SDK_GAME_START":
                         if (window._bgmStarted && document.getElementById('bgm-audio')) {
-                            document.getElementById('bgm-audio').play().catch(()=>{});
+                            document.getElementById('bgm-audio').play().catch(() => { });
                         }
                         break;
                     case "SDK_GAME_PAUSE":
@@ -61,7 +64,7 @@
                 }
             },
         };
-        (function(d, s, id) {
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s);
@@ -150,7 +153,9 @@
                     <button class="mode-btn highlight" onclick="selectCourse('n3')">JLPT N3</button>
                     <button class="mode-btn highlight" id="btn-oshikatsu" onclick="selectCourse('oshikatsu')"
                         style="grid-column: span 2; border-color: #FF80AB; color: #D81B60;">推し活マスター (Oshikatsu)</button>
-                    <button class="mode-btn highlight" style="grid-column: span 2; background: #FFF3E0; border-color: #FF9800; color: #E65100;" onclick="window.location.href='lp.html'">ℹ️ เกี่ยวกับแอปนี้ (About App)</button>
+                    <button class="mode-btn highlight"
+                        style="grid-column: span 2; background: #FFF3E0; border-color: #FF9800; color: #E65100;"
+                        onclick="window.location.href='lp.html'">ℹ️ เกี่ยวกับแอปนี้ (About App)</button>
                     <button class="mode-btn cancel" style="grid-column: span 2;" onclick="closeModeSelect()">ยกเลิก
                         (Cancel)</button>
                 </div>

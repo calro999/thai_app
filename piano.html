@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kana Piano - Sound Board</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
     <style>
         /* 画面全体を使ってピアノを配置 */
         body {
@@ -78,22 +81,29 @@
 
         /* モバイル：5列 & ボタンを正方形に近く */
         @media (max-width: 600px) {
+            .piano-container {
+                height: 94dvh;
+                /* Account for mobile browser UI */
+            }
+
             .piano-grid {
                 grid-template-columns: repeat(5, 1fr);
+                gap: 3px;
+                padding: 3px;
             }
 
             .key {
-                aspect-ratio: 1 / 1 !important;
-                /* 正方形を強制 */
-                padding: 5px !important;
+                aspect-ratio: 1 / 0.85 !important;
+                /* Slightly shorter than full square to fit all rows */
+                padding: 2px !important;
             }
 
             .key .char {
-                font-size: 1.3rem !important;
+                font-size: 1.2rem !important;
             }
 
             .key .th {
-                font-size: 0.5rem !important;
+                font-size: 0.45rem !important;
             }
         }
 
@@ -133,13 +143,15 @@
         .footer-area {
             flex: 0 0 auto;
             padding-top: 5px;
+            padding-bottom: 15px;
+            /* Added extra padding at the bottom for iOS home bar */
         }
 
         .back-home {
             background: none;
             border: none;
             color: #999;
-            font-size: 0.8rem;
+            font-size: 1rem;
             font-weight: bold;
             cursor: pointer;
             text-decoration: underline;
