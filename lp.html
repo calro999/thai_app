@@ -201,7 +201,7 @@
             box-shadow: 0 15px 25px rgba(255, 105, 180, 0.6);
         }
 
-        /* Smartphone Mockup */
+        /* Smartphone Mockup (共通スタイル) */
         .hero-mockup {
             flex: 1;
             display: flex;
@@ -210,8 +210,6 @@
         }
 
         .smartphone {
-            width: 300px;
-            height: 600px;
             background: #111;
             border-radius: 40px;
             border: 12px solid #333;
@@ -220,12 +218,18 @@
             overflow: hidden;
         }
 
+        /* ヒーローセクション用のサイズ */
+        .hero-phone-size {
+            width: 300px;
+            height: 600px;
+        }
+
         .notch {
             position: absolute;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 120px;
+            width: 40%;
             height: 25px;
             background: #333;
             border-bottom-left-radius: 15px;
@@ -248,14 +252,17 @@
             filter: brightness(0.8);
         }
 
+        /* 立ち絵の配置修正：底辺に合わせる */
         .mockup-char {
             position: absolute;
-            bottom: 120px;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80%;
+            width: 100%;
             height: auto;
             transition: opacity 0.3s ease-in-out;
+            object-fit: cover;
+            /* はみ出る部分はトリミング */
         }
 
         .mockup-ui {
@@ -270,6 +277,7 @@
             box-sizing: border-box;
             color: white;
             transition: opacity 0.3s ease-in-out;
+            text-align: left;
         }
 
         .mockup-name {
@@ -345,7 +353,7 @@
             color: var(--text-sub);
         }
 
-        /* Auto Gallery (Dress Up) */
+        /* Gallery (Dress Up) - PCレイアウト */
         .gallery {
             padding: 80px 5%;
             background: #ffe6f2;
@@ -356,53 +364,25 @@
             display: flex;
             gap: 30px;
             justify-content: center;
-            overflow-x: auto;
             padding-bottom: 40px;
-            padding-left: 20px;
-            padding-right: 20px;
         }
 
-        .gallery-smartphone {
+        /* ギャラリー用のサイズ */
+        .gallery-phone-size {
             width: 240px;
             height: 480px;
-            background: #111;
+            border-width: 8px;
             border-radius: 30px;
-            border: 8px solid #333;
-            position: relative;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
             flex-shrink: 0;
             transition: 0.3s;
-            text-align: left;
         }
 
-        .gallery-smartphone:hover {
+        .gallery-phone-size:hover {
             transform: translateY(-10px);
         }
 
-        .gallery-notch {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 20px;
-            background: #333;
-            border-bottom-left-radius: 12px;
-            border-bottom-right-radius: 12px;
-            z-index: 10;
-        }
-
-        .gallery-char-img {
-            position: absolute;
-            bottom: 85px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 85%;
-            height: auto;
-            transition: opacity 0.2s ease;
-        }
-
+        /* ギャラリー内のUI調整 */
         .gallery-ui {
             position: absolute;
             bottom: 10px;
@@ -411,10 +391,24 @@
             background: rgba(0, 0, 0, 0.85);
             border: 2px solid var(--primary-color);
             border-radius: 8px;
-            padding: 10px;
+            padding: 8px;
             box-sizing: border-box;
             color: white;
-            text-align: center;
+            text-align: left;
+        }
+
+        .gallery-text {
+            font-size: 12px;
+            line-height: 1.3;
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        .gallery-text-ja {
+            font-size: 11px;
+            color: #eee;
+            margin-top: 3px;
+            line-height: 1.3;
         }
 
         .gallery-caption {
@@ -500,6 +494,7 @@
             background: #f0f0f0;
         }
 
+        /* スマホ対応レスポンシブ */
         @media screen and (max-width: 768px) {
             .hero {
                 flex-direction: column;
@@ -521,19 +516,70 @@
                 padding: 15px 40px;
             }
 
-            .gallery-smartphone {
-                width: 200px;
-                height: 400px;
+            /* ヒーロー用スマホサイズ調整 */
+            .hero-phone-size {
+                width: 240px;
+                height: 480px;
+                border-width: 8px;
+                border-radius: 30px;
+            }
+
+            .mockup-char {
+                bottom: 0;
+            }
+
+            /* 底辺合わせを維持 */
+
+            /* ギャラリー用：2列グリッドレイアウト */
+            .gallery-wrap {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                /* 2列 */
+                gap: 15px;
+                justify-items: center;
+                padding: 0 10px 30px;
+            }
+
+            /* ギャラリー用スマホサイズを小さく */
+            .gallery-phone-size {
+                width: 160px;
+                height: 320px;
                 border-width: 6px;
                 border-radius: 20px;
             }
 
-            .gallery-char-img {
-                bottom: 70px;
+            /* 小さいスマホに合わせてUIも調整 */
+            .gallery-ui {
+                bottom: 5px;
+                padding: 5px;
+                border-radius: 5px;
+                border-width: 1px;
             }
 
-            .gallery-wrap {
-                gap: 15px;
+            .mockup-name {
+                font-size: 10px;
+                padding: 1px 6px;
+                margin-bottom: 2px;
+            }
+
+            .gallery-text {
+                font-size: 10px;
+                line-height: 1.2;
+            }
+
+            .gallery-text-ja {
+                font-size: 9px;
+                line-height: 1.2;
+            }
+
+            .gallery-caption {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+
+            .notch {
+                height: 15px;
+                border-radius: 0 0 10px 10px;
             }
 
             .cross-promo-section {
@@ -569,7 +615,7 @@
         </div>
 
         <div class="hero-mockup">
-            <div class="smartphone">
+            <div class="smartphone hero-phone-size">
                 <div class="notch"></div>
                 <div class="mockup-screen">
                     <img id="hero-bg" src="gd_build/assets/images/bg_classroom_mo.jpg" class="mockup-bg" alt="bg">
@@ -613,48 +659,66 @@
 
         <div class="gallery-wrap">
             <div>
-                <div class="gallery-smartphone">
-                    <div class="gallery-notch"></div>
+                <div class="smartphone gallery-phone-size">
+                    <div class="notch"></div>
                     <div class="mockup-screen">
                         <img src="gd_build/assets/images/bg_classroom_mo.jpg" class="mockup-bg">
-                        <img id="auto-maid" src="images/maid/maid_0000_normal.png" class="gallery-char-img">
-                        <div class="gallery-ui">✨ Maid Style ✨</div>
+                        <img id="auto-maid-img" src="images/maid/maid_0000_normal.png" class="mockup-char">
+                        <div id="auto-maid-ui" class="gallery-ui">
+                            <div class="mockup-name">Maid</div>
+                            <div id="auto-maid-th" class="gallery-text">นายท่านคะ รับชาเพิ่มไหมคะ?</div>
+                            <div id="auto-maid-ja" class="gallery-text-ja">ご主人様、お茶のおかわりはいかがですか？</div>
+                        </div>
                     </div>
                 </div>
                 <div class="gallery-caption">ชุดเมดสุดคิวท์</div>
             </div>
 
             <div>
-                <div class="gallery-smartphone">
-                    <div class="gallery-notch"></div>
+                <div class="smartphone gallery-phone-size">
+                    <div class="notch"></div>
                     <div class="mockup-screen">
                         <img src="gd_build/assets/images/bg_classroom_mo.jpg" class="mockup-bg">
-                        <img id="auto-miko" src="images/miko/miko_0000_normal.png" class="gallery-char-img">
-                        <div class="gallery-ui">⛩️ Miko Style ⛩️</div>
+                        <img id="auto-miko-img" src="images/miko/miko_0000_normal.png" class="mockup-char">
+                        <div id="auto-miko-ui" class="gallery-ui">
+                            <div class="mockup-name">Miko</div>
+                            <div id="auto-miko-th" class="gallery-text">วันนี้จะโชคดีหรือเปล่านะ มาเสี่ยงเซียมซีกันเถอะ
+                            </div>
+                            <div id="auto-miko-ja" class="gallery-text-ja">今日は運がいいかな？おみくじを引きましょう。</div>
+                        </div>
                     </div>
                 </div>
                 <div class="gallery-caption">มิโกะสไตล์ดั้งเดิม</div>
             </div>
 
             <div>
-                <div class="gallery-smartphone">
-                    <div class="gallery-notch"></div>
+                <div class="smartphone gallery-phone-size">
+                    <div class="notch"></div>
                     <div class="mockup-screen">
                         <img src="gd_build/assets/images/bg_classroom_mo.jpg" class="mockup-bg">
-                        <img id="auto-yukata" src="images/yukata/yukata-nikkori.png" class="gallery-char-img">
-                        <div class="gallery-ui">👘 Yukata Style 👘</div>
+                        <img id="auto-yukata-img" src="images/yukata/yukata-nikkori.png" class="mockup-char">
+                        <div id="auto-yukata-ui" class="gallery-ui">
+                            <div class="mockup-name">Yukata</div>
+                            <div id="auto-yukata-th" class="gallery-text">ดอกไม้ไฟสวยจังเลยเนอะ...
+                                ดีใจที่ได้มาดูกับเธอนะ</div>
+                            <div id="auto-yukata-ja" class="gallery-text-ja">花火、綺麗だね……。あなたと一緒に見れて嬉しいな。</div>
+                        </div>
                     </div>
                 </div>
                 <div class="gallery-caption">ยูกาตะต้อนรับหน้าร้อน</div>
             </div>
 
             <div>
-                <div class="gallery-smartphone">
-                    <div class="gallery-notch"></div>
+                <div class="smartphone gallery-phone-size">
+                    <div class="notch"></div>
                     <div class="mockup-screen">
                         <img src="gd_build/assets/images/bg_classroom_mo.jpg" class="mockup-bg">
-                        <img id="auto-gos" src="images/gos/gos_0000_normal.png" class="gallery-char-img">
-                        <div class="gallery-ui">🦇 Gothic Style 🦇</div>
+                        <img id="auto-gos-img" src="images/gos/gos_0000_normal.png" class="mockup-char">
+                        <div id="auto-gos-ui" class="gallery-ui">
+                            <div class="mockup-name">Gothic</div>
+                            <div id="auto-gos-th" class="gallery-text">หึ... ก็ไม่ได้มารอเธอหรอกนะ แค่ผ่านมาพอดี</div>
+                            <div id="auto-gos-ja" class="gallery-text-ja">ふん、別に待ってたわけじゃないわよ。たまたま通りかかっただけ。</div>
+                        </div>
                     </div>
                 </div>
                 <div class="gallery-caption">โกธิคโลลิต้า</div>
@@ -682,13 +746,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-            // 1. Hero Section Auto-Slider (เปลี่ยนชุดและคำพูด)
+            // 1. Hero Section Auto-Slider
             const heroImg = document.getElementById('hero-char');
             const heroBox = document.getElementById('hero-ui');
             const heroTh = document.getElementById('hero-text-th');
             const heroJa = document.getElementById('hero-text-ja');
 
-            const dynamicMockupData = [
+            const heroData = [
                 { img: 'images/maid/maid_0001_nikkori.png', th: "ยินดีต้อนรับกลับค่ะ นายท่าน! มาเริ่มเรียนกันเถอะ!", ja: "お帰りなさいませ、ご主人様！お勉強始めましょう！" },
                 { img: 'images/miko/miko_0001_nikkori.png', th: "ให้เทพเจ้าคุ้มครองการสอบ JLPT ของคุณนะ!", ja: "JLPTの合格、神様にお祈りしておきますね！" },
                 { img: 'images/yukata/yukata-nikkori.png', th: "เรียนเสร็จแล้วไปเที่ยวงานเทศกาลด้วยกันไหม?", ja: "お勉強が終わったら、一緒にお祭りに行きませんか？" },
@@ -700,42 +764,64 @@
                 setInterval(() => {
                     heroImg.style.opacity = 0; heroBox.style.opacity = 0;
                     setTimeout(() => {
-                        heroIdx = (heroIdx + 1) % dynamicMockupData.length;
-                        const data = dynamicMockupData[heroIdx];
+                        heroIdx = (heroIdx + 1) % heroData.length;
+                        const data = heroData[heroIdx];
                         heroImg.src = data.img; heroTh.innerText = data.th; heroJa.innerText = data.ja;
                         heroImg.style.opacity = 1; heroBox.style.opacity = 1;
                     }, 300);
                 }, 4000);
             }
 
-            // 2. Gallery Auto-Changer (วนรูปตัวละครแต่ละชุดแบบอัตโนมัติ)
-            const fileSets = {
-                maid: ['maid_0000_normal', 'maid_0001_nikkori', 'maid_0002_good', 'maid_0003_zannen', 'maid_0004_naku', 'maid_0005_batsu', 'maid_0006_tere', 'maid_0007_neko', 'maid_0008_hart', 'maid_0009_odoroki'],
-                miko: ['miko_0000_normal', 'miko_0001_nikkori', 'miko_0002_good', 'miko_0003_hart', 'miko_0004_odoroki', 'miko_0005_zannen', 'miko_0006_naku', 'miko_0007_tere', 'miko_0008_neko'],
-                yukata: ['yukata-nikkori', 'yukata-good', 'yukata-zannen', 'yukata-hart', 'yukata-naku', 'yukata-tere', 'yukata-odoroki'],
-                gos: ['gos_0000_normal', 'gos_0001_nikkori', 'gos_0002_good', 'gos_0003_naku', 'gos_0004_hart', 'gos_0005_neko', 'gos_0006_tere', 'gos_0007_odoroki']
+            // 2. Gallery Auto-Changer (画像とセリフをセットで切り替え)
+            const galleryData = {
+                maid: [
+                    { img: 'maid_0000_normal.png', th: "นายท่านคะ รับชาเพิ่มไหมคะ?", ja: "ご主人様、お茶のおかわりはいかがですか？" },
+                    { img: 'maid_0001_nikkori.png', th: "พยายามเข้านะคะ นายท่าน!", ja: "頑張ってくださいね、ご主人様！" },
+                    { img: 'maid_0006_tere.png', th: "อะ... เอ๋? ชมกันแบบนี้ก็เขินแย่สิคะ...", ja: "えっ…？そ、そんなに褒められると照れます…" }
+                ],
+                miko: [
+                    { img: 'miko_0000_normal.png', th: "วันนี้จะโชคดีหรือเปล่านะ มาเสี่ยงเซียมซีกันเถอะ", ja: "今日は運がいいかな？おみくじを引きましょう。" },
+                    { img: 'miko_0001_nikkori.png', th: "ขอให้สอบผ่านนะคะ!", ja: "合格しますように！" },
+                    { img: 'miko_0007_tere.png', th: "ชุดนี้... เหมาะกับฉันจริงๆ เหรอคะ?", ja: "この格好…本当に似合ってますか？" }
+                ],
+                yukata: [
+                    { img: 'yukata-nikkori.png', th: "ดอกไม้ไฟสวยจังเลยเนอะ... ดีใจที่ได้มาดูกับเธอนะ", ja: "花火、綺麗だね……。あなたと一緒に見れて嬉しいな。" },
+                    { img: 'yukata-good.png', th: "ไปตักปลาทองกันเถอะ!", ja: "金魚すくい、やろうよ！" },
+                    { img: 'yukata-tere.png', th: "มือ... จะจับมือเหรอคะ...?", ja: "手…繋ぐの…？" }
+                ],
+                gos: [
+                    { img: 'gos_0000_normal.png', th: "หึ... ก็ไม่ได้มารอเธอหรอกนะ แค่ผ่านมาพอดี", ja: "ふん、別に待ってたわけじゃないわよ。たまたま通りかかっただけ。" },
+                    { img: 'gos_0001_nikkori.png', th: "これ、あげるわ。感謝しなさいよね。", ja: "これ、あげるわ。感謝しなさいよね。" },
+                    { img: 'gos_0006_tere.png', th: "อย่ามองมากนักสิ... เจ้าบ้า!", ja: "あんまりジロジロ見ないでよ…バカ！" }
+                ]
             };
 
             let indices = { maid: 0, miko: 0, yukata: 0, gos: 0 };
-            const elements = {
-                maid: document.getElementById('auto-maid'),
-                miko: document.getElementById('auto-miko'),
-                yukata: document.getElementById('auto-yukata'),
-                gos: document.getElementById('auto-gos')
-            };
+            const elements = ['maid', 'miko', 'yukata', 'gos'].reduce((acc, key) => {
+                acc[key] = {
+                    img: document.getElementById(`auto-${key}-img`),
+                    ui: document.getElementById(`auto-${key}-ui`),
+                    th: document.getElementById(`auto-${key}-th`),
+                    ja: document.getElementById(`auto-${key}-ja`)
+                };
+                return acc;
+            }, {});
 
             setInterval(() => {
                 for (let key in elements) {
-                    if (elements[key]) {
-                        elements[key].style.opacity = 0; // Fade out
+                    if (elements[key].img) {
+                        elements[key].img.style.opacity = 0; elements[key].ui.style.opacity = 0;
                         setTimeout((currentKey) => {
-                            indices[currentKey] = (indices[currentKey] + 1) % fileSets[currentKey].length;
-                            elements[currentKey].src = `images/${currentKey}/${fileSets[currentKey][indices[currentKey]]}.png`;
-                            elements[currentKey].style.opacity = 1; // Fade in
-                        }, 200, key);
+                            indices[currentKey] = (indices[currentKey] + 1) % galleryData[currentKey].length;
+                            const data = galleryData[currentKey][indices[currentKey]];
+                            elements[currentKey].img.src = `images/${currentKey}/${data.img}`;
+                            elements[currentKey].th.innerText = data.th;
+                            elements[currentKey].ja.innerText = data.ja;
+                            elements[currentKey].img.style.opacity = 1; elements[currentKey].ui.style.opacity = 1;
+                        }, 300, key);
                     }
                 }
-            }, 2000); // เปลี่ยนรูปทุกๆ 2 วินาที
+            }, 3000); // 3秒ごとに切り替え
         });
     </script>
 </body>
