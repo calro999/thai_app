@@ -58,6 +58,7 @@ const state = {
     unlockPendingItem: null, // To track which item is being unlocked in modal
     currentTargetAudio: null // For replaying audio in listening mode
 };
+window.state = state; // Expose to global scope for external ad callbacks
 
 const characterAssets = {
     gos: { normal: 'gos_0000_normal.png', nikkori: 'gos_0001_nikkori.png', good: 'gos_0002_good.png', naku: 'gos_0003_naku.png', hart: 'gos_0004_hart.png', neko: 'gos_0005_neko.png', tere: 'gos_0006_tere.png', odoroki: 'gos_0007_odoroki.png', zannen: 'gos_0007_odoroki.png' },
@@ -642,6 +643,7 @@ function selectCourse(id) {
 }
 
 function openOshikatsuSalesBox() {
+    state.unlockPendingItem = { id: 'oshikatsu', type: 'course' };
     document.getElementById('oshikatsu-sales-box').style.display = 'flex';
 }
 
@@ -650,6 +652,7 @@ function closeOshikatsuSalesBox() {
 }
 
 function openSpecialTravelSalesBox() {
+    state.unlockPendingItem = { id: 'special_travel', type: 'course' };
     document.getElementById('special-travel-sales-box').style.display = 'flex';
 }
 
@@ -658,6 +661,7 @@ function closeSpecialTravelSalesBox() {
 }
 
 function openSpecialFoodSalesBox() {
+    state.unlockPendingItem = { id: 'special_food', type: 'course' };
     document.getElementById('special-food-sales-box').style.display = 'flex';
 }
 
@@ -666,6 +670,7 @@ function closeSpecialFoodSalesBox() {
 }
 
 function openSpecialMedicalSalesBox() {
+    state.unlockPendingItem = { id: 'special_medical', type: 'course' };
     document.getElementById('special-medical-sales-box').style.display = 'flex';
 }
 
