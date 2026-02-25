@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thai-gal-app.vercel.app/sitemap.xml
