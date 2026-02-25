@@ -1,3 +1,5 @@
+google.com, pub-6242776978959938, DIRECT, f08c47fec0942fa0
+
 headerlift.com, 34846, DIRECT
 improvedigital.com, 545_34846, DIRECT
 improvedigital.com, 545, RESELLER
