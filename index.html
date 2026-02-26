@@ -22,7 +22,6 @@
     </script>
 
     <style>
-        /* アプリ本体を最初隠すためのクラス */
         .app-hidden {
             display: none !important;
         }
@@ -339,6 +338,26 @@
 
         .thanks-btn:hover {
             background: #d81b60;
+        }
+
+        /* ★★★ 修正：モーダルのZ-Index階層管理 ★★★ */
+        /* 基本的なモーダルは1000〜 */
+        .overlay-menu {
+            z-index: 10000 !important;
+        }
+
+        /* ショップはベースとなるので少し低めに設定 */
+        #shop-modal {
+            z-index: 10001 !important;
+        }
+
+        /* アンロック系モーダルはショップより確実に上に表示させる */
+        #unlock-modal,
+        #oshikatsu-sales-box,
+        #special-travel-sales-box,
+        #special-food-sales-box,
+        #special-medical-sales-box {
+            z-index: 10005 !important;
         }
 
         @media screen and (max-width: 768px) {
@@ -698,7 +717,7 @@
 
             <div id="special-food-sales-box" class="overlay-menu" style="display:none;">
                 <div class="mode-card" style="border-color: #FF80AB; padding: 30px 20px;">
-                    <h3 style="color: #D81B60;">🔑 ภาษาญี่ปุ่นสำหรับร้านอาหารและกูร์เมต์</h3>
+                    <h3 style="color: #D81B60;">🔑 ร้านอาหารและกูร์เมต์</h3>
                     <p style="font-size: 1rem; line-height: 1.6; color: #333; margin-bottom: 20px; text-align: left;">
                         <b>วิธีปลดล็อก:</b><br>
                         เพียงคลิกชมโฆษณาเพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
@@ -798,7 +817,7 @@
         </div>
     </div>
     <script>
-        // --- 1. タイトル画面の制御（自動モードセレクトへ移動） ---
+        // --- 1. タイトル画面の制御（自動モードセレクト） ---
         function startGameApp() {
             document.getElementById('title-screen').style.display = 'none';
             document.getElementById('app-wrapper').classList.remove('app-hidden');
@@ -810,7 +829,7 @@
                 bgm.play().catch(e => console.log("BGM play failed:", e));
             }
 
-            // ★起動と同時にコース選択（モードセレクト）画面を自動で開く
+            // ★起動と同時にコース選択（モードセレクト）画面を自動で開く！
             if (typeof openModeSelect === 'function') {
                 setTimeout(() => { openModeSelect(); }, 100);
             }
