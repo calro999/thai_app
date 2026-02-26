@@ -9,7 +9,6 @@
     <title>ติวญี่ปุ่นกับสาวแกล</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="icon" type="image/png" href="images/bar.png">
     <link rel="apple-touch-icon" href="images/bar.png">
 
@@ -296,7 +295,8 @@
             margin-bottom: 10px;
         }
 
-        .pc-flex-row>button {
+        .pc-flex-row>button,
+        .pc-flex-row>a {
             flex: 1;
             margin: 0 !important;
         }
@@ -312,7 +312,12 @@
             padding: 12px 5px;
         }
 
+        /* Aタグをボタンに見せるためのスタイル */
         .settings-btn-link {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 1.5;
             background: #000;
             color: #fff;
             border: 1px solid #444;
@@ -328,9 +333,14 @@
 
         .settings-btn-link:hover {
             background: #333;
+            color: #fff;
         }
 
         .settings-btn-support {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 1.5;
             background: linear-gradient(45deg, #ff1493, #d81b60);
             color: #fff;
             border: 2px solid #fff;
@@ -347,6 +357,7 @@
 
         .settings-btn-support:hover {
             transform: scale(1.02);
+            color: #fff;
         }
 
         /* 応援ありがとうオーバーレイ */
@@ -470,7 +481,8 @@
                 margin-bottom: 0;
             }
 
-            .pc-flex-row>button {
+            .pc-flex-row>button,
+            .pc-flex-row>a {
                 width: 95% !important;
                 max-width: 300px !important;
                 margin: 8px auto !important;
@@ -554,13 +566,13 @@
                 <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.3); margin: 15px 0;">
 
                 <div class="pc-flex-row">
-                    <button class="settings-btn-link"
-                        onclick="window.open('https://www.threads.net/@jlpt_thai_gal', '_blank')">
+                    <a href="https://www.threads.net/@jlpt_thai_gal" target="_blank" class="settings-btn-link">
                         📱 Threads (@jlpt_thai_gal)
-                    </button>
-                    <button class="settings-btn-support" onclick="supportDeveloperAction()">
+                    </a>
+                    <a href="https://www.effectivegatecpm.com/p2zed15e1x?key=4a59dfe39dbbbc3427bae6fbd8c83097"
+                        target="_blank" class="settings-btn-support" onclick="startSupportWait()">
                         💖 ชมโฆษณาเพื่อสนับสนุนนักพัฒนา
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -777,15 +789,15 @@
                         </div>
 
                         <div style="border-top: 1px solid #eee; padding-top: 15px; margin-top: 10px;">
-                            <button class="settings-btn-link"
-                                onclick="window.open('https://www.threads.net/@jlpt_thai_gal', '_blank')"
-                                style="margin-bottom: 8px; width: 100%; padding: 12px; font-size:14px;">
+                            <a href="https://www.threads.net/@jlpt_thai_gal" target="_blank" class="settings-btn-link"
+                                style="margin-bottom: 10px;">
                                 📱 Official Threads (@jlpt_thai_gal)
-                            </button>
-                            <button class="settings-btn-support" onclick="supportDeveloperAction()"
-                                style="width: 100%; padding: 12px; font-size:14px;">
+                            </a>
+                            <a href="https://www.effectivegatecpm.com/p2zed15e1x?key=4a59dfe39dbbbc3427bae6fbd8c83097"
+                                target="_blank" class="settings-btn-support"
+                                onclick="startSupportWait(); closeSettingsMenu();">
                                 💖 ชมโฆษณาเพื่อสนับสนุนนักพัฒนา
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -796,16 +808,21 @@
         </div>
     </div>
     <script>
-        // --- 1. タイトル画面の制御 ---
+        // --- 1. タイトル画面の制御（自動モードセレクト） ---
         function startGameApp() {
             document.getElementById('title-screen').style.display = 'none';
             document.getElementById('app-wrapper').classList.remove('app-hidden');
 
-            // BGMの再生許可（ユーザーアクション後なのでブラウザポリシーをクリアできる）
+            // BGMの再生許可
             window._bgmStarted = true;
             const bgm = document.getElementById('bgm-audio');
             if (bgm && bgm.paused) {
                 bgm.play().catch(e => console.log("BGM play failed:", e));
+            }
+
+            // ★起動と同時にコース選択（モードセレクト）画面を開く！
+            if (typeof openModeSelect === 'function') {
+                openModeSelect();
             }
         }
 
@@ -839,12 +856,8 @@
         // --- 3. 応援ボタン機能とタブ戻り検知 ---
         let isWaitingForSupportReturn = false;
 
-        function supportDeveloperAction() {
-            // 指定のスマートリンクを開く
-            window.open("https://www.effectivegatecpm.com/p2zed15e1x?key=4a59dfe39dbbbc3427bae6fbd8c83097", "_blank");
+        function startSupportWait() {
             isWaitingForSupportReturn = true;
-            // 設定メニューが開いていたら閉じる
-            if (typeof closeSettingsMenu === 'function') closeSettingsMenu();
         }
 
         function showThanksOverlay() {
