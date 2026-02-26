@@ -451,13 +451,16 @@
             border: 4px solid #ff69b4;
             border-radius: 20px;
             padding: 30px;
-            width: 350px;
+            width: 100%;
+            max-width: 300px;
+            /* 3列綺麗に並ぶように調整 */
             box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
             transition: 0.3s;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            box-sizing: border-box;
         }
 
         .promo-card:hover {
@@ -467,13 +470,13 @@
 
         .promo-card h3 {
             color: #d81b60;
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 20px;
         }
 
         .promo-card p {
             color: #555;
-            font-size: 16px;
+            font-size: 14px;
             margin-bottom: 25px;
             line-height: 1.5;
             font-weight: bold;
@@ -482,19 +485,20 @@
         .promo-btn {
             background: linear-gradient(45deg, #ff1493, #d81b60);
             color: white;
-            padding: 12px 30px;
-            font-size: 18px;
+            padding: 10px 25px;
+            font-size: 16px;
             font-weight: bold;
             border-radius: 30px;
             box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
             display: inline-block;
             width: 80%;
+            box-sizing: border-box;
         }
 
         /* プロモ用ミニモックアップ */
         .promo-smartphone {
-            width: 160px;
-            height: 320px;
+            width: 150px;
+            height: 300px;
             background: #111;
             border-radius: 20px;
             border: 6px solid #333;
@@ -509,7 +513,7 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
+            width: 50px;
             height: 12px;
             background: #333;
             border-bottom-left-radius: 8px;
@@ -740,7 +744,8 @@
                 <div class="notch"></div>
                 <div class="mockup-screen">
                     <img id="hero-bg" src="gd_build/assets/images/bg_classroom_mo.jpg" class="mockup-bg" alt="bg">
-                    <img id="hero-char" src="images/maid/maid_0001_nikkori.png" class="mockup-char" alt="yui">
+                    <img id="hero-char" src="images/maid/maid_0001_nikkori.png" class="mockup-char" alt="yui"
+                        style="bottom:0; object-fit: cover;">
                     <div id="hero-ui" class="mockup-ui">
                         <div class="mockup-name">สาวแกล</div>
                         <div id="hero-text-th" class="mockup-text">ยินดีต้อนรับกลับค่ะ นายท่าน! มาเริ่มเรียนกันเถอะ!
@@ -784,7 +789,8 @@
                     <div class="notch"></div>
                     <div class="mockup-screen">
                         <img src="gd_build/assets/images/bg_classroom_mo.jpg" class="mockup-bg">
-                        <img id="auto-maid-img" src="images/maid/maid_0000_normal.png" class="mockup-char">
+                        <img id="auto-maid-img" src="images/maid/maid_0000_normal.png" class="mockup-char"
+                            style="bottom:0; object-fit:cover;">
                         <div id="auto-maid-ui" class="gallery-ui">
                             <div class="mockup-name">Maid</div>
                             <div id="auto-maid-th" class="gallery-text">นายท่านคะ รับชาเพิ่มไหมคะ?</div>
@@ -800,7 +806,8 @@
                     <div class="notch"></div>
                     <div class="mockup-screen">
                         <img src="gd_build/assets/images/bg_classroom_mo.jpg" class="mockup-bg">
-                        <img id="auto-miko-img" src="images/miko/miko_0000_normal.png" class="mockup-char">
+                        <img id="auto-miko-img" src="images/miko/miko_0000_normal.png" class="mockup-char"
+                            style="bottom:0; object-fit:cover;">
                         <div id="auto-miko-ui" class="gallery-ui">
                             <div class="mockup-name">Miko</div>
                             <div id="auto-miko-th" class="gallery-text">วันนี้จะโชคดีหรือเปล่านะ มาเสี่ยงเซียมซีกันเถอะ
@@ -817,7 +824,8 @@
                     <div class="notch"></div>
                     <div class="mockup-screen">
                         <img src="gd_build/assets/images/bg_classroom_mo.jpg" class="mockup-bg">
-                        <img id="auto-yukata-img" src="images/yukata/yukata-nikkori.png" class="mockup-char">
+                        <img id="auto-yukata-img" src="images/yukata/yukata-nikkori.png" class="mockup-char"
+                            style="bottom:0; object-fit:cover;">
                         <div id="auto-yukata-ui" class="gallery-ui">
                             <div class="mockup-name">Yukata</div>
                             <div id="auto-yukata-th" class="gallery-text">ดอกไม้ไฟสวยจังเลยเนอะ...
@@ -834,7 +842,8 @@
                     <div class="notch"></div>
                     <div class="mockup-screen">
                         <img src="gd_build/assets/images/bg_classroom_mo.jpg" class="mockup-bg">
-                        <img id="auto-gos-img" src="images/gos/gos_0000_normal.png" class="mockup-char">
+                        <img id="auto-gos-img" src="images/gos/gos_0000_normal.png" class="mockup-char"
+                            style="bottom:0; object-fit:cover;">
                         <div id="auto-gos-ui" class="gallery-ui">
                             <div class="mockup-name">Gothic</div>
                             <div id="auto-gos-th" class="gallery-text">หึ... ก็ไม่ได้มารอเธอหรอกนะ แค่ผ่านมาพอดี</div>
@@ -848,7 +857,7 @@
     </section>
 
     <section class="cross-promo-container">
-        <h2 class="cross-promo-title">✨ ขยายจักรวาลภาษาญี่ปุ่นกับยุย ✨</h2>
+        <h2 class="cross-promo-title">✨ ขยายจักรวาล Visual Novel กับยุย ✨</h2>
         <div class="promo-grid">
 
             <div class="promo-card">
@@ -861,17 +870,39 @@
                             class="mockup-bg">
                         <img id="promo-fest-char"
                             src="https://thai-school-festival-novel.vercel.app/images/yui_yukata_blush.png"
-                            class="mockup-char" style="bottom: 0;">
+                            class="mockup-char" style="bottom: 0; object-fit: cover;">
                         <div id="promo-fest-ui" class="promo-ui">
                             <div class="promo-name">ยุ้ย / ยุย</div>
                             <div id="promo-fest-th" class="promo-text">ไปเดินดูงานเทศกาลกันเถอะ!</div>
                         </div>
                     </div>
                 </div>
-                <p>ใหม่ล่าสุด! เกมจีบสาว 7 วันในเทศกาลโรงเรียน ระบบเลือกเส้นทาง (Route)
+                <p style="font-size: 13px;">เกมจีบสาว 7 วันในเทศกาลโรงเรียน ระบบเลือกเส้นทาง
                     ที่ทุกคำตอบส่งผลต่อฉากจบที่เปลี่ยนไป!</p>
                 <a href="https://thai-school-festival-novel.vercel.app/lp.html" target="_blank"
                     class="promo-btn">เล่นเลย (Play)</a>
+            </div>
+
+            <div class="promo-card">
+                <h3>Secret Maid Cafe Days</h3>
+                <div class="promo-smartphone">
+                    <div class="promo-notch"></div>
+                    <div class="mockup-screen">
+                        <img id="promo-maid-bg" src="https://thai-maid-gal-novel.vercel.app/images/bg_maid.jpg"
+                            class="mockup-bg">
+                        <img id="promo-maid-char"
+                            src="https://thai-maid-gal-novel.vercel.app/images/maid/maid_0001_nikkori.png"
+                            class="mockup-char" style="bottom: 0; object-fit: cover;">
+                        <div id="promo-maid-ui" class="promo-ui">
+                            <div class="promo-name">ยุ้ย / ยุย</div>
+                            <div id="promo-maid-th" class="promo-text">ยินดีต้อนรับสู่เมดคาเฟ่ค่ะ!</div>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-size: 13px;">ใหม่ล่าสุด! ทำงานพาร์ทไทม์ในร้านเมดคาเฟ่สุดป่วน! พบกับระบบ Multi-Ending
+                    ความรัก หรือถูกไล่ออก!</p>
+                <a href="https://thai-maid-gal-novel.vercel.app/lp.html" target="_blank" class="promo-btn">เล่นเลย
+                    (Play)</a>
             </div>
 
             <div class="promo-card">
@@ -882,15 +913,15 @@
                         <img id="promo-novel-bg" src="https://thai-gal-novel.vercel.app/images/bg_classroom.jpg"
                             class="mockup-bg">
                         <img id="promo-novel-char" src="https://thai-gal-novel.vercel.app/images/yui_serious.png"
-                            class="mockup-char">
+                            class="mockup-char" style="bottom: 0; object-fit: cover;">
                         <div id="promo-novel-ui" class="promo-ui">
                             <div class="promo-name">ยุ้ย / ยุย</div>
                             <div id="promo-novel-th" class="promo-text">ตั้งใจเรียนหน่อยสิคะ!</div>
                         </div>
                     </div>
                 </div>
-                <p>เรื่องราว 1 เดือนเต็มกับ 'ยุยเซนเซ' ในฐานะครูกับลูกศิษย์! ฝึกภาษาญี่ปุ่นผ่านเดตสุดโรแมนติก
-                    และมุ่งสู่ฉากจบแสนประทับใจที่สนามบิน!</p>
+                <p style="font-size: 13px;">เรื่องราว 1 เดือนเต็มกับ 'ยุยเซนเซ'! ฝึกภาษาญี่ปุ่นผ่านเดตสุดโรแมนติก
+                    และมุ่งสู่ฉากจบที่สนามบิน!</p>
                 <a href="https://thai-gal-novel.vercel.app/lp.html" target="_blank" class="promo-btn">เล่นเลย (Play)</a>
             </div>
 
@@ -1034,6 +1065,7 @@
             }, 3000);
 
             // ★★★ 3. Promo Cross Auto-Slider ★★★
+            // Festival
             const promoFestBg = document.getElementById('promo-fest-bg');
             const promoFestImg = document.getElementById('promo-fest-char');
             const promoFestUi = document.getElementById('promo-fest-ui');
@@ -1058,6 +1090,32 @@
                 }, 3500);
             }
 
+            // Maid
+            const promoMaidBg = document.getElementById('promo-maid-bg');
+            const promoMaidImg = document.getElementById('promo-maid-char');
+            const promoMaidUi = document.getElementById('promo-maid-ui');
+            const promoMaidTh = document.getElementById('promo-maid-th');
+
+            const promoMaidData = [
+                { bg: 'https://thai-maid-gal-novel.vercel.app/images/bg_maid.jpg', img: 'https://thai-maid-gal-novel.vercel.app/images/maid/maid_0001_nikkori.png', th: "ยินดีต้อนรับสู่เมดคาเฟ่ค่ะ!" },
+                { bg: 'https://thai-maid-gal-novel.vercel.app/images/bg_cafeura.jpg', img: 'https://thai-maid-gal-novel.vercel.app/images/maid/maid_0006_tere.png', th: "อ-เอ๋? ชมว่าน่ารักเหรอคะ..." },
+                { bg: 'https://thai-maid-gal-novel.vercel.app/images/bg_ura.jpg', img: 'https://thai-maid-gal-novel.vercel.app/images/maid/maid_0009_odoroki.png', th: "ว้าย! ระวังหน่อยสิคะ!" }
+            ];
+
+            let promoMaidIdx = 0;
+            if (promoMaidImg) {
+                setInterval(() => {
+                    promoMaidImg.style.opacity = 0; promoMaidUi.style.opacity = 0; promoMaidBg.style.opacity = 0.5;
+                    setTimeout(() => {
+                        promoMaidIdx = (promoMaidIdx + 1) % promoMaidData.length;
+                        const data = promoMaidData[promoMaidIdx];
+                        promoMaidBg.src = data.bg; promoMaidImg.src = data.img; promoMaidTh.innerText = data.th;
+                        promoMaidBg.style.opacity = 1; promoMaidImg.style.opacity = 1; promoMaidUi.style.opacity = 1;
+                    }, 300);
+                }, 4100);
+            }
+
+            // Novel
             const promoNovelBg = document.getElementById('promo-novel-bg');
             const promoNovelImg = document.getElementById('promo-novel-char');
             const promoNovelUi = document.getElementById('promo-novel-ui');
