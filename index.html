@@ -7,72 +7,12 @@
     <link rel="canonical" href="https://jlpt-with-gyaru.vercel.app/index.html">
     <meta name="google-site-verification" content="DkCMrOjpxPVzY0T8G34bKQQDsDP9Biu83kk2wfz5hz4">
     <title>ติวญี่ปุ่นกับสาวแกล</title>
-
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/bar.png">
     <link rel="apple-touch-icon" href="images/bar.png">
 
     <script defer src="/_vercel/insights/script.js"></script>
 
-    <script src="https://integration.gamepix.com/sdk/v3/gamepix.sdk.js"></script>
-
-    <script>
-        window["GD_OPTIONS"] = {
-            "gameId": "b8d80c10b719463ca0cceb709dc8296a", // MOCK ID, MUST REPLACE WITH REAL ID IN GD PORTAL
-            "onEvent": function (event) {
-                switch (event.name) {
-                    case "SDK_GAME_START":
-                        if (window._bgmStarted && document.getElementById('bgm-audio')) {
-                            document.getElementById('bgm-audio').play().catch(() => { });
-                        }
-                        break;
-                    case "SDK_GAME_PAUSE":
-                        if (document.getElementById('bgm-audio')) {
-                            document.getElementById('bgm-audio').pause();
-                        }
-                        window.speechSynthesis.cancel();
-                        break;
-                    case "SDK_GDPR_TRACKING":
-                    case "SDK_GDPR_TARGETING":
-                        break;
-                    case "SDK_REWARDED_WATCH_COMPLETE":
-                        if (window.state) {
-                            if (window.state.adPointsRequested) {
-                                window.state.adPointsRequested = false;
-                                window.state.adPoints += 5;
-                                localStorage.setItem('jlpt_with_gyaru_ad_points', window.state.adPoints);
-                                document.getElementById('current-points').innerText = window.state.adPoints;
-                                if (window.openUnlockModal && window.state.unlockPendingItem) {
-                                    window.openUnlockModal(window.state.unlockPendingItem.id, window.state.unlockPendingItem.type);
-                                }
-                            } else if (window.state.unlockPendingItem) {
-                                const id = window.state.unlockPendingItem.id;
-                                const type = window.state.unlockPendingItem.type;
-                                if (type === 'course') {
-                                    if (window.unlockCourse) window.unlockCourse(id, true);
-                                } else if (type === 'outfit') {
-                                    if (window.unlockOutfit) window.unlockOutfit(id, true);
-                                }
-                                if (window.closeUnlockModal) window.closeUnlockModal();
-                                if (window.closeOshikatsuSalesBox) window.closeOshikatsuSalesBox();
-                                if (window.closeSpecialTravelSalesBox) window.closeSpecialTravelSalesBox();
-                                if (window.closeSpecialFoodSalesBox) window.closeSpecialFoodSalesBox();
-                                if (window.closeSpecialMedicalSalesBox) window.closeSpecialMedicalSalesBox();
-                            }
-                        }
-                        break;
-                }
-            },
-        };
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = 'https://html5.api.gamedistribution.com/main.min.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'gamedistribution-jssdk'));
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCYNPFD7PR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -87,7 +27,6 @@
             display: none !important;
         }
 
-        /* タイトル画面全体 */
         #title-screen {
             position: absolute;
             top: 0;
@@ -295,8 +234,7 @@
             margin-bottom: 10px;
         }
 
-        .pc-flex-row>button,
-        .pc-flex-row>a {
+        .pc-flex-row>button {
             flex: 1;
             margin: 0 !important;
         }
@@ -312,12 +250,7 @@
             padding: 12px 5px;
         }
 
-        /* Aタグをボタンに見せるためのスタイル */
         .settings-btn-link {
-            display: block;
-            text-decoration: none;
-            text-align: center;
-            line-height: 1.5;
             background: #000;
             color: #fff;
             border: 1px solid #444;
@@ -333,14 +266,9 @@
 
         .settings-btn-link:hover {
             background: #333;
-            color: #fff;
         }
 
         .settings-btn-support {
-            display: block;
-            text-decoration: none;
-            text-align: center;
-            line-height: 1.5;
             background: linear-gradient(45deg, #ff1493, #d81b60);
             color: #fff;
             border: 2px solid #fff;
@@ -357,7 +285,6 @@
 
         .settings-btn-support:hover {
             transform: scale(1.02);
-            color: #fff;
         }
 
         /* 応援ありがとうオーバーレイ */
@@ -481,8 +408,7 @@
                 margin-bottom: 0;
             }
 
-            .pc-flex-row>button,
-            .pc-flex-row>a {
+            .pc-flex-row>button {
                 width: 95% !important;
                 max-width: 300px !important;
                 margin: 8px auto !important;
@@ -566,13 +492,13 @@
                 <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.3); margin: 15px 0;">
 
                 <div class="pc-flex-row">
-                    <a href="https://www.threads.net/@jlpt_thai_gal" target="_blank" class="settings-btn-link">
+                    <button class="settings-btn-link"
+                        onclick="window.open('https://www.threads.net/@jlpt_thai_gal', '_blank')">
                         📱 Threads (@jlpt_thai_gal)
-                    </a>
-                    <a href="https://www.effectivegatecpm.com/p2zed15e1x?key=4a59dfe39dbbbc3427bae6fbd8c83097"
-                        target="_blank" class="settings-btn-support" onclick="startSupportWait()">
+                    </button>
+                    <button class="settings-btn-support" onclick="supportDeveloperAction()">
                         💖 ชมโฆษณาเพื่อสนับสนุนนักพัฒนา
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -699,20 +625,16 @@
             <div id="unlock-modal" class="overlay-menu" style="display:none;">
                 <div class="mode-card">
                     <h3 id="unlock-title">Unlock Premium</h3>
-                    <p id="unlock-desc">สะสมแต้มหรือซื้อเพื่อเข้าถึงเนื้อหานี้</p>
+                    <p id="unlock-desc">สะสมแต้มหรือสนับสนุนนักพัฒนาเพื่อใช้งาน 24 ชั่วโมง!</p>
                     <div id="points-display"
                         style="margin: 15px 0; font-weight: bold; font-size: 1.2rem; color: #FF4081;">
                         แต้มสะสม: <span id="current-points">0</span> / <span id="required-points">--</span>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 10px;">
                         <button class="mode-btn highlight" id="use-points-btn"
-                            onclick="unlockWithPoints()">ใช้แต้มปลดล็อก
-                            (Use Points)</button>
-                        <button class="mode-btn" onclick="purchaseItemDirect()"
-                            style="background: #E1F5FE; border-color: #4FC3F7;">ดูวิดีโอเพื่อปลดล็อก (Watch
-                            Video)</button>
-                        <button class="mode-btn" onclick="watchAdForPoints()"
-                            style="background: #FFFDE7; border-color: #FFF176;">ดูโฆษณาเพื่อรับแต้ม (+5)</button>
+                            onclick="unlockWithPoints()">ใช้แต้มปลดล็อก (Use Points)</button>
+                        <button class="mode-btn" onclick="unlockItemViaSmartlink()"
+                            style="background: #E1F5FE; border-color: #4FC3F7;">✨ ชมโฆษณาเพื่อปลดล็อก 24 ชม.</button>
                         <button class="mode-btn cancel" onclick="closeUnlockModal()">ปิด (Close)</button>
                     </div>
                 </div>
@@ -737,6 +659,74 @@
                     <div id="shop-list" style="max-height: 400px; overflow-y: auto; padding: 10px 0;">
                     </div>
                     <button class="mode-btn cancel" onclick="closeShop()" style="margin-top: 15px;">กลับ (Back)</button>
+                </div>
+            </div>
+
+            <div id="oshikatsu-sales-box" class="overlay-menu" style="display:none;">
+                <div class="mode-card" style="border-color: #FF80AB; padding: 30px 20px;">
+                    <h3 style="color: #D81B60;">🔑 กิจกรรมของโอตาคุ</h3>
+                    <p style="font-size: 1rem; line-height: 1.6; color: #333; margin-bottom: 20px; text-align: left;">
+                        <b>วิธีปลดล็อก:</b><br>
+                        เพียงคลิกชมโฆษณาเพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <button class="mode-btn highlight" onclick="unlockItemViaSmartlink()"
+                            style="background: #FCE4EC; border-color: #F06292; color: #D81B60; padding: 18px; font-size: 1.1rem;">
+                            ✨ ชมโฆษณาเพื่อปลดล็อก 24 ชม.
+                        </button>
+                        <button class="mode-btn cancel" onclick="closeOshikatsuSalesBox()">ยกเลิก (Cancel)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="special-travel-sales-box" class="overlay-menu" style="display:none;">
+                <div class="mode-card" style="border-color: #FF80AB; padding: 30px 20px;">
+                    <h3 style="color: #D81B60;">🔑 เที่ยวญี่ปุ่นซับไววัล: 50 คำศัพท์ต้องรู้</h3>
+                    <p style="font-size: 1rem; line-height: 1.6; color: #333; margin-bottom: 20px; text-align: left;">
+                        <b>วิธีปลดล็อก:</b><br>
+                        เพียงคลิกชมโฆษณาเพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <button class="mode-btn highlight" onclick="unlockItemViaSmartlink()"
+                            style="background: #FCE4EC; border-color: #F06292; color: #D81B60; padding: 18px; font-size: 1.1rem;">
+                            ✨ ชมโฆษณาเพื่อปลดล็อก 24 ชม.
+                        </button>
+                        <button class="mode-btn cancel" onclick="closeSpecialTravelSalesBox()">ยกเลิก (Cancel)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="special-food-sales-box" class="overlay-menu" style="display:none;">
+                <div class="mode-card" style="border-color: #FF80AB; padding: 30px 20px;">
+                    <h3 style="color: #D81B60;">🔑 ภาษาญี่ปุ่นสำหรับร้านอาหารและกูร์เมต์</h3>
+                    <p style="font-size: 1rem; line-height: 1.6; color: #333; margin-bottom: 20px; text-align: left;">
+                        <b>วิธีปลดล็อก:</b><br>
+                        เพียงคลิกชมโฆษณาเพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <button class="mode-btn highlight" onclick="unlockItemViaSmartlink()"
+                            style="background: #FCE4EC; border-color: #F06292; color: #D81B60; padding: 18px; font-size: 1.1rem;">
+                            ✨ ชมโฆษณาเพื่อปลดล็อก 24 ชม.
+                        </button>
+                        <button class="mode-btn cancel" onclick="closeSpecialFoodSalesBox()">ยกเลิก (Cancel)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="special-medical-sales-box" class="overlay-menu" style="display:none;">
+                <div class="mode-card" style="border-color: #FF80AB; padding: 30px 20px;">
+                    <h3 style="color: #D81B60;">🔑 แจ้งอาการป่วยและซื้อยาอย่างมั่นใจ</h3>
+                    <p style="font-size: 1rem; line-height: 1.6; color: #333; margin-bottom: 20px; text-align: left;">
+                        <b>วิธีปลดล็อก:</b><br>
+                        เพียงคลิกชมโฆษณาเพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <button class="mode-btn highlight" onclick="unlockItemViaSmartlink()"
+                            style="background: #FCE4EC; border-color: #F06292; color: #D81B60; padding: 18px; font-size: 1.1rem;">
+                            ✨ ชมโฆษณาเพื่อปลดล็อก 24 ชม.
+                        </button>
+                        <button class="mode-btn cancel" onclick="closeSpecialMedicalSalesBox()">ยกเลิก (Cancel)</button>
+                    </div>
                 </div>
             </div>
 
@@ -789,15 +779,15 @@
                         </div>
 
                         <div style="border-top: 1px solid #eee; padding-top: 15px; margin-top: 10px;">
-                            <a href="https://www.threads.net/@jlpt_thai_gal" target="_blank" class="settings-btn-link"
-                                style="margin-bottom: 10px;">
+                            <button class="settings-btn-link"
+                                onclick="window.open('https://www.threads.net/@jlpt_thai_gal', '_blank')"
+                                style="margin-bottom: 8px; width: 100%; padding: 12px; font-size:14px;">
                                 📱 Official Threads (@jlpt_thai_gal)
-                            </a>
-                            <a href="https://www.effectivegatecpm.com/p2zed15e1x?key=4a59dfe39dbbbc3427bae6fbd8c83097"
-                                target="_blank" class="settings-btn-support"
-                                onclick="startSupportWait(); closeSettingsMenu();">
+                            </button>
+                            <button class="settings-btn-support" onclick="supportDeveloperAction()"
+                                style="width: 100%; padding: 12px; font-size:14px;">
                                 💖 ชมโฆษณาเพื่อสนับสนุนนักพัฒนา
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -808,7 +798,7 @@
         </div>
     </div>
     <script>
-        // --- 1. タイトル画面の制御（自動モードセレクト） ---
+        // --- 1. タイトル画面の制御（自動モードセレクトへ移動） ---
         function startGameApp() {
             document.getElementById('title-screen').style.display = 'none';
             document.getElementById('app-wrapper').classList.remove('app-hidden');
@@ -820,9 +810,9 @@
                 bgm.play().catch(e => console.log("BGM play failed:", e));
             }
 
-            // ★起動と同時にコース選択（モードセレクト）画面を開く！
+            // ★起動と同時にコース選択（モードセレクト）画面を自動で開く
             if (typeof openModeSelect === 'function') {
-                openModeSelect();
+                setTimeout(() => { openModeSelect(); }, 100);
             }
         }
 
@@ -856,8 +846,12 @@
         // --- 3. 応援ボタン機能とタブ戻り検知 ---
         let isWaitingForSupportReturn = false;
 
-        function startSupportWait() {
+        function supportDeveloperAction() {
+            // ★JavaScriptの window.open で確実に別タブを開く！
+            window.open("https://www.effectivegatecpm.com/p2zed15e1x?key=4a59dfe39dbbbc3427bae6fbd8c83097", "_blank");
             isWaitingForSupportReturn = true;
+            // 設定メニューが開いていたら閉じる
+            if (typeof closeSettingsMenu === 'function') closeSettingsMenu();
         }
 
         function showThanksOverlay() {
@@ -893,6 +887,64 @@
                 }, 500);
             }
         });
+
+        // --- 4. 24時間解放用スマートリンク機能 ---
+        let unlockTarget = null;
+        let isWaitingForUnlock = false;
+
+        function unlockItemViaSmartlink() {
+            // app.js に保存されている解放待ちアイテム情報を取得
+            if (window.state && window.state.unlockPendingItem) {
+                unlockTarget = window.state.unlockPendingItem;
+            }
+
+            // スマートリンクを開く
+            window.open("https://www.effectivegatecpm.com/p2zed15e1x?key=4a59dfe39dbbbc3427bae6fbd8c83097", "_blank");
+            isWaitingForUnlock = true;
+
+            // 全ての課金モーダルを閉じる
+            if (typeof closeUnlockModal === 'function') closeUnlockModal();
+            if (typeof closeOshikatsuSalesBox === 'function') closeOshikatsuSalesBox();
+            if (typeof closeSpecialTravelSalesBox === 'function') closeSpecialTravelSalesBox();
+            if (typeof closeSpecialFoodSalesBox === 'function') closeSpecialFoodSalesBox();
+            if (typeof closeSpecialMedicalSalesBox === 'function') closeSpecialMedicalSalesBox();
+        }
+
+        // アンロックからタブが戻ってきた時の処理
+        document.addEventListener("visibilitychange", () => {
+            if (!document.hidden && isWaitingForUnlock) {
+                isWaitingForUnlock = false;
+                apply24HourUnlock();
+            }
+        });
+        window.addEventListener("focus", () => {
+            if (isWaitingForUnlock) {
+                setTimeout(() => {
+                    if (isWaitingForUnlock) {
+                        isWaitingForUnlock = false;
+                        apply24HourUnlock();
+                    }
+                }, 500);
+            }
+        });
+
+        function apply24HourUnlock() {
+            if (unlockTarget) {
+                const now = Date.now();
+                // ★ 24時間解放用のタイムスタンプをローカルストレージに保存
+                localStorage.setItem(`unlock_24h_${unlockTarget.type}_${unlockTarget.id}`, now.toString());
+
+                // 既存のapp.jsの関数を呼び出して解放する
+                if (unlockTarget.type === 'course' && window.unlockCourse) {
+                    window.unlockCourse(unlockTarget.id, true);
+                } else if (unlockTarget.type === 'outfit' && window.unlockOutfit) {
+                    window.unlockOutfit(unlockTarget.id, true);
+                }
+
+                showThanksOverlay();
+                unlockTarget = null;
+            }
+        }
 
         // --- 既存の設定ボタンをフック ---
         function openSettingsMenu() {
