@@ -31,7 +31,7 @@
         content="แอปพลิเคชันเรียนภาษาญี่ปุ่นสไตล์เกมเมอร์ ติวข้อสอบ JLPT N5-N1 ฝึกฟังด้วยเสียงพากย์ และสนุกกับระบบแต่งตัวสาวแกล (Gyaru)">
     <meta name="keywords"
         content="เรียนภาษาญี่ปุ่น, ภาษาญี่ปุ่นด้วยตัวเอง, JLPT, N5, N4, N3, N2, N1, ติวญี่ปุ่น, สาวแกล, เกมเรียนภาษา, เรียนภาษาญี่ปุ่นฟรี, ฮิรางานะ, คาตาคานะ">
-    <meta name="author" content="gal">
+    <meta name="author" content="The Nameless Creator">
 
     <meta property="og:title" content="ติวญี่ปุ่นกับสาวแกล - JLPT Study with Gyaru Game">
     <meta property="og:description"
@@ -147,11 +147,21 @@
             border-radius: 25px;
             font-weight: bold;
             transition: 0.3s;
+            display: inline-block;
+            margin-left: 10px;
         }
 
         .header-btn:hover {
             background: var(--secondary-color);
             transform: scale(1.05);
+        }
+
+        .header-btn-dark {
+            background: #4b0082;
+        }
+
+        .header-btn-dark:hover {
+            background: #300052;
         }
 
         /* Hero */
@@ -203,7 +213,7 @@
             box-shadow: 0 15px 25px rgba(255, 105, 180, 0.6);
         }
 
-        /* Smartphone Mockup (共通スタイル) */
+        /* Smartphone Mockup */
         .hero-mockup {
             flex: 1;
             display: flex;
@@ -220,7 +230,6 @@
             overflow: hidden;
         }
 
-        /* ヒーローセクション用のサイズ */
         .hero-phone-size {
             width: 300px;
             height: 600px;
@@ -254,7 +263,6 @@
             filter: brightness(0.8);
         }
 
-        /* 立ち絵の配置修正：底辺に合わせる */
         .mockup-char {
             position: absolute;
             bottom: 0;
@@ -264,7 +272,6 @@
             height: auto;
             transition: opacity 0.3s ease-in-out;
             object-fit: cover;
-            /* はみ出る部分はトリミング */
         }
 
         .mockup-ui {
@@ -355,7 +362,7 @@
             color: var(--text-sub);
         }
 
-        /* Gallery (Dress Up) - PCレイアウト */
+        /* Gallery */
         .gallery {
             padding: 80px 5%;
             background: #ffe6f2;
@@ -369,7 +376,6 @@
             padding-bottom: 40px;
         }
 
-        /* ギャラリー用のサイズ */
         .gallery-phone-size {
             width: 240px;
             height: 480px;
@@ -384,7 +390,6 @@
             transform: translateY(-10px);
         }
 
-        /* ギャラリー内のUI調整 */
         .gallery-ui {
             position: absolute;
             bottom: 10px;
@@ -421,53 +426,131 @@
             text-align: center;
         }
 
-        /* Cross Promo */
-        .cross-promo-section {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+        /* ★★★ Cross Promo (YUI UNIVERSE) ★★★ */
+        .cross-promo-container {
             padding: 80px 5%;
             text-align: center;
-            margin: 40px 5%;
-            border-radius: 30px;
-            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
-            border: 4px solid #fff;
+            background: #fff;
         }
 
-        .cross-promo-section h2 {
+        .cross-promo-title {
+            font-size: 32px;
             color: #d81b60;
-            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .promo-grid {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .promo-card {
+            background: #fffaf0;
+            border: 4px solid #ff69b4;
+            border-radius: 20px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .promo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.4);
+        }
+
+        .promo-card h3 {
+            color: #d81b60;
+            font-size: 24px;
             margin-bottom: 20px;
-            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
         }
 
-        .cross-promo-section p {
+        .promo-card p {
             color: #555;
-            font-size: 20px;
-            margin-bottom: 30px;
+            font-size: 16px;
+            margin-bottom: 25px;
+            line-height: 1.5;
             font-weight: bold;
-            line-height: 1.6;
         }
 
-        .cross-promo-btn {
-            display: inline-block;
+        .promo-btn {
             background: linear-gradient(45deg, #ff1493, #d81b60);
             color: white;
-            padding: 18px 40px;
-            font-size: 24px;
+            padding: 12px 30px;
+            font-size: 18px;
             font-weight: bold;
-            border-radius: 50px;
-            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.5);
-            transition: 0.3s;
-            border: 2px solid #fff;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+            display: inline-block;
+            width: 80%;
         }
 
-        .cross-promo-btn:hover {
-            transform: scale(1.05) translateY(-3px);
-            box-shadow: 0 12px 25px rgba(255, 20, 147, 0.7);
+        /* プロモ用ミニモックアップ */
+        .promo-smartphone {
+            width: 160px;
+            height: 320px;
+            background: #111;
+            border-radius: 20px;
+            border: 6px solid #333;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .promo-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 12px;
+            background: #333;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            z-index: 10;
+        }
+
+        .promo-ui {
+            position: absolute;
+            bottom: 5px;
+            left: 5%;
+            width: 90%;
+            background: rgba(0, 0, 0, 0.85);
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+            color: white;
+            transition: opacity 0.3s;
+            text-align: left;
+        }
+
+        .promo-name {
+            font-size: 9px;
+            background: var(--primary-color);
+            padding: 1px 4px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 2px;
+        }
+
+        .promo-text {
+            font-size: 10px;
+            color: #ffd700;
+            line-height: 1.2;
+            font-weight: bold;
         }
 
         /* Footer CTA */
         .cta-section {
-            padding: 100px 5%;
+            padding: 80px 5%;
             text-align: center;
             background: linear-gradient(135deg, #d81b60 0%, #ff69b4 100%);
             color: white;
@@ -496,7 +579,59 @@
             background: #f0f0f0;
         }
 
-        /* スマホ対応レスポンシブ */
+        /* ★★★ Legal & Footer (AdSense Policies) ★★★ */
+        .legal-section {
+            background: #f8f8f8;
+            padding: 70px 5%;
+            color: #444;
+        }
+
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        .legal-title {
+            font-size: 28px;
+            color: #d81b60;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ffb3d1;
+        }
+
+        .legal-subtitle {
+            color: #d81b60;
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+
+        .site-footer {
+            background: #1a1a2e;
+            color: #aaa;
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #ff69b4;
+        }
+
         @media screen and (max-width: 768px) {
             .hero {
                 flex-direction: column;
@@ -510,7 +645,7 @@
             }
 
             .hero-content h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
 
             .play-btn-large {
@@ -518,7 +653,12 @@
                 padding: 15px 40px;
             }
 
-            /* ヒーロー用スマホサイズ調整 */
+            .header-btn {
+                padding: 6px 12px;
+                font-size: 14px;
+                margin-left: 5px;
+            }
+
             .hero-phone-size {
                 width: 240px;
                 height: 480px;
@@ -526,23 +666,14 @@
                 border-radius: 30px;
             }
 
-            .mockup-char {
-                bottom: 0;
-            }
-
-            /* 底辺合わせを維持 */
-
-            /* ギャラリー用：2列グリッドレイアウト */
             .gallery-wrap {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                /* 2列 */
                 gap: 15px;
                 justify-items: center;
                 padding: 0 10px 30px;
             }
 
-            /* ギャラリー用スマホサイズを小さく */
             .gallery-phone-size {
                 width: 160px;
                 height: 320px;
@@ -550,7 +681,6 @@
                 border-radius: 20px;
             }
 
-            /* 小さいスマホに合わせてUIも調整 */
             .gallery-ui {
                 bottom: 5px;
                 padding: 5px;
@@ -583,20 +713,6 @@
                 height: 15px;
                 border-radius: 0 0 10px 10px;
             }
-
-            .cross-promo-section {
-                padding: 40px 5%;
-                margin: 20px 5%;
-            }
-
-            .cross-promo-section h2 {
-                font-size: 24px;
-            }
-
-            .cross-promo-btn {
-                font-size: 18px;
-                padding: 15px 20px;
-            }
         }
     </style>
 </head>
@@ -606,7 +722,10 @@
     <header>
         <div class="logo"><img src="images/icon.png" alt="Icon" onerror="this.style.display='none'">JLPT with Gyaru
         </div>
-        <a href="index.html" class="header-btn">เริ่มเรียนฟรี</a>
+        <div>
+            <a href="top.html" class="header-btn header-btn-dark">🌐 YUI UNIVERSE</a>
+            <a href="index.html" class="header-btn">เริ่มติวเลย</a>
+        </div>
     </header>
 
     <section class="hero">
@@ -657,7 +776,7 @@
 
     <section class="gallery">
         <h2 class="section-title">สะสมแต้มเพื่อปลดล็อกชุดสุดปัง! 👗<br><span
-                style="font-size: 18px; color: #666;">คะแนนจากการเรียนนำมาสุ่มกาชาเปลี่ยนชุดได้!</span></h2>
+                style="font-size: 18px; color: #666;">คะแนนจากการเรียนนำมาปลดล็อกเปลี่ยนชุดได้!</span></h2>
 
         <div class="gallery-wrap">
             <div>
@@ -728,16 +847,54 @@
         </div>
     </section>
 
-    <section class="cross-promo-section">
-        <h2>🌸 พักสมองจากการเรียน มาออกเดตกันเถอะ! 🌸</h2>
-        <p>
-            ติวข้อสอบจนเหนื่อยแล้วใช่ไหม?<br>
-            ไปสัมผัสประสบการณ์เดตจำลองกับสาวญี่ปุ่นแท้ๆ 'ยุยเซนเซ'<br>
-            ในเกมแนวนิยาย (Visual Novel) ที่อยู่ในจักรวาลเดียวกันได้เลย!
-        </p>
-        <a href="https://thai-gal-novel.vercel.app/lp.html" target="_blank" class="cross-promo-btn">
-            💖 เล่นเกมจีบสาวยุยเซนเซ (เล่นฟรี) 💖
-        </a>
+    <section class="cross-promo-container">
+        <h2 class="cross-promo-title">✨ ขยายจักรวาลภาษาญี่ปุ่นกับยุย ✨</h2>
+        <div class="promo-grid">
+
+            <div class="promo-card">
+                <h3>Thai School Festival Days</h3>
+                <div class="promo-smartphone">
+                    <div class="promo-notch"></div>
+                    <div class="mockup-screen">
+                        <img id="promo-fest-bg"
+                            src="https://thai-school-festival-novel.vercel.app/images/bg_festival.jpg"
+                            class="mockup-bg">
+                        <img id="promo-fest-char"
+                            src="https://thai-school-festival-novel.vercel.app/images/yui_yukata_blush.png"
+                            class="mockup-char" style="bottom: 0;">
+                        <div id="promo-fest-ui" class="promo-ui">
+                            <div class="promo-name">ยุ้ย / ยุย</div>
+                            <div id="promo-fest-th" class="promo-text">ไปเดินดูงานเทศกาลกันเถอะ!</div>
+                        </div>
+                    </div>
+                </div>
+                <p>ใหม่ล่าสุด! เกมจีบสาว 7 วันในเทศกาลโรงเรียน ระบบเลือกเส้นทาง (Route)
+                    ที่ทุกคำตอบส่งผลต่อฉากจบที่เปลี่ยนไป!</p>
+                <a href="https://thai-school-festival-novel.vercel.app/lp.html" target="_blank"
+                    class="promo-btn">เล่นเลย (Play)</a>
+            </div>
+
+            <div class="promo-card">
+                <h3>Thai-Japan Novel Project</h3>
+                <div class="promo-smartphone">
+                    <div class="promo-notch"></div>
+                    <div class="mockup-screen">
+                        <img id="promo-novel-bg" src="https://thai-gal-novel.vercel.app/images/bg_classroom.jpg"
+                            class="mockup-bg">
+                        <img id="promo-novel-char" src="https://thai-gal-novel.vercel.app/images/yui_serious.png"
+                            class="mockup-char">
+                        <div id="promo-novel-ui" class="promo-ui">
+                            <div class="promo-name">ยุ้ย / ยุย</div>
+                            <div id="promo-novel-th" class="promo-text">ตั้งใจเรียนหน่อยสิคะ!</div>
+                        </div>
+                    </div>
+                </div>
+                <p>เรื่องราว 1 เดือนเต็มกับ 'ยุยเซนเซ' ในฐานะครูกับลูกศิษย์! ฝึกภาษาญี่ปุ่นผ่านเดตสุดโรแมนติก
+                    และมุ่งสู่ฉากจบแสนประทับใจที่สนามบิน!</p>
+                <a href="https://thai-gal-novel.vercel.app/lp.html" target="_blank" class="promo-btn">เล่นเลย (Play)</a>
+            </div>
+
+        </div>
     </section>
 
     <section class="cta-section">
@@ -745,92 +902,54 @@
         <a href="index.html" class="cta-btn">เข้าสู่แอปเรียนเลย!</a>
     </section>
 
-    <!-- Privacy Policy & Disclaimer -->
-    <section id="legal" style="background: #f8f8f8; padding: 70px 5%; color: #444;">
-        <div style="max-width: 800px; margin: 0 auto;">
+    <section id="legal" class="legal-section">
+        <div class="legal-container">
 
-            <!-- プライバシーポリシー -->
             <div id="privacy-policy" style="margin-bottom: 60px;">
-                <h2
-                    style="font-size: 28px; color: #d81b60; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 2px solid #ffb3d1;">
-                    🔒 プライバシーポリシー
-                </h2>
-                <div style="line-height: 1.9; font-size: 15px;">
-                    <p style="margin-bottom: 15px;">本アプリ（以下「当サービス」）は、ユーザーのプライバシーを尊重し、以下の方針に従って個人情報を取り扱います。</p>
-
-                    <h3 style="color: #d81b60; margin: 20px 0 10px;">1. 収集する情報</h3>
-                    <p>当サービスでは、Google Analytics および Google AdSense
-                        を利用しており、これらのサービスがCookieを使用してユーザーの行動データ（ページ閲覧履歴、デバイス情報など）を収集することがあります。当サービス自体がユーザーの氏名・メールアドレス等の個人を特定できる情報を直接収集することはありません。
-                    </p>
-
-                    <h3 style="color: #d81b60; margin: 20px 0 10px;">2. Cookieについて</h3>
-                    <p>当サービスは、Googleが提供するサービス（Google Analytics・Google
-                        AdSense）を利用しており、これらのサービスはCookieを使用します。ユーザーはブラウザの設定によりCookieを無効にすることができますが、一部機能が制限されることがあります。</p>
-
-                    <h3 style="color: #d81b60; margin: 20px 0 10px;">3. Google AdSenseについて</h3>
-                    <p>当サービスはGoogle AdSenseによる広告を掲載しています。Googleはユーザーのウェブサイト閲覧情報に基づいて広告を配信することがあります。詳細は <a
-                            href="https://policies.google.com/privacy" target="_blank"
-                            style="color: #d81b60;">Googleプライバシーポリシー</a> をご確認ください。</p>
-
-                    <h3 style="color: #d81b60; margin: 20px 0 10px;">4. 学習データについて</h3>
-                    <p>当サービス内で記録されるスコア・学習進捗・設定情報は、お使いのデバイスのローカルストレージ（localStorage）に保存されます。これらのデータは外部サーバーには送信されず、当サービス運営者が閲覧することはありません。
-                    </p>
-
-                    <h3 style="color: #d81b60; margin: 20px 0 10px;">5. 外部リンクについて</h3>
-                    <p>当サービスには外部サイトへのリンクが含まれる場合があります。リンク先のプライバシー方針については、各サイトの方針をご確認ください。</p>
-
-                    <h3 style="color: #d81b60; margin: 20px 0 10px;">6. ポリシーの変更</h3>
-                    <p>本プライバシーポリシーは予告なく変更される場合があります。変更後の内容は本ページに掲載された時点から有効となります。</p>
-
-                    <p style="margin-top: 20px; font-size: 13px; color: #888;">最終更新日：2026年2月26日</p>
-                </div>
+                <h2 class="legal-title">🔒 プライバシーポリシー</h2>
+                <p style="margin-bottom: 15px;">本アプリ（以下「当サービス」）は、ユーザーのプライバシーを尊重し、以下の方針に従って個人情報を取り扱います。</p>
+                <h3 class="legal-subtitle">1. 収集する情報</h3>
+                <p>当サービスでは、Google Analytics および Google AdSense
+                    を利用しており、これらのサービスがCookieを使用してユーザーの行動データ（ページ閲覧履歴、デバイス情報など）を収集することがあります。当サービス自体がユーザーの氏名・メールアドレス等の個人を特定できる情報を直接収集することはありません。
+                </p>
+                <h3 class="legal-subtitle">2. Cookieについて</h3>
+                <p>ユーザーはブラウザの設定によりCookieを無効にすることができますが、一部機能が制限されることがあります。</p>
+                <h3 class="legal-subtitle">3. 学習データについて</h3>
+                <p>当サービス内で記録されるスコア・学習進捗・設定情報は、お使いのデバイスのローカルストレージ（localStorage）に保存されます。外部サーバーには送信されません。</p>
             </div>
 
-            <!-- 免責事項 -->
             <div id="disclaimer">
-                <h2
-                    style="font-size: 28px; color: #d81b60; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 2px solid #ffb3d1;">
-                    ⚠️ 免責事項
-                </h2>
-                <div style="line-height: 1.9; font-size: 15px;">
-                    <h3 style="color: #d81b60; margin: 20px 0 10px;">1. コンテンツの正確性</h3>
-                    <p>当サービスに掲載されている日本語・タイ語の学習コンテンツは、教育目的で提供しておりますが、その内容の正確性・完全性を保証するものではありません。JLPT（日本語能力試験）の合格を保証するものではなく、あくまで学習補助ツールとしてご利用ください。
-                    </p>
-
-                    <h3 style="color: #d81b60; margin: 20px 0 10px;">2. サービスの可用性</h3>
-                    <p>当サービスは予告なくメンテナンス・仕様変更・サービス停止を行う場合があります。これにより生じた損害について、当サービス運営者は一切の責任を負いません。</p>
-
-                    <h3 style="color: #d81b60; margin: 20px 0 10px;">3. 著作権</h3>
-                    <p>当サービスに掲載されているコンテンツ（テキスト・画像・音声・プログラム等）の著作権は当サービス運営者に帰属します。無断での複製・転用・二次利用を禁止します。</p>
-
-                    <h3 style="color: #d81b60; margin: 20px 0 10px;">4. 損害について</h3>
-                    <p>当サービスの利用によって生じたいかなる損害についても、当サービス運営者は責任を負いかねます。ご利用はユーザー自身の判断と責任のもとで行ってください。</p>
-
-                    <p style="margin-top: 20px; font-size: 13px; color: #888;">最終更新日：2026年2月26日</p>
-                </div>
+                <h2 class="legal-title">⚠️ 免責事項</h2>
+                <h3 class="legal-subtitle">1. コンテンツの正確性</h3>
+                <p>当サービスに掲載されている日本語・タイ語の学習コンテンツは、教育目的で提供しておりますが、その内容の正確性・完全性を保証するものではありません。JLPTの合格を保証するものではなく、あくまで学習補助ツールとしてご利用ください。
+                </p>
+                <h3 class="legal-subtitle">2. サービスの可用性</h3>
+                <p>当サービスは予告なくメンテナンス・仕様変更・サービス停止を行う場合があります。これにより生じた損害について、当サービス運営者は一切の責任を負いません。</p>
+                <h3 class="legal-subtitle">3. 著作権</h3>
+                <p>当サービスに掲載されているコンテンツの著作権は当サービス運営者に帰属します。無断での複製・転用・二次利用を禁止します。</p>
             </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer style="background: #1a1a2e; color: #aaa; padding: 40px 5%; text-align: center;">
-        <div style="max-width: 800px; margin: 0 auto;">
+    <footer class="site-footer">
+        <div class="footer-inner">
             <div style="font-size: 22px; font-weight: bold; color: #ff69b4; margin-bottom: 10px;">
                 🌸 ติวญี่ปุ่นกับสาวแกล
             </div>
             <p style="font-size: 13px; margin-bottom: 15px; line-height: 1.8;">
-                Developed by <span style="color: #ff69b4; font-style: italic;">??? ✦ 謎の開発者 ✦ ???</span><br>
+                Developed by <span style="color: #ff69b4; font-style: italic;">ผู้สร้างไร้นาม (The Nameless
+                    Creator)</span><br>
                 <span style="font-size: 12px; opacity: 0.6;">— 正体は誰も知らない —</span>
             </p>
-            <div
-                style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; font-size: 13px; margin-bottom: 20px;">
-                <a href="#privacy-policy" style="color: #ff69b4;">プライバシーポリシー</a>
+            <div class="footer-links">
+                <a href="#privacy-policy">プライバシーポリシー</a>
                 <span style="color: #444;">|</span>
-                <a href="#disclaimer" style="color: #ff69b4;">免責事項</a>
+                <a href="#disclaimer">免責事項</a>
                 <span style="color: #444;">|</span>
-                <a href="index.html" style="color: #ff69b4;">アプリを起動</a>
+                <a href="index.html">アプリを起動</a>
             </div>
-            <p style="font-size: 12px; opacity: 0.5;">© 2026 ติวญี่ปุ่นกับสาวแกล. All rights reserved.</p>
+            <p style="font-size: 12px; opacity: 0.5;">© 2026 JLPT with Gyaru. All rights reserved.</p>
         </div>
     </footer>
 
@@ -863,7 +982,7 @@
                 }, 4000);
             }
 
-            // 2. Gallery Auto-Changer (画像とセリフをセットで切り替え)
+            // 2. Gallery Auto-Changer 
             const galleryData = {
                 maid: [
                     { img: 'maid_0000_normal.png', th: "นายท่านคะ รับชาเพิ่มไหมคะ?", ja: "ご主人様、お茶のおかわりはいかがですか？" },
@@ -912,7 +1031,57 @@
                         }, 300, key);
                     }
                 }
-            }, 3000); // 3秒ごとに切り替え
+            }, 3000);
+
+            // ★★★ 3. Promo Cross Auto-Slider ★★★
+            const promoFestBg = document.getElementById('promo-fest-bg');
+            const promoFestImg = document.getElementById('promo-fest-char');
+            const promoFestUi = document.getElementById('promo-fest-ui');
+            const promoFestTh = document.getElementById('promo-fest-th');
+
+            const promoFestData = [
+                { bg: 'https://thai-school-festival-novel.vercel.app/images/bg_classroom.jpg', img: 'https://thai-school-festival-novel.vercel.app/images/yui_serious.png', th: "มาช่วยกันเตรียมงานเดี๋ยวนี้!" },
+                { bg: 'https://thai-school-festival-novel.vercel.app/images/bg_market.jpg', img: 'https://thai-school-festival-novel.vercel.app/images/yui_casual_normal.png', th: "ซื้อของเยอะจังเลยนะ" },
+                { bg: 'https://thai-school-festival-novel.vercel.app/images/bg_festival.jpg', img: 'https://thai-school-festival-novel.vercel.app/images/yui_yukata_blush.png', th: "ไปเดินดูงานเทศกาลกันเถอะ!" }
+            ];
+
+            let promoFestIdx = 0;
+            if (promoFestImg) {
+                setInterval(() => {
+                    promoFestImg.style.opacity = 0; promoFestUi.style.opacity = 0; promoFestBg.style.opacity = 0.5;
+                    setTimeout(() => {
+                        promoFestIdx = (promoFestIdx + 1) % promoFestData.length;
+                        const data = promoFestData[promoFestIdx];
+                        promoFestBg.src = data.bg; promoFestImg.src = data.img; promoFestTh.innerText = data.th;
+                        promoFestBg.style.opacity = 1; promoFestImg.style.opacity = 1; promoFestUi.style.opacity = 1;
+                    }, 300);
+                }, 3500);
+            }
+
+            const promoNovelBg = document.getElementById('promo-novel-bg');
+            const promoNovelImg = document.getElementById('promo-novel-char');
+            const promoNovelUi = document.getElementById('promo-novel-ui');
+            const promoNovelTh = document.getElementById('promo-novel-th');
+
+            const promoNovelData = [
+                { bg: 'https://thai-gal-novel.vercel.app/images/bg_classroom.jpg', img: 'https://thai-gal-novel.vercel.app/images/yui_serious.png', th: "ตั้งใจเรียนหน่อยสิคะ!" },
+                { bg: 'https://thai-gal-novel.vercel.app/images/bg_cafe.jpg', img: 'https://thai-gal-novel.vercel.app/images/yui_casual_blush.png', th: "มาเดต... งั้นเหรอคะ?" },
+                { bg: 'https://thai-gal-novel.vercel.app/images/bg_air.jpg', img: 'https://thai-gal-novel.vercel.app/images/yui_happy.png', th: "ฉันชอบคุณค่ะ!" }
+            ];
+
+            let promoNovelIdx = 0;
+            if (promoNovelImg) {
+                setInterval(() => {
+                    promoNovelImg.style.opacity = 0; promoNovelUi.style.opacity = 0; promoNovelBg.style.opacity = 0.5;
+                    setTimeout(() => {
+                        promoNovelIdx = (promoNovelIdx + 1) % promoNovelData.length;
+                        const data = promoNovelData[promoNovelIdx];
+                        promoNovelBg.src = data.bg; promoNovelImg.src = data.img; promoNovelTh.innerText = data.th;
+                        promoNovelBg.style.opacity = 1; promoNovelImg.style.opacity = 1; promoNovelUi.style.opacity = 1;
+                    }, 300);
+                }, 3800);
+            }
+
         });
     </script>
 </body>
