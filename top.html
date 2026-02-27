@@ -6,8 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>YUI UNIVERSE | แพลตฟอร์มเกมเรียนภาษาญี่ปุ่นกับสาวแกล</title>
 
-    <link rel="icon" type="image/png" href="images/icon.png">
-    <link rel="apple-touch-icon" href="images/icon.png">
+    <link rel="icon" type="image/jpeg" href="images/icon_jlpt.jpg">
+    <link rel="apple-touch-icon" href="images/icon_jlpt.jpg">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yui-universe.vercel.app/top.html">
+    <meta property="og:title" content="YUI UNIVERSE | แพลตฟอร์มเกมเรียนภาษาญี่ปุ่นกับสาวแกล">
+    <meta property="og:description"
+        content="ศูนย์รวมเกมและแอปพลิเคชันเรียนภาษาญี่ปุ่นสไตล์ Visual Novel เรียนสนุกไปกับยุยเซนเซ!">
+    <meta property="og:image" content="images/ogp_jlpt.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yui-universe.vercel.app/top.html">
+    <meta property="twitter:title" content="YUI UNIVERSE | แพลตฟอร์มเกมเรียนภาษาญี่ปุ่นกับสาวแกล">
+    <meta property="twitter:description"
+        content="ศูนย์รวมเกมและแอปพลิเคชันเรียนภาษาญี่ปุ่นสไตล์ Visual Novel เรียนสนุกไปกับยุยเซนเซ!">
+    <meta property="twitter:image" content="images/ogp_jlpt.jpg">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8GLN5CFXRM"></script>
     <script>
@@ -88,6 +104,11 @@
             align-items: center;
             gap: 10px;
             letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .logo:hover {
+            color: var(--edu-purple);
         }
 
         .logo img {
@@ -98,7 +119,8 @@
 
         .nav-links {
             display: flex;
-            gap: 15px;
+            gap: 12px;
+            align-items: center;
         }
 
         .nav-links a {
@@ -106,7 +128,7 @@
             font-weight: bold;
             font-size: 14px;
             transition: 0.3s;
-            padding: 8px 15px;
+            padding: 8px 12px;
             border-radius: 20px;
             border: 1px solid transparent;
         }
@@ -115,6 +137,18 @@
             color: var(--edu-purple);
             border-color: var(--edu-purple);
             background: #f9f9fc;
+        }
+
+        .nav-btn-portal {
+            background: linear-gradient(45deg, #00e5ff, #0077ff);
+            color: #fff !important;
+            border: none !important;
+            box-shadow: 0 2px 10px rgba(0, 229, 255, 0.4);
+        }
+
+        .nav-btn-portal:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 229, 255, 0.6);
         }
 
         /* ★★★ Hero Section ★★★ */
@@ -163,6 +197,11 @@
             margin-bottom: 60px;
             box-shadow: 0 15px 35px rgba(123, 104, 238, 0.08);
             border: 1px solid #eee;
+            transition: transform 0.3s ease;
+        }
+
+        .flat-card:hover {
+            transform: translateY(-5px);
         }
 
         .flat-card.reverse {
@@ -202,26 +241,27 @@
             font-weight: 900;
             margin-bottom: 15px;
             letter-spacing: 1px;
+            color: white;
         }
 
         .tag-edu {
             background: var(--edu-purple);
-            color: white;
         }
 
         .tag-main {
             background: #3498db;
-            color: white;
         }
 
         .tag-new {
             background: #ff69b4;
-            color: white;
         }
 
         .tag-fest {
             background: #ff4500;
-            color: white;
+        }
+
+        .tag-tokyo {
+            background: #ff4757;
         }
 
         /* ボタンレイアウト */
@@ -359,6 +399,35 @@
             color: var(--text-sub);
             margin-top: 4px;
             line-height: 1.4;
+        }
+
+        /* カスタムカラー: Tokyo */
+        .theme-tokyo .mockup-ui {
+            border-color: #ff4757;
+        }
+
+        .theme-tokyo .mockup-name {
+            background: #ff4757;
+        }
+
+        .theme-tokyo .btn-play {
+            background: #ff4757;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+        }
+
+        .theme-tokyo .btn-play:hover {
+            background: #ff6b6b;
+        }
+
+        .theme-tokyo .btn-lp {
+            background: #fff;
+            color: #ff4757;
+            border-color: #ff4757;
+        }
+
+        .theme-tokyo .btn-lp:hover {
+            color: #ff6b6b;
+            border-color: #ff6b6b;
         }
 
         /* カスタムカラー: Novel */
@@ -522,12 +591,16 @@
 <body>
 
     <header>
-        <div class="logo"><img src="images/icon.png" alt="Icon" onerror="this.style.display='none'">YUI UNIVERSE</div>
+        <a href="https://yui-universe.vercel.app/" class="logo">
+            <img src="images/icon.png" alt="Icon" onerror="this.style.display='none'">YUI UNIVERSE
+        </a>
         <nav class="nav-links">
+            <a href="#tokyo">🗼 Tokyo</a>
             <a href="#jlpt">📚 JLPT Study</a>
             <a href="#novel">🌸 Novel</a>
             <a href="#festival">🎆 Festival</a>
             <a href="#maid">🎀 Maid Cafe</a>
+            <a href="https://yui-universe.vercel.app/" class="nav-btn-portal" target="_blank">🌐 Portal</a>
         </nav>
     </header>
 
@@ -538,7 +611,43 @@
 
     <section class="showcase-section showcase-container">
 
-        <div id="jlpt" class="flat-card">
+        <div id="tokyo" class="flat-card theme-tokyo">
+            <div class="game-info">
+                <div class="tag tag-tokyo">LATEST PROJECT</div>
+                <h2>Tokyo Romantic Journey</h2>
+                <h3>ทริปโตเกียวสุดโรแมนติกกับยุย</h3>
+                <p>
+                    เดินทางมาเที่ยวโตเกียว 2 สัปดาห์ และได้พบกับ 'ยุย' สาวญี่ปุ่นที่คุยกันผ่านแอปหาคู่!<br>
+                    เธออาสาพาเที่ยวสถานที่ดังๆ พร้อมสอนมารยาทที่นักท่องเที่ยวต้องรู้<br>
+                    มีระบบคะแนนความรักกำหนดตอนจบ 3 รูปแบบ!
+                </p>
+                <div class="pc-flex-row">
+                    <a href="https://study-japanese-tokyo.vercel.app/" target="_blank" class="btn-play">▶ เล่นเกม
+                        (Play)</a>
+                    <a href="https://study-japanese-tokyo.vercel.app/lp.html" target="_blank" class="btn-play btn-lp">📄
+                        ดูรายละเอียด (LP)</a>
+                </div>
+            </div>
+            <div class="mockup-wrapper">
+                <div class="smartphone" style="border-color: #ffebef;">
+                    <div class="notch" style="background: #ffebef;"></div>
+                    <div class="mockup-screen">
+                        <img id="tokyo-bg" src="https://study-japanese-tokyo.vercel.app/images/bg_tokyo_street.jpg"
+                            class="mockup-bg">
+                        <img id="tokyo-char"
+                            src="https://study-japanese-tokyo.vercel.app/images/gos/gos_0001_nikkori.png"
+                            class="mockup-char">
+                        <div id="tokyo-ui" class="mockup-ui">
+                            <div class="mockup-name">ยุ้ย / ยุย</div>
+                            <div id="tokyo-th" class="mockup-th">ยินดีต้อนรับสู่โตเกียวค่ะ!</div>
+                            <div id="tokyo-ja" class="mockup-ja">東京へようこそ！</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="jlpt" class="flat-card reverse">
             <div class="game-info">
                 <div class="tag tag-edu">EDUCATION MODE</div>
                 <h2>JLPT Study with Gyaru</h2>
@@ -569,7 +678,7 @@
             </div>
         </div>
 
-        <div id="novel" class="flat-card reverse theme-novel">
+        <div id="novel" class="flat-card theme-novel">
             <div class="game-info">
                 <div class="tag tag-main">ORIGINAL STORY</div>
                 <h2>Thai-Japan Novel Project</h2>
@@ -601,7 +710,7 @@
             </div>
         </div>
 
-        <div id="festival" class="flat-card theme-fest">
+        <div id="festival" class="flat-card reverse theme-fest">
             <div class="game-info">
                 <div class="tag tag-fest">SPECIAL EVENT</div>
                 <h2>Thai School Festival Days</h2>
@@ -635,9 +744,9 @@
             </div>
         </div>
 
-        <div id="maid" class="flat-card reverse theme-maid">
+        <div id="maid" class="flat-card theme-maid">
             <div class="game-info">
-                <div class="tag tag-new">NEW RELEASE</div>
+                <div class="tag tag-new" style="background:#ff69b4; color:white;">MOE & CUTE</div>
                 <h2>Secret Maid Cafe Days</h2>
                 <h3>ความลับในเมดคาเฟ่กับรุ่นพี่ยุย</h3>
                 <p>
@@ -704,6 +813,30 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+
+            // 0. Tokyo Animation (NEW)
+            const tBg = document.getElementById('tokyo-bg');
+            const tChar = document.getElementById('tokyo-char');
+            const tUi = document.getElementById('tokyo-ui');
+            const tTh = document.getElementById('tokyo-th');
+            const tJa = document.getElementById('tokyo-ja');
+            const tData = [
+                { bg: 'https://study-japanese-tokyo.vercel.app/images/bg_tokyo_street.jpg', char: 'https://study-japanese-tokyo.vercel.app/images/gos/gos_0001_nikkori.png', th: "ยินดีต้อนรับสู่โตเกียวค่ะ!", ja: "東京へようこそ！" },
+                { bg: 'https://study-japanese-tokyo.vercel.app/images/bg_airport.jpg', char: 'https://study-japanese-tokyo.vercel.app/images/gos/gos_0000_normal.png', th: "มารยาทแรก: เดินชิดซ้ายนะ", ja: "最初のマナー：左側を歩いてね。" },
+                { bg: 'https://study-japanese-tokyo.vercel.app/images/bg_tokyo_yoru.jpg', char: 'https://study-japanese-tokyo.vercel.app/images/gos/gos_0006_tere.png', th: "ว้าว! จับมือฉันไว้สิ!", ja: "はぐれないように手、繋ごう？" }
+            ];
+            let tIdx = 0;
+            if (tChar) {
+                setInterval(() => {
+                    tChar.style.opacity = 0; tUi.style.opacity = 0; tBg.style.opacity = 0.5;
+                    setTimeout(() => {
+                        tIdx = (tIdx + 1) % tData.length;
+                        tBg.src = tData[tIdx].bg; tChar.src = tData[tIdx].char;
+                        tTh.innerText = tData[tIdx].th; tJa.innerText = tData[tIdx].ja;
+                        tChar.style.opacity = 1; tUi.style.opacity = 1; tBg.style.opacity = 1;
+                    }, 400);
+                }, 4200);
+            }
 
             // 1. JLPT Animation (※背景とキャラ画像を自分のディレクトリ内から確実なものに指定)
             const jBg = document.getElementById('jlpt-bg');

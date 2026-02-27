@@ -8,8 +8,8 @@
     <meta name="google-site-verification" content="DkCMrOjpxPVzY0T8G34bKQQDsDP9Biu83kk2wfz5hz4">
     <title>ติวญี่ปุ่นกับสาวแกล - JLPT Study with Gyaru Game</title>
 
-    <link rel="icon" type="image/png" href="images/bar.png">
-    <link rel="apple-touch-icon" href="images/bar.png">
+    <link rel="icon" type="image/jpeg" href="images/icon_jlpt.jpg">
+    <link rel="apple-touch-icon" href="images/icon_jlpt.jpg">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCYNPFD7PR"></script>
     <script>
@@ -36,30 +36,13 @@
     <meta property="og:title" content="ติวญี่ปุ่นกับสาวแกล - JLPT Study with Gyaru Game">
     <meta property="og:description"
         content="สนุกกับการเรียนภาษาญี่ปุ่นไปพร้อมกับตัวละครสาวแกล พร้อมระบบฝึกฟังและควิซ JLPT N5-N1 ครบวงจร!">
-    <meta property="og:image" content="images/icon.png">
+    <meta property="og:image" content="images/ogp_jlpt.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ติวญี่ปุ่นกับสาวแกล - JLPT Study with Gyaru Game">
     <meta name="twitter:description"
         content="สนุกกับการเรียนภาษาญี่ปุ่นไปพร้อมกับตัวละครสาวแกล พร้อมระบบฝึกฟังและควิซ JLPT N5-N1 ครบวงจร!">
-    <meta name="twitter:image" content="images/icon.png">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "JLPT Study with Gyaru Game",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "WebBrowser",
-      "description": "แอปพลิเคชันเรียนภาษาญี่ปุ่นสไตล์เกมเมอร์ ติวข้อสอบ JLPT N5-N1 ฝึกฟังด้วยเสียงพากย์ และสนุกกับระบบแต่งตัวสาวแกล",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "THB"
-      },
-      "inLanguage": ["th", "ja"]
-    }
-    </script>
+    <meta name="twitter:image" content="images/ogp_jlpt.jpg">
 
     <style>
         :root {
@@ -374,6 +357,7 @@
             gap: 30px;
             justify-content: center;
             padding-bottom: 40px;
+            flex-wrap: wrap;
         }
 
         .gallery-phone-size {
@@ -453,7 +437,6 @@
             padding: 30px;
             width: 100%;
             max-width: 300px;
-            /* 3列綺麗に並ぶように調整 */
             box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
             transition: 0.3s;
             display: flex;
@@ -493,9 +476,13 @@
             display: inline-block;
             width: 80%;
             box-sizing: border-box;
+            transition: 0.3s;
         }
 
-        /* プロモ用ミニモックアップ */
+        .promo-btn:hover {
+            transform: scale(1.05);
+        }
+
         .promo-smartphone {
             width: 150px;
             height: 300px;
@@ -552,7 +539,7 @@
             font-weight: bold;
         }
 
-        /* Footer CTA */
+        /* Footer CTA & Legal */
         .cta-section {
             padding: 80px 5%;
             text-align: center;
@@ -561,7 +548,7 @@
         }
 
         .cta-section h2 {
-            font-size: 40px;
+            font-size: 36px;
             margin-bottom: 20px;
         }
 
@@ -569,9 +556,9 @@
             display: inline-block;
             background: white;
             color: var(--secondary-color);
-            font-size: 28px;
+            font-size: 26px;
             font-weight: bold;
-            padding: 20px 60px;
+            padding: 18px 50px;
             border-radius: 50px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             transition: 0.3s;
@@ -583,7 +570,6 @@
             background: #f0f0f0;
         }
 
-        /* ★★★ Legal & Footer (AdSense Policies) ★★★ */
         .legal-section {
             background: #f8f8f8;
             padding: 70px 5%;
@@ -717,6 +703,11 @@
                 height: 15px;
                 border-radius: 0 0 10px 10px;
             }
+
+            .promo-card {
+                width: 100%;
+                max-width: 300px;
+            }
         }
     </style>
 </head>
@@ -727,7 +718,8 @@
         <div class="logo"><img src="images/icon.png" alt="Icon" onerror="this.style.display='none'">JLPT with Gyaru
         </div>
         <div>
-            <a href="top.html" class="header-btn header-btn-dark">🌐 YUI UNIVERSE</a>
+            <a href="https://yui-universe.vercel.app/" class="header-btn header-btn-dark" target="_blank">🌐 YUI
+                UNIVERSE</a>
             <a href="index.html" class="header-btn">เริ่มติวเลย</a>
         </div>
     </header>
@@ -860,6 +852,39 @@
         <h2 class="cross-promo-title">✨ ขยายจักรวาล Visual Novel กับยุย ✨</h2>
         <div class="promo-grid">
 
+            <div class="promo-card" style="border-color: #00e5ff; background: #111;">
+                <h3 style="color: #00e5ff; text-shadow: 0 0 10px rgba(0,229,255,0.5);">🌐 YUI UNIVERSE</h3>
+                <img src="images/icon.png"
+                    style="width: 120px; height: 120px; object-fit: contain; margin-bottom: 15px; border-radius: 20px; box-shadow: 0 0 20px rgba(0,229,255,0.3);">
+                <p style="color: #ddd;">พอร์ทัลรวมเกมจีบสาวและแอปเรียนภาษาญี่ปุ่นทุกซีรีส์ของยุยไว้ในที่เดียว!
+                    เลือกเล่นได้ง่ายๆ ทันที</p>
+                <a href="https://yui-universe.vercel.app/" target="_blank" class="promo-btn"
+                    style="background: linear-gradient(45deg, #00e5ff, #0077ff); color: #fff; box-shadow: 0 0 15px rgba(0,229,255,0.4);">เข้าสู่พอร์ทัล
+                    (Portal)</a>
+            </div>
+
+            <div class="promo-card" style="border-color: #ff4757;">
+                <h3 style="color: #ff4757;">Tokyo Romantic Journey</h3>
+                <div class="promo-smartphone">
+                    <div class="promo-notch"></div>
+                    <div class="mockup-screen">
+                        <img id="promo-tokyo-bg"
+                            src="https://study-japanese-tokyo.vercel.app/images/bg_tokyo_street.jpg" class="mockup-bg">
+                        <img id="promo-tokyo-char"
+                            src="https://study-japanese-tokyo.vercel.app/images/gos/gos_0001_nikkori.png"
+                            class="mockup-char" style="bottom: 0; object-fit: cover;">
+                        <div id="promo-tokyo-ui" class="promo-ui" style="border-color: #ff4757;">
+                            <div class="promo-name" style="background: #ff4757;">ยุ้ย / ยุย</div>
+                            <div id="promo-tokyo-th" class="promo-text">ยินดีต้อนรับสู่โตเกียวค่ะ!</div>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-size: 13px;">ทริปโตเกียว 14 วัน! เรียนรู้วัฒนธรรมญี่ปุ่นกับยุย พร้อมระบบตอนจบ 3 รูปแบบ
+                </p>
+                <a href="https://study-japanese-tokyo.vercel.app/" target="_blank" class="promo-btn"
+                    style="background: linear-gradient(45deg, #ff4757, #ff6b6b);">เล่นเลย (Play)</a>
+            </div>
+
             <div class="promo-card">
                 <h3>Thai School Festival Days</h3>
                 <div class="promo-smartphone">
@@ -963,6 +988,15 @@
         </div>
     </section>
 
+    <div style="text-align: center; padding: 40px 5% 40px; background: #fff;">
+        <div style="font-size: 12px; color: #888; margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase;">
+            - Advertisement / โฆษณา -
+        </div>
+        <script async="async" data-cfasync="false"
+            src="https://pl28798315.effectivegatecpm.com/c8272ae1ad758ad15584018dcdd2c651/invoke.js"></script>
+        <div id="container-c8272ae1ad758ad15584018dcdd2c651"></div>
+    </div>
+
     <footer class="site-footer">
         <div class="footer-inner">
             <div style="font-size: 22px; font-weight: bold; color: #ff69b4; margin-bottom: 10px;">
@@ -1065,18 +1099,37 @@
             }, 3000);
 
             // ★★★ 3. Promo Cross Auto-Slider ★★★
+            // Tokyo
+            const pTokyoBg = document.getElementById('promo-tokyo-bg');
+            const pTokyoImg = document.getElementById('promo-tokyo-char');
+            const pTokyoUi = document.getElementById('promo-tokyo-ui');
+            const pTokyoTh = document.getElementById('promo-tokyo-th');
+            const pTokyoData = [
+                { bg: 'https://study-japanese-tokyo.vercel.app/images/bg_tokyo_street.jpg', img: 'https://study-japanese-tokyo.vercel.app/images/gos/gos_0001_nikkori.png', th: "ยินดีต้อนรับสู่โตเกียวค่ะ!" },
+                { bg: 'https://study-japanese-tokyo.vercel.app/images/bg_odaiba.jpg', img: 'https://study-japanese-tokyo.vercel.app/images/maid/maid_0006_tere.png', th: "วิวทะเลสวยจังเลยนะคะ..." }
+            ];
+            let ptIdx = 0;
+            if (pTokyoImg) {
+                setInterval(() => {
+                    pTokyoImg.style.opacity = 0; pTokyoUi.style.opacity = 0; pTokyoBg.style.opacity = 0.5;
+                    setTimeout(() => {
+                        ptIdx = (ptIdx + 1) % pTokyoData.length;
+                        pTokyoBg.src = pTokyoData[ptIdx].bg; pTokyoImg.src = pTokyoData[ptIdx].img; pTokyoTh.innerText = pTokyoData[ptIdx].th;
+                        pTokyoBg.style.opacity = 1; pTokyoImg.style.opacity = 1; pTokyoUi.style.opacity = 1;
+                    }, 300);
+                }, 4200);
+            }
+
             // Festival
             const promoFestBg = document.getElementById('promo-fest-bg');
             const promoFestImg = document.getElementById('promo-fest-char');
             const promoFestUi = document.getElementById('promo-fest-ui');
             const promoFestTh = document.getElementById('promo-fest-th');
-
             const promoFestData = [
                 { bg: 'https://thai-school-festival-novel.vercel.app/images/bg_classroom.jpg', img: 'https://thai-school-festival-novel.vercel.app/images/yui_serious.png', th: "มาช่วยกันเตรียมงานเดี๋ยวนี้!" },
                 { bg: 'https://thai-school-festival-novel.vercel.app/images/bg_market.jpg', img: 'https://thai-school-festival-novel.vercel.app/images/yui_casual_normal.png', th: "ซื้อของเยอะจังเลยนะ" },
                 { bg: 'https://thai-school-festival-novel.vercel.app/images/bg_festival.jpg', img: 'https://thai-school-festival-novel.vercel.app/images/yui_yukata_blush.png', th: "ไปเดินดูงานเทศกาลกันเถอะ!" }
             ];
-
             let promoFestIdx = 0;
             if (promoFestImg) {
                 setInterval(() => {
@@ -1095,13 +1148,11 @@
             const promoMaidImg = document.getElementById('promo-maid-char');
             const promoMaidUi = document.getElementById('promo-maid-ui');
             const promoMaidTh = document.getElementById('promo-maid-th');
-
             const promoMaidData = [
                 { bg: 'https://thai-maid-gal-novel.vercel.app/images/bg_maid.jpg', img: 'https://thai-maid-gal-novel.vercel.app/images/maid/maid_0001_nikkori.png', th: "ยินดีต้อนรับสู่เมดคาเฟ่ค่ะ!" },
                 { bg: 'https://thai-maid-gal-novel.vercel.app/images/bg_cafeura.jpg', img: 'https://thai-maid-gal-novel.vercel.app/images/maid/maid_0006_tere.png', th: "อ-เอ๋? ชมว่าน่ารักเหรอคะ..." },
                 { bg: 'https://thai-maid-gal-novel.vercel.app/images/bg_ura.jpg', img: 'https://thai-maid-gal-novel.vercel.app/images/maid/maid_0009_odoroki.png', th: "ว้าย! ระวังหน่อยสิคะ!" }
             ];
-
             let promoMaidIdx = 0;
             if (promoMaidImg) {
                 setInterval(() => {
@@ -1120,13 +1171,11 @@
             const promoNovelImg = document.getElementById('promo-novel-char');
             const promoNovelUi = document.getElementById('promo-novel-ui');
             const promoNovelTh = document.getElementById('promo-novel-th');
-
             const promoNovelData = [
                 { bg: 'https://thai-gal-novel.vercel.app/images/bg_classroom.jpg', img: 'https://thai-gal-novel.vercel.app/images/yui_serious.png', th: "ตั้งใจเรียนหน่อยสิคะ!" },
                 { bg: 'https://thai-gal-novel.vercel.app/images/bg_cafe.jpg', img: 'https://thai-gal-novel.vercel.app/images/yui_casual_blush.png', th: "มาเดต... งั้นเหรอคะ?" },
                 { bg: 'https://thai-gal-novel.vercel.app/images/bg_air.jpg', img: 'https://thai-gal-novel.vercel.app/images/yui_happy.png', th: "ฉันชอบคุณค่ะ!" }
             ];
-
             let promoNovelIdx = 0;
             if (promoNovelImg) {
                 setInterval(() => {
