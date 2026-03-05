@@ -16,7 +16,7 @@
             padding: 0;
         }
         .hero {
-            background: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%);
+            background: linear-gradient(135deg, #1565c0 0%, #42a5f5 100%);
             padding: 80px 5% 40px;
             text-align: center;
             color: white;
@@ -37,61 +37,70 @@
             padding: 25px;
             margin-bottom: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-left: 5px solid #1976d2;
+            border-left: 5px solid #1565c0;
         }
         .card-header {
             font-size: 1.5rem;
-            color: #1976d2;
+            color: #1565c0;
             margin-bottom: 15px;
             border-bottom: 1px dashed #ccc;
             padding-bottom: 10px;
             font-weight: 600;
         }
         .text-th {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: #555;
             margin-bottom: 15px;
-            line-height: 1.6;
-            background: #f9f9f9;
-            padding: 10px 15px;
+            line-height: 1.7;
+            background: #f0f4ff;
+            padding: 12px 15px;
             border-radius: 8px;
+            border-left: 3px solid #90caf9;
         }
         .text-ja {
-            font-size: 1.3rem;
-            color: #d81b60;
+            font-size: 1.4rem;
+            color: #1565c0;
             margin-bottom: 20px;
             font-weight: 600;
-            background: #fce4ec;
+            background: #e3f2fd;
             padding: 15px;
             border-radius: 10px;
-            border: 1px solid #f8bbd0;
+            border: 1px solid #90caf9;
+            line-height: 1.8;
         }
         .vocab-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 12px;
             margin-top: 15px;
         }
         .vocab-item {
             display: flex;
             align-items: center;
             background: #fff;
-            padding: 12px;
+            padding: 10px;
             border-radius: 8px;
-            border-left: 4px solid #ff69b4;
+            border-left: 4px solid #42a5f5;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             transition: 0.2s;
             border-right: 1px solid #eee;
             border-top: 1px solid #eee;
             border-bottom: 1px solid #eee;
         }
+        .vocab-item.main-word {
+            border-left: 4px solid #d81b60;
+            background: #fff0f5;
+        }
         .vocab-item:hover {
-            background: #ffe4f0;
+            background: #e3f2fd;
             transform: translateX(3px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+        .vocab-item.main-word:hover {
+            background: #fce4ec;
+        }
         .tts-small-btn {
-            background: #ff69b4;
+            background: #1976d2;
             color: white;
             border: none;
             width: 35px;
@@ -105,31 +114,34 @@
             font-size: 1rem;
             flex-shrink: 0;
             transition: 0.3s;
-            box-shadow: 0 2px 5px rgba(255,105,180,0.4);
+            box-shadow: 0 2px 5px rgba(25,118,210,0.4);
+        }
+        .vocab-item.main-word .tts-small-btn {
+            background: #d81b60;
+            box-shadow: 0 2px 5px rgba(216,27,96,0.4);
         }
         .tts-small-btn:hover {
-            background: #d81b60;
+            opacity: 0.8;
             transform: scale(1.1);
         }
-        .tts-large-btn {
-            background: #1976d2;
-            color: white;
-            border: none;
-            padding: 8px 15px;
+        .tts-sentence-btn {
+            background: transparent;
+            color: #1976d2;
+            border: 2px solid #1976d2;
+            padding: 6px 14px;
             border-radius: 20px;
             cursor: pointer;
             font-size: 1rem;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             transition: 0.3s;
             margin-top: 10px;
             font-family: 'Kanit', sans-serif;
-            box-shadow: 0 2px 5px rgba(25,118,210,0.4);
         }
-        .tts-large-btn:hover {
-            background: #115293;
-            transform: translateY(-2px);
+        .tts-sentence-btn:hover {
+            background: #1976d2;
+            color: white;
         }
         .vocab-content {
             display: flex;
@@ -139,17 +151,29 @@
         .vocab-jp {
             font-weight: bold;
             color: #333;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
         }
         .vocab-kana {
             color: #888;
-            font-size: 0.8em;
+            font-size: 0.78em;
             font-weight: normal;
         }
         .vocab-th {
-            color: #1976d2;
-            font-size: 0.95em;
+            color: #1565c0;
+            font-size: 0.9em;
             margin-top: 3px;
+        }
+        .main-word .vocab-th {
+            color: #c2185b;
+        }
+        .vocab-label {
+            font-size: 0.75rem;
+            background: #ff69b4;
+            color: white;
+            padding: 1px 6px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 4px;
         }
         .next-page-container {
             text-align: center;
@@ -157,7 +181,7 @@
         }
         .next-btn {
             display: inline-block;
-            background: #1976d2;
+            background: #1565c0;
             color: white;
             padding: 15px 40px;
             font-size: 1.3rem;
@@ -165,10 +189,10 @@
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(25, 118, 210, 0.4);
+            box-shadow: 0 5px 15px rgba(21, 101, 192, 0.4);
         }
         .next-btn:hover {
-            background: #115293;
+            background: #0d47a1;
             transform: translateY(-5px);
         }
         footer {
@@ -179,7 +203,7 @@
             margin-top: 50px;
         }
         .footer-links a {
-            color: #ff69b4;
+            color: #64b5f6;
             margin: 0 10px;
             text-decoration: none;
         }
@@ -193,15 +217,21 @@
             margin-bottom: 10px;
             font-weight: bold;
         }
+        .card-count {
+            font-size: 0.8rem;
+            color: #aaa;
+            font-weight: normal;
+            margin-left: 10px;
+        }
     </style>
     <script>
         function playTTS(text) {
             if ('speechSynthesis' in window) {
-                text = text.replace(/〜/g, ''); // Remove tildes for better TTS pronunciation
+                text = text.replace(/〜/g, '');
                 window.speechSynthesis.cancel();
                 const msg = new SpeechSynthesisUtterance(text);
                 msg.lang = 'ja-JP';
-                msg.rate = 0.9;
+                msg.rate = 0.85;
                 window.speechSynthesis.speak(msg);
             } else {
                 alert("เบราว์เซอร์ของคุณไม่รองรับระบบอ่านออกเสียง");
@@ -210,44 +240,45 @@
     </script>
 </head>
 <body>
-    <header style="background: rgba(255, 255, 255, 0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 90%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); backdrop-filter: blur(5px);">
-        <a href="hub.html" class="logo" style="font-size: 20px; font-weight: bold; color: #d81b60; text-decoration: none;">JLPT Learning Hub</a>
-        <a href="index.html" style="background: #1976d2; color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px;">กลับหน้าเกม</a>
+    <header style="background: rgba(255,255,255,0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 90%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); backdrop-filter: blur(5px);">
+        <a href="hub.html" style="font-size: 20px; font-weight: bold; color: #1565c0; text-decoration: none;">JLPT N2 Learning</a>
+        <a href="index.html" style="background: #1565c0; color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px;">กลับหน้าเกม</a>
     </header>
 
     <div class="hero">
         <h1 style="margin-top: 20px;">วิเคราะห์ไวยากรณ์และคำศัพท์ N2 (Part 5/6)</h1>
-        <p>เรียนรู้คำศัพท์และไวยากรณ์จากประโยคภาษาญี่ปุ่นแบบเจาะลึก พร้อมเสียงอ่านรายคำ</p>
+        <p>เรียนรู้คำศัพท์ N2 แบบเจาะลึกครบทุกคำในประโยค พร้อมฟังเสียงรายคำ</p>
     </div>
 
     <div class="container">
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 21-201 | 佐藤</div>
+            <div class="card-header">No.21-201 | 佐藤<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '佐藤' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 佐藤さん、悪いけど来週の展示会、君がメインで動いてくれないか？
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('佐藤さん、悪いけど来週の展示会、君がメインで動いてくれないか？')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('佐藤さん、悪いけど来週の展示会、君がメインで動いてくれないか？')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('佐藤')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">佐藤</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '佐藤' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -255,31 +286,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 21-202 | 掃除機</div>
+            <div class="card-header">No.21-202 | 掃除機<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '掃除機' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 このコードレス掃除機、軽くていいね。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('このコードレス掃除機、軽くていいね。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('このコードレス掃除機、軽くていいね。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('掃除機')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">掃除機</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '掃除機' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -287,31 +319,39 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 21-203 | 部長</div>
+            <div class="card-header">No.21-203 | 部長<span class="card-count">(2 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '部長' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 部長、今回の件、私の監督不行き届きで多大なご迷惑をおかけしました。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('部長、今回の件、私の監督不行き届きで多大なご迷惑をおかけしました。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('部長、今回の件、私の監督不行き届きで多大なご迷惑をおかけしました。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('部長')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">部長</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '部長' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('今回')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今回 <span class="vocab-kana">(こんかい)</span></div>
+                    <div class="vocab-th">= ครั้งนี้</div>
                 </div>
             </div>
                 </div>
@@ -319,31 +359,39 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 21-204 | 手軽</div>
+            <div class="card-header">No.21-204 | 手軽<span class="card-count">(2 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '手軽' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 誰でも手軽に発信できる時代ですが、一度拡散された情報を完全に消し去ることは不可能です。いわゆる『デジタルタトゥー』として一生残る覚悟が必要です。投稿ボタンを押す前の数秒間の自制、それが自分を守る唯一の手段なのです。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('誰でも手軽に発信できる時代ですが、一度拡散された情報を完全に消し去ることは不可能です。いわゆる『デジタルタトゥー』として一生残る覚悟が必要です。投稿ボタンを押す前の数秒間の自制、それが自分を守る唯一の手段なのです。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('誰でも手軽に発信できる時代ですが、一度拡散された情報を完全に消し去ることは不可能です。いわゆる『デジタルタトゥー』として一生残る覚悟が必要です。投稿ボタンを押す前の数秒間の自制、それが自分を守る唯一の手段なのです。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('手軽')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">手軽</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '手軽' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('情報')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">情報 <span class="vocab-kana">(じょうほう)</span></div>
+                    <div class="vocab-th">= ข้อมูลข่าวสาร</div>
                 </div>
             </div>
                 </div>
@@ -351,31 +399,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 21-205 | 木村</div>
+            <div class="card-header">No.21-205 | 木村<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '木村' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 いやあ、木村さんの仕事の速さには、いつも脱帽させられますよ。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('いやあ、木村さんの仕事の速さには、いつも脱帽させられますよ。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('いやあ、木村さんの仕事の速さには、いつも脱帽させられますよ。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('木村')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">木村</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '木村' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -383,31 +432,39 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 21-206 | 来週</div>
+            <div class="card-header">No.21-206 | 来週<span class="card-count">(2 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '来週' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 来週の金曜日、あのお店予約できるか聞いてみた？
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('来週の金曜日、あのお店予約できるか聞いてみた？')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('来週の金曜日、あのお店予約できるか聞いてみた？')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('来週')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">来週</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '来週' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('予約')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">予約 <span class="vocab-kana">(よやく)</span></div>
+                    <div class="vocab-th">= การจอง</div>
                 </div>
             </div>
                 </div>
@@ -415,31 +472,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 21-207 | 会議</div>
+            <div class="card-header">No.21-207 | 会議<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 หมายถึง 'การประชุม' ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 今日の会議、また2時間もかかっちゃったわね。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('今日の会議、また2時間もかかっちゃったわね。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('今日の会議、また2時間もかかっちゃったわね。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('会議')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">会議 <span class="vocab-kana">(かいぎ)</span></div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">หมายถึง 'การประชุม' ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -447,31 +505,46 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 21-208 | 部長</div>
+            <div class="card-header">No.21-208 | 部長<span class="card-count">(3 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '部長' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 部長、今回の私の独断での行動、面目次第もございません。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('部長、今回の私の独断での行動、面目次第もございません。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('部長、今回の私の独断での行動、面目次第もございません。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('部長')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">部長</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '部長' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('行動')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">行動 <span class="vocab-kana">(こうどう)</span></div>
+                    <div class="vocab-th">= การกระทำ / พฤติกรรม</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('今回')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今回 <span class="vocab-kana">(こんかい)</span></div>
+                    <div class="vocab-th">= ครั้งนี้</div>
                 </div>
             </div>
                 </div>
@@ -479,31 +552,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 21-209 | 来月</div>
+            <div class="card-header">No.21-209 | 来月<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '来月' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 来月、マンションの更新料を払わなきゃいけないんだ。家賃1ヶ月分って、結構痛いよね。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('来月、マンションの更新料を払わなきゃいけないんだ。家賃1ヶ月分って、結構痛いよね。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('来月、マンションの更新料を払わなきゃいけないんだ。家賃1ヶ月分って、結構痛いよね。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('来月')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">来月</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '来月' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -511,31 +585,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 21-210 | 新商品</div>
+            <div class="card-header">No.21-210 | 新商品<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '新商品' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 新商品の売上、好調な滑り出しを見せているようですね。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('新商品の売上、好調な滑り出しを見せているようですね。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('新商品の売上、好調な滑り出しを見せているようですね。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('新商品')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">新商品</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '新商品' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -543,31 +618,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 22-211 | 資料</div>
+            <div class="card-header">No.22-211 | 資料<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 หมายถึง 'เอกสารข้อมูล' ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 資料、全体的にはよくまとまっているけど、グラフが多すぎて肝心の結論が霞んでしまっているね。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('資料、全体的にはよくまとまっているけど、グラフが多すぎて肝心の結論が霞んでしまっているね。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('資料、全体的にはよくまとまっているけど、グラフが多すぎて肝心の結論が霞んでしまっているね。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('資料')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">資料 <span class="vocab-kana">(しりょう)</span></div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">หมายถึง 'เอกสารข้อมูล' ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -575,31 +651,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 22-212 | 健康</div>
+            <div class="card-header">No.22-212 | 健康<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '健康' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 健康のためにジョギングを始めたんだけど、膝を痛めちゃって。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('健康のためにジョギングを始めたんだけど、膝を痛めちゃって。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('健康のためにジョギングを始めたんだけど、膝を痛めちゃって。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('健康')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">健康</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '健康' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -607,31 +684,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 22-213 | フォロー</div>
+            <div class="card-header">No.22-213 | フォロー<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 หมายถึง 'การสนับสนุน' หรือ 'การช่วยเหลือ' ในการทำงานครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 佐藤さん、昨日のフォローのおかげで、なんとか面目が保てました。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('佐藤さん、昨日のフォローのおかげで、なんとか面目が保てました。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('佐藤さん、昨日のフォローのおかげで、なんとか面目が保てました。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('フォロー')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">フォロー <span class="vocab-kana">(する)</span></div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">หมายถึง 'การสนับสนุน' หรือ 'การช่วยเหลือ' ในการทำงานครั...</div>
                 </div>
             </div>
                 </div>
@@ -639,31 +717,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 22-214 | 片付</div>
+            <div class="card-header">No.22-214 | 片付<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '片付' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 片付けが苦手な方は、『いつか使うかも』という言葉を封印しましょう。1年使わなかったものは、今のあなたには必要のないものです。物に執着せず、今の自分にとって本当に価値があるものだけを残す。それが、快適な暮らしへの第一歩です。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('片付けが苦手な方は、『いつか使うかも』という言葉を封印しましょう。1年使わなかったものは、今のあなたには必要のないものです。物に執着せず、今の自分にとって本当に価値があるものだけを残す。それが、快適な暮らしへの第一歩です。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('片付けが苦手な方は、『いつか使うかも』という言葉を封印しましょう。1年使わなかったものは、今のあなたには必要のないものです。物に執着せず、今の自分にとって本当に価値があるものだけを残す。それが、快適な暮らしへの第一歩です。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('片付')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">片付</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '片付' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -671,31 +750,39 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 22-215 | 課長</div>
+            <div class="card-header">No.22-215 | 課長<span class="card-count">(2 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '課長' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 課長、今回の私の失態、慙愧の念に堪えません。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('課長、今回の私の失態、慙愧の念に堪えません。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('課長、今回の私の失態、慙愧の念に堪えません。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('課長')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">課長</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '課長' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('今回')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今回 <span class="vocab-kana">(こんかい)</span></div>
+                    <div class="vocab-th">= ครั้งนี้</div>
                 </div>
             </div>
                 </div>
@@ -703,31 +790,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 22-216 | 最近</div>
+            <div class="card-header">No.22-216 | 最近<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '最近' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 最近、スマホの充電がすぐになくなっちゃうの。買い替え時かしら。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('最近、スマホの充電がすぐになくなっちゃうの。買い替え時かしら。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('最近、スマホの充電がすぐになくなっちゃうの。買い替え時かしら。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('最近')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">最近</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '最近' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -735,31 +823,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 22-217 | 会議</div>
+            <div class="card-header">No.22-217 | 会議<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 หมายถึง 'การประชุม' ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 最近、チーム内の風通しが悪い気がするんだ。会議でも意見が出にくいし。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('最近、チーム内の風通しが悪い気がするんだ。会議でも意見が出にくいし。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('最近、チーム内の風通しが悪い気がするんだ。会議でも意見が出にくいし。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('会議')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">会議 <span class="vocab-kana">(かいぎ)</span></div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">หมายถึง 'การประชุม' ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -767,31 +856,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 22-218 | 完遂</div>
+            <div class="card-header">No.22-218 | 完遂<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '完遂' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 このプロジェクトを完遂するためなら、泥を被る覚悟はできております。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('このプロジェクトを完遂するためなら、泥を被る覚悟はできております。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('このプロジェクトを完遂するためなら、泥を被る覚悟はできております。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('完遂')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">完遂</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '完遂' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -799,31 +889,39 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 22-219 | 今度</div>
+            <div class="card-header">No.22-219 | 今度<span class="card-count">(2 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '今度' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 今度のマンション、管理費がちょっと高いんだよね。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('今度のマンション、管理費がちょっと高いんだよね。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('今度のマンション、管理費がちょっと高いんだよね。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('今度')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">今度</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '今度' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('管理')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">管理 <span class="vocab-kana">(かんり)</span></div>
+                    <div class="vocab-th">= การจัดการ</div>
                 </div>
             </div>
                 </div>
@@ -831,31 +929,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 22-220 | 明日</div>
+            <div class="card-header">No.22-220 | 明日<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '明日' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 あの、明日のゴルフですが、諸般の事情により欠席させていただきたく…。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('あの、明日のゴルフですが、諸般の事情により欠席させていただきたく…。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('あの、明日のゴルフですが、諸般の事情により欠席させていただきたく…。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('明日')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">明日</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '明日' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -863,31 +962,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 23-221 | 山田君</div>
+            <div class="card-header">No.23-221 | 山田君<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '山田君' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 山田君、今週のタスク、かなり立て込んでるみたいだけど大丈夫か？
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('山田君、今週のタスク、かなり立て込んでるみたいだけど大丈夫か？')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('山田君、今週のタスク、かなり立て込んでるみたいだけど大丈夫か？')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('山田君')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">山田君</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '山田君' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -895,31 +995,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 23-222 | 加湿器</div>
+            <div class="card-header">No.23-222 | 加湿器<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '加湿器' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 加湿器、これに変えてから喉の調子がいいよ。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('加湿器、これに変えてから喉の調子がいいよ。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('加湿器、これに変えてから喉の調子がいいよ。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('加湿器')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">加湿器</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '加湿器' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -927,31 +1028,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 23-223 | 昨日</div>
+            <div class="card-header">No.23-223 | 昨日<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '昨日' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 あの、昨日の件ですが、私の勘違いでご足労をおかけしてしまいました。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('あの、昨日の件ですが、私の勘違いでご足労をおかけしてしまいました。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('あの、昨日の件ですが、私の勘違いでご足労をおかけしてしまいました。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('昨日')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">昨日</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '昨日' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -959,31 +1061,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 23-224 | 効率</div>
+            <div class="card-header">No.23-224 | 効率<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 หมายถึง 'ประสิทธิภาพ' ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 午後の仕事の効率を上げるには、15分から20分程度の昼寝が極めて有効です。ただし、30分を超えてしまうと深い眠りに入ってしまい、起きた時にかえって頭がボーッとしてしまいます。『短く、深く』が昼寝の鉄則です。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('午後の仕事の効率を上げるには、15分から20分程度の昼寝が極めて有効です。ただし、30分を超えてしまうと深い眠りに入ってしまい、起きた時にかえって頭がボーッとしてしまいます。『短く、深く』が昼寝の鉄則です。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('午後の仕事の効率を上げるには、15分から20分程度の昼寝が極めて有効です。ただし、30分を超えてしまうと深い眠りに入ってしまい、起きた時にかえって頭がボーッとしてしまいます。『短く、深く』が昼寝の鉄則です。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('効率')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">効率 <span class="vocab-kana">(こうりつ)</span></div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">หมายถึง 'ประสิทธิภาพ' ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -991,31 +1094,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 23-225 | 課長</div>
+            <div class="card-header">No.23-225 | 課長<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '課長' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 課長、先日のプロジェクト案、時期尚早とのご指摘、肝に銘じております。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('課長、先日のプロジェクト案、時期尚早とのご指摘、肝に銘じております。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('課長、先日のプロジェクト案、時期尚早とのご指摘、肝に銘じております。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('課長')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">課長</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '課長' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1023,31 +1127,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 23-226 | 写真</div>
+            <div class="card-header">No.23-226 | 写真<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '写真' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 スマホの写真がいっぱいで、もう保存できないわ。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('スマホの写真がいっぱいで、もう保存できないわ。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('スマホの写真がいっぱいで、もう保存できないわ。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('写真')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">写真</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '写真' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1055,31 +1160,39 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 23-227 | 浸透</div>
+            <div class="card-header">No.23-227 | 浸透<span class="card-count">(2 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '浸透' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 我が社でもテレワークが浸透してきたが、一方で対面のコミュニケーション不足が課題になっている。週に一日は『全員出社日』を設けて、意識的に情報共有を行う場を作りたいと思う。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('我が社でもテレワークが浸透してきたが、一方で対面のコミュニケーション不足が課題になっている。週に一日は『全員出社日』を設けて、意識的に情報共有を行う場を作りたいと思う。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('我が社でもテレワークが浸透してきたが、一方で対面のコミュニケーション不足が課題になっている。週に一日は『全員出社日』を設けて、意識的に情報共有を行う場を作りたいと思う。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('浸透')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">浸透</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '浸透' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('情報')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">情報 <span class="vocab-kana">(じょうほう)</span></div>
+                    <div class="vocab-th">= ข้อมูลข่าวสาร</div>
                 </div>
             </div>
                 </div>
@@ -1087,31 +1200,39 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 23-228 | 部長</div>
+            <div class="card-header">No.23-228 | 部長<span class="card-count">(2 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '部長' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 部長、今回の件、私の不徳の致すところで、弁解の余地もございません。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('部長、今回の件、私の不徳の致すところで、弁解の余地もございません。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('部長、今回の件、私の不徳の致すところで、弁解の余地もございません。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('部長')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">部長</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '部長' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('今回')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今回 <span class="vocab-kana">(こんかい)</span></div>
+                    <div class="vocab-th">= ครั้งนี้</div>
                 </div>
             </div>
                 </div>
@@ -1119,31 +1240,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 23-229 | 足音</div>
+            <div class="card-header">No.23-229 | 足音<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '足音' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 上の階の足音が夜遅くまで響いて、なかなか眠れないんだ。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('上の階の足音が夜遅くまで響いて、なかなか眠れないんだ。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('上の階の足音が夜遅くまで響いて、なかなか眠れないんだ。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('足音')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">足音</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '足音' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1151,31 +1273,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 23-230 | 本日</div>
+            <div class="card-header">No.23-230 | 本日<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '本日' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 本日は遠路はるばるお越しいただき、恐縮の至りです。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('本日は遠路はるばるお越しいただき、恐縮の至りです。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('本日は遠路はるばるお越しいただき、恐縮の至りです。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('本日')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">本日</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '本日' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1183,31 +1306,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 24-231 | 開発</div>
+            <div class="card-header">No.24-231 | 開発<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 หมายถึง 'การพัฒนา(ระบบ ผลิตภัณฑ์)' ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 山田君、開発スケジュールが1週間遅れているようだが、何がボトルネックになっているんだ？
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('山田君、開発スケジュールが1週間遅れているようだが、何がボトルネックになっているんだ？')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('山田君、開発スケジュールが1週間遅れているようだが、何がボトルネックになっているんだ？')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('開発')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">開発 <span class="vocab-kana">(かいはつ)</span></div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">หมายถึง 'การพัฒนา(ระบบ ผลิตภัณฑ์)' ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1215,31 +1339,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 24-232 | 昼間</div>
+            <div class="card-header">No.24-232 | 昼間<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '昼間' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 このプロジェクター、昼間でも結構はっきり映るね。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('このプロジェクター、昼間でも結構はっきり映るね。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('このプロジェクター、昼間でも結構はっきり映るね。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('昼間')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">昼間</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '昼間' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1247,31 +1372,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 24-233 | 昨日</div>
+            <div class="card-header">No.24-233 | 昨日<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '昨日' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 あの、昨日の不手際ですが、衷心よりお詫び申し上げます。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('あの、昨日の不手際ですが、衷心よりお詫び申し上げます。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('あの、昨日の不手際ですが、衷心よりお詫び申し上げます。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('昨日')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">昨日</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '昨日' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1279,31 +1405,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 24-234 | 投資</div>
+            <div class="card-header">No.24-234 | 投資<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '投資' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 投資で一番大切なのは、一つのカゴにすべての卵を盛らないことです。特定の銘柄に集中させると、暴落した際のリスクが大きすぎます。資産を分散させること、そして短期的な変動に一喜一憂しない忍耐強さこそが、成功への近道です。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('投資で一番大切なのは、一つのカゴにすべての卵を盛らないことです。特定の銘柄に集中させると、暴落した際のリスクが大きすぎます。資産を分散させること、そして短期的な変動に一喜一憂しない忍耐強さこそが、成功への近道です。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('投資で一番大切なのは、一つのカゴにすべての卵を盛らないことです。特定の銘柄に集中させると、暴落した際のリスクが大きすぎます。資産を分散させること、そして短期的な変動に一喜一憂しない忍耐強さこそが、成功への近道です。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('投資')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">投資</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '投資' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1311,31 +1438,39 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 24-235 | 課長</div>
+            <div class="card-header">No.24-235 | 課長<span class="card-count">(2 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '課長' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 課長、今回の私の勝手な判断、万死に値すると猛省しております。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('課長、今回の私の勝手な判断、万死に値すると猛省しております。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('課長、今回の私の勝手な判断、万死に値すると猛省しております。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('課長')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">課長</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '課長' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('今回')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今回 <span class="vocab-kana">(こんかい)</span></div>
+                    <div class="vocab-th">= ครั้งนี้</div>
                 </div>
             </div>
                 </div>
@@ -1343,31 +1478,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 24-236 | 今日</div>
+            <div class="card-header">No.24-236 | 今日<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '今日' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 このレポート、今日の定時までに間に合いそう？
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('このレポート、今日の定時までに間に合いそう？')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('このレポート、今日の定時までに間に合いそう？')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('今日')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">今日</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '今日' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1375,31 +1511,39 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 24-237 | 来月</div>
+            <div class="card-header">No.24-237 | 来月<span class="card-count">(2 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '来月' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 来月から『メンター制度』を導入します。これは、部署の異なる先輩社員が、若手の相談役になる仕組みです。直属の上司には話しにくい悩みも、客観的な立場からのアドバイスで解消されることを期待しています。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('来月から『メンター制度』を導入します。これは、部署の異なる先輩社員が、若手の相談役になる仕組みです。直属の上司には話しにくい悩みも、客観的な立場からのアドバイスで解消されることを期待しています。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('来月から『メンター制度』を導入します。これは、部署の異なる先輩社員が、若手の相談役になる仕組みです。直属の上司には話しにくい悩みも、客観的な立場からのアドバイスで解消されることを期待しています。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('来月')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">来月</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '来月' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('導入')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">導入 <span class="vocab-kana">(どうにゅう)</span></div>
+                    <div class="vocab-th">= การนำใช้ / การนำเข้า</div>
                 </div>
             </div>
                 </div>
@@ -1407,31 +1551,39 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 24-238 | 部長</div>
+            <div class="card-header">No.24-238 | 部長<span class="card-count">(2 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '部長' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 部長、今回の私の失態で、会社に泥を塗るようなことになってしまい…。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('部長、今回の私の失態で、会社に泥を塗るようなことになってしまい…。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('部長、今回の私の失態で、会社に泥を塗るようなことになってしまい…。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('部長')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">部長</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '部長' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('今回')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今回 <span class="vocab-kana">(こんかい)</span></div>
+                    <div class="vocab-th">= ครั้งนี้</div>
                 </div>
             </div>
                 </div>
@@ -1439,31 +1591,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 24-239 | 屋上</div>
+            <div class="card-header">No.24-239 | 屋上<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '屋上' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 屋上のテラス、夜20時以降は使用禁止になったんだってね。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('屋上のテラス、夜20時以降は使用禁止になったんだってね。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('屋上のテラス、夜20時以降は使用禁止になったんだってね。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('屋上')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">屋上</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '屋上' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1471,31 +1624,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 24-240 | 課長</div>
+            <div class="card-header">No.24-240 | 課長<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '課長' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 課長、先日のプレゼン、お褒めに預かり光栄です！
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('課長、先日のプレゼン、お褒めに預かり光栄です！')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('課長、先日のプレゼン、お褒めに預かり光栄です！')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('課長')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">課長</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '課長' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1503,31 +1657,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 25-241 | 今回</div>
+            <div class="card-header">No.25-241 | 今回<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '今回' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 今回のプロジェクト、スピード重視で進めてほしいんだが、石橋を叩いて壊すような慎重さは今は必要ないよ。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('今回のプロジェクト、スピード重視で進めてほしいんだが、石橋を叩いて壊すような慎重さは今は必要ないよ。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('今回のプロジェクト、スピード重視で進めてほしいんだが、石橋を叩いて壊すような慎重さは今は必要ないよ。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('今回')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">今回</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '今回' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1535,31 +1690,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 25-242 | 結果</div>
+            <div class="card-header">No.25-242 | 結果<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 หมายถึง 'ผลลัพธ์' ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 健康診断の結果が返ってきたんだけど、運動不足を指摘されちゃった。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('健康診断の結果が返ってきたんだけど、運動不足を指摘されちゃった。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('健康診断の結果が返ってきたんだけど、運動不足を指摘されちゃった。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('結果')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">結果 <span class="vocab-kana">(けっか)</span></div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">หมายถึง 'ผลลัพธ์' ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1567,31 +1723,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 25-243 | 明日</div>
+            <div class="card-header">No.25-243 | 明日<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '明日' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 あの、明日のゴルフですが、諸般の事情により欠席させていただきたく存じます。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('あの、明日のゴルフですが、諸般の事情により欠席させていただきたく存じます。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('あの、明日のゴルフですが、諸般の事情により欠席させていただきたく存じます。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('明日')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">明日</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '明日' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1599,31 +1756,46 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 25-244 | 少子高齢化</div>
+            <div class="card-header">No.25-244 | 少子高齢化<span class="card-count">(3 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '少子高齢化' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 少子高齢化を単なる人口減と捉えるのではなく、産業構造を刷新する好機と考えるべきです。労働力が不足するからこそ、AIやロボットの導入が加速し、生産性が向上する。ピンチをチャンスに変える発想の転換が、これからの日本には不可欠です。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('少子高齢化を単なる人口減と捉えるのではなく、産業構造を刷新する好機と考えるべきです。労働力が不足するからこそ、AIやロボットの導入が加速し、生産性が向上する。ピンチをチャンスに変える発想の転換が、これからの日本には不可欠です。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('少子高齢化を単なる人口減と捉えるのではなく、産業構造を刷新する好機と考えるべきです。労働力が不足するからこそ、AIやロボットの導入が加速し、生産性が向上する。ピンチをチャンスに変える発想の転換が、これからの日本には不可欠です。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('少子高齢化')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">少子高齢化</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '少子高齢化' ในรูปประโยคนี้ครับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('加速')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">加速 <span class="vocab-kana">(かそく)</span></div>
+                    <div class="vocab-th">= การเร่งความเร็ว / เร่ง</div>
+                </div>
+            </div>
+            <div class="vocab-item">
+                <button class="tts-small-btn" onclick="playTTS('導入')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">導入 <span class="vocab-kana">(どうにゅう)</span></div>
+                    <div class="vocab-th">= การนำใช้ / การนำเข้า</div>
                 </div>
             </div>
                 </div>
@@ -1631,31 +1803,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 25-245 | 部長</div>
+            <div class="card-header">No.25-245 | 部長<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '部長' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 部長、先日の私の独断での発言、慙愧の念に堪えません。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('部長、先日の私の独断での発言、慙愧の念に堪えません。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('部長、先日の私の独断での発言、慙愧の念に堪えません。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('部長')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">部長</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '部長' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1663,31 +1836,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 25-246 | 仕事</div>
+            <div class="card-header">No.25-246 | 仕事<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '仕事' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 この仕事、納期はかなり厳しいんだけど、引き受けてもらえるかな？
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('この仕事、納期はかなり厳しいんだけど、引き受けてもらえるかな？')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('この仕事、納期はかなり厳しいんだけど、引き受けてもらえるかな？')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('仕事')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">仕事</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '仕事' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1695,31 +1869,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 25-247 | 今回</div>
+            <div class="card-header">No.25-247 | 今回<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '今回' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 今回のリーダーシップ研修、どうだった？
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('今回のリーダーシップ研修、どうだった？')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('今回のリーダーシップ研修、どうだった？')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('今回')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">今回</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '今回' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1727,31 +1902,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 25-248 | 会議</div>
+            <div class="card-header">No.25-248 | 会議<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 หมายถึง 'การประชุม' ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 課長、先ほどの会議での私の失言、平にご容赦願いたいのですが。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('課長、先ほどの会議での私の失言、平にご容赦願いたいのですが。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('課長、先ほどの会議での私の失言、平にご容赦願いたいのですが。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('会議')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">会議 <span class="vocab-kana">(かいぎ)</span></div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">หมายถึง 'การประชุม' ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1759,31 +1935,32 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 25-249 | 防犯</div>
+            <div class="card-header">No.25-249 | 防犯<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '防犯' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 マンションの防犯カメラ、増設するって決まったみたいだね。
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('マンションの防犯カメラ、増設するって決まったみたいだね。')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('マンションの防犯カメラ、増設するって決まったみたいだね。')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('防犯')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">防犯</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '防犯' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
@@ -1791,38 +1968,38 @@
         </div>
 
         <div class="learning-card">
-            <div class="card-header">Word ID: 25-250 | 成功</div>
+            <div class="card-header">No.25-250 | 成功<span class="card-count">(1 คำ)</span></div>
             
             <div class="text-th">
-                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                <span class="tag-title" style="background: #1565c0;">🇹🇭 คำอธิบายคำสำคัญ (Key Explanation)</span><br>
                 คำศัพท์ที่น่าสนใจคือ '成功' ในรูปประโยคนี้ครับ
             </div>
             
             <div class="text-ja">
-                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                <span class="tag-title" style="background: #42a5f5;">🇯🇵 ประโยคตัวอย่าง (Example Sentence)</span><br>
                 このプロジェクトを成功させるためなら、泥を被る覚悟はできております！
                 <br>
-                <button class="tts-large-btn" onclick="playTTS('このプロジェクトを成功させるためなら、泥を被る覚悟はできております！')">
-                    🔊 ฟังเสียงประโยค (Listen)
+                <button class="tts-sentence-btn" onclick="playTTS('このプロジェクトを成功させるためなら、泥を被る覚悟はできております！')">
+                    🔊 ฟังทั้งประโยค
                 </button>
             </div>
             
             <div class="vocab-section">
-                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกคำศัพท์สำคัญในประโยค (Vocabulary Breakdown)</h4>
                 <div class="vocab-grid">
                     
-            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+            <div class="vocab-item main-word">
                 <button class="tts-small-btn" onclick="playTTS('成功')">🔊</button>
                 <div class="vocab-content">
+                    <span class="vocab-label">★ キーワード</span>
                     <div class="vocab-jp">成功</div>
-                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                    <div class="vocab-th">คำศัพท์ที่น่าสนใจคือ '成功' ในรูปประโยคนี้ครับ...</div>
                 </div>
             </div>
                 </div>
             </div>
         </div>
 
-        
         <div class="next-page-container">
             <a href="jlpt-n2-exam-preparation-strategies-part6.html" class="next-btn">เรียนต่อ Part 6 ➔</a>
         </div>
