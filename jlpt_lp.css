@@ -307,16 +307,17 @@ footer {
     }
 
     .game-text {
-        font-size: 0.85rem;
+        font-size: 0.6rem;
     }
 
     .game-text span {
-        font-size: 0.75rem;
+        font-size: 0.55rem;
     }
 
     .game-name {
-        font-size: 0.7rem;
-        top: -12px;
+        font-size: 0.55rem;
+        top: -10px;
         left: 10px;
+        padding: 2px 8px;
     }
 }
