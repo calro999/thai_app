@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คอร์สเรียนภาษาญี่ปุ่น JLPT - เลือกเส้นทางการเรียนของคุณ</title>
+    <meta name="description"
+        content="รวมคอร์สติวสอบ JLPT N5-N1 และเทคนิคการเรียนภาษาญี่ปุ่นด้วยเกม สนุก เข้าใจง่าย ได้ผลจริง">
+    <link rel="stylesheet" href="jlpt_lp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Mitr:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff69b4;
+            --secondary: #d81b60;
+            --accent: #ffeb3b;
+            --glass: rgba(255, 255, 255, 0.9);
+            --card-shadow: 0 10px 30px rgba(216, 27, 96, 0.15);
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: #fffaf0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .hub-hero {
+            background: linear-gradient(135deg, #ff69b4 0%, #d81b60 100%);
+            padding: 100px 5% 60px;
+            text-align: center;
+            color: white;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .hub-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: 'Mitr', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hub-hero p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: -40px auto 100px;
+            padding: 0 20px;
+        }
+
+        .category-group {
+            margin-bottom: 60px;
+            background: var(--glass);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: var(--card-shadow);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #ffb3d1;
+        }
+
+        .category-title i {
+            font-size: 2.5rem;
+        }
+
+        .category-title h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin: 0;
+            font-family: 'Mitr', sans-serif;
+        }
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid #fff0f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(216, 27, 96, 0.2);
+            border-color: var(--primary);
+        }
+
+        .course-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .course-card h3 {
+            font-size: 1.3rem;
+            color: #333;
+            margin: 0 0 15px 0;
+            line-height: 1.4;
+        }
+
+        .course-card p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .course-btn {
+            background: #fdf2f8;
+            color: var(--secondary);
+            padding: 10px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .course-card:hover .course-btn {
+            background: var(--secondary);
+            color: white;
+        }
+
+        /* Badge Styles */
+        .level-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .badge-listening {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-guide {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .badge-skill {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        @media (max-width: 768px) {
+            .hub-hero h1 {
+                font-size: 2rem;
+            }
+
+            .hub-hero p {
+                font-size: 1.1rem;
+            }
+
+            .category-group {
+                padding: 25px;
+            }
+
+            .category-title h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        footer {
+            background: #1a1a2e;
+            color: #aaa;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #ff69b4;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">JLPT Gyaru Academy</a>
+        <div>
+            <a href="index.html" class="header-btn">Start Game</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="hub-hero">
+            <h1 class="animate-fade">เลือกเส้นทางสู่ความเป็นเซียนญี่ปุ่น! 🌸</h1>
+            <p class="animate-fade">รวบรวมคอร์สเรียนและเทคนิคการสอบ JLPT ที่สนุกที่สุดในโลก
+                เลือกหัวข้อที่คุณต้องการเริ่มเรียนได้เลย</p>
+        </div>
+
+        <div class="container">
+
+            <!-- Category: Listening Master -->
+            <section class="category-group">
+                <div class="category-title">
+                    <span>🎧</span>
+                    <h2>Listening Master (ฝึกการฟัง)</h2>
+                </div>
+                <div class="learning-grid">
+                    <a href="jlpt-n1-listening-practice.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-listening">JLPT N1</span>
+                            <h3>เทคนิคการฟังระดับ N1</h3>
+                            <p>ฝึกหูให้ชินกับความเร็วและสำนวนระดับสูง พร้อมสคริปต์ไทย-ญี่ปุ่น</p>
+                        </div>
+                        <div class="course-btn">เริ่มเรียนเลย</div>
+                    </a>
+                    <a href="jlpt-n2-listening-practice.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-listening">JLPT N2</span>
+                            <h3>พิชิตพาร์ทฟัง N2</h3>
+                            <p>จับใจความสำคัญของบทสนทนาที่ซับซ้อนในธีมชีวิตประจำวันและการทำงาน</p>
+                        </div>
+                        <div class="course-btn">เริ่มเรียนเลย</div>
+                    </a>
+                    <a href="jlpt-n3-listening-practice.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-listening">JLPT N3</span>
+                            <h3>เตรียมสอบฟัง N3</h3>
+                            <p>ก้าวข้ามขีดจำกัดการฟังระดับกลาง เข้าใจบริบทและคีย์เวิร์ดสำคัญ</p>
+                        </div>
+                        <div class="course-btn">เริ่มเรียนเลย</div>
+                    </a>
+                    <a href="jlpt-n4-listening-practice.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-listening">JLPT N4</span>
+                            <h3>ฝึกฟังพื้นฐาน N4</h3>
+                            <p>ปูพื้นฐานการฟังด้วยประโยคที่ใช้บ่อย กับสาวแกลสุดน่ารัก</p>
+                        </div>
+                        <div class="course-btn">เริ่มเรียนเลย</div>
+                    </a>
+                    <a href="jlpt-n5-listening-practice.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-listening">JLPT N5</span>
+                            <h3>เริ่มต้นการฟัง N5</h3>
+                            <p>สำหรับผู้เริ่มต้น ฝึกฟังคำศัพท์ง่ายๆ และสำเนียงที่ถูกต้อง</p>
+                        </div>
+                        <div class="course-btn">เริ่มเรียนเลย</div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Category: Exam Guide -->
+            <section class="category-group">
+                <div class="category-title">
+                    <span>📝</span>
+                    <h2>Exam Guide (แนวข้อสอบ)</h2>
+                </div>
+                <div class="learning-grid">
+                    <a href="jlpt-pass-n1-guide.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-guide">JLPT N1</span>
+                            <h3>ไกด์สอบผ่าน N1</h3>
+                            <p>เจาะลึกกลยุทธ์ทำคะแนนพาร์ทไวยากรณ์และคันจิระดับชั้นเซียน</p>
+                        </div>
+                        <div class="course-btn">ดูเนื้อหา</div>
+                    </a>
+                    <a href="jlpt-pass-n2-guide.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-guide">JLPT N2</span>
+                            <h3>สูตรลับคะแนนเต็ม N2</h3>
+                            <p>จัดเต็มคลังคำศัพท์และรูปแบบประโยคที่มักออกสอบบ่อยที่สุด</p>
+                        </div>
+                        <div class="course-btn">ดูเนื้อหา</div>
+                    </a>
+                    <a href="jlpt-pass-n3-guide.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-guide">JLPT N3</span>
+                            <h3>คัมภีร์สอบ N3</h3>
+                            <p>เปลี่ยนระดับกลางที่ยาก ให้กลายเป็นเรื่องง่ายด้วยวิธีคิดแบบเกม</p>
+                        </div>
+                        <div class="course-btn">ดูเนื้อหา</div>
+                    </a>
+                    <a href="jlpt-pass-n4-guide.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-guide">JLPT N4</span>
+                            <h3>ติวเข้ม N4</h3>
+                            <p>ยกระดับภาษาญี่ปุ่นพื้นฐานสู่ความคล่องแคล่ว ติวครบทุกพาร์ท</p>
+                        </div>
+                        <div class="course-btn">ดูเนื้อหา</div>
+                    </a>
+                    <a href="jlpt-pass-n5-guide.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-guide">JLPT N5</span>
+                            <h3>ก้าวแรกสู่ N5</h3>
+                            <p>อธิบายละเอียดเหมือนมีรุ่นพี่คอยติวให้ สอบผ่านได้แน่นอน</p>
+                        </div>
+                        <div class="course-btn">ดูเนื้อหา</div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Category: Special Skills -->
+            <section class="category-group">
+                <div class="category-title">
+                    <span>⭐</span>
+                    <h2>Special Skills (ทักษะเฉพาะด้าน)</h2>
+                </div>
+                <div class="learning-grid">
+                    <a href="jlpt-vocabulary-mastery.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-skill">Vocabulary</span>
+                            <h3>พิชิตคลังคำศัพท์</h3>
+                            <p>จำศัพท์แม่น ยิ่งเรียนยิ่งสนุก กับระบบควิซในเกม</p>
+                        </div>
+                        <div class="course-btn">เก่งคำศัพท์</div>
+                    </a>
+                    <a href="jlpt-kanji-skills.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-skill">Kanji</span>
+                            <h3>คันจิไม่ใช่อุปสรรค</h3>
+                            <p>เผยเทคนิคการจำคันจิจากรากศัพท์และภาพจำสุดคาวาอี้</p>
+                        </div>
+                        <div class="course-btn">เก่งคันจิ</div>
+                    </a>
+                    <a href="jlpt-grammar-lesson.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-skill">Grammar</span>
+                            <h3>ไวยากรณ์เข้าใจง่าย</h3>
+                            <p>ถอดรหัสโครงสร้างประโยคที่ซับซ้อนให้กลายเป็นภาษาคน</p>
+                        </div>
+                        <div class="course-btn">เก่งไวยากรณ์</div>
+                    </a>
+                    <a href="jlpt-japanese-conversation.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-skill">Conversation</span>
+                            <h3>ฝึกพูดแบบฉบับสาวแกล</h3>
+                            <p>เรียนรู้วิธีสนทนาที่เป็นธรรมชาติ สำนวนวัยรุ่น และระดับภาษา</p>
+                        </div>
+                        <div class="course-btn">เก่งบทสนทนา</div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Category: Study Tips -->
+            <section class="category-group">
+                <div class="category-title">
+                    <span>💡</span>
+                    <h2>Study Tips (เทคนิคการเรียน)</h2>
+                </div>
+                <div class="learning-grid">
+                    <a href="jlpt-study-method.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-skill">Method</span>
+                            <h3>สูตรการเรียน 15 นาที</h3>
+                            <p>วิธีแบ่งเวลาเรียนให้ได้ผลลัพธ์สูงสุดสำหรับคนไม่ค่อยมีเวลา</p>
+                        </div>
+                        <div class="course-btn">อ่านเทคนิค</div>
+                    </a>
+                    <a href="jlpt-how-to-pass.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-skill">Pass</span>
+                            <h3>สอบอย่างไรให้ไม่ล้ม</h3>
+                            <p>การเตรียมตัวทางจิตใจและเทคนิคจัดการเวลาในห้องสอบ</p>
+                        </div>
+                        <div class="course-btn">อ่านเทคนิค</div>
+                    </a>
+                    <a href="jlpt-game-learning-style.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-skill">Game</span>
+                            <h3>ทำไมต้องเรียนผ่านเกม?</h3>
+                            <p>วิทยาศาสตร์เบื้องหลังการเรียนรู้ที่ทำให้คุณจำได้นานกว่าปกติ</p>
+                        </div>
+                        <div class="course-btn">อ่านเทคนิค</div>
+                    </a>
+                    <a href="jlpt-thai-speakers.html" class="course-card">
+                        <div>
+                            <span class="level-badge badge-skill">Thai</span>
+                            <h3>จุดอ่อนคนไทยใน JLPT</h3>
+                            <p>เจาะลึกปัญหาที่คนไทยมักเจอและวิธีแก้จุดบอดเหล่านั้น</p>
+                        </div>
+                        <div class="course-btn">อ่านเทคนิค</div>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links" style="margin-bottom: 25px;">
+            <a href="index.html">Home</a>
+            <a href="top.html">Top</a>
+            <a href="lp.html">LP</a>
+            <a href="sitemap.html">Sitemap</a>
+        </div>
+        <p>&copy; 2026 YUI & YUTO. All rights reserved.</p>
+    </footer>
+
+    <!-- Native Banner -->
+    <script async="async" data-cfasync="false"
+        src="https://pl28842706.effectivegatecpm.com/d82e1b5ca98e70ae57305b561c19323f/invoke.js"></script>
+    <div id="container-d82e1b5ca98e70ae57305b561c19323f"></div>
+
+    <!-- Social Bar -->
+    <script src="https://pl28842711.effectivegatecpm.com/a0/a3/a9/a0a3a9e248e155da596da919272bf4aa.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const pushSocialBar = setInterval(() => {
+                Array.from(document.body.children).forEach(el => {
+                    if (el.tagName === 'DIV' || el.tagName === 'IFRAME') {
+                        const style = window.getComputedStyle(el);
+                        if (style.position === 'fixed' && style.top === '0px' && style.zIndex > 100) {
+                            if (el.tagName !== 'HEADER' && !el.querySelector('header')) {
+                                el.style.setProperty('top', '70px', 'important');
+                            }
+                        }
+                    }
+                });
+            }, 1000);
+            setTimeout(() => clearInterval(pushSocialBar), 10000);
+        });
+    </script>
+</body>
+
+</html>
