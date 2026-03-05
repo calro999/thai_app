@@ -3,79 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitemap - แผนผังเว็บไซต์</title>
+    <title>Sitemap — แผนผังเว็บไซต์ JLPT Gyaru</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background: #f8f9fa; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h1 { color: #D81B60; text-align: center; border-bottom: 2px solid #ff99bb; padding-bottom: 10px; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; }
-        a { color: #4A90E2; text-decoration: none; font-size: 1.1rem; transition: color 0.3s; }
-        a:hover { color: #D81B60; text-decoration: underline; }
-        .category { font-size: 1.5rem; color: #333; margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        body { font-family: 'Kanit', sans-serif; background: #f8f9fa; padding: 20px; color: #333; }
+        .container { max-width: 860px; margin: 0 auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        h1 { color: #d81b60; text-align: center; border-bottom: 2px solid #ffb3cc; padding-bottom: 16px; margin-bottom: 30px; font-size: 2rem; }
+        .section { margin-bottom: 35px; }
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .s-top    { background: linear-gradient(135deg, #d81b60, #ff69b4); }
+        .s-n1     { background: linear-gradient(135deg, #4a148c, #7b1fa2); }
+        .s-n2     { background: linear-gradient(135deg, #1565c0, #42a5f5); }
+        .s-n3     { background: linear-gradient(135deg, #1976d2, #64b5f6); }
+        .s-n4     { background: linear-gradient(135deg, #00695c, #26a69a); }
+        .s-n5     { background: linear-gradient(135deg, #e65100, #ff8a65); }
+        .s-lp     { background: linear-gradient(135deg, #455a64, #78909c); }
+        .s-other  { background: linear-gradient(135deg, #37474f, #607d8b); }
+        ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+        li a {
+            display: block;
+            color: #3a3a6a;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            border: 1px solid #eee;
+            transition: all 0.2s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        li a:hover { background: #fff0f5; border-color: #ffb3cc; color: #d81b60; transform: translateX(3px); }
+        .footer-nav { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
+        .footer-nav a { color: #888; margin: 0 10px; text-decoration: none; font-size: 0.9rem; }
+        .footer-nav a:hover { color: #d81b60; }
+        @media(max-width:600px) { ul { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>Sitemap - แผนผังเว็บไซต์</h1>
-    <h2 class="category">หน้าหลัก (Main Pages)</h2>
-    <ul>
-        <li><a href="/index.html">ติวญี่ปุ่นกับสาวแกล</a></li>
-        <li><a href="/top.html">YUI UNIVERSE | แพลตฟอร์มเกมเรียนภาษาญี่ปุ่นกับสาวแกล</a></li>
-    </ul>
-    <h2 class="category">บทความเรียนภาษาญี่ปุ่น (Learning Pages)</h2>
-    <ul>
-        <li><a href="/jlpt-game-learning-style.html">ทำไมเกมภาษาญี่ปุ่นแอปนี้ถึงเวิร์กสุดๆ</a></li>
-        <li><a href="/jlpt-grammar-lesson.html">สอนไวยากรณ์ญี่ปุ่นผ่าน Visual Novel ไม่ต้องจงใจท่อง</a></li>
-        <li><a href="/jlpt-how-to-pass.html">เคล็ดลับสอบผ่าน JLPT และเทคนิคเพิ่มแต้ม</a></li>
-        <li><a href="/jlpt-interest-japanese.html">สนใจภาษาญี่ปุ่น? เรียนเรื่องที่ชอบผ่านเกมโอตาคุซิ!</a></li>
-        <li><a href="/jlpt-japanese-conversation.html">ฝึกสนทนากับชาวญี่ปุ่นผ่านบทจำลองในเกม</a></li>
-        <li><a href="/jlpt-kanji-skills.html">แก้ปัญหาคันจิยากด้วยเกมทายปริศนาตัวอักษร</a></li>
-        <li><a href="/jlpt-learn-japanese.html">วิธีเรียนภาษาญี่ปุ่นด้วยเกม | ขั้นเริ่มต้น - JLPT Gyaru</a></li>
-        <li><a href="/jlpt-n1-advanced-japanese-idioms-part2.html">คอร์สเรียนข้อความ N1 - Part 2</a></li>
-        <li><a href="/jlpt-n1-complex-grammar-patterns-part3.html">คอร์สเรียนข้อความ N1 - Part 3</a></li>
-        <li><a href="/jlpt-n1-exam-mastery-strategies-part6.html">คอร์สเรียนข้อความ N1 - Part 6</a></li>
-        <li><a href="/jlpt-n1-high-level-listening-drills-part4.html">คอร์สเรียนข้อความ N1 - Part 4</a></li>
-        <li><a href="/jlpt-n1-listening-practice.html">เจาะลึกบทฟังขั้นสูง JLPT N1 เสียงบรรยายเต็ม</a></li>
-        <li><a href="/jlpt-n1-native-level-expressions-part5.html">คอร์สเรียนข้อความ N1 - Part 5</a></li>
-        <li><a href="/jlpt-n1-reading-vocabulary-analysis-part1.html">คอร์สเรียนข้อความ N1 - Part 1</a></li>
-        <li><a href="/jlpt-n2-advanced-grammar-patterns-part3.html">คอร์สเรียนข้อความ N2 - Part 3</a></li>
-        <li><a href="/jlpt-n2-business-japanese-expressions-part2.html">คอร์สเรียนข้อความ N2 - Part 2</a></li>
-        <li><a href="/jlpt-n2-exam-preparation-strategies-part6.html">คอร์สเรียนข้อความ N2 - Part 6</a></li>
-        <li><a href="/jlpt-n2-listening-practice.html">ฝึกฝน Listening JLPT N2 ฟังยากแต่มีวิธีทำ</a></li>
-        <li><a href="/jlpt-n2-listening-vocabulary-analysis-part1.html">คอร์สเรียนข้อความ N2 - Part 1</a></li>
-        <li><a href="/jlpt-n2-native-conversation-practice-part5.html">คอร์สเรียนข้อความ N2 - Part 5</a></li>
-        <li><a href="/jlpt-n2-practical-listening-drills-part4.html">คอร์สเรียนข้อความ N2 - Part 4</a></li>
-        <li><a href="/jlpt-n3-kanji-reading-practice-part2.html">คอร์สเรียนข้อความ N3 - Part 2</a></li>
-        <li><a href="/jlpt-n3-listening-practice.html">เสียงพากย์จริง ฝึกทักษะฟัง JLPT N3 ผ่านเว็บไซต์</a></li>
-        <li><a href="/jlpt-n3-practical-japanese-phrases-part4.html">คอร์สเรียนข้อความ N3 - Part 4</a></li>
-        <li><a href="/jlpt-n3-sentence-structure-drill-part3.html">คอร์สเรียนข้อความ N3 - Part 3</a></li>
-        <li><a href="/jlpt-n3-vocab-grammar-analysis-part1.html">คอร์สเรียนข้อความ N3 - Part 1</a></li>
-        <li><a href="/jlpt-n4-common-phrases-analysis-part3.html">คอร์สเรียนข้อความ N4 - Part 3</a></li>
-        <li><a href="/jlpt-n4-essential-japanese-expressions-part4.html">คอร์สเรียนข้อความ N4 - Part 4</a></li>
-        <li><a href="/jlpt-n4-grammar-vocabulary-breakdown-part1.html">คอร์สเรียนข้อความ N4 - Part 1</a></li>
-        <li><a href="/jlpt-n4-kanji-reading-listening-part2.html">คอร์สเรียนข้อความ N4 - Part 2</a></li>
-        <li><a href="/jlpt-n4-listening-practice.html">Listening ฝึกฟังเสียงภาษาญี่ปุ่น JLPT N4</a></li>
-        <li><a href="/jlpt-n5-basic-grammar-vocabulary-part1.html">คอร์สเรียนข้อความ N5 - Part 1</a></li>
-        <li><a href="/jlpt-n5-common-phrases-analysis-part3.html">คอร์สเรียนข้อความ N5 - Part 3</a></li>
-        <li><a href="/jlpt-n5-essential-japanese-expressions-part4.html">คอร์สเรียนข้อความ N5 - Part 4</a></li>
-        <li><a href="/jlpt-n5-kanji-reading-listening-part2.html">คอร์สเรียนข้อความ N5 - Part 2</a></li>
-        <li><a href="/jlpt-n5-listening-practice.html">ฝึกฟัง JLPT N5 ผ่านเสียงเกมและระบบอักษร | JLPT Gyaru</a></li>
-        <li><a href="/jlpt-pass-n1-guide.html">JLPT N1 ไวยากรณ์และการฟังขั้นสูง</a></li>
-        <li><a href="/jlpt-pass-n2-guide.html">สอบผ่าน JLPT N2 ทำแบบทดสอบฟรีตลอด 24ชม</a></li>
-        <li><a href="/jlpt-pass-n3-guide.html">เทคนิคตะลุยข้อสอบ JLPT N3 ด้วยเกมฟรี | JLPT Gyaru</a></li>
-        <li><a href="/jlpt-pass-n4-guide.html">แนวทางสอบผ่าน JLPT N4 ด้วย Visual Novel | JLPT Gyaru</a></li>
-        <li><a href="/jlpt-pass-n5-guide.html">เตรียมสอบ JLPT N5 ผ่านระบบเกม ทดลองเล่นฟรี</a></li>
-        <li><a href="/jlpt-study-method.html">วิธีเตรียมสอบ JLPT เล่นเกมไปเรียนไปก็สอบผ่านได้</a></li>
-        <li><a href="/jlpt-thai-speakers.html">เรียนภาษาญี่ปุ่นสำหรับคนไทย - ซัพพอร์ตเต็มรูปแบบ</a></li>
-        <li><a href="/jlpt-vocabulary-mastery.html">จำคำศัพท์ญี่ปุ่นยังไงไม่ให้ลืมด้วยควิซในแอปเกม</a></li>
-    </ul>
-    <h2 class="category">หน้าอื่นๆ (Other Pages)</h2>
-    <ul>
-        <li><a href="/hub.html">คอร์สเรียนภาษาญี่ปุ่น JLPT - เลือกเส้นทางการเรียนของคุณ</a></li>
-        <li><a href="/lp.html">ติวญี่ปุ่นกับสาวแกล - JLPT Study with Gyaru Game</a></li>
-        <li><a href="/piano.html">Kana Piano - Sound Board</a></li>
-    </ul>
+    <h1>🗺️ Sitemap — แผนผังเว็บไซต์</h1>
+<div class="section"><div class="section-title s-top">🏠 หน้าหลัก (Main Pages)</div><ul>
+        <li><a href="/index.html" title="ติวญี่ปุ่นกับสาวแกล">ติวญี่ปุ่นกับสาวแกล</a></li>
+        <li><a href="/top.html" title="YUI UNIVERSE | แพลตฟอร์มเกมเรียนภาษาญี่ปุ่นกับสาวแกล">YUI UNIVERSE | แพลตฟอร์มเกมเรียนภาษาญี่ปุ่นกับสาวแกล</a></li>
+        <li><a href="/hub.html" title="คอร์สเรียนภาษาญี่ปุ่น JLPT - เลือกเส้นทางการเรียนของคุณ">คอร์สเรียนภาษาญี่ปุ่น JLPT - เลือกเส้นทางการเรียนของคุณ</a></li>
+        <li><a href="/study.html" title="JLPT Study Hub — รวมคอร์สเรียนภาษาญี่ปุ่น N1〜N5">JLPT Study Hub — รวมคอร์สเรียนภาษาญี่ปุ่น N1〜N5</a></li>
+</ul></div>
+<div class="section"><div class="section-title s-n1">📘 N1 — ระดับสูงสุด (6 Parts + Listening)</div><ul>
+        <li><a href="/jlpt-n1-reading-vocabulary-analysis-part1.html" title="คอร์สเรียนข้อความ N1 - Part 1">คอร์สเรียนข้อความ N1 - Part 1</a></li>
+        <li><a href="/jlpt-n1-advanced-japanese-idioms-part2.html" title="คอร์สเรียนข้อความ N1 - Part 2">คอร์สเรียนข้อความ N1 - Part 2</a></li>
+        <li><a href="/jlpt-n1-complex-grammar-patterns-part3.html" title="คอร์สเรียนข้อความ N1 - Part 3">คอร์สเรียนข้อความ N1 - Part 3</a></li>
+        <li><a href="/jlpt-n1-high-level-listening-drills-part4.html" title="คอร์สเรียนข้อความ N1 - Part 4">คอร์สเรียนข้อความ N1 - Part 4</a></li>
+        <li><a href="/jlpt-n1-native-level-expressions-part5.html" title="คอร์สเรียนข้อความ N1 - Part 5">คอร์สเรียนข้อความ N1 - Part 5</a></li>
+        <li><a href="/jlpt-n1-exam-mastery-strategies-part6.html" title="คอร์สเรียนข้อความ N1 - Part 6">คอร์สเรียนข้อความ N1 - Part 6</a></li>
+        <li><a href="/jlpt-n1-listening-practice.html" title="เจาะลึกบทฟังขั้นสูง JLPT N1 เสียงบรรยายเต็ม">เจาะลึกบทฟังขั้นสูง JLPT N1 เสียงบรรยายเต็ม</a></li>
+</ul></div>
+<div class="section"><div class="section-title s-n2">📗 N2 — ระดับสูง (6 Parts + Listening)</div><ul>
+        <li><a href="/jlpt-n2-listening-vocabulary-analysis-part1.html" title="คอร์สเรียนข้อความ N2 - Part 1">คอร์สเรียนข้อความ N2 - Part 1</a></li>
+        <li><a href="/jlpt-n2-business-japanese-expressions-part2.html" title="คอร์สเรียนข้อความ N2 - Part 2">คอร์สเรียนข้อความ N2 - Part 2</a></li>
+        <li><a href="/jlpt-n2-advanced-grammar-patterns-part3.html" title="คอร์สเรียนข้อความ N2 - Part 3">คอร์สเรียนข้อความ N2 - Part 3</a></li>
+        <li><a href="/jlpt-n2-practical-listening-drills-part4.html" title="คอร์สเรียนข้อความ N2 - Part 4">คอร์สเรียนข้อความ N2 - Part 4</a></li>
+        <li><a href="/jlpt-n2-native-conversation-practice-part5.html" title="คอร์สเรียนข้อความ N2 - Part 5">คอร์สเรียนข้อความ N2 - Part 5</a></li>
+        <li><a href="/jlpt-n2-exam-preparation-strategies-part6.html" title="คอร์สเรียนข้อความ N2 - Part 6">คอร์สเรียนข้อความ N2 - Part 6</a></li>
+        <li><a href="/jlpt-n2-listening-practice.html" title="ฝึกฝน Listening JLPT N2 ฟังยากแต่มีวิธีทำ">ฝึกฝน Listening JLPT N2 ฟังยากแต่มีวิธีทำ</a></li>
+</ul></div>
+<div class="section"><div class="section-title s-n3">📙 N3 — ระดับกลาง (4 Parts + Listening)</div><ul>
+        <li><a href="/jlpt-n3-vocab-grammar-analysis-part1.html" title="คอร์สเรียน N3 - Part 1">คอร์สเรียน N3 - Part 1</a></li>
+        <li><a href="/jlpt-n3-kanji-reading-practice-part2.html" title="คอร์สเรียน N3 - Part 2">คอร์สเรียน N3 - Part 2</a></li>
+        <li><a href="/jlpt-n3-sentence-structure-drill-part3.html" title="คอร์สเรียน N3 - Part 3">คอร์สเรียน N3 - Part 3</a></li>
+        <li><a href="/jlpt-n3-practical-japanese-phrases-part4.html" title="คอร์สเรียน N3 - Part 4">คอร์สเรียน N3 - Part 4</a></li>
+        <li><a href="/jlpt-n3-listening-practice.html" title="เสียงพากย์จริง ฝึกทักษะฟัง JLPT N3 ผ่านเว็บไซต์">เสียงพากย์จริง ฝึกทักษะฟัง JLPT N3 ผ่านเว็บไซต์</a></li>
+</ul></div>
+<div class="section"><div class="section-title s-n4">📒 N4 — ระดับต้น-กลาง (4 Parts + Listening)</div><ul>
+        <li><a href="/jlpt-n4-grammar-vocabulary-breakdown-part1.html" title="คอร์สเรียน N4 - Part 1">คอร์สเรียน N4 - Part 1</a></li>
+        <li><a href="/jlpt-n4-kanji-reading-listening-part2.html" title="คอร์สเรียน N4 - Part 2">คอร์สเรียน N4 - Part 2</a></li>
+        <li><a href="/jlpt-n4-common-phrases-analysis-part3.html" title="คอร์สเรียน N4 - Part 3">คอร์สเรียน N4 - Part 3</a></li>
+        <li><a href="/jlpt-n4-essential-japanese-expressions-part4.html" title="คอร์สเรียน N4 - Part 4">คอร์สเรียน N4 - Part 4</a></li>
+        <li><a href="/jlpt-n4-listening-practice.html" title="Listening ฝึกฟังเสียงภาษาญี่ปุ่น JLPT N4">Listening ฝึกฟังเสียงภาษาญี่ปุ่น JLPT N4</a></li>
+</ul></div>
+<div class="section"><div class="section-title s-n5">📕 N5 — ระดับเริ่มต้น (4 Parts + Listening)</div><ul>
+        <li><a href="/jlpt-n5-basic-grammar-vocabulary-part1.html" title="คอร์สเรียน N5 - Part 1">คอร์สเรียน N5 - Part 1</a></li>
+        <li><a href="/jlpt-n5-kanji-reading-listening-part2.html" title="คอร์สเรียน N5 - Part 2">คอร์สเรียน N5 - Part 2</a></li>
+        <li><a href="/jlpt-n5-common-phrases-analysis-part3.html" title="คอร์สเรียน N5 - Part 3">คอร์สเรียน N5 - Part 3</a></li>
+        <li><a href="/jlpt-n5-essential-japanese-expressions-part4.html" title="คอร์สเรียน N5 - Part 4">คอร์สเรียน N5 - Part 4</a></li>
+        <li><a href="/jlpt-n5-listening-practice.html" title="ฝึกฟัง JLPT N5 ผ่านเสียงเกมและระบบอักษร | JLPT Gyaru">ฝึกฟัง JLPT N5 ผ่านเสียงเกมและระบบอักษร | JLPT Gyaru</a></li>
+</ul></div>
+<div class="section"><div class="section-title s-lp">📄 LP & เนื้อหาอื่นๆ</div><ul>
+        <li><a href="/jlpt-game-learning-style.html" title="ทำไมเกมภาษาญี่ปุ่นแอปนี้ถึงเวิร์กสุดๆ">ทำไมเกมภาษาญี่ปุ่นแอปนี้ถึงเวิร์กสุดๆ</a></li>
+        <li><a href="/jlpt-grammar-lesson.html" title="สอนไวยากรณ์ญี่ปุ่นผ่าน Visual Novel ไม่ต้องจงใจท่อง">สอนไวยากรณ์ญี่ปุ่นผ่าน Visual Novel ไม่ต้องจงใจท่อง</a></li>
+        <li><a href="/jlpt-how-to-pass.html" title="เคล็ดลับสอบผ่าน JLPT และเทคนิคเพิ่มแต้ม">เคล็ดลับสอบผ่าน JLPT และเทคนิคเพิ่มแต้ม</a></li>
+        <li><a href="/jlpt-interest-japanese.html" title="สนใจภาษาญี่ปุ่น? เรียนเรื่องที่ชอบผ่านเกมโอตาคุซิ!">สนใจภาษาญี่ปุ่น? เรียนเรื่องที่ชอบผ่านเกมโอตาคุซิ!</a></li>
+        <li><a href="/jlpt-japanese-conversation.html" title="ฝึกสนทนากับชาวญี่ปุ่นผ่านบทจำลองในเกม">ฝึกสนทนากับชาวญี่ปุ่นผ่านบทจำลองในเกม</a></li>
+        <li><a href="/jlpt-kanji-skills.html" title="แก้ปัญหาคันจิยากด้วยเกมทายปริศนาตัวอักษร">แก้ปัญหาคันจิยากด้วยเกมทายปริศนาตัวอักษร</a></li>
+        <li><a href="/jlpt-learn-japanese.html" title="วิธีเรียนภาษาญี่ปุ่นด้วยเกม | ขั้นเริ่มต้น - JLPT Gyaru">วิธีเรียนภาษาญี่ปุ่นด้วยเกม | ขั้นเริ่มต้น - JLPT Gyaru</a></li>
+        <li><a href="/jlpt-pass-n1-guide.html" title="JLPT N1 ไวยากรณ์และการฟังขั้นสูง">JLPT N1 ไวยากรณ์และการฟังขั้นสูง</a></li>
+        <li><a href="/jlpt-pass-n2-guide.html" title="สอบผ่าน JLPT N2 ทำแบบทดสอบฟรีตลอด 24ชม">สอบผ่าน JLPT N2 ทำแบบทดสอบฟรีตลอด 24ชม</a></li>
+        <li><a href="/jlpt-pass-n3-guide.html" title="เทคนิคตะลุยข้อสอบ JLPT N3 ด้วยเกมฟรี | JLPT Gyaru">เทคนิคตะลุยข้อสอบ JLPT N3 ด้วยเกมฟรี | JLPT Gyaru</a></li>
+        <li><a href="/jlpt-pass-n4-guide.html" title="แนวทางสอบผ่าน JLPT N4 ด้วย Visual Novel | JLPT Gyaru">แนวทางสอบผ่าน JLPT N4 ด้วย Visual Novel | JLPT Gyaru</a></li>
+        <li><a href="/jlpt-pass-n5-guide.html" title="เตรียมสอบ JLPT N5 ผ่านระบบเกม ทดลองเล่นฟรี">เตรียมสอบ JLPT N5 ผ่านระบบเกม ทดลองเล่นฟรี</a></li>
+        <li><a href="/jlpt-study-method.html" title="วิธีเตรียมสอบ JLPT เล่นเกมไปเรียนไปก็สอบผ่านได้">วิธีเตรียมสอบ JLPT เล่นเกมไปเรียนไปก็สอบผ่านได้</a></li>
+        <li><a href="/jlpt-thai-speakers.html" title="เรียนภาษาญี่ปุ่นสำหรับคนไทย - ซัพพอร์ตเต็มรูปแบบ">เรียนภาษาญี่ปุ่นสำหรับคนไทย - ซัพพอร์ตเต็มรูปแบบ</a></li>
+        <li><a href="/jlpt-vocabulary-mastery.html" title="จำคำศัพท์ญี่ปุ่นยังไงไม่ให้ลืมด้วยควิซในแอปเกม">จำคำศัพท์ญี่ปุ่นยังไงไม่ให้ลืมด้วยควิซในแอปเกม</a></li>
+</ul></div>
+<div class="section"><div class="section-title s-other">⚙️ หน้าอื่นๆ</div><ul>
+        <li><a href="/lp.html" title="ติวญี่ปุ่นกับสาวแกล - JLPT Study with Gyaru Game">ติวญี่ปุ่นกับสาวแกล - JLPT Study with Gyaru Game</a></li>
+        <li><a href="/piano.html" title="Kana Piano - Sound Board">Kana Piano - Sound Board</a></li>
+</ul></div>
+
+    <div class="footer-nav">
+        <a href="/index.html">Home</a>
+        <a href="/top.html">Top</a>
+        <a href="/hub.html">Hub</a>
+        <a href="/study.html">Study Hub</a>
+    </div>
 </div>
 </body>
 </html>
