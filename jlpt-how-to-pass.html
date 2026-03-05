@@ -9,6 +9,27 @@
     <style>
         .hero { background: linear-gradient(135deg, #ECFDF5 0%, #F0F9FF 100%); }
         .custom-section { margin-bottom: 60px; padding: 20px; background: #fff; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+        /* Native Banner Grid */
+        #container-d82e1b5ca98e70ae57305b561c19323f {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        @media (max-width: 768px) {
+            #container-d82e1b5ca98e70ae57305b561c19323f {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+        }
+
+        /* Header z-index buffer */
+        header {
+            z-index: 2147483647 !important;
+        }
     </style>
 </head>
 <body>
@@ -155,11 +176,35 @@
         </div>
     </main>
 
+    <!-- Native Banner -->
+    <script async="async" data-cfasync="false" src="https://pl28842706.effectivegatecpm.com/d82e1b5ca98e70ae57305b561c19323f/invoke.js"></script>
+    <div id="container-d82e1b5ca98e70ae57305b561c19323f"></div>
+
     <footer>
         <p>&copy; 2026 JLPT Study with Gyaru - YUI & YUTO NOVEL GAME</p>
         <div class="footer-disclaimer">
             ข้อจำกัดความรับผิดชอบ: เกมนี้ทำหน้าที่เป็นสื่อเสริมการเรียนรู้ภาษาญี่ปุ่นเท่านั้น ผลลัพธ์ขึ้นอยู่กับการฝึกฝนของผู้เรียน
         </div>
     </footer>
+
+    <!-- Social Bar -->
+    <script src="https://pl28842711.effectivegatecpm.com/a0/a3/a9/a0a3a9e248e155da596da919272bf4aa.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const pushSocialBar = setInterval(() => {
+            Array.from(document.body.children).forEach(el => {
+                if (el.tagName === 'DIV' || el.tagName === 'IFRAME') {
+                    const style = window.getComputedStyle(el);
+                    if (style.position === 'fixed' && style.top === '0px' && style.zIndex > 100) {
+                        if (el.tagName !== 'HEADER' && !el.querySelector('header')) {
+                            el.style.setProperty('top', '70px', 'important');
+                        }
+                    }
+                }
+            });
+        }, 1000);
+        setTimeout(() => clearInterval(pushSocialBar), 10000);
+    });
+    </script>
 </body>
 </html>
