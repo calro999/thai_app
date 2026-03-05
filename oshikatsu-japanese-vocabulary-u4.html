@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สแลงแฟนคลับญี่ปุ่น Unit 4 | とうとい エモい ばえる</title>
     <meta name="description" content="คำศัพท์วัยรุ่นและสแลงแฟนคลับญี่ปุ่นที่ใช้บน SNS! とうとい エモい ばえる เข้าใจได้ทันที พร้อมคำอธิบายไทย">
-    <meta name="keywords" content="oshi, โอชิ, oshikatsu, 推し活, ภาษาญี่ปุ่นสำหรับแฟนคลับ, คำชมภาษาญี่ปุ่น, ไปคอนเสิร์ตญี่ปุ่น, คำพูดเวลาเจอไอดอล, ภาษาญี่ปุ่นแฟนคลับ, fan meeting ภาษาญี่ปุ่น, idol คำศัพท์, เพลงญี่ปุ่น, อนิเมะ">
+    <meta name="keywords" content="oshi, โอชิ, oshikatsu, 推し活, ภาษาญี่ปุ่นสำหรับแฟนคลับ, คำชมภาษาญี่ปุ่น, ไปคอนเสิร์ตญี่ปุ่น, คำพูดเวลาเจอไอดอล, ภาษาญี่ปุ่นแฟนคลับ, fan meeting ภาษาญี่ปุ่น, idol คำศัพท์, kpop ภาษาญี่ปุ่น, jpop ภาษาญี่ปุ่น">
     <link rel="canonical" href="https://jlpt-with-gyaru.vercel.app/oshikatsu-japanese-vocabulary-u4.html">
     <link rel="icon" type="image/jpeg" href="images/icon_jlpt.jpg">
     <link rel="apple-touch-icon" href="images/icon_jlpt.jpg">
@@ -161,6 +161,25 @@
             box-shadow: 0 3px 10px rgba(216,27,96,0.4);
         }
         .tts-btn:hover { transform: scale(1.15); background: #c2185b; }
+        .tts-label-btn {
+            background: rgba(255,105,180,0.15);
+            border: 1px solid rgba(255,105,180,0.35);
+            color: #ff69b4; padding: 6px 16px;
+            border-radius: 20px; cursor: pointer;
+            font-family: 'Kanit', sans-serif; font-size: 0.95rem;
+            font-weight: 600; transition: 0.3s;
+            display: inline-flex; align-items: center; gap: 5px;
+        }
+        .tts-label-btn:hover { background: var(--deep-pink); color: white; border-color: var(--deep-pink); }
+        .tts-replay-btn {
+            background: rgba(156,39,176,0.15);
+            border: 1px solid rgba(156,39,176,0.3);
+            color: #ce93d8; padding: 5px 14px;
+            border-radius: 15px; cursor: pointer;
+            font-family: 'Kanit', sans-serif; font-size: 0.88rem;
+            transition: 0.3s; display: inline-block;
+        }
+        .tts-replay-btn:hover { background: #9c27b0; color: white; }
         .word-display {
             font-size: 2rem; font-weight: 700; color: #ffb3cc;
             letter-spacing: 0.05em;
@@ -299,83 +318,133 @@
 
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('とうとい')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('とうとい')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">とうとい</div>
+            <button class="tts-label-btn" onclick="playTTS('とうとい')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 คำว่า 'Toutoi' คือที่สุดของสายติ่ง! ใช้เวลาเห็นโอชิทำอะไรที่ดูดี ดูสูงส่ง หรือดูบริสุทธิ์จนเราอยากจะกราบไหว้</div>
-        <div class="explanation-box">📌 Toutoi (とうとい) = เลอค่า, สูงส่ง, ดีงาม (ใช้เมื่อรู้สึกซาบซึ้งในการมีอยู่ของโอชิ)</div>
+        <div class="explanation-box">📌 Toutoi (とうとい) = เลอค่า, สูงส่ง, ดีงาม (ใช้เมื่อรู้สึกซาบซึ้งในการมีอยู่ของโอชิ)
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('とうとい')">🔁 ฟังซ้ำ — とうとい</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('エモい')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('エモい')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">エモい</div>
+            <button class="tts-label-btn" onclick="playTTS('エモい')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 Emo-i! ใช้ชมรูปภาพหรือบรรยากาศที่ดูมีเสน่ห์ กระตุ้นอารมณ์ หรือดูมีความหมายลึกซึ้งเกินบรรยาย</div>
-        <div class="explanation-box">📌 Emo-i (エモい) = มีเสน่ห์ทางอารมณ์, ลึกซึ้ง, ได้ฟีล</div>
+        <div class="explanation-box">📌 Emo-i (エモい) = มีเสน่ห์ทางอารมณ์, ลึกซึ้ง, ได้ฟีล
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('エモい')">🔁 ฟังซ้ำ — エモい</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('ばえる')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('ばえる')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">ばえる</div>
+            <button class="tts-label-btn" onclick="playTTS('ばえる')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 ใช้เวลาเห็นรูปที่โอชิลงแล้วมัน 'ดูดีมาก' เหมาะกับ Social Media หรือองค์ประกอบภาพเป๊ะสุดๆ</div>
-        <div class="explanation-box">📌 Baeru (ばえる) = ดูดี, ขึ้นกล้อง, เหมาะจะลง IG</div>
+        <div class="explanation-box">📌 Baeru (ばえる) = ดูดี, ขึ้นกล้อง, เหมาะจะลง IG
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('ばえる')">🔁 ฟังซ้ำ — ばえる</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('ぬま')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('ぬま')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">ぬま</div>
+            <button class="tts-label-btn" onclick="playTTS('ぬま')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 สภาพที่ถอนตัวไม่ขึ้นจากการชอบใครสักคน เหมือนตกลงไปในโคลนดูดที่ยิ่งดิ้นยิ่งจม!</div>
-        <div class="explanation-box">📌 Numa (ぬま) = ปลัก, โคลนดูด (ใช้เปรียบเปรยการถอนตัวไม่ขึ้นจากการติ่ง)</div>
+        <div class="explanation-box">📌 Numa (ぬま) = ปลัก, โคลนดูด (ใช้เปรียบเปรยการถอนตัวไม่ขึ้นจากการติ่ง)
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('ぬま')">🔁 ฟังซ้ำ — ぬま</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('おし')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('おし')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">おし</div>
+            <button class="tts-label-btn" onclick="playTTS('おし')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 คำจำกัดความของคนที่เราสนับสนุนและรักที่สุด 'My Oshi'!</div>
-        <div class="explanation-box">📌 Oshi (おし) = คนที่เราสนับสนุน, เมน (ใช้เรียกคนที่เราชอบที่สุดในวง)</div>
+        <div class="explanation-box">📌 Oshi (おし) = คนที่เราสนับสนุน, เมน (ใช้เรียกคนที่เราชอบที่สุดในวง)
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('おし')">🔁 ฟังซ้ำ — おし</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('いやし')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('いやし')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">いやし</div>
+            <button class="tts-label-btn" onclick="playTTS('いやし')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 เมื่อคุณเหนื่อยจากงานหรือการเรียน แค่เห็นหน้าโอชิก็รู้สึก 'ได้รับการเยียวยา' แล้ว</div>
-        <div class="explanation-box">📌 Iyashi (いやし) = การเยียวยาจิตใจ (ใช้เรียกสิ่งที่ทำให้รู้สึกสงบและมีความสุข)</div>
+        <div class="explanation-box">📌 Iyashi (いやし) = การเยียวยาจิตใจ (ใช้เรียกสิ่งที่ทำให้รู้สึกสงบและมีความสุข)
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('いやし')">🔁 ฟังซ้ำ — いやし</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('たからもの')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('たからもの')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">たからもの</div>
+            <button class="tts-label-btn" onclick="playTTS('たからもの')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 คุณคือสมบัติล้ำค่าในชีวิตของฉัน! ใช้เรียกโอชิหรือสิ่งของที่เกี่ยวกับโอชิที่มีค่าต่อจิตใจ</div>
-        <div class="explanation-box">📌 Takaramono (たからもの) = ของขวัญล้ำค่า, สมบัติ</div>
+        <div class="explanation-box">📌 Takaramono (たからもの) = ของขวัญล้ำค่า, สมบัติ
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('たからもの')">🔁 ฟังซ้ำ — たからもの</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('でんせつ')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('でんせつ')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">でんせつ</div>
+            <button class="tts-label-btn" onclick="playTTS('でんせつ')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 โชว์วันนี้ยอดเยี่ยมมากจนต้องจารึกไว้! 'นี่คือตำนาน!'</div>
-        <div class="explanation-box">📌 Densetsu (でんせつ) = ตำนาน (ใช้ชมสิ่งที่ยอดเยี่ยมจนน่าจดจำไปตลอด)</div>
+        <div class="explanation-box">📌 Densetsu (でんせつ) = ตำนาน (ใช้ชมสิ่งที่ยอดเยี่ยมจนน่าจดจำไปตลอด)
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('でんせつ')">🔁 ฟังซ้ำ — でんせつ</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('きせき')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('きせき')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">きせき</div>
+            <button class="tts-label-btn" onclick="playTTS('きせき')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 การที่ฉันได้มารู้จักคุณ คือปาฏิหาริย์ที่เกิดขึ้นในชีวิตของฉัน</div>
-        <div class="explanation-box">📌 Kiseki (きせき) = ปาฏิหาริย์</div>
+        <div class="explanation-box">📌 Kiseki (きせき) = ปาฏิหาริย์
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('きせき')">🔁 ฟังซ้ำ — きせき</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('うんめい')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('うんめい')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">うんめい</div>
+            <button class="tts-label-btn" onclick="playTTS('うんめい')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 ฉันรู้สึกว่าเราเกิดมาเพื่อเจอกัน... นี่คือพรหมลิขิต!</div>
-        <div class="explanation-box">📌 Unmei (うんめい) = โชคชะตา, พรหมลิขิต</div>
+        <div class="explanation-box">📌 Unmei (うんめい) = โชคชะตา, พรหมลิขิต
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('うんめい')">🔁 ฟังซ้ำ — うんめい</button>
+            </div>
+        </div>
     </div>
 
 
@@ -407,7 +476,7 @@
         <p style="margin-bottom:8px;">
             <span class="culture-kanji">同担</span><span class="culture-kana">（どうたん）</span>
         </p>
-        <div class="culture-desc">同担（どうたん）= แฟนคลับที่ชอบโอชิคนเดียวกัน / 兼担（かけもち）= แฟนคลับที่มีโอชิหลายคน ในวัฒนธรรมแฟนคลับญี่ปุ่น นี่เป็นเรื่องสำคัญมาก!</div>
+        <div class="culture-desc">同担（どうたん）= แฟนคลับที่ชอบโอชิคนเดียวกัน / 兼担（かけもち）= แฟนคลับที่มีโอชิหลายคน ในวัฒนธรรม Kpop/JPop นี่เป็นเรื่องสำคัญมาก!</div>
         <button class="culture-tts" onclick="playTTS('どうたん')">🔊 ฟังเสียง</button>
     </div>
 

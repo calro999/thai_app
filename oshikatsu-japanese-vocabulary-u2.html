@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>คำบอกรักโอชิภาษาญี่ปุ่น 10 คำ | 推し活 ญี่ปุ่น Unit 2</title>
     <meta name="description" content="บอกรักโอชิเป็นภาษาญี่ปุ่น! だいすき あいしてる あいたい คำที่แฟนคลับต้องรู้ พร้อมวิธีใช้จริงในอีเวนต์และ SNS">
-    <meta name="keywords" content="oshi, โอชิ, oshikatsu, 推し活, ภาษาญี่ปุ่นสำหรับแฟนคลับ, คำชมภาษาญี่ปุ่น, ไปคอนเสิร์ตญี่ปุ่น, คำพูดเวลาเจอไอดอล, ภาษาญี่ปุ่นแฟนคลับ, fan meeting ภาษาญี่ปุ่น, idol คำศัพท์, เพลงญี่ปุ่น, อนิเมะ">
+    <meta name="keywords" content="oshi, โอชิ, oshikatsu, 推し活, ภาษาญี่ปุ่นสำหรับแฟนคลับ, คำชมภาษาญี่ปุ่น, ไปคอนเสิร์ตญี่ปุ่น, คำพูดเวลาเจอไอดอล, ภาษาญี่ปุ่นแฟนคลับ, fan meeting ภาษาญี่ปุ่น, idol คำศัพท์, kpop ภาษาญี่ปุ่น, jpop ภาษาญี่ปุ่น">
     <link rel="canonical" href="https://jlpt-with-gyaru.vercel.app/oshikatsu-japanese-vocabulary-u2.html">
     <link rel="icon" type="image/jpeg" href="images/icon_jlpt.jpg">
     <link rel="apple-touch-icon" href="images/icon_jlpt.jpg">
@@ -161,6 +161,25 @@
             box-shadow: 0 3px 10px rgba(216,27,96,0.4);
         }
         .tts-btn:hover { transform: scale(1.15); background: #c2185b; }
+        .tts-label-btn {
+            background: rgba(255,105,180,0.15);
+            border: 1px solid rgba(255,105,180,0.35);
+            color: #ff69b4; padding: 6px 16px;
+            border-radius: 20px; cursor: pointer;
+            font-family: 'Kanit', sans-serif; font-size: 0.95rem;
+            font-weight: 600; transition: 0.3s;
+            display: inline-flex; align-items: center; gap: 5px;
+        }
+        .tts-label-btn:hover { background: var(--deep-pink); color: white; border-color: var(--deep-pink); }
+        .tts-replay-btn {
+            background: rgba(156,39,176,0.15);
+            border: 1px solid rgba(156,39,176,0.3);
+            color: #ce93d8; padding: 5px 14px;
+            border-radius: 15px; cursor: pointer;
+            font-family: 'Kanit', sans-serif; font-size: 0.88rem;
+            transition: 0.3s; display: inline-block;
+        }
+        .tts-replay-btn:hover { background: #9c27b0; color: white; }
         .word-display {
             font-size: 2rem; font-weight: 700; color: #ffb3cc;
             letter-spacing: 0.05em;
@@ -299,83 +318,133 @@
 
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('だいすき')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('だいすき')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">だいすき</div>
+            <button class="tts-label-btn" onclick="playTTS('だいすき')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 คำบอกรักที่ใช้บ่อยที่สุด! 'Daisuki' แสดงถึงความชอบที่เอ่อล้น ใช้พูดกับโอชิได้ทุกวันเลย</div>
-        <div class="explanation-box">📌 Daisuki (だいすき) = ชอบมากที่สุด ใช้บอกความรู้สึกรักและประทับใจ</div>
+        <div class="explanation-box">📌 Daisuki (だいすき) = ชอบมากที่สุด ใช้บอกความรู้สึกรักและประทับใจ
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('だいすき')">🔁 ฟังซ้ำ — だいすき</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('あいしてる')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('あいしてる')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">あいしてる</div>
+            <button class="tts-label-btn" onclick="playTTS('あいしてる')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 คำนี้ลึกซึ้งกว่า Daisuki! 'Aishiteru' ใช้ในโอกาสพิเศษเพื่อบอกว่ารักสุดหัวใจ</div>
-        <div class="explanation-box">📌 Aishiteru (あいしてる) = รักนะ ใช้สื่อถึงความรักที่มั่นคงและลึกซึ้ง</div>
+        <div class="explanation-box">📌 Aishiteru (あいしてる) = รักนะ ใช้สื่อถึงความรักที่มั่นคงและลึกซึ้ง
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('あいしてる')">🔁 ฟังซ้ำ — あいしてる</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('あいたい')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('あいたい')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">あいたい</div>
+            <button class="tts-label-btn" onclick="playTTS('あいたい')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 เวลาที่ไม่ได้เจอนานๆ หรืออยากไปคอนเสิร์ต ต้องพิมพ์คำนี้ใน SNS ของเขาเลย!</div>
-        <div class="explanation-box">📌 Aitai (あいたい) = อยากเจอ, คิดถึง มักใช้ตอนที่กำลังรอคอยที่จะพบโอชิ</div>
+        <div class="explanation-box">📌 Aitai (あいたい) = อยากเจอ, คิดถึง มักใช้ตอนที่กำลังรอคอยที่จะพบโอชิ
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('あいたい')">🔁 ฟังซ้ำ — あいたい</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('うれしい')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('うれしい')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">うれしい</div>
+            <button class="tts-label-btn" onclick="playTTS('うれしい')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 ใช้เวลาที่โอชิลงรูปใหม่ หรือโอชิอ่านคอมเมนต์เรา 'Ureshii!' คือความสุขที่เกิดขึ้นตอนนั้นเลย</div>
-        <div class="explanation-box">📌 Ureshii (うれしい) = ดีใจ, มีความสุข (กับเหตุการณ์ที่เกิดขึ้น)</div>
+        <div class="explanation-box">📌 Ureshii (うれしい) = ดีใจ, มีความสุข (กับเหตุการณ์ที่เกิดขึ้น)
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('うれしい')">🔁 ฟังซ้ำ — うれしい</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('しあわせ')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('しあわせ')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">しあわせ</div>
+            <button class="tts-label-btn" onclick="playTTS('しあわせ')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 การมีคุณอยู่ในชีวิตทำให้ฉันมีความสุข... คำนี้ลึกซึ้งและอบอุ่นหัวใจมาก</div>
-        <div class="explanation-box">📌 Shiawase (しあわせ) = มีความสุข (ในภาพรวมของชีวิตหรือความสัมพันธ์)</div>
+        <div class="explanation-box">📌 Shiawase (しあわせ) = มีความสุข (ในภาพรวมของชีวิตหรือความสัมพันธ์)
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('しあわせ')">🔁 ฟังซ้ำ — しあわせ</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('かんどう')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('かんどう')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">かんどう</div>
+            <button class="tts-label-btn" onclick="playTTS('かんどう')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 ใช้เมื่อดูการแสดงที่ยอดเยี่ยมจนน้ำตาซึม หรือฟังเพลงที่กินใจ 'Kandou shimashita!'</div>
-        <div class="explanation-box">📌 Kandou (かんどう) = ประทับใจ, ตื้นตันใจ</div>
+        <div class="explanation-box">📌 Kandou (かんどう) = ประทับใจ, ตื้นตันใจ
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('かんどう')">🔁 ฟังซ้ำ — かんどう</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('ありがとう')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('ありがとう')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">ありがとう</div>
+            <button class="tts-label-btn" onclick="playTTS('ありがとう')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 คำมหัศจรรย์! ขอบคุณที่เกิดมา ขอบคุณที่มอบรอยยิ้มให้เราเสมอ</div>
-        <div class="explanation-box">📌 Arigatou (ありがとう) = ขอบคุณ ใช้ได้ในทุกสถานการณ์</div>
+        <div class="explanation-box">📌 Arigatou (ありがとう) = ขอบคุณ ใช้ได้ในทุกสถานการณ์
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('ありがとう')">🔁 ฟังซ้ำ — ありがとう</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('おめでとう')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('おめでとう')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">おめでとう</div>
+            <button class="tts-label-btn" onclick="playTTS('おめでとう')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 ใช้ในวันเกิดโอชิ หรือตอนที่โอชิได้รับรางวัลสำคัญ 'Omedetou!'</div>
-        <div class="explanation-box">📌 Omedetou (おめでとう) = ยินดีด้วย ใช้ในการเฉลิมฉลองต่างๆ</div>
+        <div class="explanation-box">📌 Omedetou (おめでとう) = ยินดีด้วย ใช้ในการเฉลิมฉลองต่างๆ
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('おめでとう')">🔁 ฟังซ้ำ — おめでとう</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('がんばって')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('がんばって')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">がんばって</div>
+            <button class="tts-label-btn" onclick="playTTS('がんばって')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 ส่งพลังให้โอชิ! 'Ganbatte' คือการบอกว่า พยายามเข้านะ เราเป็นกำลังใจให้เสมอ</div>
-        <div class="explanation-box">📌 Ganbatte (がんばって) = สู้ๆนะ, พยายามเข้านะ</div>
+        <div class="explanation-box">📌 Ganbatte (がんばって) = สู้ๆนะ, พยายามเข้านะ
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('がんばって')">🔁 ฟังซ้ำ — がんばって</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('おうえん')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('おうえん')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">おうえん</div>
+            <button class="tts-label-btn" onclick="playTTS('おうえん')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 ฉันจะสนับสนุนคุณตลอดไป... คำนี้สื่อถึงความเป็นแฟนคลับที่เหนียวแน่น</div>
-        <div class="explanation-box">📌 Ouen (おうえん) = สนับสนุน, เชียร์ (Ouen shiteimasu = คอยสนับสนุนอยู่ค่ะ)</div>
+        <div class="explanation-box">📌 Ouen (おうえん) = สนับสนุน, เชียร์ (Ouen shiteimasu = คอยสนับสนุนอยู่ค่ะ)
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('おうえん')">🔁 ฟังซ้ำ — おうえん</button>
+            </div>
+        </div>
     </div>
 
 

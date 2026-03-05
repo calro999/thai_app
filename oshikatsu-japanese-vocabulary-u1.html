@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>คำชมโอชิภาษาญี่ปุ่น 10 คำ | 推し活 ญี่ปุ่น Unit 1</title>
     <meta name="description" content="เรียนคำชมภาษาญี่ปุ่นสำหรับโอชิ! かわいい かっこいい きれい ハンサム พร้อมเสียงอ่านและคำอธิบายไทย ใช้ได้จริงตอนเจอไอดอล">
-    <meta name="keywords" content="oshi, โอชิ, oshikatsu, 推し活, ภาษาญี่ปุ่นสำหรับแฟนคลับ, คำชมภาษาญี่ปุ่น, ไปคอนเสิร์ตญี่ปุ่น, คำพูดเวลาเจอไอดอล, ภาษาญี่ปุ่นแฟนคลับ, fan meeting ภาษาญี่ปุ่น, idol คำศัพท์, เพลงญี่ปุ่น, อนิเมะ">
+    <meta name="keywords" content="oshi, โอชิ, oshikatsu, 推し活, ภาษาญี่ปุ่นสำหรับแฟนคลับ, คำชมภาษาญี่ปุ่น, ไปคอนเสิร์ตญี่ปุ่น, คำพูดเวลาเจอไอดอล, ภาษาญี่ปุ่นแฟนคลับ, fan meeting ภาษาญี่ปุ่น, idol คำศัพท์, kpop ภาษาญี่ปุ่น, jpop ภาษาญี่ปุ่น">
     <link rel="canonical" href="https://jlpt-with-gyaru.vercel.app/oshikatsu-japanese-vocabulary-u1.html">
     <link rel="icon" type="image/jpeg" href="images/icon_jlpt.jpg">
     <link rel="apple-touch-icon" href="images/icon_jlpt.jpg">
@@ -161,6 +161,25 @@
             box-shadow: 0 3px 10px rgba(216,27,96,0.4);
         }
         .tts-btn:hover { transform: scale(1.15); background: #c2185b; }
+        .tts-label-btn {
+            background: rgba(255,105,180,0.15);
+            border: 1px solid rgba(255,105,180,0.35);
+            color: #ff69b4; padding: 6px 16px;
+            border-radius: 20px; cursor: pointer;
+            font-family: 'Kanit', sans-serif; font-size: 0.95rem;
+            font-weight: 600; transition: 0.3s;
+            display: inline-flex; align-items: center; gap: 5px;
+        }
+        .tts-label-btn:hover { background: var(--deep-pink); color: white; border-color: var(--deep-pink); }
+        .tts-replay-btn {
+            background: rgba(156,39,176,0.15);
+            border: 1px solid rgba(156,39,176,0.3);
+            color: #ce93d8; padding: 5px 14px;
+            border-radius: 15px; cursor: pointer;
+            font-family: 'Kanit', sans-serif; font-size: 0.88rem;
+            transition: 0.3s; display: inline-block;
+        }
+        .tts-replay-btn:hover { background: #9c27b0; color: white; }
         .word-display {
             font-size: 2rem; font-weight: 700; color: #ffb3cc;
             letter-spacing: 0.05em;
@@ -299,83 +318,133 @@
 
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('かわいい')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('かわいい')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">かわいい</div>
+            <button class="tts-label-btn" onclick="playTTS('かわいい')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 คำเบสิกที่สุด! 'Kawaii' ใช้ชมโอชิที่ดูน่ารัก สดใส ไม่ว่าจะเป็นผู้ชายหรือผู้หญิงก็ได้นะ</div>
-        <div class="explanation-box">📌 Kawaii (かわいい) = น่ารัก ใช้ได้ครอบจักรวาล ตั้งแต่รูปลักษณ์ไปจนถึงนิสัยเลย!</div>
+        <div class="explanation-box">📌 Kawaii (かわいい) = น่ารัก ใช้ได้ครอบจักรวาล ตั้งแต่รูปลักษณ์ไปจนถึงนิสัยเลย!
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('かわいい')">🔁 ฟังซ้ำ — かわいい</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('かっこいい')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('かっこいい')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">かっこいい</div>
+            <button class="tts-label-btn" onclick="playTTS('かっこいい')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 คำนี้เอาไว้ชมโอชิที่ดูเท่ ดูคูล ดูสมาร์ท 'Kakkoii!' พูดตอนเขาแสดงบนเวทีหรือโพสต์ท่าเท่ๆ สิ!</div>
-        <div class="explanation-box">📌 Kakkoii (かっこいい) = เท่, ดูดี มักใช้กับผู้ชาย แต่ผู้หญิงที่เท่มากๆ ก็ใช้ได้เหมือนกัน</div>
+        <div class="explanation-box">📌 Kakkoii (かっこいい) = เท่, ดูดี มักใช้กับผู้ชาย แต่ผู้หญิงที่เท่มากๆ ก็ใช้ได้เหมือนกัน
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('かっこいい')">🔁 ฟังซ้ำ — かっこいい</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('きれい')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('きれい')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">きれい</div>
+            <button class="tts-label-btn" onclick="playTTS('きれい')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 ใช้ชมความงามที่ดูสะอาดตา เรียบร้อย หรือผิวพรรณดี 'Kirei' ยังใช้ชมภาพถ่ายหรือฉากในอนิเมะที่สวยมากๆ ได้ด้วย</div>
-        <div class="explanation-box">📌 Kirei (きれい) = สวย, สะอาด, เรียบร้อย ใช้ชมได้ทั้งคน สิ่งของ และสถานที่</div>
+        <div class="explanation-box">📌 Kirei (きれい) = สวย, สะอาด, เรียบร้อย ใช้ชมได้ทั้งคน สิ่งของ และสถานที่
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('きれい')">🔁 ฟังซ้ำ — きれい</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('うつくしい')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('うつくしい')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">うつくしい</div>
+            <button class="tts-label-btn" onclick="playTTS('うつくしい')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 คำนี้ระดับสูงกว่า Kirei! ใช้ชมความงามที่ดู 'งดงาม' ราวกับภาพวาด หรือความงามที่ดูสูงส่งจนหยุดหายใจ</div>
-        <div class="explanation-box">📌 Utsukushii (うつくしい) = งดงาม, เลอค่า มักใช้ชมความงามที่สมบูรณ์แบบ</div>
+        <div class="explanation-box">📌 Utsukushii (うつくしい) = งดงาม, เลอค่า มักใช้ชมความงามที่สมบูรณ์แบบ
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('うつくしい')">🔁 ฟังซ้ำ — うつくしい</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('ハンサム')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('ハンサム')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">ハンサム</div>
+            <button class="tts-label-btn" onclick="playTTS('ハンサム')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 คำทับศัพท์จาก Handsome! ใช้ชมโอชิชายที่โครงหน้าเป๊ะ หล่อแบบคลาสสิก</div>
-        <div class="explanation-box">📌 Hansamu (ハンサム) = หล่อ มักใช้กับความหล่อที่เป็นทางการหรือโครงหน้าชัดเจน</div>
+        <div class="explanation-box">📌 Hansamu (ハンサム) = หล่อ มักใช้กับความหล่อที่เป็นทางการหรือโครงหน้าชัดเจน
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('ハンサム')">🔁 ฟังซ้ำ — ハンサム</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('スタイルがいい')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('スタイルがいい')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">スタイルがいい</div>
+            <button class="tts-label-btn" onclick="playTTS('スタイルがいい')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 ใช้ชมรูปร่าง! ไม่ว่าจะเป็นโอชิที่ขายาว หุ่นดี หรือสัดส่วนเป๊ะ ต้องคำนี้เลย</div>
-        <div class="explanation-box">📌 Sutairu ga ii (スタイルがいい) = หุ่นดี, รูปร่างดี</div>
+        <div class="explanation-box">📌 Sutairu ga ii (スタイルがいい) = หุ่นดี, รูปร่างดี
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('スタイルがいい')">🔁 ฟังซ้ำ — スタイルがいい</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('ビジュアル')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('ビジュアル')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">ビジュアル</div>
+            <button class="tts-label-btn" onclick="playTTS('ビジュアル')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 Visual! ใช้เวลาจะบอกว่า 'หน้าตา' ของโอชิคนนี้คือที่สุด หรือภาพลักษณ์โดยรวมดูดีมาก</div>
-        <div class="explanation-box">📌 Bijuaru (ビジュアル) = รูปลักษณ์ภายนอก, ภาพลักษณ์</div>
+        <div class="explanation-box">📌 Bijuaru (ビジュアル) = รูปลักษณ์ภายนอก, ภาพลักษณ์
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('ビジュアル')">🔁 ฟังซ้ำ — ビジュアル</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('おしゃれ')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('おしゃれ')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">おしゃれ</div>
+            <button class="tts-label-btn" onclick="playTTS('おしゃれ')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 เห็นโอชิลงรูปชุด Private หรือชุดลำลองที่แต่งตัวเก่งๆ ต้องชมว่า 'Oshare' นะ</div>
-        <div class="explanation-box">📌 Oshare (おしゃれ) = แต่งตัวดี, มีสไตล์, ทันสมัย</div>
+        <div class="explanation-box">📌 Oshare (おしゃれ) = แต่งตัวดี, มีสไตล์, ทันสมัย
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('おしゃれ')">🔁 ฟังซ้ำ — おしゃれ</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('えがお')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('えがお')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">えがお</div>
+            <button class="tts-label-btn" onclick="playTTS('えがお')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 สิ่งเยียวยาจิตใจที่ดีที่สุดคือ 'รอยยิ้ม' ของโอชิ! คำนี้คือคำนามที่แปลว่ารอยยิ้มที่สดใส</div>
-        <div class="explanation-box">📌 Egao (えがお) = รอยยิ้ม มักใช้คู่กับคำว่าสดใส (Suteki na egao)</div>
+        <div class="explanation-box">📌 Egao (えがお) = รอยยิ้ม มักใช้คู่กับคำว่าสดใส (Suteki na egao)
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('えがお')">🔁 ฟังซ้ำ — えがお</button>
+            </div>
+        </div>
     </div>
     <div class="vocab-card">
         <div class="vocab-word">
-            <button class="tts-btn" onclick="playTTS('てんし')">🔊</button>
+            <button class="tts-btn" onclick="playTTS('てんし')" title="ฟังเสียงภาษาญี่ปุ่น">🔊</button>
             <div class="word-display">てんし</div>
+            <button class="tts-label-btn" onclick="playTTS('てんし')">🔊 ฟังเสียง</button>
         </div>
         <div class="dialogue-box">💬 เมื่อโอชิน่ารักและใจดีเกินไป จนดูเหมือนมีปีกงอกออกมา... เขาคือ 'นางฟ้า' ของเรา!</div>
-        <div class="explanation-box">📌 Tenshi (てんし) = นางฟ้า หรือเทวดาตัวน้อยๆ ของแฟนคลับ</div>
+        <div class="explanation-box">📌 Tenshi (てんし) = นางฟ้า หรือเทวดาตัวน้อยๆ ของแฟนคลับ
+            <div style="margin-top:8px;">
+                <button class="tts-replay-btn" onclick="playTTS('てんし')">🔁 ฟังซ้ำ — てんし</button>
+            </div>
+        </div>
     </div>
 
 
