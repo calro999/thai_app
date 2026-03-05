@@ -73,6 +73,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-n3-text-1.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-n3-text-2.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-n3-text-3.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-n3-text-4.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jlpt-with-gyaru.vercel.app/jlpt-n4-listening-practice.html</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>

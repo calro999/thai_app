@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คอร์สเรียนข้อความ N3 - Part 4</title>
+    <meta name="description" content="เรียนรู้คำศัพท์และการฟัง JLPT N3 ด้วยสคริปต์แบบไทย-ญี่ปุ่น พร้อมระบบอ่านออกเสียง (TTS)">
+    <link rel="stylesheet" href="jlpt_lp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: #fffaf0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%);
+            padding: 80px 5% 40px;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+        .learning-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid #1976d2;
+        }
+        .card-header {
+            font-size: 1.5rem;
+            color: #1976d2;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+        .text-th {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .text-ja {
+            font-size: 1.3rem;
+            color: #d81b60;
+            margin-bottom: 20px;
+            font-weight: 600;
+            background: #fce4ec;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .tts-btn {
+            background: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: 'Kanit', sans-serif;
+        }
+        .tts-btn:hover {
+            background: #d81b60;
+            transform: scale(1.05);
+        }
+        .explanation {
+            margin-top: 20px;
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .explanation h4 {
+            margin: 0 0 10px 0;
+            color: #1565c0;
+        }
+        .explanation ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .explanation li {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .next-page-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .next-btn {
+            display: inline-block;
+            background: #1976d2;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(25, 118, 210, 0.4);
+        }
+        .next-btn:hover {
+            background: #115293;
+            transform: translateY(-5px);
+        }
+        footer {
+            background: #1a1a2e;
+            color: #aaa;
+            padding: 40px 5%;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .footer-links a {
+            color: #ff69b4;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function playTTS(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const msg = new SpeechSynthesisUtterance(text);
+                msg.lang = 'ja-JP';
+                msg.rate = 0.9;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("เบราว์เซอร์ของคุณไม่รองรับระบบอ่านออกเสียง");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header style="background: rgba(255, 255, 255, 0.9); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 90%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <a href="hub.html" class="logo" style="font-size: 20px; font-weight: bold; color: #d81b60; text-decoration: none;">JLPT N3 Learning Hub</a>
+        <a href="index.html" style="background: #1976d2; color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-weight: bold;">กลับไปหน้าเกม</a>
+    </header>
+
+    <div class="hero">
+        <h1>ฝึกฟัง-แปลบทสนทนา JLPT N3 (Part 4/4)</h1>
+        <p>เรียนรู้ด้วยตัวอย่างประโยค แปลไทย-ญี่ปุ่น พร้อมคำศัพท์เสริมและการอ่านออกเสียง</p>
+    </div>
+
+    <div class="container">
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 276 | 嬉しい</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                ฉันกำลังคิดเรื่อง 'ดีใจ' อยู่เนี่ย... คุณเข้าใจแนวคิดนี้ไหมคะ
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                私は今「嬉しい」について考えているの……。あなたはこの概念を理解できるかしら？
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('私は今「嬉しい」について考えているの……。あなたはこの概念を理解できるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ดีใจ' คือข้อไหนคะ?<br>
+                (翻訳: 「嬉しい」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「嬉しい」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>嬉しい</strong> (うれしい) = ดีใจ</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 277 | 噂</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                เมื่อวานมีเรื่องเกี่ยวกับ 'ข่าวลือ' เกิดขึ้นค่ะ จึงอยากจะเล่าให้คุณฟัง
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                昨日、「噂」についての出来事があったから、あなたに話したいの。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('昨日、「噂」についての出来事があったから、あなたに話したいの。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ข่าวลือ' คือข้อไหนคะ?<br>
+                (翻訳: 「噂」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「噂」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>噂</strong> (うわさ) = ข่าวลือ</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 278 | 運河</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                ในชีวิตประจำวันนั่น 'คลอง' มีความสำคัญมากกว่าที่คุณคิดน่ะค่ะ
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                日常生活の中で、「運河」はあなたが思っている以上に重要なのよ。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('日常生活の中で、「運河」はあなたが思っている以上に重要なのよ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'คลอง' คือข้อไหนคะ?<br>
+                (翻訳: 「運河」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「運河」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>運河</strong> (うんが) = คลอง</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 279 | 影響</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                การเข้าใจเกี่ยวกับ 'อิทธิพล / ผลกระทบ' นี่คือสิ่งที่จะช่วยคุณต่อไปในการเรียน
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                「影響」について理解することは、今後のあなたの学習の助けになるわ。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('「影響」について理解することは、今後のあなたの学習の助けになるわ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'อิทธิพล / ผลกระทบ' คือข้อไหนคะ?<br>
+                (翻訳: 「影響」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「影響」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>影響</strong> (えいきょう) = อิทธิพล / ผลกระทบ</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 280 | 営業</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                วัฒนธรรมญี่ปุ่นมักจะใช้คำว่า 'การดำเนินธุรกิจ / งานขาย' เรื่อยๆ ค่ะ เข้าใจหรือเปล่า
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                日本の文化では「営業」という言葉を頻繁に使うの。意味はわかるかしら？
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('日本の文化では「営業」という言葉を頻繁に使うの。意味はわかるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'การดำเนินธุรกิจ / งานขาย' คือข้อไหนคะ?<br>
+                (翻訳: 「営業」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「営業」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>営業</strong> (えいぎょう) = การดำเนินธุรกิจ / งานขาย</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 281 | 衛星</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                ฉันกำลังคิดเรื่อง 'ดาวเทียม' อยู่เนี่ย... คุณเข้าใจแนวคิดนี้ไหมคะ
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                私は今「衛星」について考えているの……。あなたはこの概念を理解できるかしら？
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('私は今「衛星」について考えているの……。あなたはこの概念を理解できるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ดาวเทียม' คือข้อไหนคะ?<br>
+                (翻訳: 「衛星」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「衛星」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>衛星</strong> (えいせい) = ดาวเทียม</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 282 | 栄養</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                เมื่อวานมีเรื่องเกี่ยวกับ 'สารอาหาร' เกิดขึ้นค่ะ จึงอยากจะเล่าให้คุณฟัง
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                昨日、「栄養」についての出来事があったから、あなたに話したいの。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('昨日、「栄養」についての出来事があったから、あなたに話したいの。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'สารอาหาร' คือข้อไหนคะ?<br>
+                (翻訳: 「栄養」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「栄養」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>栄養</strong> (えいよう) = สารอาหาร</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 283 | 笑顔</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                ในชีวิตประจำวันนั่น 'ใบหน้ายิ้มแย้ม' มีความสำคัญมากกว่าที่คุณคิดน่ะค่ะ
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                日常生活の中で、「笑顔」はあなたが思っている以上に重要なのよ。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('日常生活の中で、「笑顔」はあなたが思っている以上に重要なのよ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ใบหน้ายิ้มแย้ม' คือข้อไหนคะ?<br>
+                (翻訳: 「笑顔」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「笑顔」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>笑顔</strong> (えがお) = ใบหน้ายิ้มแย้ม</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 284 | 描く</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                การเข้าใจเกี่ยวกับ 'วาด / บรรยาย' นี่คือสิ่งที่จะช่วยคุณต่อไปในการเรียน
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                「描く」について理解することは、今後のあなたの学習の助けになるわ。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('「描く」について理解することは、今後のあなたの学習の助けになるわ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'วาด / บรรยาย' คือข้อไหนคะ?<br>
+                (翻訳: 「描く」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「描く」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>描く</strong> (えがく) = วาด / บรรยาย</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 285 | 餌</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                วัฒนธรรมญี่ปุ่นมักจะใช้คำว่า 'อาหารสัตว์' เรื่อยๆ ค่ะ เข้าใจหรือเปล่า
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                日本の文化では「餌」という言葉を頻繁に使うの。意味はわかるかしら？
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('日本の文化では「餌」という言葉を頻繁に使うの。意味はわかるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'อาหารสัตว์' คือข้อไหนคะ?<br>
+                (翻訳: 「餌」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「餌」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>餌</strong> (えさ) = อาหารสัตว์</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 286 | 得る</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                ฉันกำลังคิดเรื่อง 'ได้รับ' อยู่เนี่ย... คุณเข้าใจแนวคิดนี้ไหมคะ
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                私は今「得る」について考えているの……。あなたはこの概念を理解できるかしら？
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('私は今「得る」について考えているの……。あなたはこの概念を理解できるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ได้รับ' คือข้อไหนคะ?<br>
+                (翻訳: 「得る」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「得る」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>得る</strong> (える) = ได้รับ</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 287 | 延期</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                เมื่อวานมีเรื่องเกี่ยวกับ 'การเลื่อนออกไป' เกิดขึ้นค่ะ จึงอยากจะเล่าให้คุณฟัง
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                昨日、「延期」についての出来事があったから、あなたに話したいの。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('昨日、「延期」についての出来事があったから、あなたに話したいの。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'การเลื่อนออกไป' คือข้อไหนคะ?<br>
+                (翻訳: 「延期」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「延期」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>延期</strong> (えんき) = การเลื่อนออกไป</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 288 | 演説</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                ในชีวิตประจำวันนั่น 'การปราศรัย' มีความสำคัญมากกว่าที่คุณคิดน่ะค่ะ
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                日常生活の中で、「演説」はあなたが思っている以上に重要なのよ。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('日常生活の中で、「演説」はあなたが思っている以上に重要なのよ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'การปราศรัย' คือข้อไหนคะ?<br>
+                (翻訳: 「演説」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「演説」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>演説</strong> (えんぜつ) = การปราศรัย</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 289 | 援助</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                การเข้าใจเกี่ยวกับ 'การช่วยเหลือ' นี่คือสิ่งที่จะช่วยคุณต่อไปในการเรียน
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                「援助」について理解することは、今後のあなたの学習の助けになるわ。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('「援助」について理解することは、今後のあなたの学習の助けになるわ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'การช่วยเหลือ' คือข้อไหนคะ?<br>
+                (翻訳: 「援助」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「援助」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>援助</strong> (えんじょ) = การช่วยเหลือ</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 290 | 縁</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                วัฒนธรรมญี่ปุ่นมักจะใช้คำว่า 'วาสนา / พรหมลิขิต' เรื่อยๆ ค่ะ เข้าใจหรือเปล่า
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                日本の文化では「縁」という言葉を頻繁に使うの。意味はわかるかしら？
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('日本の文化では「縁」という言葉を頻繁に使うの。意味はわかるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'วาสนา / พรหมลิขิต' คือข้อไหนคะ?<br>
+                (翻訳: 「縁」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「縁」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>縁</strong> (えん) = วาสนา / พรหมลิขิต</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 291 | 追い越す</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                ฉันกำลังคิดเรื่อง 'แซง' อยู่เนี่ย... คุณเข้าใจแนวคิดนี้ไหมคะ
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                私は今「追い越す」について考えているの……。あなたはこの概念を理解できるかしら？
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('私は今「追い越す」について考えているの……。あなたはこの概念を理解できるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'แซง' คือข้อไหนคะ?<br>
+                (翻訳: 「追い越す」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「追い越す」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>追い越す</strong> (おいこす) = แซง</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 292 | 王</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                เมื่อวานมีเรื่องเกี่ยวกับ 'พระราชา' เกิดขึ้นค่ะ จึงอยากจะเล่าให้คุณฟัง
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                昨日、「王」についての出来事があったから、あなたに話したいの。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('昨日、「王」についての出来事があったから、あなたに話したいの。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'พระราชา' คือข้อไหนคะ?<br>
+                (翻訳: 「王」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「王」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>王</strong> (おう) = พระราชา</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 293 | 応援</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                ในชีวิตประจำวันนั่น 'การเชียร์ / สนับสนุน' มีความสำคัญมากกว่าที่คุณคิดน่ะค่ะ
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                日常生活の中で、「応援」はあなたが思っている以上に重要なのよ。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('日常生活の中で、「応援」はあなたが思っている以上に重要なのよ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'การเชียร์ / สนับสนุน' คือข้อไหนคะ?<br>
+                (翻訳: 「応援」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「応援」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>応援</strong> (おうえん) = การเชียร์ / สนับสนุน</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 294 | 応対</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                การเข้าใจเกี่ยวกับ 'การรับหน้า / การต้อนรับ' นี่คือสิ่งที่จะช่วยคุณต่อไปในการเรียน
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                「応対」について理解することは、今後のあなたの学習の助けになるわ。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('「応対」について理解することは、今後のあなたの学習の助けになるわ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'การรับหน้า / การต้อนรับ' คือข้อไหนคะ?<br>
+                (翻訳: 「応対」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「応対」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>応対</strong> (おうたい) = การรับหน้า / การต้อนรับ</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 295 | 欧米</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                วัฒนธรรมญี่ปุ่นมักจะใช้คำว่า 'ยุโรปและอเมริกา' เรื่อยๆ ค่ะ เข้าใจหรือเปล่า
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                日本の文化では「欧米」という言葉を頻繁に使うの。意味はわかるかしら？
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('日本の文化では「欧米」という言葉を頻繁に使うの。意味はわかるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ยุโรปและอเมริกา' คือข้อไหนคะ?<br>
+                (翻訳: 「欧米」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「欧米」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>欧米</strong> (おうべい) = ยุโรปและอเมริกา</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 296 | 応用</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                ฉันกำลังคิดเรื่อง 'การประยุกต์ใช้' อยู่เนี่ย... คุณเข้าใจแนวคิดนี้ไหมคะ
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                私は今「応用」について考えているの……。あなたはこの概念を理解できるかしら？
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('私は今「応用」について考えているの……。あなたはこの概念を理解できるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'การประยุกต์ใช้' คือข้อไหนคะ?<br>
+                (翻訳: 「応用」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「応用」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>応用</strong> (おうよう) = การประยุกต์ใช้</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 297 | 大雑把</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                เมื่อวานมีเรื่องเกี่ยวกับ 'คร่าวๆ / ไม่ละเอียด' เกิดขึ้นค่ะ จึงอยากจะเล่าให้คุณฟัง
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                昨日、「大雑把」についての出来事があったから、あなたに話したいの。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('昨日、「大雑把」についての出来事があったから、あなたに話したいの。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'คร่าวๆ / ไม่ละเอียด' คือข้อไหนคะ?<br>
+                (翻訳: 「大雑把」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「大雑把」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>大雑把</strong> (おおざっぱ) = คร่าวๆ / ไม่ละเอียด</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 298 | お互い</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                ในชีวิตประจำวันนั่น 'ซึ่งกันและกัน' มีความสำคัญมากกว่าที่คุณคิดน่ะค่ะ
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                日常生活の中で、「お互い」はあなたが思っている以上に重要なのよ。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('日常生活の中で、「お互い」はあなたが思っている以上に重要なのよ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ซึ่งกันและกัน' คือข้อไหนคะ?<br>
+                (翻訳: 「お互い」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「お互い」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>お互い</strong> (おたがい) = ซึ่งกันและกัน</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 299 | 穏やか</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                การเข้าใจเกี่ยวกับ 'สงบ / เยือกเย็น' นี่คือสิ่งที่จะช่วยคุณต่อไปในการเรียน
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                「穏やか」について理解することは、今後のあなたの学習の助けになるわ。
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('「穏やか」について理解することは、今後のあなたの学習の助けになるわ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'สงบ / เยือกเย็น' คือข้อไหนคะ?<br>
+                (翻訳: 「穏やか」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「穏やか」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>穏やか</strong> (おだやか) = สงบ / เยือกเย็น</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 300 | 断る</div>
+            
+            <div class="text-th">
+                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                วัฒนธรรมญี่ปุ่นมักจะใช้คำว่า 'ปฏิเสธ' เรื่อยๆ ค่ะ เข้าใจหรือเปล่า
+            </div>
+            
+            <div class="text-ja">
+                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
+                日本の文化では「断る」という言葉を頻繁に使うの。意味はわかるかしら？
+            </div>
+            
+            <button class="tts-btn" onclick="playTTS('日本の文化では「断る」という言葉を頻繁に使うの。意味はわかるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
+            <br><br>
+            <div class="text-th" style="font-size:1.1rem; color:#888;">
+                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ปฏิเสธ' คือข้อไหนคะ?<br>
+                (翻訳: 「断る」を意味する日本語の言葉はどれかしら？)
+            </div>
+            
+            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「断る」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
+
+            <div class="explanation">
+                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
+                <ul>
+                    <li><strong>断る</strong> (ことわる) = ปฏิเสธ</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="next-page-container">
+            <a href="hub.html" class="next-btn" style="background:#ff69b4;">กลับหน้าหลัก N3 (Hub) 🏠</a>
+        </div>
+    </div>
+
+    <!-- Native Banner -->
+    <script async="async" data-cfasync="false" src="https://pl28842706.effectivegatecpm.com/d82e1b5ca98e70ae57305b561c19323f/invoke.js"></script>
+    <div id="container-d82e1b5ca98e70ae57305b561c19323f"></div>
+
+    <footer>
+        <div class="footer-links" style="margin-bottom: 20px;">
+            <a href="index.html">Home</a>
+            <a href="top.html">Top</a>
+            <a href="lp.html">LP</a>
+            <a href="hub.html">Hub</a>
+            <a href="sitemap.html">Sitemap</a>
+        </div>
+        <p>&copy; 2026 YUI & YUTO. All rights reserved.</p>
+    </footer>
+
+    <!-- Social Bar -->
+    <script src="https://pl28842711.effectivegatecpm.com/a0/a3/a9/a0a3a9e248e155da596da919272bf4aa.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const pushSocialBar = setInterval(() => {
+            Array.from(document.body.children).forEach(el => {
+                if (el.tagName === 'DIV' || el.tagName === 'IFRAME') {
+                    const style = window.getComputedStyle(el);
+                    if (style.position === 'fixed' && style.top === '0px' && style.zIndex > 100) {
+                        if (el.tagName !== 'HEADER' && !el.querySelector('header')) {
+                            el.style.setProperty('top', '70px', 'important');
+                        }
+                    }
+                }
+            });
+        }, 1000);
+        setTimeout(() => clearInterval(pushSocialBar), 10000);
+    });
+    </script>
+</body>
+</html>
