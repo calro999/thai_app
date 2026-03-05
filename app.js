@@ -496,7 +496,7 @@ function openModeSelect() {
     const grid = document.querySelector('#mode-selection .mode-grid');
     grid.innerHTML = "";
 
-    const courses = ['hiragana', 'katakana', 'n5', 'n4', 'n3', 'oshikatsu', 'special_travel', 'special_food', 'special_medical', 'listening'];
+    const courses = ['hiragana', 'katakana', 'listening'];
     courses.forEach(id => {
         const info = courseConfig[id];
         const unlocked = isCourseUnlocked(id);
@@ -542,6 +542,18 @@ function openModeSelect() {
         btn.onclick = () => selectCourse(id);
         grid.appendChild(btn);
     });
+
+    // Add Text Learning Hub button
+    const hubBtn = document.createElement('button');
+    hubBtn.className = 'mode-btn highlight';
+    hubBtn.style.gridColumn = "span 2";
+    hubBtn.style.background = "linear-gradient(45deg, #7b1fa2, #1565c0)";
+    hubBtn.style.color = "white";
+    hubBtn.style.borderColor = "#ce93d8";
+    hubBtn.innerHTML = "📚 เรียนภาษาญี่ปุ่นแบบเนื้อหา (Text Study)<br><small>รวมคลังบทความและคอร์สเรียน</small>";
+    hubBtn.onclick = () => { window.location.href = 'japanese-text-learning.html'; };
+    grid.appendChild(hubBtn);
+
 
     const shopBtn = document.createElement('button');
     shopBtn.className = 'mode-btn highlight';
