@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: 'Kanit', sans-serif;
-            background: #fffaf0;
+            background: #fdfaf6;
             color: #333;
             margin: 0;
             padding: 0;
@@ -52,6 +52,9 @@
             color: #555;
             margin-bottom: 15px;
             line-height: 1.6;
+            background: #f9f9f9;
+            padding: 10px 15px;
+            border-radius: 8px;
         }
         .text-ja {
             font-size: 1.3rem;
@@ -61,39 +64,72 @@
             background: #fce4ec;
             padding: 15px;
             border-radius: 10px;
+            border: 1px solid #f8bbd0;
         }
-        .tts-btn {
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .vocab-item {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #ff69b4;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: 0.2s;
+            border-right: 1px solid #eee;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-item:hover {
+            background: #ffe4f0;
+            transform: translateX(3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .tts-small-btn {
             background: #ff69b4;
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 1.1rem;
-            border-radius: 25px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
             cursor: pointer;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
             transition: 0.3s;
-            font-family: 'Kanit', sans-serif;
+            box-shadow: 0 2px 5px rgba(255,105,180,0.4);
         }
-        .tts-btn:hover {
+        .tts-small-btn:hover {
             background: #d81b60;
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
-        .explanation {
-            margin-top: 20px;
-            background: #e3f2fd;
-            padding: 15px;
-            border-radius: 10px;
+        .vocab-content {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
         }
-        .explanation h4 {
-            margin: 0 0 10px 0;
-            color: #1565c0;
+        .vocab-jp {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.15rem;
         }
-        .explanation ul {
-            margin: 0;
-            padding-left: 20px;
+        .vocab-kana {
+            color: #888;
+            font-size: 0.8em;
+            font-weight: normal;
         }
-        .explanation li {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
+        .vocab-th {
+            color: #1976d2;
+            font-size: 0.95em;
+            margin-top: 3px;
         }
         .next-page-container {
             text-align: center;
@@ -127,10 +163,21 @@
             margin: 0 10px;
             text-decoration: none;
         }
+        .tag-title {
+            display: inline-block;
+            background: #1565c0;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
     </style>
     <script>
         function playTTS(text) {
             if ('speechSynthesis' in window) {
+                text = text.replace(/〜/g, ''); // Remove tildes for better TTS pronunciation
                 window.speechSynthesis.cancel();
                 const msg = new SpeechSynthesisUtterance(text);
                 msg.lang = 'ja-JP';
@@ -143,14 +190,14 @@
     </script>
 </head>
 <body>
-    <header style="background: rgba(255, 255, 255, 0.9); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 90%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+    <header style="background: rgba(255, 255, 255, 0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 90%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); backdrop-filter: blur(5px);">
         <a href="hub.html" class="logo" style="font-size: 20px; font-weight: bold; color: #d81b60; text-decoration: none;">JLPT N3 Learning Hub</a>
-        <a href="index.html" style="background: #1976d2; color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-weight: bold;">กลับไปหน้าเกม</a>
+        <a href="index.html" style="background: #1976d2; color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px;">กลับหน้าเกม</a>
     </header>
 
     <div class="hero">
-        <h1>ฝึกฟัง-แปลบทสนทนา JLPT N3 (Part 1/4)</h1>
-        <p>เรียนรู้ด้วยตัวอย่างประโยค แปลไทย-ญี่ปุ่น พร้อมคำศัพท์เสริมและการอ่านออกเสียง</p>
+        <h1 style="margin-top: 20px;">วิเคราะห์ไวยากรณ์และคำศัพท์ N3 (Part 1/4)</h1>
+        <p>เรียนรู้คำศัพท์และไวยากรณ์จากประโยคภาษาญี่ปุ่นแบบเจาะลึก พร้อมเสียงอ่านรายคำ</p>
     </div>
 
     <div class="container">
@@ -159,29 +206,76 @@
             <div class="card-header">Word ID: 201 | 愛情</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 ฉันกำลังคิดเรื่อง 'ความรัก' อยู่เนี่ย... คุณเข้าใจแนวคิดนี้ไหมคะ
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                私は今「愛情」について考えているの……。あなたはこの概念を理解できるかしら？
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                私は今、「愛情」について考えています。あなたはこの概念を理解できますか。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('私は今「愛情」について考えているの……。あなたはこの概念を理解できるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ความรัก' คือข้อไหนคะ?<br>
-                (翻訳: 「愛情」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('私')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">私 <span class="vocab-kana">(わたし)</span></div>
+                    <div class="vocab-th">= ฉัน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「愛情」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>愛情</strong> (あいじょう) = ความรัก</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('今')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今 <span class="vocab-kana">(いま)</span></div>
+                    <div class="vocab-th">= ตอนนี้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('愛情')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">愛情 <span class="vocab-kana">(あいじょう)</span></div>
+                    <div class="vocab-th">= ความรัก</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('について')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜について</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('考える')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">考える <span class="vocab-kana">(かんがえる)</span></div>
+                    <div class="vocab-th">= คิด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('概念')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">概念 <span class="vocab-kana">(がいねん)</span></div>
+                    <div class="vocab-th">= แนวคิด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解できる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解できる <span class="vocab-kana">(りかいできる)</span></div>
+                    <div class="vocab-th">= สามารถเข้าใจได้</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -189,29 +283,83 @@
             <div class="card-header">Word ID: 202 | 合図</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 เมื่อวานมีเรื่องเกี่ยวกับ 'สัญญาณ' เกิดขึ้นค่ะ จึงอยากจะเล่าให้คุณฟัง
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                昨日、「合図」についての出来事があったから、あなたに話したいの。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                昨日、「合図」についての出来事がありました。ですから、あなたに話したいです。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('昨日、「合図」についての出来事があったから、あなたに話したいの。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'สัญญาณ' คือข้อไหนคะ?<br>
-                (翻訳: 「合図」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('昨日')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">昨日 <span class="vocab-kana">(きのう)</span></div>
+                    <div class="vocab-th">= เมื่อวาน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「合図」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>合図</strong> (あいず) = สัญญาณ</li>
-                </ul>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('合図')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">合図 <span class="vocab-kana">(あいず)</span></div>
+                    <div class="vocab-th">= สัญญาณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('についての')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜についての</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('出来事')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">出来事 <span class="vocab-kana">(できごと)</span></div>
+                    <div class="vocab-th">= เหตุการณ์ / เรื่องราว</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('ある')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">ある</div>
+                    <div class="vocab-th">= มี / เกิดขึ้น</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('ですから')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">ですから</div>
+                    <div class="vocab-th">= ดังนั้น / จึง</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('話す')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">話す <span class="vocab-kana">(はなす)</span></div>
+                    <div class="vocab-th">= พูด / เล่า</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('たい')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜たい</div>
+                    <div class="vocab-th">= อยาก...</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -219,29 +367,69 @@
             <div class="card-header">Word ID: 203 | 明らか</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 ในชีวิตประจำวันนั่น 'ชัดเจน / แจ่มแจ้ง' มีความสำคัญมากกว่าที่คุณคิดน่ะค่ะ
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                日常生活の中で、「明らか」はあなたが思っている以上に重要なのよ。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                日常生活において、「明らか」はあなたが思っている以上に重要です。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('日常生活の中で、「明らか」はあなたが思っている以上に重要なのよ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ชัดเจน / แจ่มแจ้ง' คือข้อไหนคะ?<br>
-                (翻訳: 「明らか」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('日常生活')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">日常生活 <span class="vocab-kana">(にちじょうせいかつ)</span></div>
+                    <div class="vocab-th">= ชีวิตประจำวัน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「明らか」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>明らか</strong> (あきらか) = ชัดเจน / แจ่มแจ้ง</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('において')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜において</div>
+                    <div class="vocab-th">= ใน... / ที่...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('明らか')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">明らか <span class="vocab-kana">(あきらか)</span></div>
+                    <div class="vocab-th">= ชัดเจน / แจ่มแจ้ง</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('思う')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">思う <span class="vocab-kana">(おもう)</span></div>
+                    <div class="vocab-th">= คิด / รู้สึก</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('以上に')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜以上に <span class="vocab-kana">(いじょうに)</span></div>
+                    <div class="vocab-th">= มากกว่าที่...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('重要')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">重要 <span class="vocab-kana">(じゅうよう)</span></div>
+                    <div class="vocab-th">= สำคัญ</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -249,29 +437,69 @@
             <div class="card-header">Word ID: 204 | 諦める</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 การเข้าใจเกี่ยวกับ 'ถอดใจ / ยอมแพ้' นี่คือสิ่งที่จะช่วยคุณต่อไปในการเรียน
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                「諦める」について理解することは、今後のあなたの学習の助けになるわ。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                「諦める」について理解することは、今後の学習の助けになります。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('「諦める」について理解することは、今後のあなたの学習の助けになるわ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ถอดใจ / ยอมแพ้' คือข้อไหนคะ?<br>
-                (翻訳: 「諦める」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('諦める')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">諦める <span class="vocab-kana">(あきらめる)</span></div>
+                    <div class="vocab-th">= ถอดใจ / ยอมแพ้</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「諦める」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>諦める</strong> (あきらめる) = ถอดใจ / ยอมแพ้</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('について')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜について</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解する')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解する <span class="vocab-kana">(りかいする)</span></div>
+                    <div class="vocab-th">= เข้าใจ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('今後')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今後 <span class="vocab-kana">(こんご)</span></div>
+                    <div class="vocab-th">= ต่อไป / หลังจากนี้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('学習')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">学習 <span class="vocab-kana">(がくしゅう)</span></div>
+                    <div class="vocab-th">= การเรียน</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('助け')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">助け <span class="vocab-kana">(たすけ)</span></div>
+                    <div class="vocab-th">= การช่วยเหลือ / สิ่งที่ช่วย</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('になる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜になる</div>
+                    <div class="vocab-th">= กลายเป็น... / นำไปสู่...</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -279,29 +507,69 @@
             <div class="card-header">Word ID: 205 | 握手</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 วัฒนธรรมญี่ปุ่นมักจะใช้คำว่า 'การจับมือ' เรื่อยๆ ค่ะ เข้าใจหรือเปล่า
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                日本の文化では「握手」という言葉を頻繁に使うの。意味はわかるかしら？
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                日本の文化では、「握手」という言葉をよく使います。理解できますか。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('日本の文化では「握手」という言葉を頻繁に使うの。意味はわかるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'การจับมือ' คือข้อไหนคะ?<br>
-                (翻訳: 「握手」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('日本')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">日本 <span class="vocab-kana">(にほん)</span></div>
+                    <div class="vocab-th">= ญี่ปุ่น</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「握手」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>握手</strong> (あくしゅ) = การจับมือ</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('文化')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">文化 <span class="vocab-kana">(ぶんか)</span></div>
+                    <div class="vocab-th">= วัฒนธรรม</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('握手')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">握手 <span class="vocab-kana">(あくしゅ)</span></div>
+                    <div class="vocab-th">= การจับมือ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('言葉')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">言葉 <span class="vocab-kana">(ことば)</span></div>
+                    <div class="vocab-th">= คำศัพท์ / คำพูด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('よく')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">よく</div>
+                    <div class="vocab-th">= บ่อยๆ / เรื่อยๆ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('使う')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">使う <span class="vocab-kana">(つかう)</span></div>
+                    <div class="vocab-th">= ใช้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解できる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解できる <span class="vocab-kana">(りかいできる)</span></div>
+                    <div class="vocab-th">= สามารถเข้าใจได้</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -309,29 +577,76 @@
             <div class="card-header">Word ID: 206 | 預ける</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 ฉันกำลังคิดเรื่อง 'ฝากไว้' อยู่เนี่ย... คุณเข้าใจแนวคิดนี้ไหมคะ
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                私は今「預ける」について考えているの……。あなたはこの概念を理解できるかしら？
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                私は今、「預ける」について考えています。あなたはこの概念を理解できますか。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('私は今「預ける」について考えているの……。あなたはこの概念を理解できるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ฝากไว้' คือข้อไหนคะ?<br>
-                (翻訳: 「預ける」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('私')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">私 <span class="vocab-kana">(わたし)</span></div>
+                    <div class="vocab-th">= ฉัน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「預ける」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>預ける</strong> (あずける) = ฝากไว้</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('今')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今 <span class="vocab-kana">(いま)</span></div>
+                    <div class="vocab-th">= ตอนนี้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('預ける')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">預ける <span class="vocab-kana">(あずける)</span></div>
+                    <div class="vocab-th">= ฝากไว้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('について')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜について</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('考える')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">考える <span class="vocab-kana">(かんがえる)</span></div>
+                    <div class="vocab-th">= คิด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('概念')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">概念 <span class="vocab-kana">(がいねん)</span></div>
+                    <div class="vocab-th">= แนวคิด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解できる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解できる <span class="vocab-kana">(りかいできる)</span></div>
+                    <div class="vocab-th">= สามารถเข้าใจได้</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -339,29 +654,83 @@
             <div class="card-header">Word ID: 207 | 与える</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 เมื่อวานมีเรื่องเกี่ยวกับ 'ให้ / ก่อให้เกิด' เกิดขึ้นค่ะ จึงอยากจะเล่าให้คุณฟัง
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                昨日、「与える」についての出来事があったから、あなたに話したいの。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                昨日、「与える」についての出来事がありました。ですから、あなたに話したいです。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('昨日、「与える」についての出来事があったから、あなたに話したいの。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ให้ / ก่อให้เกิด' คือข้อไหนคะ?<br>
-                (翻訳: 「与える」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('昨日')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">昨日 <span class="vocab-kana">(きのう)</span></div>
+                    <div class="vocab-th">= เมื่อวาน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「与える」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>与える</strong> (あたえる) = ให้ / ก่อให้เกิด</li>
-                </ul>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('与える')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">与える <span class="vocab-kana">(あたえる)</span></div>
+                    <div class="vocab-th">= ให้ / ก่อให้เกิด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('についての')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜についての</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('出来事')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">出来事 <span class="vocab-kana">(できごと)</span></div>
+                    <div class="vocab-th">= เหตุการณ์ / เรื่องราว</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('ある')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">ある</div>
+                    <div class="vocab-th">= มี / เกิดขึ้น</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('ですから')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">ですから</div>
+                    <div class="vocab-th">= ดังนั้น / จึง</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('話す')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">話す <span class="vocab-kana">(はなす)</span></div>
+                    <div class="vocab-th">= พูด / เล่า</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('たい')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜たい</div>
+                    <div class="vocab-th">= อยาก...</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -369,29 +738,69 @@
             <div class="card-header">Word ID: 208 | 辺り</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 ในชีวิตประจำวันนั่น 'บริเวณรอบๆ' มีความสำคัญมากกว่าที่คุณคิดน่ะค่ะ
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                日常生活の中で、「辺り」はあなたが思っている以上に重要なのよ。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                日常生活において、「辺り」はあなたが思っている以上に重要です。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('日常生活の中で、「辺り」はあなたが思っている以上に重要なのよ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'บริเวณรอบๆ' คือข้อไหนคะ?<br>
-                (翻訳: 「辺り」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('日常生活')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">日常生活 <span class="vocab-kana">(にちじょうせいかつ)</span></div>
+                    <div class="vocab-th">= ชีวิตประจำวัน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「辺り」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>辺り</strong> (あたり) = บริเวณรอบๆ</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('において')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜において</div>
+                    <div class="vocab-th">= ใน... / ที่...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('辺り')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">辺り <span class="vocab-kana">(あたり)</span></div>
+                    <div class="vocab-th">= บริเวณรอบๆ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('思う')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">思う <span class="vocab-kana">(おもう)</span></div>
+                    <div class="vocab-th">= คิด / รู้สึก</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('以上に')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜以上に <span class="vocab-kana">(いじょうに)</span></div>
+                    <div class="vocab-th">= มากกว่าที่...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('重要')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">重要 <span class="vocab-kana">(じゅうよう)</span></div>
+                    <div class="vocab-th">= สำคัญ</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -399,29 +808,69 @@
             <div class="card-header">Word ID: 209 | 当たる</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 การเข้าใจเกี่ยวกับ 'ถูก (รางวัล) / กระแทก' นี่คือสิ่งที่จะช่วยคุณต่อไปในการเรียน
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                「当たる」について理解することは、今後のあなたの学習の助けになるわ。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                「当たる」について理解することは、今後の学習の助けになります。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('「当たる」について理解することは、今後のあなたの学習の助けになるわ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ถูก (รางวัล) / กระแทก' คือข้อไหนคะ?<br>
-                (翻訳: 「当たる」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('当たる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">当たる <span class="vocab-kana">(あたる)</span></div>
+                    <div class="vocab-th">= ถูก (รางวัล) / กระแทก</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「当たる」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>当たる</strong> (あたる) = ถูก (รางวัล) / กระแทก</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('について')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜について</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解する')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解する <span class="vocab-kana">(りかいする)</span></div>
+                    <div class="vocab-th">= เข้าใจ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('今後')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今後 <span class="vocab-kana">(こんご)</span></div>
+                    <div class="vocab-th">= ต่อไป / หลังจากนี้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('学習')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">学習 <span class="vocab-kana">(がくしゅう)</span></div>
+                    <div class="vocab-th">= การเรียน</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('助け')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">助け <span class="vocab-kana">(たすけ)</span></div>
+                    <div class="vocab-th">= การช่วยเหลือ / สิ่งที่ช่วย</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('になる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜になる</div>
+                    <div class="vocab-th">= กลายเป็น... / นำไปสู่...</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -429,29 +878,69 @@
             <div class="card-header">Word ID: 210 | 厚かましい</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 วัฒนธรรมญี่ปุ่นมักจะใช้คำว่า 'หน้าด้าน / ไร้ยางอาย' เรื่อยๆ ค่ะ เข้าใจหรือเปล่า
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                日本の文化では「厚かましい」という言葉を頻繁に使うの。意味はわかるかしら？
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                日本の文化では、「厚かましい」という言葉をよく使います。理解できますか。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('日本の文化では「厚かましい」という言葉を頻繁に使うの。意味はわかるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'หน้าด้าน / ไร้ยางอาย' คือข้อไหนคะ?<br>
-                (翻訳: 「厚かましい」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('日本')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">日本 <span class="vocab-kana">(にほん)</span></div>
+                    <div class="vocab-th">= ญี่ปุ่น</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「厚かましい」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>厚かましい</strong> (あつかましい) = หน้าด้าน / ไร้ยางอาย</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('文化')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">文化 <span class="vocab-kana">(ぶんか)</span></div>
+                    <div class="vocab-th">= วัฒนธรรม</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('厚かましい')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">厚かましい <span class="vocab-kana">(あつかましい)</span></div>
+                    <div class="vocab-th">= หน้าด้าน / ไร้ยางอาย</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('言葉')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">言葉 <span class="vocab-kana">(ことば)</span></div>
+                    <div class="vocab-th">= คำศัพท์ / คำพูด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('よく')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">よく</div>
+                    <div class="vocab-th">= บ่อยๆ / เรื่อยๆ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('使う')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">使う <span class="vocab-kana">(つかう)</span></div>
+                    <div class="vocab-th">= ใช้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解できる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解できる <span class="vocab-kana">(りかいできる)</span></div>
+                    <div class="vocab-th">= สามารถเข้าใจได้</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -459,29 +948,76 @@
             <div class="card-header">Word ID: 211 | 圧縮</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 ฉันกำลังคิดเรื่อง 'การบีบอัด' อยู่เนี่ย... คุณเข้าใจแนวคิดนี้ไหมคะ
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                私は今「圧縮」について考えているの……。あなたはこの概念を理解できるかしら？
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                私は今、「圧縮」について考えています。あなたはこの概念を理解できますか。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('私は今「圧縮」について考えているの……。あなたはこの概念を理解できるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'การบีบอัด' คือข้อไหนคะ?<br>
-                (翻訳: 「圧縮」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('私')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">私 <span class="vocab-kana">(わたし)</span></div>
+                    <div class="vocab-th">= ฉัน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「圧縮」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>圧縮</strong> (あっしゅく) = การบีบอัด</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('今')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今 <span class="vocab-kana">(いま)</span></div>
+                    <div class="vocab-th">= ตอนนี้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('圧縮')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">圧縮 <span class="vocab-kana">(あっしゅく)</span></div>
+                    <div class="vocab-th">= การบีบอัด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('について')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜について</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('考える')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">考える <span class="vocab-kana">(かんがえる)</span></div>
+                    <div class="vocab-th">= คิด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('概念')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">概念 <span class="vocab-kana">(がいねん)</span></div>
+                    <div class="vocab-th">= แนวคิด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解できる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解できる <span class="vocab-kana">(りかいできる)</span></div>
+                    <div class="vocab-th">= สามารถเข้าใจได้</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -489,29 +1025,83 @@
             <div class="card-header">Word ID: 212 | 暴れる</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 เมื่อวานมีเรื่องเกี่ยวกับ 'อาละวาด' เกิดขึ้นค่ะ จึงอยากจะเล่าให้คุณฟัง
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                昨日、「暴れる」についての出来事があったから、あなたに話したいの。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                昨日、「暴れる」についての出来事がありました。ですから、あなたに話したいです。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('昨日、「暴れる」についての出来事があったから、あなたに話したいの。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'อาละวาด' คือข้อไหนคะ?<br>
-                (翻訳: 「暴れる」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('昨日')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">昨日 <span class="vocab-kana">(きのう)</span></div>
+                    <div class="vocab-th">= เมื่อวาน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「暴れる」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>暴れる</strong> (あばれる) = อาละวาด</li>
-                </ul>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('暴れる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">暴れる <span class="vocab-kana">(あばれる)</span></div>
+                    <div class="vocab-th">= อาละวาด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('についての')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜についての</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('出来事')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">出来事 <span class="vocab-kana">(できごと)</span></div>
+                    <div class="vocab-th">= เหตุการณ์ / เรื่องราว</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('ある')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">ある</div>
+                    <div class="vocab-th">= มี / เกิดขึ้น</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('ですから')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">ですから</div>
+                    <div class="vocab-th">= ดังนั้น / จึง</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('話す')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">話す <span class="vocab-kana">(はなす)</span></div>
+                    <div class="vocab-th">= พูด / เล่า</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('たい')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜たい</div>
+                    <div class="vocab-th">= อยาก...</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -519,29 +1109,69 @@
             <div class="card-header">Word ID: 213 | 余る</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 ในชีวิตประจำวันนั่น 'เหลือ' มีความสำคัญมากกว่าที่คุณคิดน่ะค่ะ
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                日常生活の中で、「余る」はあなたが思っている以上に重要なのよ。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                日常生活において、「余る」はあなたが思っている以上に重要です。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('日常生活の中で、「余る」はあなたが思っている以上に重要なのよ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'เหลือ' คือข้อไหนคะ?<br>
-                (翻訳: 「余る」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('日常生活')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">日常生活 <span class="vocab-kana">(にちじょうせいかつ)</span></div>
+                    <div class="vocab-th">= ชีวิตประจำวัน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「余る」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>余る</strong> (あまる) = เหลือ</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('において')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜において</div>
+                    <div class="vocab-th">= ใน... / ที่...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('余る')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">余る <span class="vocab-kana">(あまる)</span></div>
+                    <div class="vocab-th">= เหลือ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('思う')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">思う <span class="vocab-kana">(おもう)</span></div>
+                    <div class="vocab-th">= คิด / รู้สึก</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('以上に')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜以上に <span class="vocab-kana">(いじょうに)</span></div>
+                    <div class="vocab-th">= มากกว่าที่...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('重要')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">重要 <span class="vocab-kana">(じゅうよう)</span></div>
+                    <div class="vocab-th">= สำคัญ</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -549,29 +1179,69 @@
             <div class="card-header">Word ID: 214 | 危うい</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 การเข้าใจเกี่ยวกับ 'อันตราย / ล่อแหลม' นี่คือสิ่งที่จะช่วยคุณต่อไปในการเรียน
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                「危うい」について理解することは、今後のあなたの学習の助けになるわ。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                「危うい」について理解することは、今後の学習の助けになります。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('「危うい」について理解することは、今後のあなたの学習の助けになるわ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'อันตราย / ล่อแหลม' คือข้อไหนคะ?<br>
-                (翻訳: 「危うい」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('危うい')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">危うい <span class="vocab-kana">(あやうい)</span></div>
+                    <div class="vocab-th">= อันตราย / ล่อแหลม</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「危うい」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>危うい</strong> (あやうい) = อันตราย / ล่อแหลม</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('について')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜について</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解する')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解する <span class="vocab-kana">(りかいする)</span></div>
+                    <div class="vocab-th">= เข้าใจ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('今後')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今後 <span class="vocab-kana">(こんご)</span></div>
+                    <div class="vocab-th">= ต่อไป / หลังจากนี้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('学習')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">学習 <span class="vocab-kana">(がくしゅう)</span></div>
+                    <div class="vocab-th">= การเรียน</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('助け')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">助け <span class="vocab-kana">(たすけ)</span></div>
+                    <div class="vocab-th">= การช่วยเหลือ / สิ่งที่ช่วย</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('になる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜になる</div>
+                    <div class="vocab-th">= กลายเป็น... / นำไปสู่...</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -579,29 +1249,69 @@
             <div class="card-header">Word ID: 215 | 怪しい</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 วัฒนธรรมญี่ปุ่นมักจะใช้คำว่า 'น่าสงสัย' เรื่อยๆ ค่ะ เข้าใจหรือเปล่า
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                日本の文化では「怪しい」という言葉を頻繁に使うの。意味はわかるかしら？
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                日本の文化では、「怪しい」という言葉をよく使います。理解できますか。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('日本の文化では「怪しい」という言葉を頻繁に使うの。意味はわかるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'น่าสงสัย' คือข้อไหนคะ?<br>
-                (翻訳: 「怪しい」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('日本')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">日本 <span class="vocab-kana">(にほん)</span></div>
+                    <div class="vocab-th">= ญี่ปุ่น</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「怪しい」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>怪しい</strong> (あやしい) = น่าสงสัย</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('文化')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">文化 <span class="vocab-kana">(ぶんか)</span></div>
+                    <div class="vocab-th">= วัฒนธรรม</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('怪しい')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">怪しい <span class="vocab-kana">(あやしい)</span></div>
+                    <div class="vocab-th">= น่าสงสัย</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('言葉')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">言葉 <span class="vocab-kana">(ことば)</span></div>
+                    <div class="vocab-th">= คำศัพท์ / คำพูด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('よく')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">よく</div>
+                    <div class="vocab-th">= บ่อยๆ / เรื่อยๆ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('使う')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">使う <span class="vocab-kana">(つかう)</span></div>
+                    <div class="vocab-th">= ใช้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解できる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解できる <span class="vocab-kana">(りかいできる)</span></div>
+                    <div class="vocab-th">= สามารถเข้าใจได้</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -609,29 +1319,76 @@
             <div class="card-header">Word ID: 216 | 謝る</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 ฉันกำลังคิดเรื่อง 'ขอโทษ' อยู่เนี่ย... คุณเข้าใจแนวคิดนี้ไหมคะ
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                私は今「謝る」について考えているの……。あなたはこの概念を理解できるかしら？
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                私は今、「謝る」について考えています。あなたはこの概念を理解できますか。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('私は今「謝る」について考えているの……。あなたはこの概念を理解できるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ขอโทษ' คือข้อไหนคะ?<br>
-                (翻訳: 「謝る」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('私')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">私 <span class="vocab-kana">(わたし)</span></div>
+                    <div class="vocab-th">= ฉัน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「謝る」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>謝る</strong> (あやまる) = ขอโทษ</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('今')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今 <span class="vocab-kana">(いま)</span></div>
+                    <div class="vocab-th">= ตอนนี้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('謝る')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">謝る <span class="vocab-kana">(あやまる)</span></div>
+                    <div class="vocab-th">= ขอโทษ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('について')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜について</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('考える')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">考える <span class="vocab-kana">(かんがえる)</span></div>
+                    <div class="vocab-th">= คิด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('概念')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">概念 <span class="vocab-kana">(がいねん)</span></div>
+                    <div class="vocab-th">= แนวคิด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解できる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解できる <span class="vocab-kana">(りかいできる)</span></div>
+                    <div class="vocab-th">= สามารถเข้าใจได้</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -639,29 +1396,83 @@
             <div class="card-header">Word ID: 217 | 表す</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 เมื่อวานมีเรื่องเกี่ยวกับ 'แสดงออกมา' เกิดขึ้นค่ะ จึงอยากจะเล่าให้คุณฟัง
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                昨日、「表す」についての出来事があったから、あなたに話したいの。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                昨日、「表す」についての出来事がありました。ですから、あなたに話したいです。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('昨日、「表す」についての出来事があったから、あなたに話したいの。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'แสดงออกมา' คือข้อไหนคะ?<br>
-                (翻訳: 「表す」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('昨日')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">昨日 <span class="vocab-kana">(きのう)</span></div>
+                    <div class="vocab-th">= เมื่อวาน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「表す」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>表す</strong> (あらわす) = แสดงออกมา</li>
-                </ul>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('表す')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">表す <span class="vocab-kana">(あらわす)</span></div>
+                    <div class="vocab-th">= แสดงออกมา</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('についての')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜についての</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('出来事')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">出来事 <span class="vocab-kana">(できごと)</span></div>
+                    <div class="vocab-th">= เหตุการณ์ / เรื่องราว</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('ある')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">ある</div>
+                    <div class="vocab-th">= มี / เกิดขึ้น</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('ですから')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">ですから</div>
+                    <div class="vocab-th">= ดังนั้น / จึง</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('話す')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">話す <span class="vocab-kana">(はなす)</span></div>
+                    <div class="vocab-th">= พูด / เล่า</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('たい')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜たい</div>
+                    <div class="vocab-th">= อยาก...</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -669,29 +1480,69 @@
             <div class="card-header">Word ID: 218 | 有難い</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 ในชีวิตประจำวันนั่น 'รู้สึกขอบคุณ' มีความสำคัญมากกว่าที่คุณคิดน่ะค่ะ
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                日常生活の中で、「有難い」はあなたが思っている以上に重要なのよ。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                日常生活において、「有難い」はあなたが思っている以上に重要です。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('日常生活の中で、「有難い」はあなたが思っている以上に重要なのよ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'รู้สึกขอบคุณ' คือข้อไหนคะ?<br>
-                (翻訳: 「有難い」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('日常生活')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">日常生活 <span class="vocab-kana">(にちじょうせいかつ)</span></div>
+                    <div class="vocab-th">= ชีวิตประจำวัน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「有難い」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>有難い</strong> (ありがたい) = รู้สึกขอบคุณ</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('において')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜において</div>
+                    <div class="vocab-th">= ใน... / ที่...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('有難い')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">有難い <span class="vocab-kana">(ありがたい)</span></div>
+                    <div class="vocab-th">= รู้สึกขอบคุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('思う')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">思う <span class="vocab-kana">(おもう)</span></div>
+                    <div class="vocab-th">= คิด / รู้สึก</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('以上に')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜以上に <span class="vocab-kana">(いじょうに)</span></div>
+                    <div class="vocab-th">= มากกว่าที่...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('重要')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">重要 <span class="vocab-kana">(じゅうよう)</span></div>
+                    <div class="vocab-th">= สำคัญ</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -699,29 +1550,69 @@
             <div class="card-header">Word ID: 219 | 慌てる</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 การเข้าใจเกี่ยวกับ 'ลนลาน' นี่คือสิ่งที่จะช่วยคุณต่อไปในการเรียน
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                「慌てる」について理解することは、今後のあなたの学習の助けになるわ。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                「慌てる」について理解することは、今後の学習の助けになります。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('「慌てる」について理解することは、今後のあなたの学習の助けになるわ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ลนลาน' คือข้อไหนคะ?<br>
-                (翻訳: 「慌てる」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('慌てる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">慌てる <span class="vocab-kana">(あわてる)</span></div>
+                    <div class="vocab-th">= ลนลาน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「慌てる」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>慌てる</strong> (あわてる) = ลนลาน</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('について')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜について</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解する')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解する <span class="vocab-kana">(りかいする)</span></div>
+                    <div class="vocab-th">= เข้าใจ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('今後')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今後 <span class="vocab-kana">(こんご)</span></div>
+                    <div class="vocab-th">= ต่อไป / หลังจากนี้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('学習')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">学習 <span class="vocab-kana">(がくしゅう)</span></div>
+                    <div class="vocab-th">= การเรียน</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('助け')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">助け <span class="vocab-kana">(たすけ)</span></div>
+                    <div class="vocab-th">= การช่วยเหลือ / สิ่งที่ช่วย</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('になる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜になる</div>
+                    <div class="vocab-th">= กลายเป็น... / นำไปสู่...</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -729,29 +1620,69 @@
             <div class="card-header">Word ID: 220 | 安易</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 วัฒนธรรมญี่ปุ่นมักจะใช้คำว่า 'ง่ายดาย / มักง่าย' เรื่อยๆ ค่ะ เข้าใจหรือเปล่า
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                日本の文化では「安易」という言葉を頻繁に使うの。意味はわかるかしら？
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                日本の文化では、「安易」という言葉をよく使います。理解できますか。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('日本の文化では「安易」という言葉を頻繁に使うの。意味はわかるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ง่ายดาย / มักง่าย' คือข้อไหนคะ?<br>
-                (翻訳: 「安易」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('日本')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">日本 <span class="vocab-kana">(にほん)</span></div>
+                    <div class="vocab-th">= ญี่ปุ่น</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「安易」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>安易</strong> (あんい) = ง่ายดาย / มักง่าย</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('文化')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">文化 <span class="vocab-kana">(ぶんか)</span></div>
+                    <div class="vocab-th">= วัฒนธรรม</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('安易')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">安易 <span class="vocab-kana">(あんい)</span></div>
+                    <div class="vocab-th">= ง่ายดาย / มักง่าย</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('言葉')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">言葉 <span class="vocab-kana">(ことば)</span></div>
+                    <div class="vocab-th">= คำศัพท์ / คำพูด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('よく')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">よく</div>
+                    <div class="vocab-th">= บ่อยๆ / เรื่อยๆ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('使う')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">使う <span class="vocab-kana">(つかう)</span></div>
+                    <div class="vocab-th">= ใช้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解できる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解できる <span class="vocab-kana">(りかいできる)</span></div>
+                    <div class="vocab-th">= สามารถเข้าใจได้</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -759,29 +1690,76 @@
             <div class="card-header">Word ID: 221 | 暗記</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 ฉันกำลังคิดเรื่อง 'การท่องจำ' อยู่เนี่ย... คุณเข้าใจแนวคิดนี้ไหมคะ
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                私は今「暗記」について考えているの……。あなたはこの概念を理解できるかしら？
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                私は今、「暗記」について考えています。あなたはこの概念を理解できますか。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('私は今「暗記」について考えているの……。あなたはこの概念を理解できるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'การท่องจำ' คือข้อไหนคะ?<br>
-                (翻訳: 「暗記」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('私')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">私 <span class="vocab-kana">(わたし)</span></div>
+                    <div class="vocab-th">= ฉัน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「暗記」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>暗記</strong> (あんき) = การท่องจำ</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('今')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今 <span class="vocab-kana">(いま)</span></div>
+                    <div class="vocab-th">= ตอนนี้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('暗記')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">暗記 <span class="vocab-kana">(あんき)</span></div>
+                    <div class="vocab-th">= การท่องจำ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('について')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜について</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('考える')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">考える <span class="vocab-kana">(かんがえる)</span></div>
+                    <div class="vocab-th">= คิด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('概念')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">概念 <span class="vocab-kana">(がいねん)</span></div>
+                    <div class="vocab-th">= แนวคิด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解できる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解できる <span class="vocab-kana">(りかいできる)</span></div>
+                    <div class="vocab-th">= สามารถเข้าใจได้</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -789,29 +1767,83 @@
             <div class="card-header">Word ID: 222 | 安定</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 เมื่อวานมีเรื่องเกี่ยวกับ 'ความมั่นคง' เกิดขึ้นค่ะ จึงอยากจะเล่าให้คุณฟัง
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                昨日、「安定」についての出来事があったから、あなたに話したいの。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                昨日、「安定」についての出来事がありました。ですから、あなたに話したいです。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('昨日、「安定」についての出来事があったから、あなたに話したいの。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'ความมั่นคง' คือข้อไหนคะ?<br>
-                (翻訳: 「安定」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('昨日')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">昨日 <span class="vocab-kana">(きのう)</span></div>
+                    <div class="vocab-th">= เมื่อวาน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「安定」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>安定</strong> (あんてい) = ความมั่นคง</li>
-                </ul>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('安定')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">安定 <span class="vocab-kana">(あんてい)</span></div>
+                    <div class="vocab-th">= ความมั่นคง</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('についての')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜についての</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('出来事')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">出来事 <span class="vocab-kana">(できごと)</span></div>
+                    <div class="vocab-th">= เหตุการณ์ / เรื่องราว</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('ある')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">ある</div>
+                    <div class="vocab-th">= มี / เกิดขึ้น</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('ですから')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">ですから</div>
+                    <div class="vocab-th">= ดังนั้น / จึง</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('話す')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">話す <span class="vocab-kana">(はなす)</span></div>
+                    <div class="vocab-th">= พูด / เล่า</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('たい')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜たい</div>
+                    <div class="vocab-th">= อยาก...</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -819,29 +1851,69 @@
             <div class="card-header">Word ID: 223 | 胃</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 ในชีวิตประจำวันนั่น 'กระเพาะอาหาร' มีความสำคัญมากกว่าที่คุณคิดน่ะค่ะ
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                日常生活の中で、「胃」はあなたが思っている以上に重要なのよ。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                日常生活において、「胃」はあなたが思っている以上に重要です。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('日常生活の中で、「胃」はあなたが思っている以上に重要なのよ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'กระเพาะอาหาร' คือข้อไหนคะ?<br>
-                (翻訳: 「胃」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('日常生活')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">日常生活 <span class="vocab-kana">(にちじょうせいかつ)</span></div>
+                    <div class="vocab-th">= ชีวิตประจำวัน</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「胃」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>胃</strong> (い) = กระเพาะอาหาร</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('において')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜において</div>
+                    <div class="vocab-th">= ใน... / ที่...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('胃')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">胃 <span class="vocab-kana">(い)</span></div>
+                    <div class="vocab-th">= กระเพาะอาหาร</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('あなた')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">あなた</div>
+                    <div class="vocab-th">= คุณ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('思う')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">思う <span class="vocab-kana">(おもう)</span></div>
+                    <div class="vocab-th">= คิด / รู้สึก</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('以上に')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜以上に <span class="vocab-kana">(いじょうに)</span></div>
+                    <div class="vocab-th">= มากกว่าที่...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('重要')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">重要 <span class="vocab-kana">(じゅうよう)</span></div>
+                    <div class="vocab-th">= สำคัญ</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -849,29 +1921,69 @@
             <div class="card-header">Word ID: 224 | 委員</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 การเข้าใจเกี่ยวกับ 'กรรมการ' นี่คือสิ่งที่จะช่วยคุณต่อไปในการเรียน
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                「委員」について理解することは、今後のあなたの学習の助けになるわ。
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                「委員」について理解することは、今後の学習の助けになります。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('「委員」について理解することは、今後のあなたの学習の助けになるわ。')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'กรรมการ' คือข้อไหนคะ?<br>
-                (翻訳: 「委員」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('委員')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">委員 <span class="vocab-kana">(いいん)</span></div>
+                    <div class="vocab-th">= กรรมการ</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「委員」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>委員</strong> (いいん) = กรรมการ</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('について')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜について</div>
+                    <div class="vocab-th">= เกี่ยวกับ...</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解する')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解する <span class="vocab-kana">(りかいする)</span></div>
+                    <div class="vocab-th">= เข้าใจ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('今後')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">今後 <span class="vocab-kana">(こんご)</span></div>
+                    <div class="vocab-th">= ต่อไป / หลังจากนี้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('学習')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">学習 <span class="vocab-kana">(がくしゅう)</span></div>
+                    <div class="vocab-th">= การเรียน</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('助け')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">助け <span class="vocab-kana">(たすけ)</span></div>
+                    <div class="vocab-th">= การช่วยเหลือ / สิ่งที่ช่วย</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('になる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜になる</div>
+                    <div class="vocab-th">= กลายเป็น... / นำไปสู่...</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
@@ -879,29 +1991,69 @@
             <div class="card-header">Word ID: 225 | 言い出す</div>
             
             <div class="text-th">
-                <strong>🇹🇭 สถานการณ์ (Thai):</strong><br>
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 สถานการณ์ (Thai)</span><br>
                 วัฒนธรรมญี่ปุ่นมักจะใช้คำว่า 'เอ่ยปากพูด / เริ่มพูด' เรื่อยๆ ค่ะ เข้าใจหรือเปล่า
             </div>
             
             <div class="text-ja">
-                <strong>🇯🇵 แปลและอธิบาย (Japanese):</strong><br>
-                日本の文化では「言い出す」という言葉を頻繁に使うの。意味はわかるかしら？
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่นแบบมาตรฐาน</span><br>
+                日本の文化では、「言い出す」という言葉をよく使います。理解できますか。
             </div>
             
-            <button class="tts-btn" onclick="playTTS('日本の文化では「言い出す」という言葉を頻繁に使うの。意味はわかるかしら？')">🔊 ฟังเสียงประโยคภาษาญี่ปุ่น</button>
-            <br><br>
-            <div class="text-th" style="font-size:1.1rem; color:#888;">
-                คำถาม: คำภาษาญี่ปุ่นที่แปลว่า 'เอ่ยปากพูด / เริ่มพูด' คือข้อไหนคะ?<br>
-                (翻訳: 「言い出す」を意味する日本語の言葉はどれかしら？)
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 แยกส่วนประกอบประโยคพร้อมฟังเสียงคำศัพท์ (Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('日本')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">日本 <span class="vocab-kana">(にほん)</span></div>
+                    <div class="vocab-th">= ญี่ปุ่น</div>
+                </div>
             </div>
-            
-            <button class="tts-btn" style="background:#4CAF50; padding:8px 15px; font-size:1rem;" onclick="playTTS('「言い出す」を意味する日本語の言葉はどれかしら？')">🔊 ฟังคำถาม</button>
-
-            <div class="explanation">
-                <h4>📝 คำศัพท์ที่ควรจำ (補足単語・解説)</h4>
-                <ul>
-                    <li><strong>言い出す</strong> (いいだす) = เอ่ยปากพูด / เริ่มพูด</li>
-                </ul>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('文化')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">文化 <span class="vocab-kana">(ぶんか)</span></div>
+                    <div class="vocab-th">= วัฒนธรรม</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('言い出す')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">言い出す <span class="vocab-kana">(いいだす)</span></div>
+                    <div class="vocab-th">= เอ่ยปากพูด / เริ่มพูด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('言葉')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">言葉 <span class="vocab-kana">(ことば)</span></div>
+                    <div class="vocab-th">= คำศัพท์ / คำพูด</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('よく')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">よく</div>
+                    <div class="vocab-th">= บ่อยๆ / เรื่อยๆ</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('使う')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">使う <span class="vocab-kana">(つかう)</span></div>
+                    <div class="vocab-th">= ใช้</div>
+                </div>
+            </div>
+            <div class="vocab-item" style="">
+                <button class="tts-small-btn" onclick="playTTS('理解できる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">理解できる <span class="vocab-kana">(りかいできる)</span></div>
+                    <div class="vocab-th">= สามารถเข้าใจได้</div>
+                </div>
+            </div>
+                </div>
             </div>
         </div>
 
