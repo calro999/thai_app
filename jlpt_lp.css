@@ -117,30 +117,6 @@ p {
     color: var(--text-main);
 }
 
-/* Image Mockups */
-.mockup-container {
-    margin: 20px 0 40px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
-    background: #000;
-    aspect-ratio: 1920 / 1080;
-    position: relative;
-    border: 4px solid #FFF;
-}
-
-.mockup-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.6s ease;
-}
-
-.mockup-container:hover img {
-    transform: scale(1.02);
-}
-
 /* CTA Buttons */
 .cta-button {
     display: inline-block;
@@ -196,8 +172,15 @@ footer {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fade {
@@ -205,20 +188,35 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header { padding: 1rem 5%; }
-    .hero { padding-top: 100px; }
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.6rem; }
+    header {
+        padding: 1rem 5%;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
 }
 
 /* Game Mockup Component */
 .mockup-container {
-    margin: 30px 0;
+    margin: 30px 0 40px;
     border: 3px solid var(--primary);
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: var(--card-shadow);
+    background: #000;
     aspect-ratio: 16/9;
+    position: relative;
 }
+
 .game-mockup {
     width: 100%;
     height: 100%;
@@ -226,20 +224,38 @@ footer {
     overflow: hidden;
     background: #000;
 }
+
 .game-bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     opacity: 0.8;
+    transition: transform 0.6s ease;
 }
+
 .game-char {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 95%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
     object-fit: contain;
+    display: block;
+    transition: transform 0.6s ease;
+    z-index: 1;
 }
+
+.mockup-container:hover .game-bg {
+    transform: scale(1.02);
+}
+
+.mockup-container:hover .game-char {
+    transform: translateX(-50%) scale(1.02);
+}
+
 .game-ui {
     position: absolute;
     bottom: 5%;
@@ -252,8 +268,10 @@ footer {
     padding: 15px;
     color: #FFF;
     text-align: left;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
+
 .game-name {
     position: absolute;
     top: -15px;
@@ -266,12 +284,15 @@ footer {
     color: #FFF;
     box-shadow: 0 4px 10px rgba(255, 51, 102, 0.3);
 }
+
 .game-text {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.4;
     margin: 0;
+    color: #FFF;
 }
+
 .game-text span {
     display: block;
     margin-top: 5px;
@@ -284,7 +305,18 @@ footer {
         padding: 10px;
         bottom: 5%;
     }
-    .game-text { font-size: 0.8rem; }
-    .game-text span { font-size: 0.7rem; }
-    .game-name { font-size: 0.6rem; top: -10px; left: 10px; }
+
+    .game-text {
+        font-size: 0.85rem;
+    }
+
+    .game-text span {
+        font-size: 0.75rem;
+    }
+
+    .game-name {
+        font-size: 0.7rem;
+        top: -12px;
+        left: 10px;
+    }
 }
