@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คอร์สเรียนข้อความ N2 - Part 3</title>
+    <meta name="description" content="เรียนรู้คำศัพท์และการฟัง JLPT N2 ด้วยสคริปต์แบบไทย-ญี่ปุ่น พร้อมระบบอ่านออกเสียง (TTS)">
+    <link rel="stylesheet" href="jlpt_lp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: #fdfaf6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%);
+            padding: 80px 5% 40px;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+        .learning-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid #1976d2;
+        }
+        .card-header {
+            font-size: 1.5rem;
+            color: #1976d2;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+        .text-th {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            background: #f9f9f9;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+        .text-ja {
+            font-size: 1.3rem;
+            color: #d81b60;
+            margin-bottom: 20px;
+            font-weight: 600;
+            background: #fce4ec;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #f8bbd0;
+        }
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .vocab-item {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #ff69b4;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: 0.2s;
+            border-right: 1px solid #eee;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-item:hover {
+            background: #ffe4f0;
+            transform: translateX(3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .tts-small-btn {
+            background: #ff69b4;
+            color: white;
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+            transition: 0.3s;
+            box-shadow: 0 2px 5px rgba(255,105,180,0.4);
+        }
+        .tts-small-btn:hover {
+            background: #d81b60;
+            transform: scale(1.1);
+        }
+        .tts-large-btn {
+            background: #1976d2;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            margin-top: 10px;
+            font-family: 'Kanit', sans-serif;
+            box-shadow: 0 2px 5px rgba(25,118,210,0.4);
+        }
+        .tts-large-btn:hover {
+            background: #115293;
+            transform: translateY(-2px);
+        }
+        .vocab-content {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
+        }
+        .vocab-jp {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.15rem;
+        }
+        .vocab-kana {
+            color: #888;
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+        .vocab-th {
+            color: #1976d2;
+            font-size: 0.95em;
+            margin-top: 3px;
+        }
+        .next-page-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .next-btn {
+            display: inline-block;
+            background: #1976d2;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(25, 118, 210, 0.4);
+        }
+        .next-btn:hover {
+            background: #115293;
+            transform: translateY(-5px);
+        }
+        footer {
+            background: #1a1a2e;
+            color: #aaa;
+            padding: 40px 5%;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .footer-links a {
+            color: #ff69b4;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .tag-title {
+            display: inline-block;
+            background: #1565c0;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function playTTS(text) {
+            if ('speechSynthesis' in window) {
+                text = text.replace(/〜/g, ''); // Remove tildes for better TTS pronunciation
+                window.speechSynthesis.cancel();
+                const msg = new SpeechSynthesisUtterance(text);
+                msg.lang = 'ja-JP';
+                msg.rate = 0.9;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("เบราว์เซอร์ของคุณไม่รองรับระบบอ่านออกเสียง");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header style="background: rgba(255, 255, 255, 0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 90%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); backdrop-filter: blur(5px);">
+        <a href="hub.html" class="logo" style="font-size: 20px; font-weight: bold; color: #d81b60; text-decoration: none;">JLPT Learning Hub</a>
+        <a href="index.html" style="background: #1976d2; color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px;">กลับหน้าเกม</a>
+    </header>
+
+    <div class="hero">
+        <h1 style="margin-top: 20px;">วิเคราะห์ไวยากรณ์และคำศัพท์ N2 (Part 3/6)</h1>
+        <p>เรียนรู้คำศัพท์และไวยากรณ์จากประโยคภาษาญี่ปุ่นแบบเจาะลึก พร้อมเสียงอ่านรายคำ</p>
+    </div>
+
+    <div class="container">
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 11-101 | 詰め込み</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                詰め込み ในบริบทการเรียน หมายถึง การอัดความรู้เข้าหัวในเวลาอันสั้นครับ เช่น การอ่านหนังสือสอบข้ามคืนนั่นเองครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                徹夜での詰め込みはおすすめできません。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('徹夜での詰め込みはおすすめできません。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('詰め込み')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">詰め込み <span class="vocab-kana">(つめこみ)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 11-102 | ぶっきらぼう</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                ぶっきらぼう หมายถึง การพูดจาหรือท่าทางที่ห้วนๆ ไม่เป็นมิตร หรือไม่มีหางเสียงครับ มักใช้ตำหนิพนักงานบริการที่ไม่ใส่ใจลูกค้า
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                接客がぶっきらぼうだった。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('接客がぶっきらぼうだった。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('ぶっきらぼう')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">ぶっきらぼう</div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 11-103 | 口を挟む</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                口を挟む หมายถึง การพูดแทรก หรือการสอดแทรกความคิดเห็นครับ เป็นสำนวนถ่อมตัวเมื่อต้องการแสดงความเห็นในเรื่องที่ตนเองอาจไม่มีอำนาจตัดสินใจ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                口を挟むようなことじゃないかもしれませんが。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('口を挟むようなことじゃないかもしれませんが。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('口を挟む')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">口を挟む <span class="vocab-kana">(くちをはさむ)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 11-104 | 考察</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                考察 หมายถึง การวิเคราะห์ หรือการพิจารณาอย่างถี่ถ้วนครับ ในการทำรายงานคือการสรุปมุมมองของผู้เขียนจากข้อมูลที่ได้ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                肝心の考察が抜けているよ。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('肝心の考察が抜けているよ。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('考察')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">考察 <span class="vocab-kana">(こうさつ)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 11-105 | お上手</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                ในที่นี้ไม่ได้แปลว่า 'เก่ง' แต่เป็นสำนวนแปลว่า 'ปากหวาน' หรือ 'พูดเยินยอ' ครับ ใช้ตอบรับคำชมแบบถ่อมตัวและขี้เล่นนิดๆ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                またそんなお上手を。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('またそんなお上手を。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('お上手')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">お上手 <span class="vocab-kana">(おじょうず)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 11-106 | 追いかける</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                追いかける ปกติแปลว่า วิ่งตาม ครับ แต่เมื่อใช้กับ 流行 (เทรนด์/แฟชั่น) จะหมายถึงการพยายามทำตามกระแสให้ทันอยู่เสมอครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                流行を追いかけるのに必死でした。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('流行を追いかけるのに必死でした。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('追いかける')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">追いかける <span class="vocab-kana">(おいかける)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 11-107 | 埋まっている</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                埋まっている ในบริบทของห้องประชุมหรือที่นั่ง หมายถึง 'ถูกจองเต็มแล้ว' หรือ 'ไม่ว่าง' ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                第1は埋まってるけど。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('第1は埋まってるけど。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('埋まっている')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">埋まっている <span class="vocab-kana">(うまっている)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 11-108 | のるかそるか</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                เป็นสำนวนหมายถึง 'ได้かเสีย' หรือ 'จะรุ่งหรือจะร่วง' ใช้พูดถึงสถานการณ์ที่ต้องเสี่ยงดวงหรือวัดใจครั้งใหญ่ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                のるかそるかの勝負になりそうね。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('のるかそるかの勝負になりそうね。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('のるかそるか')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">のるかそるか</div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 11-109 | 財布が寂しい</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                เป็นสำนวนเปรียบเทียบหมายถึง 'เงินในกระเป๋าเหลือน้อย' หรือ 'กำลังถังแตก' ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                財布が寂しいよ。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('財布が寂しいよ。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('財布が寂しい')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">財布が寂しい <span class="vocab-kana">(さいふがさびしい)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 11-110 | 大役</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                大役 หมายถึง ภาระหน้าที่ที่สำคัญ หรือบทบาทที่ยิ่งใหญ่ครับ มักใช้ชมเชยผู้ที่เพิ่งเสร็จสิ้นงานสำคัญมา
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                大役お疲れ様でした。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('大役お疲れ様でした。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('大役')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">大役 <span class="vocab-kana">(たいやく)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 12-111 | 〜割</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                割 (Wari) คือ หน่วย 10% ครับ 2割 จึงหมายถึง 20% ของจำนวนทั้งหมดครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                あと2割ほど増やしておこうか。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('あと2割ほど増やしておこうか。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('割')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜割 <span class="vocab-kana">(わり)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 12-112 | 申し分ない</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                申し分ない หมายถึง สมบูรณ์แบบ หรือ ไม่มีที่ติครับ มักใช้ชมเชยคุณภาพของสินค้าหรือผลงาน
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                吸引力は申し分ないんだけど。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('吸引力は申し分ないんだけど。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('申し分ない')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">申し分ない <span class="vocab-kana">(もうしぶんない)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 12-113 | 他言無用</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                เป็นสำนวนสุภาพแต่หนักแน่น หมายถึง 'ห้ามนำไปบอกคนอื่น' หรือ 'ปิดเป็นความลับ' ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                他言無用でお願いしますね。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('他言無用でお願いしますね。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('他言無用')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">他言無用 <span class="vocab-kana">(たごんむよう)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 12-114 | 切り捨てる</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                切り捨てる ปกติแปลว่า ฟันแล้วทิ้ง ครับ ในที่นี้หมายถึง การตัดสินหรือสรุปแบบรวบยอดโดยไม่สนใจรายละเอียดที่สำคัญ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                単なる節約志向と切り捨てるのは。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('単なる節約志向と切り捨てるのは。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('切り捨てる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">切り捨てる <span class="vocab-kana">(きりすてる)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 12-115 | 折り入って</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                เป็นคำที่ใช้เกริ่นนำเมื่อต้องการจะปรึกษาเรื่องที่สำคัญหรือเรื่องส่วนตัวอย่างจริงจังครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                折り入ってご相談があるのですが。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('折り入ってご相談があるのですが。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('折り入って')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">折り入って <span class="vocab-kana">(おりいって)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 12-116 | つい〜ちゃう</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                เป็นสำนวนที่ใช้เมื่อเราทำบางอย่างลงไปโดยไม่ทันยั้งคิด หรือเผลอตัวทำไปทั้งที่รู้ว่าไม่ควรครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                ついチェックしちゃうんだよね。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('ついチェックしちゃうんだよね。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('ついちゃう')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">つい〜ちゃう</div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 12-117 | 一気に</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                一気に หมายถึง 'รวดเดียวจบ' หรือ 'ทำอย่างรวดเร็วโดยไม่หยุดพัก' ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                溜まってた映画を一気に見る。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('溜まってた映画を一気に見る。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('一気に')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">一気に <span class="vocab-kana">(いっきに)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 12-118 | 力添え</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                เป็นคำยกย่อง (Respectful) หมายถึง 'ความช่วยเหลือ' หรือ 'การสนับสนุน' จากผู้อื่นครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                君の力添えがなければ。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('君の力添えがなければ。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('力添え')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">力添え <span class="vocab-kana">(ちからぞえ)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 12-119 | 満室</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                満室 หมายถึง ห้องพักเต็มครับ มักใช้กับโรงแรมหรืออพาร์ทเมนท์
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                どこも満室でね。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('どこも満室でね。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('満室')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">満室 <span class="vocab-kana">(まんしつ)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 12-120 | 弁解の余地がない</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                เป็นสำนวนขอโทษที่ยอมรับผิดอย่างเต็มที่ หมายถึง 'ไม่มีคำแก้ตัวใดๆ' หรือ 'ผิดไปแล้วจริงๆ' ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                弁解の余地もございません。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('弁解の余地もございません。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('弁解の余地がない')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">弁解の余地がない <span class="vocab-kana">(べんかいのよちがない)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 13-121 | 後回し</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                後回し หมายถึง การเก็บไว้ทำทีหลัง หรือการเลื่อนลำดับความสำคัญออกไปครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                メールは後回しにして。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('メールは後回しにして。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('後回し')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">後回し <span class="vocab-kana">(あとまわし)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 13-122 | 縁を切る</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                縁を切る หมายถึง การตัดความสัมพันธ์ครับ ในวัฒนธรรมญี่ปุ่น การให้ของมีคมเป็นของขวัญอาจสื่อถึงการตัดสัมพันธ์ จึงมักหลีกเลี่ยงในงานมงคลครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                刃物は『縁を切る』って言われて。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('刃物は『縁を切る』って言われて。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('縁を切る')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">縁を切る <span class="vocab-kana">(えんをきる)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 13-123 | 不手際</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                不手際 หมายถึง ความผิดพลาด หรือการจัดการที่ไม่ดีครับ เป็นคำสุภาพที่ใช้เมื่อต้องการยอมรับผิดในความบกพร่องของตนเองหรือทีมงาน
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                こちらの不手際で。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('こちらの不手際で。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('不手際')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">不手際 <span class="vocab-kana">(ふてぎわ)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 13-124 | 賑わう</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                賑わう หมายถึง คึกคัก หรือเต็มไปด้วยผู้คนครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                家族連れで賑わいそうです。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('家族連れで賑わいそうです。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('賑わう')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">賑わう <span class="vocab-kana">(にぎわう)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 13-125 | 独壇場</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                独壇場 หมายถึง 'เวทีของเขาคนเดียว' หรือสถานการณ์ที่คนๆ หนึ่งโดดเด่นและแสดงฝีมืออยู่เพียงผู้เดียวครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                君の独壇場だったね。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('君の独壇場だったね。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('独壇場')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">独壇場 <span class="vocab-kana">(どくだんじょう)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 13-126 | 免れる</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                免れる หมายถึง หลีกเลี่ยงได้ หรือรอดพ้นจาก (สิ่งที่ไม่ดี) ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                再検査は免れたけど。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('再検査は免れたけど。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('免れる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">免れる <span class="vocab-kana">(まぬかれる)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 13-127 | 玉に瑕</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                玉に瑕 เป็นสำนวนหมายถึง 'รอยตำหนิในหยก' สื่อถึงสิ่งที่ดีเกือบทุกอย่างแต่ดันมีข้อเสียเล็กๆ น้อยๆ ที่น่าเสียดายครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                ミスが目立つのが玉に瑕だな。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('ミスが目立つのが玉に瑕だな。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('玉に瑕')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">玉に瑕 <span class="vocab-kana">(たまにきず)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 13-128 | 一任</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                一任 หมายถึง การมอบหมายให้ตัดสินใจแต่เพียงผู้เดียว หรือการฝากฝังงานทั้งหมดให้รับผิดชอบครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                私に一任していただけないでしょうか。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('私に一任していただけないでしょうか。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('一任')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">一任 <span class="vocab-kana">(いちにん)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 13-129 | その手がある</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                เป็นสำนวนแปลว่า 'ยังมีวิธีนั้นอยู่นี่นา' หรือ 'เป็นไอเดียที่ดีนะ' ใช้เมื่อเพิ่งนึกวิธีแก้ปัญหาออกจากการแนะนำของผู้อื่น
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                あ、その手があったわね。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('あ、その手があったわね。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('その手がある')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">その手がある</div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 13-130 | 感服</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                感服 หมายถึง การชื่นชมอย่างใจจริง หรือการเลื่อมใสในความคิดหรือการกระทำของผู้อื่นครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                ご発言、感服いたしました。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('ご発言、感服いたしました。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('感服')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">感服 <span class="vocab-kana">(かんぷく)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 14-131 | 滞る</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                滞る หมายถึง ไม่คืบหน้า หรือหยุดชะงักครับ มักใช้กับงาน (仕事) หรือการชำระเงิน (支払い) ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                作成が滞っておりまして…。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('作成が滞っておりまして…。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('滞る')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">滞る <span class="vocab-kana">(とどこおる)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 14-132 | 手狭</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                手狭 หมายถึง (สถานที่) คับแคบ หรือมีพื้นที่ไม่เพียงพอสำหรับการใช้งานครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                今のところは手狭だし。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('今のところは手狭だし。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('手狭')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">手狭 <span class="vocab-kana">(てぜま)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 14-133 | 一任</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                一任 หมายถึง การได้รับมอบหมายให้ตัดสินใจแต่เพียงผู้เดียวครับ เป็นคำที่เป็นทางการมาก
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                私に一任されておりまして。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('私に一任されておりまして。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('一任')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">一任 <span class="vocab-kana">(いちにん)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 14-134 | 特効薬</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                特効薬 หมายถึง ยาที่ได้ผลชะงัดครับ ในบริบทนี้คือ 'วิธีแก้ปัญหาที่ได้ผลดีที่สุด' ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                最大の特効薬と言えるでしょう。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('最大の特効薬と言えるでしょう。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('特効薬')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">特効薬 <span class="vocab-kana">(とっこうやく)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 14-135 | 見送る</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                見送る ปกติแปลว่า ไปส่ง (คนที่สถานี) ครับ แต่ในบริบทธุรกิจแปลว่า 'ปฏิเสธ' หรือ 'เลื่อนออกไปก่อน' (ยังไม่รับข้อเสนอ) ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                今回は見送らせていただくことに。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('今回は見送らせていただくことに。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('見送る')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">見送る <span class="vocab-kana">(みおくる)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 14-136 | 強制終了</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                強制終了 หมายถึง การบังคับปิดเครื่อง หรือ Force Quit เมื่อเครื่องค้างครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                強制終了してみた？
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('強制終了してみた？')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('強制終了')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">強制終了 <span class="vocab-kana">(きょうせいしゅうりょう)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 14-137 | パンクする</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                パンクする ปกติแปลว่า ยางแตก ครับ แต่ในที่นี้หมายถึง 'รับงานเกินขีดจำกัด' จนทำไม่ไหวหรือสติแตกครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                一人でパンクして遅れるのが。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('一人でパンクして遅れるのが。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('パンクする')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">パンクする</div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 14-138 | 白紙に戻す</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                白紙に戻す หมายถึง การยกเลิกสิ่งที่ทำมาทั้งหมดและกลับไปเริ่มนับหนึ่งใหม่เหมือนกระดาษเปล่าครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                計画を白紙に戻す。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('計画を白紙に戻す。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('白紙に戻す')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">白紙に戻す <span class="vocab-kana">(はくしにもどす)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 14-139 | 手間を省く</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                手間を省く หมายถึง การลดขั้นตอนที่ยุ่งยาก หรือประหยัดเวลาและแรงงานครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                窓口に行く手間も省けるし。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('窓口に行く手間も省けるし。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('手間を省く')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">手間を省く <span class="vocab-kana">(てまをはぶく)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 14-140 | 気負う</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                気負う หมายถึง การตั้งใจมากเกินไปจนเกร็ง หรือแบกความคาดหวังไว้สูงเกินไปครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                そんなに気負わなくていいよ。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('そんなに気負わなくていいよ。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('気負う')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">気負う <span class="vocab-kana">(きおう)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 15-141 | 先行研究</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                先行研究 หมายถึง งานวิจัยที่ทำไว้ก่อนหน้านี้ครับ เป็นคำที่เจอบ่อยในบริบทการเขียนรายงานหรือวิทยานิพนธ์
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                先行研究の紹介が長すぎて。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('先行研究の紹介が長すぎて。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('先行研究')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">先行研究 <span class="vocab-kana">(せんこうけんきゅう)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 15-142 | 無難</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                無難 หมายถึง 'ปลอดภัยไว้ก่อน' หรือ 'ทางเลือกที่ไม่เสี่ยง' ครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                光回線を引いたほうが無難かな。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('光回線を引いたほうが無難かな。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('無難')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">無難 <span class="vocab-kana">(ぶなん)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 15-143 | 不本意</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                不本意 หมายถึง 'ไม่เป็นไปตามความตั้งใจ' หรือ 'จำใจต้องทำ' ครับ มักใช้เมื่อผลลัพธ์ออกมาไม่ดีทั้งที่ใจไม่อยากให้เป็นแบบนั้น
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                不本意ながらあのような形に。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('不本意ながらあのような形に。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('不本意')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">不本意 <span class="vocab-kana">(ふほんい)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 15-144 | しなやか</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                しなやか ปกติแปลว่า อ่อนช้อยครับ แต่ในบริบทนี้หมายถึง 'ความยืดหยุ่น' หรือการปรับตัวให้เข้ากับยุคสมัยได้ดีครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                そのしなやかさこそが。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('そのしなやかさこそが。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('しなやか')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">しなやか</div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 15-145 | 中座</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                中座 หมายถึง การขอตัวลุกออกจากที่ประชุมหรือวงสนทนากลางคันครับ เป็นคำที่สุภาพมาก
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                中座させていただくかもしれません。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('中座させていただくかもしれません。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('中座')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">中座 <span class="vocab-kana">(ちゅうざ)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 15-146 | 潔い</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                潔い หมายถึง 'เด็ดเดี่ยว' หรือ 'ยอมรับความจริงอย่างสง่าผ่าเผย' ในที่นี้คือการกล้ายอมรับความพ่ายแพ้แล้วถอยกลับครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                潔く引き返す勇気も必要だ。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('潔く引き返す勇気も必要だ。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('潔い')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">潔い <span class="vocab-kana">(いさぎよい)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 15-147 | 脇に置く</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                脇に置く เป็นสำนวนหมายถึง 'วางไว้ข้างๆ ก่อน' หรือ 'พักเรื่องนี้ไว้ก่อน' เพื่อไปทำเรื่องที่สำคัญกว่าครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                一旦脇に置いておいて。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('一旦脇に置いておいて。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('脇に置く')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">脇に置く <span class="vocab-kana">(わきにおく)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 15-148 | 至らなさ</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                至らない หมายถึง 'ยังดีไม่พอ' หรือ 'บกพร่อง' です。至らなさ คือความบกพร่องของตนเอง ใช้ในการขอโทษที่ถ่อมตัวมากครับ
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                私の至らなさで。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('私の至らなさで。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('至らなさ')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">至らなさ <span class="vocab-kana">(いたらなさ)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 15-149 | 整理</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                整理 หมายถึง การจัดระเบียบ หรือการคัดแยกสิ่งที่ไม่จำเป็นออกไปครับ ในที่นี้คือการลบข้อมูลที่ไม่ได้ใช้ออก
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                定期的に整理しないとね。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('定期的に整理しないとね。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('整理')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">整理 <span class="vocab-kana">(せいり)</span></div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-card">
+            <div class="card-header">Word ID: 15-150 | 〜しかねる</div>
+            
+            <div class="text-th">
+                <span class="tag-title" style="background: #e0e0e0; color: #555;">🇹🇭 คำอธิบาย (Explanation)</span><br>
+                〜しかねる เป็นรูปปฏิเสธที่สุภาพมาก หมายถึง 'ยากที่จะ...' หรือ 'ไม่สามารถ...ได้' ครับ ในที่นี้คือ 'ไม่สามารถเห็นด้วยได้'
+            </div>
+            
+            <div class="text-ja">
+                <span class="tag-title" style="background: #ff69b4;">🇯🇵 ประโยคภาษาญี่ปุ่น (Japanese Sentence)</span><br>
+                賛成しかねます。
+                <br>
+                <button class="tts-large-btn" onclick="playTTS('賛成しかねます。')">
+                    🔊 ฟังเสียงประโยค (Listen)
+                </button>
+            </div>
+            
+            <div class="vocab-section">
+                <h4 style="color: #1565c0; margin-top: 0; padding-bottom: 8px; border-bottom: 2px dashed #bbdefb;">📝 คำศัพท์ที่ควรจำ (Key Vocabulary)</h4>
+                <div class="vocab-grid">
+                    
+            <div class="vocab-item" style="background: #fff0f5; border-left: 4px solid #d81b60;">
+                <button class="tts-small-btn" onclick="playTTS('しかねる')">🔊</button>
+                <div class="vocab-content">
+                    <div class="vocab-jp">〜しかねる</div>
+                    <div class="vocab-th">คำสำคัญ (Key Word)</div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="next-page-container">
+            <a href="jlpt-n2-practical-listening-drills-part4.html" class="next-btn">เรียนต่อ Part 4 ➔</a>
+        </div>
+    </div>
+
+    <!-- Native Banner -->
+    <script async="async" data-cfasync="false" src="https://pl28842706.effectivegatecpm.com/d82e1b5ca98e70ae57305b561c19323f/invoke.js"></script>
+    <div id="container-d82e1b5ca98e70ae57305b561c19323f"></div>
+
+    <footer>
+        <div class="footer-links" style="margin-bottom: 20px;">
+            <a href="index.html">Home</a>
+            <a href="top.html">Top</a>
+            <a href="lp.html">LP</a>
+            <a href="hub.html">Hub</a>
+            <a href="sitemap.html">Sitemap</a>
+        </div>
+        <p>&copy; 2026 YUI & YUTO. All rights reserved.</p>
+    </footer>
+
+    <!-- Social Bar -->
+    <script src="https://pl28842711.effectivegatecpm.com/a0/a3/a9/a0a3a9e248e155da596da919272bf4aa.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const pushSocialBar = setInterval(() => {
+            Array.from(document.body.children).forEach(el => {
+                if (el.tagName === 'DIV' || el.tagName === 'IFRAME') {
+                    const style = window.getComputedStyle(el);
+                    if (style.position === 'fixed' && style.top === '0px' && style.zIndex > 100) {
+                        if (el.tagName !== 'HEADER' && !el.querySelector('header')) {
+                            el.style.setProperty('top', '70px', 'important');
+                        }
+                    }
+                }
+            });
+        }, 1000);
+        setTimeout(() => clearInterval(pushSocialBar), 10000);
+    });
+    </script>
+</body>
+</html>
