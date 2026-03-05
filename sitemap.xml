@@ -1,33 +1,147 @@
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jlpt-with-gyaru.vercel.app/lp.html</loc>
-    <lastmod>2026-02-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://jlpt-with-gyaru.vercel.app/index.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jlpt-with-gyaru.vercel.app/index.html</loc>
-    <lastmod>2026-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://jlpt-with-gyaru.vercel.app/top.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jlpt-with-gyaru.vercel.app/top.html</loc>
-    <lastmod>2026-02-26</lastmod>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-game-learning-style.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-grammar-lesson.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-how-to-pass.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-interest-japanese.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-japanese-conversation.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-kanji-skills.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-learn-japanese.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-n1-listening-practice.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-n2-listening-practice.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-n3-listening-practice.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-n4-listening-practice.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-n5-listening-practice.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-pass-n1-guide.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-pass-n2-guide.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-pass-n3-guide.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-pass-n4-guide.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-pass-n5-guide.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-study-method.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-thai-speakers.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/jlpt-vocabulary-mastery.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jlpt-with-gyaru.vercel.app/lp.html</loc>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://jlpt-with-gyaru.vercel.app/piano.html</loc>
-    <lastmod>2026-02-26</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://jlpt-with-gyaru.vercel.app</loc>
-    <lastmod>2026-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-learn-japanese.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-interest-japanese.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-pass-n1-guide.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-pass-n2-guide.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-pass-n3-guide.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-pass-n4-guide.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-pass-n5-guide.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-study-method.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-how-to-pass.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-n1-listening-practice.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-n2-listening-practice.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-n3-listening-practice.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-n4-listening-practice.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-n5-listening-practice.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-vocabulary-mastery.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-grammar-lesson.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-japanese-conversation.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-game-learning-style.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-kanji-skills.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://jlpt-with-gyaru.vercel.app/jlpt-thai-speakers.html</loc><lastmod>2026-03-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url></urlset>
+</urlset>
