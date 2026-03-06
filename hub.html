@@ -187,20 +187,40 @@
         }
 
         @media (max-width: 768px) {
+            .hub-hero {
+                padding: 60px 5% 40px;
+                clip-path: none;
+            }
+
             .hub-hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .hub-hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
+            }
+
+            .container {
+                margin-top: 20px;
+                padding: 0 15px;
             }
 
             .category-group {
-                padding: 25px;
+                padding: 20px;
+                margin-bottom: 30px;
+                border-radius: 20px;
+            }
+
+            .category-title {
+                margin-bottom: 20px;
             }
 
             .category-title h2 {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
+            }
+
+            .learning-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -222,14 +242,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jlpt-with-gyaru.vercel.app/hub.html">
     <meta property="og:title" content="JLPT Learning Hub | รวมคอร์สเรียนภาษาญี่ปุ่น">
-    <meta property="og:description" content="รวบรวมคอร์สเรียนและเทคนิคการสอบ JLPT N5-N1 ที่สนุกที่สุด เลือกหัวข้อที่คุณต้องการเริ่มเรียนได้เลย">
+    <meta property="og:description"
+        content="รวบรวมคอร์สเรียนและเทคนิคการสอบ JLPT N5-N1 ที่สนุกที่สุด เลือกหัวข้อที่คุณต้องการเริ่มเรียนได้เลย">
     <meta property="og:image" content="images/ogp_jlpt.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://jlpt-with-gyaru.vercel.app/hub.html">
     <meta property="twitter:title" content="JLPT Learning Hub | รวมคอร์สเรียนภาษาญี่ปุ่น">
-    <meta property="twitter:description" content="รวบรวมคอร์สเรียนและเทคนิคการสอบ JLPT N5-N1 ที่สนุกที่สุด เลือกหัวข้อที่คุณต้องการเริ่มเรียนได้เลย">
+    <meta property="twitter:description"
+        content="รวบรวมคอร์สเรียนและเทคนิคการสอบ JLPT N5-N1 ที่สนุกที่สุด เลือกหัวข้อที่คุณต้องการเริ่มเรียนได้เลย">
     <meta property="twitter:image" content="images/ogp_jlpt.jpg">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCYNPFD7PR"></script>
@@ -240,6 +262,20 @@
         gtag('config', 'G-CCYNPFD7PR');
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "คอร์สเรียนภาษาญี่ปุ่น JLPT - เลือกเส้นทางการเรียนของคุณ",
+  "description": "",
+  "provider": {
+    "@type": "Organization",
+    "name": "JLPT with Gyaru",
+    "sameAs": "https://jlpt-with-gyaru.vercel.app/"
+  }
+}
+</script>
 </head>
 
 <body>

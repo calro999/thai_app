@@ -549,24 +549,61 @@
         }
 
         @media screen and (max-width: 900px) {
+            header {
+                width: 100%;
+                padding: 10px 15px;
+                box-sizing: border-box;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
             .nav-links {
                 display: none;
             }
 
+            .hero-edu {
+                padding: 80px 15px 40px;
+                min-height: auto;
+            }
+
             .hero-edu h1 {
-                font-size: 32px;
+                font-size: 28px;
             }
 
             .hero-edu p {
-                font-size: 16px;
+                font-size: 15px;
+                margin-top: 10px;
+            }
+
+            .showcase-container {
+                padding: 30px 15px 60px;
             }
 
             .flat-card,
             .flat-card.reverse {
                 flex-direction: column;
                 text-align: center;
-                padding: 40px 20px;
-                gap: 30px;
+                padding: 30px 15px;
+                gap: 25px;
+                margin-bottom: 40px;
+                border-radius: 16px;
+            }
+
+            .game-info h2 {
+                font-size: 24px;
+            }
+
+            .game-info h3 {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .game-info p {
+                font-size: 14px;
+                margin-bottom: 20px;
+                line-height: 1.6;
             }
 
             .pc-flex-row {
@@ -576,13 +613,39 @@
 
             .btn-play {
                 width: 100%;
+                min-width: unset;
+                padding: 12px 20px;
+                font-size: 16px;
                 box-sizing: border-box;
             }
 
+            .mockup-wrapper {
+                width: 100%;
+            }
+
             .smartphone {
-                width: 260px;
-                height: 520px;
-                border-width: 8px;
+                width: 220px;
+                height: 440px;
+                border-width: 6px;
+                border-radius: 25px;
+            }
+
+            .notch {
+                width: 80px;
+                height: 18px;
+            }
+
+            .mockup-ui {
+                padding: 10px;
+                bottom: 10px;
+            }
+
+            .mockup-th {
+                font-size: 12px;
+            }
+
+            .mockup-ja {
+                font-size: 11px;
             }
         }
     </style>
