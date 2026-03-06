@@ -496,7 +496,7 @@ function openModeSelect() {
     const grid = document.querySelector('#mode-selection .mode-grid');
     grid.innerHTML = "";
 
-    const courses = ['hiragana', 'katakana', 'listening'];
+    const courses = ['hiragana', 'katakana', 'n5', 'n4', 'n3', 'oshikatsu', 'special_travel', 'special_food', 'special_medical', 'listening'];
     courses.forEach(id => {
         const info = courseConfig[id];
         const unlocked = isCourseUnlocked(id);
