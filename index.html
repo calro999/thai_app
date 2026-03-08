@@ -538,10 +538,63 @@
                         onclick="window.open('https://www.threads.net/@jlpt_thai_gal', '_blank')">
                         📱 Threads (@jlpt_thai_gal)
                     </button>
-                    <button class="settings-btn-support" onclick="supportDeveloperAction()">
-                        💖 ชมโฆษณาเพื่อสนับสนุนนักพัฒนา
+                </div>
+
+                <!-- Developer Support Snack Box -->
+                <div
+                    style="max-width: 380px; margin: 25px auto; padding: 18px; border: 2px dashed #ff4500; border-radius: 15px; background-color: #ffffff; text-align: center; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-shadow: 0 4px 15px rgba(0,0,0,0.05); color: #333;">
+
+                    <p style="font-size: 16px; font-weight: bold; color: #ff4500; margin-bottom: 8px;">
+                        🇯🇵 สุ่มขนมญี่ปุ่นยอดฮิตที่แนะนำโดยผู้พัฒนา!
+                    </p>
+                    <p style="font-size: 12px; color: #555; line-height: 1.5; margin-bottom: 15px; padding: 0 10px;">
+                        ลองกดสุ่มดูไหมครับ? หากคุณซื้อสินค้าผ่านลิงก์นี้ ค่าคอมมิชชันส่วนหนึ่งจะช่วยสนับสนุนเรา
+                        (ราคาสินค้าเท่าเดิมครับ)
+                        <br><span style="font-size: 10px; color: #aaa;">*เราไม่ได้เป็นผู้ขายโดยตรง
+                            เป็นเพียงการแนะนำสินค้าคุณภาพจาก Shopee เท่านั้น</span>
+                    </p>
+
+                    <button id="random-snack-btn" style="
+                        background-color: #ff4500; 
+                        color: white; 
+                        border: none; 
+                        padding: 12px 28px; 
+                        font-size: 16px; 
+                        font-weight: bold; 
+                        border-radius: 50px; 
+                        cursor: pointer;
+                        transition: 0.3s;
+                        box-shadow: 0 4px 12px rgba(255, 69, 0, 0.4);
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                    ">
+                        <span>สุ่มขนมและสนับสนุนเรา</span> 🍬
                     </button>
                 </div>
+
+                <script>
+                    document.getElementById('random-snack-btn').addEventListener('click', function () {
+                        const snackLinks = [
+                            'https://s.shopee.co.th/3qI9ZmMOIL', // セブンプレミアム ラングドシャ
+                            'https://s.shopee.co.th/1BHOP5pyGW', // 北海道クッキー
+                            'https://s.shopee.co.th/900FjalhpK', // DIYお菓子 (知育菓子)
+                            'https://s.shopee.co.th/1gDf0IdluT', // セブンプレミアム カリカリコーン
+                            'https://s.shopee.co.th/9pZMjNekeD'  // じゃがりこ
+                        ];
+                        const randomLink = snackLinks[Math.floor(Math.random() * snackLinks.length)];
+                        window.open(randomLink, '_blank');
+                    });
+                    const snackBtn = document.getElementById('random-snack-btn');
+                    snackBtn.onmouseover = function () {
+                        this.style.backgroundColor = '#e63e00';
+                        this.style.transform = 'translateY(-2px)';
+                    };
+                    snackBtn.onmouseout = function () {
+                        this.style.backgroundColor = '#ff4500';
+                        this.style.transform = 'translateY(0)';
+                    };
+                </script>
             </div>
         </div>
     </div>
@@ -819,10 +872,20 @@
                                 style="margin-bottom: 8px; width: 100%; padding: 12px; font-size:14px;">
                                 📱 Official Threads (@jlpt_thai_gal)
                             </button>
-                            <button class="settings-btn-support" onclick="supportDeveloperAction()"
-                                style="width: 100%; padding: 12px; font-size:14px;">
-                                💖 ชมโฆษณาเพื่อสนับสนุนนักพัฒนา
-                            </button>
+                            <!-- Settings Modal Support Section -->
+                            <div
+                                style="padding: 12px; border: 1px dashed #ff4500; border-radius: 10px; background-color: #fffaf0; text-align: center;">
+                                <p style="font-size: 13px; font-weight: bold; color: #ff4500; margin-bottom: 8px;">
+                                    สุ่มขนมเพื่อสนับสนุนเรา 🍬</p>
+                                <button id="random-snack-btn-settings"
+                                    style="background-color: #ff4500; color: white; border: none; padding: 8px 16px; font-size: 14px; font-weight: bold; border-radius: 20px; cursor: pointer;">สุ่มเลย!</button>
+                            </div>
+                            <script>
+                                document.getElementById('random-snack-btn-settings').addEventListener('click', function () {
+                                    const snackLinks = ['https://s.shopee.co.th/3qI9ZmMOIL', 'https://s.shopee.co.th/1BHOP5pyGW', 'https://s.shopee.co.th/900FjalhpK', 'https://s.shopee.co.th/1gDf0IdluT', 'https://s.shopee.co.th/9pZMjNekeD'];
+                                    window.open(snackLinks[Math.floor(Math.random() * snackLinks.length)], '_blank');
+                                });
+                            </script>
                         </div>
                     </div>
 
