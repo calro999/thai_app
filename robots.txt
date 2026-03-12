@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /tmp/
+Disallow: /scripts/
+Disallow: /app.js.bak
+Disallow: /inject_*.py
 
+Host: https://jlpt-with-gyaru.vercel.app
 Sitemap: https://jlpt-with-gyaru.vercel.app/sitemap.xml
