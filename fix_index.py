@@ -13,7 +13,7 @@ def update_file(filename):
 
     target = '''<button class="mode-btn cancel" style="grid-column: span 2;" onclick="closeModeSelect()">ยกเลิก
                         (Cancel)</button>'''
-    lp_btn = '''<button class="mode-btn highlight" style="grid-column: span 2; background: #FFF3E0; border-color: #FF9800; color: #E65100;" onclick="window.location.href='lp.html'">ℹ️ เกี่ยวกับแอปนี้ (About App)</button>
+    lp_btn = '''<button class="mode-btn highlight" style="grid-column: span 2; background: #FFF3E0; border-color: #FF9800; color: #E65100;" onclick="window.location.href='lp'">ℹ️ เกี่ยวกับแอปนี้ (About App)</button>
                     ''' + target
 
     if 'lp.html' not in content:
