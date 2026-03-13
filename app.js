@@ -12,10 +12,10 @@ const config = {
     questionsPerStory: 10,
     outfits: [
         { id: 'default', name: 'Default', price: 'Free', thumbnail: 'images/normal.png' },
-        { id: 'yukata', name: 'Yukata', price: 'ดูโฆษณาเพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/yukata/yukata-nikkori.png' },
-        { id: 'gos', name: 'Gos', price: 'ดูโฆษณาเพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/gos/gos_0000_normal.png' },
-        { id: 'maid', name: 'Maid', price: 'ดูโฆษณาเพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/maid/maid_0000_normal.png' },
-        { id: 'miko', name: 'Miko', price: 'ดูโฆษณาเพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/miko/miko_0000_normal.png' }
+        { id: 'yukata', name: 'Yukata', price: 'สุ่ม Shopee เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/yukata/yukata-nikkori.png' },
+        { id: 'gos', name: 'Gos', price: 'สุ่ม Shopee เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/gos/gos_0000_normal.png' },
+        { id: 'maid', name: 'Maid', price: 'สุ่ม Shopee เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/maid/maid_0000_normal.png' },
+        { id: 'miko', name: 'Miko', price: 'สุ่ม Shopee เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/miko/miko_0000_normal.png' }
     ]
 };
 
@@ -233,10 +233,10 @@ const courseConfig = {
     listening_n2: { name: 'JLPT N2 Listening', price: 'Free', points: 0 },
     n4: { name: 'JLPT N4', price: 'Free', points: 0 },
     n3: { name: 'JLPT N3', price: 'Free', points: 0 },
-    oshikatsu: { name: 'กิจกรรมของโอตาคุ', price: 'ดูโฆษณา (24 ชม.)', points: 15 },
-    special_travel: { name: 'เที่ยวญี่ปุ่นซับไววัล: 50 คำศัพท์', price: 'ดูโฆษณา (24 ชม.)', points: 15 },
-    special_food: { name: 'ร้านอาหารและกูร์เมต์', price: 'ดูโฆษณา (24 ชม.)', points: 15 },
-    special_medical: { name: 'แจ้งอาการป่วยและซื้อยา', price: 'ดูโฆษณา (24 ชม.)', points: 15 },
+    oshikatsu: { name: 'กิจกรรมของโอตาคุ', price: 'สุ่ม Shopee (24 ชม.)', points: 15 },
+    special_travel: { name: 'เที่ยวญี่ปุ่นซับไววัล: 50 คำศัพท์', price: 'สุ่ม Shopee (24 ชม.)', points: 15 },
+    special_food: { name: 'ร้านอาหารและกูร์เมต์', price: 'สุ่ม Shopee (24 ชม.)', points: 15 },
+    special_medical: { name: 'แจ้งอาการป่วยและซื้อยา', price: 'สุ่ม Shopee (24 ชม.)', points: 15 },
     listening: { name: 'การฟัง (Listening)', price: 'Free', points: 0 },
     baby_step: { name: 'เบบี้สเต็ป (Baby Step)', price: 'Free', points: 0 },
     daily_life: { name: 'ชีวิตประจำวัน (Daily Life)', price: 'Free', points: 0 },
@@ -519,25 +519,25 @@ function openModeSelect() {
             btn.style.gridColumn = "span 2";
             btn.style.borderColor = "#FF80AB"; btn.style.color = "#D81B60";
             btn.style.background = unlocked ? "#FCE4EC" : "white";
-            btn.innerHTML = unlocked ? "กิจกรรมของโอตาคุ (Oshikatsu)" : `🔑 กิจกรรมของโอตาคุ<br><small>(24 ชม.)</small>`;
+            btn.innerHTML = unlocked ? "กิจกรรมของโอตาคุ (Oshikatsu)" : `🔑 กิจกรรมของโอตาคุ<br><small>(สุ่ม Shopee Gacha)</small>`;
         }
         if (id === 'special_travel') {
             btn.style.gridColumn = "span 2";
             btn.style.borderColor = "#FF80AB"; btn.style.color = "#D81B60";
             btn.style.background = unlocked ? "#FCE4EC" : "white";
-            btn.innerHTML = unlocked ? "เที่ยวญี่ปุ่นซับไววัล (Travel Survival)" : `🔑 เที่ยวญี่ปุ่นซับไววัล<br><small>(24 ชม.)</small>`;
+            btn.innerHTML = unlocked ? "เที่ยวญี่ปุ่นซับไววัล (Travel Survival)" : `🔑 เที่ยวญี่ปุ่นซับไววัล<br><small>(สุ่ม Shopee Gacha)</small>`;
         }
         if (id === 'special_food') {
             btn.style.gridColumn = "span 2";
             btn.style.borderColor = "#FF80AB"; btn.style.color = "#D81B60";
             btn.style.background = unlocked ? "#FCE4EC" : "white";
-            btn.innerHTML = unlocked ? "ร้านอาหารและกูร์เมต์ (Food & Gourmet)" : `🔑 ร้านอาหารและกูร์เมต์<br><small>(24 ชม.)</small>`;
+            btn.innerHTML = unlocked ? "ร้านอาหารและกูร์เมต์ (Food & Gourmet)" : `🔑 ร้านอาหารและกูร์เมต์<br><small>(สุ่ม Shopee Gacha)</small>`;
         }
         if (id === 'special_medical') {
             btn.style.gridColumn = "span 2";
             btn.style.borderColor = "#FF80AB"; btn.style.color = "#D81B60";
             btn.style.background = unlocked ? "#FCE4EC" : "white";
-            btn.innerHTML = unlocked ? "แจ้งอาการป่วย (Medical & Pharmacy)" : `🔑 แจ้งอาการป่วยและซื้อยา<br><small>(24 ชม.)</small>`;
+            btn.innerHTML = unlocked ? "แจ้งอาการป่วย (Medical & Pharmacy)" : `🔑 แจ้งอาการป่วยและซื้อยา<br><small>(สุ่ม Shopee Gacha)</small>`;
         }
         btn.onclick = () => selectCourse(id);
         grid.appendChild(btn);
@@ -1069,7 +1069,7 @@ function updateShopUI() {
                 <div style="font-size:0.8rem; color:#666;">${o.price}</div>
             </div>
             <button class="shop-item-btn ${owned ? 'owned' : ''}" onclick="handleShopClick('${o.id}')">
-                ${owned ? '着替える' : 'ปลดล็อก (24ชม.)'}
+                ${owned ? '着替える' : 'สุ่ม Shopee (24ชม.)'}
             </button>
         `;
         list.appendChild(div);
