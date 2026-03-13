@@ -177,39 +177,22 @@ function selectCourse(id) {
     if (isCourseUnlocked(id)) {
         openSubModeSelect(id);
     } else {
-        if (id === 'oshikatsu') openOshikatsuSalesBox();
-        else if (id === 'special_travel') openSpecialTravelSalesBox();
-        else if (id === 'special_food') openSpecialFoodSalesBox();
-        else if (id === 'special_medical') openSpecialMedicalSalesBox();
-        else openUnlockModal(id, 'course');
+        showShopeeGacha(id, 'course');
     }
 }
 
-function openOshikatsuSalesBox() {
-    state.unlockPendingItem = { id: 'oshikatsu', type: 'course' };
-    document.getElementById('oshikatsu-sales-box').style.display = 'flex';
-}
-function closeOshikatsuSalesBox() { document.getElementById('oshikatsu-sales-box').style.display = 'none'; }
-function openSpecialTravelSalesBox() {
-    state.unlockPendingItem = { id: 'special_travel', type: 'course' };
-    document.getElementById('special-travel-sales-box').style.display = 'flex';
-}
-function closeSpecialTravelSalesBox() { document.getElementById('special-travel-sales-box').style.display = 'none'; }
-function openSpecialFoodSalesBox() {
-    state.unlockPendingItem = { id: 'special_food', type: 'course' };
-    document.getElementById('special-food-sales-box').style.display = 'flex';
-}
-function closeSpecialFoodSalesBox() { document.getElementById('special-food-sales-box').style.display = 'none'; }
-function openSpecialMedicalSalesBox() {
-    state.unlockPendingItem = { id: 'special_medical', type: 'course' };
-    document.getElementById('special-medical-sales-box').style.display = 'flex';
-}
-function closeSpecialMedicalSalesBox() { document.getElementById('special-medical-sales-box').style.display = 'none'; }
-function openUnlockModal(id, type) {
+function showShopeeGacha(id, type) {
     state.unlockPendingItem = { id, type };
-    document.getElementById('unlock-modal').style.display = 'flex';
+    if (window.unlockItemViaSmartlink) {
+        window.unlockItemViaSmartlink();
+    }
 }
-function closeUnlockModal() { document.getElementById('unlock-modal').style.display = 'none'; }
+function openUnlockModal(id, type) { showShopeeGacha(id, type); }
+function openOshikatsuSalesBox() { showShopeeGacha('oshikatsu', 'course'); }
+function openSpecialTravelSalesBox() { showShopeeGacha('special_travel', 'course'); }
+function openSpecialFoodSalesBox() { showShopeeGacha('special_food', 'course'); }
+function openSpecialMedicalSalesBox() { showShopeeGacha('special_medical', 'course'); }
+function closeUnlockModal() { document.getElementById('shopee-gacha-modal').style.display = 'none'; }
 
 // ★ スマートリンク解放完了後に呼ばれる関数（index.htmlのリスナーから実行される）
 function unlockCourse(id, showAlert) {
