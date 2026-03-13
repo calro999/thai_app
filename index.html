@@ -662,61 +662,25 @@
                 </div>
             </div>
 
-            <div id="main-menu" class="overlay-menu" style="display: none;">
+                        <div id="main-menu" class="overlay-menu" style="display: none;">
                 <div class="mode-card">
-                    <h3>เมนู (Menu)</h3>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <button class="mode-btn highlight" onclick="openModeSelect(); closeMainMenu();">📖 เลือกบทเรียน
-                            (Lessons)</button>
-                        <button class="mode-btn highlight" onclick="openShop(); closeMainMenu();">🛍️ ร้านค้าชุด
-                            (Shop)</button>
-                        <button class="mode-btn cancel" onclick="closeMainMenu()">ปิด (Close)</button>
+                    <h3 id="menu-title">Menu</h3>
+                    <div class="menu-grid">
+                        <button class="menu-item" onclick="showStorySelect('n5')">📖 JLPT N5 Course</button>
+                        <button class="menu-item" onclick="showStorySelect('n4')">📚 JLPT N4 Course</button>
+                        <button class="menu-item" onclick="showStorySelect('n3')">📕 JLPT N3 Course</button>
+                        <button class="menu-item" onclick="showStorySelect('travel')">✈️ Travel Phrases</button>
+                        <button class="menu-item" onclick="showStorySelect('food')">🍜 Food & Gourmet</button>
+                        <button class="menu-item" onclick="showStorySelect('medical')">🏥 Medical Phrases</button>
+                        <button class="menu-item" onclick="showStorySelect('oshikatsu')">🌟 Oshikatsu Course</button>
+                        <button class="menu-item" onclick="openShop()">🛍️ Outfit Shop</button>
+                        <button class="menu-item" onclick="openSettings()">⚙️ Settings</button>
                     </div>
+                    <button class="mode-btn cancel" onclick="closeMainMenu()">ปิด (Close)</button>
                 </div>
             </div>
 
-            <div id="mode-selection" class="overlay-menu" style="display: none;">
-                <div class="mode-card">
-                    <h3>เลือกคอร์สที่ต้องการเรียน</h3>
-                    <div class="mode-grid">
-                        <!-- Dynamic buttons from app.js will appear here -->
-                        <button class="mode-btn highlight"
-                            style="grid-column: span 2; background: #FFF3E0; border-color: #FF9800; color: #E65100;"
-                            onclick="window.location.href='lp'">ℹ️ เกี่ยวกับแอปนี้ (About App)</button>
-                        <button class="mode-btn cancel" style="grid-column: span 2;" onclick="closeModeSelect()">ยกเลิก
-                            (Cancel)</button>
-                    </div>
-                </div>
-            </div>
-
-            <div id="listening-selection" class="overlay-menu" style="display:none;">
-                <div class="mode-card">
-                    <h3>🎧 เลือกคอร์สการฟัง (Select Listening)</h3>
-                    <div class="mode-grid" id="listening-grid">
-                    </div>
-                    <button class="mode-btn cancel" style="margin-top: 15px;"
-                        onclick="document.getElementById('listening-selection').style.display='none'; openModeSelect();">กลับ
-                        (Back)</button>
-                </div>
-            </div>
-
-            <div id="sub-selection" class="overlay-menu" style="display: none;">
-                <div class="mode-card">
-                    <h3>เลือกรูปแบบการฝึก</h3>
-                    <div class="mode-grid">
-                        <button class="mode-btn highlight" onclick="setGameMode('learning')"
-                            style="background: #E0F7FA;">📖
-                            เรียน (Learning)</button>
-                        <button class="mode-btn highlight" onclick="setGameMode('quiz')" style="background: #FFF9C4;">⚔️
-                            ควิซ (Quiz)</button>
-                        <button class="mode-btn cancel" style="grid-column: span 2;"
-                            onclick="document.getElementById('sub-selection').style.display='none'; openModeSelect();">ย้อนกลับ
-                            (Back)</button>
-                    </div>
-                </div>
-            </div>
-
-            <div id="story-selection" class="overlay-menu" style="display: none;">
+            <div id="story-modal" class="overlay-menu" style="display:none;">
                 <div class="mode-card" style="border-color: #FF80AB;">
                     <h3 id="story-level-title">Unit Selection</h3>
                     <div id="story-list-container" class="story-grid">
@@ -739,7 +703,7 @@
                         <button class="mode-btn highlight" id="use-points-btn"
                             onclick="unlockWithPoints()">ใช้แต้มปลดล็อก (Use Points)</button>
                         <button class="mode-btn" onclick="unlockItemViaSmartlink()"
-                            style="background: #E1F5FE; border-color: #4FC3F7;">✨ ชมโฆษณาเพื่อปลดล็อก 24 ชม.</button>
+                            style="background: #E1F5FE; border-color: #4FC3F7;">✨ สุ่มขนมเพื่อปลดล็อก 24 ชม.</button>
                         <button class="mode-btn cancel" onclick="closeUnlockModal()">ปิด (Close)</button>
                     </div>
                 </div>
@@ -751,9 +715,7 @@
                     <img id="result-img" src="images/normal.png"
                         style="height: 150px; display: block; margin: 15px auto; object-fit: contain;">
                     <p id="result-message" style="font-weight: bold; margin-bottom: 5px; color: #666;"></p>
-                    <p id="result-score" style="font-size: 2.2rem; font-weight: bold; color: #FF4081; margin: 10px 0;">0
-                        /
-                        10</p>
+                    <p id="result-score" style="font-size: 2.2rem; font-weight: bold; color: #FF4081; margin: 10px 0;">0 / 10</p>
                     <button class="mode-btn highlight" id="result-close">กลับสู่เมนู</button>
                 </div>
             </div>
@@ -772,12 +734,12 @@
                     <h3 style="color: #D81B60;">🔑 กิจกรรมของโอตาคุ</h3>
                     <p style="font-size: 1rem; line-height: 1.6; color: #333; margin-bottom: 20px; text-align: left;">
                         <b>วิธีปลดล็อก:</b><br>
-                        เพียงคลิกชมโฆษณาเพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
+                        เพียงร่วมสุ่มขนมญี่ปุ่นผ่าน Shopee เพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
                     </p>
                     <div style="display: flex; flex-direction: column; gap: 12px;">
                         <button class="mode-btn highlight" onclick="unlockItemViaSmartlink()"
                             style="background: #FCE4EC; border-color: #F06292; color: #D81B60; padding: 18px; font-size: 1.1rem;">
-                            ✨ ชมโฆษณาเพื่อปลดล็อก 24 ชม.
+                            ✨ สุ่มขนมเพื่อปลดล็อก 24 ชม.
                         </button>
                         <button class="mode-btn cancel" onclick="closeOshikatsuSalesBox()">ยกเลิก (Cancel)</button>
                     </div>
@@ -789,12 +751,12 @@
                     <h3 style="color: #D81B60;">🔑 เที่ยวญี่ปุ่นซับไววัล: 50 คำศัพท์ต้องรู้</h3>
                     <p style="font-size: 1rem; line-height: 1.6; color: #333; margin-bottom: 20px; text-align: left;">
                         <b>วิธีปลดล็อก:</b><br>
-                        เพียงคลิกชมโฆษณาเพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
+                        เพียงร่วมสุ่มขนมญี่ปุ่นผ่าน Shopee เพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
                     </p>
                     <div style="display: flex; flex-direction: column; gap: 12px;">
                         <button class="mode-btn highlight" onclick="unlockItemViaSmartlink()"
                             style="background: #FCE4EC; border-color: #F06292; color: #D81B60; padding: 18px; font-size: 1.1rem;">
-                            ✨ ชมโฆษณาเพื่อปลดล็อก 24 ชม.
+                            ✨ สุ่มขนมเพื่อปลดล็อก 24 ชม.
                         </button>
                         <button class="mode-btn cancel" onclick="closeSpecialTravelSalesBox()">ยกเลิก (Cancel)</button>
                     </div>
@@ -806,12 +768,12 @@
                     <h3 style="color: #D81B60;">🔑 ร้านอาหารและกูร์เมต์</h3>
                     <p style="font-size: 1rem; line-height: 1.6; color: #333; margin-bottom: 20px; text-align: left;">
                         <b>วิธีปลดล็อก:</b><br>
-                        เพียงคลิกชมโฆษณาเพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
+                        เพียงร่วมสุ่มขนมญี่ปุ่นผ่าน Shopee เพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
                     </p>
                     <div style="display: flex; flex-direction: column; gap: 12px;">
                         <button class="mode-btn highlight" onclick="unlockItemViaSmartlink()"
                             style="background: #FCE4EC; border-color: #F06292; color: #D81B60; padding: 18px; font-size: 1.1rem;">
-                            ✨ ชมโฆษณาเพื่อปลดล็อก 24 ชม.
+                            ✨ สุ่มขนมเพื่อปลดล็อก 24 ชม.
                         </button>
                         <button class="mode-btn cancel" onclick="closeSpecialFoodSalesBox()">ยกเลิก (Cancel)</button>
                     </div>
@@ -823,19 +785,54 @@
                     <h3 style="color: #D81B60;">🔑 แจ้งอาการป่วยและซื้อยาอย่างมั่นใจ</h3>
                     <p style="font-size: 1rem; line-height: 1.6; color: #333; margin-bottom: 20px; text-align: left;">
                         <b>วิธีปลดล็อก:</b><br>
-                        เพียงคลิกชมโฆษณาเพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
+                        เพียงร่วมสุ่มขนมญี่ปุ่นผ่าน Shopee เพื่อสนับสนุนนักพัฒนา<br>คุณจะสามารถเข้าเรียนคอร์สนี้ได้ฟรี <b>24 ชั่วโมง!</b>
                     </p>
                     <div style="display: flex; flex-direction: column; gap: 12px;">
                         <button class="mode-btn highlight" onclick="unlockItemViaSmartlink()"
                             style="background: #FCE4EC; border-color: #F06292; color: #D81B60; padding: 18px; font-size: 1.1rem;">
-                            ✨ ชมโฆษณาเพื่อปลดล็อก 24 ชม.
+                            ✨ สุ่มขนมเพื่อปลดล็อก 24 ชม.
                         </button>
                         <button class="mode-btn cancel" onclick="closeSpecialMedicalSalesBox()">ยกเลิก (Cancel)</button>
                     </div>
                 </div>
             </div>
 
-            <div id="settings-modal" class="overlay-menu" style="display:none;">
+            <div id="shopee-gacha-modal" class="overlay-menu" style="display:none;">
+                <div style="max-width: 380px; margin: auto; padding: 20px; border: 2px dashed #ff4500; border-radius: 15px; background-color: #ffffff; text-align: center; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: relative;">
+                    <p style="font-size: 18px; font-weight: bold; color: #ff4500; margin-bottom: 8px;">
+                        🇯🇵 สุ่มขนมญี่ปุ่นยอดฮิต !
+                    </p>
+                    <p style="font-size: 13px; color: #555; line-height: 1.5; margin-bottom: 20px; padding: 0 10px;">
+                        ลองกดสุ่มดูไหมครับ? หากคุณซื้อสินค้าผ่านลิงก์นี้ ค่าคอมมิชชันส่วนหนึ่งจะช่วยสนับสนุนเรา (ราคาสินค้าเท่าเดิมครับ)
+                        <br><span style="font-size: 11px; color: #aaa;">*เราไม่ได้เป็นผู้ขายโดยตรง เป็นเพียงการแนะนำสินค้าคุณภาพจาก Shopee เท่านั้น</span>
+                    </p>
+                
+                    <button id="random-snack-btn-main" style="
+                        background-color: #ff4500; 
+                        color: white; 
+                        border: none; 
+                        padding: 14px 32px; 
+                        font-size: 16px; 
+                        font-weight: bold; 
+                        border-radius: 50px; 
+                        cursor: pointer;
+                        transition: 0.3s;
+                        box-shadow: 0 4px 12px rgba(255, 69, 0, 0.4);
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        width: 90%;
+                        justify-content: center;
+                    " onclick="startShopeeGachaUnlock()">
+                        <span>สุ่มขนมและสนับสนุนเรา</span> 🍬
+                    </button>
+                    
+                    <button class="mode-btn cancel" onclick="closeShopeeGacha()" style="margin-top: 15px; width: 90%;">ยกเลิก (Cancel)</button>
+                </div>
+            </div>
+
+
+<div id="settings-modal" class="overlay-menu" style="display:none;">
                 <div class="mode-card" style="max-width:380px;">
                     <h3 style="color: #8a2be2; margin-top:0;">การตั้งค่า (Settings)</h3>
 
@@ -1003,7 +1000,7 @@
             }
         });
 
-        // --- 4. 24時間解放用スマートリンク機能 ---
+        // --- 4. 24時間解放用機能 ---
         let unlockTarget = null;
         let isWaitingForUnlock = false;
 
@@ -1013,11 +1010,33 @@
                 unlockTarget = window.state.unlockPendingItem;
             }
 
-            // スマートリンクを開く
+            // Gachaモーダルを表示
+            document.getElementById('shopee-gacha-modal').style.display = 'flex';
+        }
+
+        function closeShopeeGacha() {
+            document.getElementById('shopee-gacha-modal').style.display = 'none';
+        }
+
+        function startShopeeGachaUnlock() {
+            const snackLinks = [
+                'https://s.shopee.co.th/3qI9ZmMOIL', // セブンプレミアム ラングドシャ
+                'https://s.shopee.co.th/1BHOP5pyGW', // 北海道クッキー
+                'https://s.shopee.co.th/900FjalhpK', // DIYお菓子 (知育菓子)
+                'https://s.shopee.co.th/1gDf0IdluT', // セブンプレミアム カリカリコーン
+                'https://s.shopee.co.th/9pZMjNekeD'  // じゃがりこ
+            ];
+
+            // ランダムに選出
+            const randomLink = snackLinks[Math.floor(Math.random() * snackLinks.length)];
+            
+            // 新しいタブで開く
+            window.open(randomLink, '_blank');
             
             isWaitingForUnlock = true;
-
-            // 全ての課金モーダルを閉じる
+            
+            // モーダルを閉じる
+            closeShopeeGacha();
             if (typeof closeUnlockModal === 'function') closeUnlockModal();
             if (typeof closeOshikatsuSalesBox === 'function') closeOshikatsuSalesBox();
             if (typeof closeSpecialTravelSalesBox === 'function') closeSpecialTravelSalesBox();

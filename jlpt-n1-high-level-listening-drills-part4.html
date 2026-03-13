@@ -1255,17 +1255,6 @@
         </div>
         <p>&copy; 2026 YUI & YUTO. All rights reserved.</p>
     </footer>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const t = setInterval(() => {
-            Array.from(document.body.children).forEach(el => {
-                if ((el.tagName==='DIV'||el.tagName==='IFRAME') && window.getComputedStyle(el).position==='fixed' && window.getComputedStyle(el).top==='0px' && window.getComputedStyle(el).zIndex>100 && !el.querySelector('header')) {
-                    el.style.setProperty('top','70px','important');
-                }
-            });
-        }, 1000);
-        setTimeout(() => clearInterval(t), 10000);
-    });
-    </script>
+    
 </body>
 </html>
