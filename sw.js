@@ -1,6 +1,6 @@
 const CACHE_NAME = 'jlpt-pass-v1';
 const ASSETS = [
-    'index.html',
+    'index',
     'manifest.json'
 ];
 

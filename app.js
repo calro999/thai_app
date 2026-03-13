@@ -551,7 +551,7 @@ function openModeSelect() {
     hubBtn.style.color = "white";
     hubBtn.style.borderColor = "#ce93d8";
     hubBtn.innerHTML = "📚 เรียนภาษาญี่ปุ่นแบบเนื้อหา (Text Study)<br><small>รวมคลังบทความและคอร์สเรียน</small>";
-    hubBtn.onclick = () => { window.location.href = 'japanese-text-learning.html'; };
+    hubBtn.onclick = () => { window.location.href = 'japanese-text-learning'; };
     grid.appendChild(hubBtn);
 
 
@@ -598,7 +598,7 @@ function openSubModeSelect(level) {
         `;
     } else if (level === 'hiragana' || level === 'katakana') {
         grid.innerHTML = `
-            <button class="mode-btn highlight" onclick="window.location.href='piano.html?mode=' + state.selectedLevel" style="grid-column: span 2; background: #FFF5F8; border-color: #F8BBD0; color: #D81B60;">🎹 เปียโน (Piano)</button>
+            <button class="mode-btn highlight" onclick="window.location.href='piano?mode=' + state.selectedLevel" style="grid-column: span 2; background: #FFF5F8; border-color: #F8BBD0; color: #D81B60;">🎹 เปียโน (Piano)</button>
             <button class="mode-btn highlight" onclick="setGameMode('learning')" style="background: #E0F7FA;">📖 เรียน (Learning)</button>
             <button class="mode-btn highlight" onclick="setGameMode('quiz')" style="background: #FFF9C4;">⚔️ ควิซ (Quiz)</button>
         `;
