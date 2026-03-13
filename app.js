@@ -12,10 +12,10 @@ const config = {
     questionsPerStory: 10,
     outfits: [
         { id: 'default', name: 'Default', price: 'Free', thumbnail: 'images/normal.png' },
-        { id: 'yukata', name: 'Yukata', price: 'สุ่ม Shopee เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/yukata/yukata-nikkori.png' },
-        { id: 'gos', name: 'Gos', price: 'สุ่ม Shopee เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/gos/gos_0000_normal.png' },
-        { id: 'maid', name: 'Maid', price: 'สุ่ม Shopee เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/maid/maid_0000_normal.png' },
-        { id: 'miko', name: 'Miko', price: 'สุ่ม Shopee เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/miko/miko_0000_normal.png' }
+        { id: 'yukata', name: 'Yukata', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/yukata/yukata-nikkori.png' },
+        { id: 'gos', name: 'Gos', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/gos/gos_0000_normal.png' },
+        { id: 'maid', name: 'Maid', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/maid/maid_0000_normal.png' },
+        { id: 'miko', name: 'Miko', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/miko/miko_0000_normal.png' }
     ]
 };
 
@@ -206,27 +206,27 @@ function unlockOutfit(id, showAlert) {
 }
 
 const courseConfig = {
-    hiragana: { name: 'Hiragana', price: 'Free', points: 0 },
-    katakana: { name: 'Katakana', price: 'Free', points: 0 },
-    n5: { name: 'JLPT N5', price: 'Free', points: 0 },
-    listening_n5: { name: 'JLPT N5 Listening', price: 'Free', points: 0 },
-    listening_n4: { name: 'JLPT N4 Listening', price: 'Free', points: 0 },
-    listening_n3: { name: 'JLPT N3 Listening', price: 'Free', points: 0 },
-    listening_n1: { name: 'JLPT N1 Listening', price: 'Free', points: 0 },
-    listening_n2: { name: 'JLPT N2 Listening', price: 'Free', points: 0 },
-    n4: { name: 'JLPT N4', price: 'Free', points: 0 },
-    n3: { name: 'JLPT N3', price: 'Free', points: 0 },
-    oshikatsu: { name: 'กิจกรรมของโอตาคุ', price: 'สุ่ม Shopee (24 ชม.)', points: 15 },
-    special_travel: { name: 'เที่ยวญี่ปุ่นซับไววัล: 50 คำศัพท์', price: 'สุ่ม Shopee (24 ชม.)', points: 15 },
-    special_food: { name: 'ร้านอาหารและกูร์เมต์', price: 'สุ่ม Shopee (24 ชม.)', points: 15 },
-    special_medical: { name: 'แจ้งอาการป่วยและซื้อยา', price: 'สุ่ม Shopee (24 ชม.)', points: 15 },
-    listening: { name: 'การฟัง (Listening)', price: 'Free', points: 0 },
-    baby_step: { name: 'เบบี้สเต็ป (Baby Step)', price: 'Free', points: 0 },
-    daily_life: { name: 'ชีวิตประจำวัน (Daily Life)', price: 'Free', points: 0 },
-    communication: { name: 'การสื่อสาร (Communication)', price: 'Free', points: 0 },
-    number: { name: 'ตัวเลขและเวลา (Numbers & Time)', price: 'Free', points: 0 },
-    business: { name: 'ทำงานกันเถอะ (Business)', price: 'Free', points: 0 },
-    disaster: { name: 'ภัยพิบัติและการเอาตัวรอด', price: 'Free', points: 0 }
+    hiragana: { name: 'Hiragana', price: 'Free' },
+    katakana: { name: 'Katakana', price: 'Free' },
+    n5: { name: 'JLPT N5', price: 'Free' },
+    listening_n5: { name: 'JLPT N5 Listening', price: 'Free' },
+    listening_n4: { name: 'JLPT N4 Listening', price: 'Free' },
+    listening_n3: { name: 'JLPT N3 Listening', price: 'Free' },
+    listening_n1: { name: 'JLPT N1 Listening', price: 'Free' },
+    listening_n2: { name: 'JLPT N2 Listening', price: 'Free' },
+    n4: { name: 'JLPT N4', price: 'Free' },
+    n3: { name: 'JLPT N3', price: 'Free' },
+    oshikatsu: { name: 'กิจกรรมของโอตาคุ', price: 'สุ่ม Shopee Gacha (24 ชม.)' },
+    special_travel: { name: 'เที่ยวญี่ปุ่นซับไววัล: 50 คำศัพท์', price: 'สุ่ม Shopee Gacha (24 ชม.)' },
+    special_food: { name: 'ร้านอาหารและกูร์メต์', price: 'สุ่ม Shopee Gacha (24 ชม.)' },
+    special_medical: { name: 'แจ้งอาการป่วยและซื้อยา', price: 'สุ่ม Shopee Gacha (24 ชม.)' },
+    listening: { name: 'การฟัง (Listening)', price: 'Free' },
+    baby_step: { name: 'เบบี้สเต็ป (Baby Step)', price: 'Free' },
+    daily_life: { name: 'ชีวิตประจำวัน (Daily Life)', price: 'Free' },
+    communication: { name: 'การสื่อสาร (Communication)', price: 'Free' },
+    number: { name: 'ตัวเลขและเวลา (Numbers & Time)', price: 'Free' },
+    business: { name: 'ทำงานกันเถอะ (Business)', price: 'Free' },
+    disaster: { name: 'ภัยพิบัติและการเอาตัวรอด', price: 'Free' }
 };
 
 const oshikatsuUnitInfo = {
@@ -1052,7 +1052,7 @@ function updateShopUI() {
                 <div style="font-size:0.8rem; color:#666;">${o.price}</div>
             </div>
             <button class="shop-item-btn ${owned ? 'owned' : ''}" onclick="handleShopClick('${o.id}')">
-                ${owned ? '着替える' : 'สุ่ม Shopee (24ชม.)'}
+                ${owned ? '着替える' : 'สุ่ม Shopee Gacha (24ชม.)'}
             </button>
         `;
         list.appendChild(div);
