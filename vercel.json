@@ -36,7 +36,7 @@
       ]
     },
     {
-      "source": "/images/:path*",
+      "source": "/images/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "source": "/gd_build/assets/:path*",
+      "source": "/gd_build/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "source": "/:path*(js|css|png|jpg|jpeg|gif|ico|svg|webp|mp3|wav|json)",
+      "source": "/(.*).(js|css|png|jpg|jpeg|gif|ico|svg|webp|mp3|wav|json)",
       "headers": [
         {
           "key": "Cache-Control",

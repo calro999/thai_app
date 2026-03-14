@@ -663,7 +663,24 @@
             </div>
 
 
-            <div id="story-modal" class="overlay-menu" style="display:none;">
+            <!-- Navigation Modals -->
+            <div id="mode-selection" class="overlay-menu" style="display:none;">
+                <div class="mode-card" style="border-color: #D81B60;">
+                    <h3 style="color: #D81B60; text-align: center; margin-bottom: 20px;">เลือกโหมดการเรียนรู้ (Select Mode)</h3>
+                    <div class="mode-grid"></div>
+                    <button class="mode-btn cancel" onclick="document.getElementById('mode-selection').style.display='none'; document.getElementById('lobby-ui').style.visibility='visible';">ยกเลิก (Cancel)</button>
+                </div>
+            </div>
+
+            <div id="sub-selection" class="overlay-menu" style="display:none;">
+                <div class="mode-card" style="border-color: #4A90E2;">
+                    <h3 style="color: #4A90E2; text-align: center; margin-bottom: 20px;">เลือกหัวข้อ (Select Topic)</h3>
+                    <div class="mode-grid"></div>
+                    <button class="mode-btn cancel" onclick="document.getElementById('sub-selection').style.display='none'; document.getElementById('mode-selection').style.display='flex';">ย้อนกลับ (Back)</button>
+                </div>
+            </div>
+
+            <div id="story-selection" class="overlay-menu" style="display:none;">
                 <div class="mode-card" style="border-color: #FF80AB;">
                     <h3 id="story-level-title">Unit Selection</h3>
                     <div id="story-list-container" class="story-grid">
@@ -673,6 +690,19 @@
                         (Back)</button>
                 </div>
             </div>
+
+            <!-- Result Modal -->
+            <div id="result-modal" class="overlay-menu" style="display:none;">
+                <div class="mode-card" style="border-color: #FFD700; text-align: center;">
+                    <h2 id="result-message" style="color: #D81B60; margin-bottom: 10px;">ยอดเยี่ยม!</h2>
+                    <div style="height: 150px; margin-bottom: 15px;">
+                        <img id="result-img" src="images/normal.png" alt="Result" style="height: 100%; object-fit: contain;">
+                    </div>
+                    <p id="result-score" style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">คะแนน: 10/10</p>
+                    <button id="result-close" class="mode-btn highlight" onclick="document.getElementById('result-modal').style.display='none'; openModeSelect();">กลับไปหน้าหลัก (Home)</button>
+                </div>
+            </div>
+
             <div id="shopee-gacha-modal" class="overlay-menu" style="display:none;">
                 <div style="max-width: 380px; margin: auto; padding: 18px; border: 2px dashed #ff4500; border-radius: 15px; background-color: #ffffff; text-align: center; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-shadow: 0 4px 15px rgba(0,0,0,0.05); position: relative;">
                     
