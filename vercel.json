@@ -11,7 +11,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: 'unsafe-inline' 'unsafe-eval' *.klook.com *.shopee.co.th; style-src 'self' https: 'unsafe-inline'; img-src 'self' https: data: *.klook.com *.shopee.co.th; font-src 'self' https: data:; connect-src 'self' https: *.klook.com *.shopee.co.th; frame-src 'self' https:; frame-ancestors 'self' https://*.vercel.app https://yui-universe.vercel.app https://th-nihongo-quest.vercel.app https://jlpt-with-gyaru.vercel.app https://thai-maid-gal-novel.vercel.app https://thai-gal-novel.vercel.app https://thai-school-festival-novel.vercel.app https://study-japanese-tokyo.vercel.app https://th-intern-romance.vercel.app https://th-distance-love.vercel.app https://yui-yuto.vercel.app;"
+          "value": "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: 'unsafe-inline' 'unsafe-eval' *.klook.com *.shopee.co.th; style-src 'self' https: 'unsafe-inline'; img-src 'self' https: data: *.klook.com *.shopee.co.th; font-src 'self' https: data:; connect-src 'self' https: *.klook.com *.shopee.co.th; frame-src 'self' https:; frame-ancestors 'self' https://*.vercel.app"
         },
         {
           "key": "X-Robots-Tag",

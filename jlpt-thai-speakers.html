@@ -235,22 +235,6 @@
     </footer>
 
     
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const pushSocialBar = setInterval(() => {
-            Array.from(document.body.children).forEach(el => {
-                if (el.tagName === 'DIV' || el.tagName === 'IFRAME') {
-                    const style = window.getComputedStyle(el);
-                    if (style.position === 'fixed' && style.top === '0px' && style.zIndex > 100) {
-                        if (el.tagName !== 'HEADER' && !el.querySelector('header')) {
-                            el.style.setProperty('top', '70px', 'important');
-                        }
-                    }
-                }
-            });
-        }, 1000);
-        setTimeout(() => clearInterval(pushSocialBar), 10000);
-    });
-    </script>
+    
 </body>
 </html>
