@@ -371,8 +371,9 @@
         #oshikatsu-sales-box,
         #special-travel-sales-box,
         #special-food-sales-box,
-        #special-medical-sales-box {
-            z-index: 10005 !important;
+        #special-medical-sales-box,
+        #shopee-gacha-modal {
+            z-index: 10010 !important;
         }
 
         @media screen and (max-width: 768px) {
@@ -600,6 +601,7 @@
                             'https://s.shopee.co.th/9pZMjNekeD'  // じゃがりこ
                         ];
                         const randomLink = snackLinks[Math.floor(Math.random() * snackLinks.length)];
+                        isWaitingForSupportReturn = true; // Added support reward flag
                         window.open(randomLink, '_blank');
                     });
                     const snackBtn = document.getElementById('random-snack-btn');
@@ -714,7 +716,7 @@
                         <br><span style="font-size: 10px; color: #aaa;">*เราไม่ได้เป็นผู้ขายโดยตรง เป็นเพียงการแนะนำสินค้าคุณภาพจาก Shopee เท่านั้น</span>
                     </p>
 
-                    <button id="random-snack-btn" style="
+                    <button id="random-snack-btn-gacha" style="
                         background-color: #ff4500; 
                         color: white; 
                         border: none; 
@@ -824,6 +826,7 @@
                             <script>
                                 document.getElementById('random-snack-btn-settings').addEventListener('click', function () {
                                     const snackLinks = ['https://s.shopee.co.th/3qI9ZmMOIL', 'https://s.shopee.co.th/1BHOP5pyGW', 'https://s.shopee.co.th/900FjalhpK', 'https://s.shopee.co.th/1gDf0IdluT', 'https://s.shopee.co.th/9pZMjNekeD'];
+                                    isWaitingForSupportReturn = true; // Added support reward flag
                                     window.open(snackLinks[Math.floor(Math.random() * snackLinks.length)], '_blank');
                                 });
                             </script>
@@ -952,6 +955,7 @@
             ];
             const randomLink = snackLinks[Math.floor(Math.random() * snackLinks.length)];
             isWaitingForUnlock = true;
+            isWaitingForSupportReturn = true; // Added support reward flag
             window.open(randomLink, '_blank');
             closeShopeeGacha();
         }
