@@ -662,23 +662,6 @@
                 </div>
             </div>
 
-                        <div id="main-menu" class="overlay-menu" style="display: none;">
-                <div class="mode-card">
-                    <h3 id="menu-title">Menu</h3>
-                    <div class="menu-grid">
-                        <button class="menu-item" onclick="showStorySelect('n5')">📖 JLPT N5 Course</button>
-                        <button class="menu-item" onclick="showStorySelect('n4')">📚 JLPT N4 Course</button>
-                        <button class="menu-item" onclick="showStorySelect('n3')">📕 JLPT N3 Course</button>
-                        <button class="menu-item" onclick="showStorySelect('travel')">✈️ Travel Phrases</button>
-                        <button class="menu-item" onclick="showStorySelect('food')">🍜 Food & Gourmet</button>
-                        <button class="menu-item" onclick="showStorySelect('medical')">🏥 Medical Phrases</button>
-                        <button class="menu-item" onclick="showStorySelect('oshikatsu')">🌟 Oshikatsu Course</button>
-                        <button class="menu-item" onclick="openShop()">🛍️ Outfit Shop</button>
-                        <button class="menu-item" onclick="openSettings()">⚙️ Settings</button>
-                    </div>
-                    <button class="mode-btn cancel" onclick="closeMainMenu()">ปิด (Close)</button>
-                </div>
-            </div>
 
             <div id="story-modal" class="overlay-menu" style="display:none;">
                 <div class="mode-card" style="border-color: #FF80AB;">
@@ -918,7 +901,7 @@
         let unlockTarget = null;
         let isWaitingForUnlock = false;
 
-        function unlockItemViaSmartlink() {
+        function openShopeeGacha() {
             if (window.state && window.state.unlockPendingItem) {
                 unlockTarget = window.state.unlockPendingItem;
             }

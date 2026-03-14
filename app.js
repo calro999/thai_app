@@ -1,5 +1,5 @@
 /**
- * JLPT Visual Novel Engine - Oshikatsu & 24h Smartlink Unlock Update
+ * JLPT Visual Novel Engine - Oshikatsu & 24h Shopee Gacha Unlock Update
  */
 
 const APP_CONFIG = {
@@ -55,11 +55,8 @@ const characterAssets = {
 
 // ★★★ 24時間解放の判定ロジック ★★★
 function isCourseUnlocked(id) {
-    // 基本無料コースは常にアンロック
-    const freeCourses = ["hiragana", "katakana", "n5", "n4", "n3", "listening"];
-    if (freeCourses.includes(id) || id.startsWith('listening_') || id === 'baby_step' || id === 'daily_life' || id === 'communication' || id === 'number' || id === 'business' || id === 'disaster') {
-        return true;
-    }
+    if (!courseConfig[id]) return true;
+    if (courseConfig[id].price === 'Free') return true;
 
     // 24時間タイマーのチェック
     const unlockTime = localStorage.getItem(`unlock_24h_course_${id}`);
@@ -183,8 +180,8 @@ function selectCourse(id) {
 
 function showShopeeGacha(id, type) {
     state.unlockPendingItem = { id, type };
-    if (window.unlockItemViaSmartlink) {
-        window.unlockItemViaSmartlink();
+    if (window.openShopeeGacha) {
+        window.openShopeeGacha();
     }
 }
 function openUnlockModal(id, type) { showShopeeGacha(id, type); }
@@ -546,6 +543,14 @@ function openModeSelect() {
     shopBtn.innerHTML = "🛍️ ไปที่ร้านค้า (Outfit Shop)";
     shopBtn.onclick = () => { closeModeSelect(); openShop(); };
     grid.appendChild(shopBtn);
+
+    const settingsBtn = document.createElement('button');
+    settingsBtn.className = 'mode-btn';
+    settingsBtn.style.gridColumn = "span 2";
+    settingsBtn.style.marginTop = "5px";
+    settingsBtn.innerHTML = "⚙️ การตั้งค่า (Settings)";
+    settingsBtn.onclick = () => { closeModeSelect(); openSettings(); };
+    grid.appendChild(settingsBtn);
 
     const cancelBtn = document.createElement('button');
     cancelBtn.className = 'mode-btn cancel';
@@ -1178,7 +1183,7 @@ function updateProgressBar(c, t) {
     if (pIcon) pIcon.style.left = `${pct}%`;
 }
 function hideProgressBar() { document.getElementById('progress-container').style.display = 'none'; }
-function openMainMenu() { document.getElementById('main-menu').style.display = 'flex'; }
+function openMainMenu() { openModeSelect(); }
 function closeMainMenu() { document.getElementById('main-menu').style.display = 'none'; }
 
 function openSettings() {
@@ -1204,12 +1209,13 @@ function updateSettingsPreview() {
     if (unlocked) {
         applyBtn.innerText = "เปลี่ยนชุด (Apply)";
         applyBtn.classList.add('highlight');
-        applyBtn.disabled = false;
+        applyBtn.style.background = "#8a2be2";
     } else {
-        applyBtn.innerText = "ยังไม่ได้ปลดล็อก (Locked)";
+        applyBtn.innerText = "สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)";
         applyBtn.classList.remove('highlight');
-        applyBtn.disabled = true;
+        applyBtn.style.background = "#ff4500";
     }
+    applyBtn.disabled = false;
 }
 
 function previewPrev() {
@@ -1226,6 +1232,8 @@ function applyPreviewedOutfit() {
     const outfit = config.outfits[state.previewIndex];
     if (isOutfitUnlocked(outfit.id)) {
         changeCharacter(outfit.id);
+    } else {
+        showShopeeGacha(outfit.id, 'outfit');
     }
 }
 
