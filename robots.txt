@@ -5,5 +5,5 @@ Disallow: /scripts/
 Disallow: /app.js.bak
 Disallow: /inject_*.py
 
-Host: https://jlpt-with-gyaru.vercel.app
-Sitemap: https://jlpt-with-gyaru.vercel.app/sitemap.xml
+Host: https://jlpt.yui-yuto.com
+Sitemap: https://jlpt.yui-yuto.com/sitemap.xml
