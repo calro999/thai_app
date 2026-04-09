@@ -11,11 +11,11 @@ const config = {
     reactionTime: 3000,
     questionsPerStory: 10,
     outfits: [
-        { id: 'default', name: 'Default', price: 'Free', thumbnail: 'images/normal.png' },
-        { id: 'yukata', name: 'Yukata', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/yukata/yukata-nikkori.png' },
-        { id: 'gos', name: 'Gos', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/gos/gos_0000_normal.png' },
-        { id: 'maid', name: 'Maid', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/maid/maid_0000_normal.png' },
-        { id: 'miko', name: 'Miko', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/miko/miko_0000_normal.png' }
+        { id: 'default', name: 'Default', price: 'Free', thumbnail: 'images/normal.webp' },
+        { id: 'yukata', name: 'Yukata', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/yukata/yukata-nikkori.webp' },
+        { id: 'gos', name: 'Gos', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/gos/gos_0000_normal.webp' },
+        { id: 'maid', name: 'Maid', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/maid/maid_0000_normal.webp' },
+        { id: 'miko', name: 'Miko', price: 'สุ่ม Shopee Gacha เพื่อปลดล็อก (24 ชม.)', thumbnail: 'images/miko/miko_0000_normal.webp' }
     ]
 };
 

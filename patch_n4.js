@@ -15,7 +15,7 @@ code = code.replace(
 
 code = code.replace(
     /const btnN5 = document\.createElement\('button'\);\s+btnN5\.className = 'course-btn';\s+btnN5\.innerHTML = `\s+<img src="\${BASE_URL}images\/items\/listening\.png" alt="Listening N5">\s+<span>\${n5Info\.name}<span>Free<\/span><\/span>\s+`;\s+btnN5\.onclick = \(\) => {\s+openStorySelect\('listening_n5'\);\s+};\s+listeningSelectionDiv\.appendChild\(btnN5\);/,
-    match => match + "\n\n    const btnN4 = document.createElement('button');\n    btnN4.className = 'course-btn';\n    btnN4.innerHTML = `\n        <img src=\"${BASE_URL}images/items/listening.png\" alt=\"Listening N4\">\n        <span>${n4Info.name}<span>Free</span></span>\n    `;\n    btnN4.onclick = () => {\n        openStorySelect('listening_n4');\n    };\n    listeningSelectionDiv.appendChild(btnN4);"
+    match => match + "\n\n    const btnN4 = document.createElement('button');\n    btnN4.className = 'course-btn';\n    btnN4.innerHTML = `\n        <img src=\"${BASE_URL}images/items/listening.webp\" alt=\"Listening N4\">\n        <span>${n4Info.name}<span>Free</span></span>\n    `;\n    btnN4.onclick = () => {\n        openStorySelect('listening_n4');\n    };\n    listeningSelectionDiv.appendChild(btnN4);"
 );
 
 // 3. Update conditions referencing listening_n5

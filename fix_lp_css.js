@@ -52,7 +52,7 @@ const newStyles = \`
 
 .phone-screen {
     flex: 1;
-    background: url('images/bg_classroom.jpg') center/cover;
+    background: url('images/bg_classroom.webp') center/cover;
     position: relative;
     display: flex;
     flex-direction: column;

@@ -23,7 +23,7 @@ html {
     justify-content: flex-end;
 
     /* Default: PC / Desktop Setting */
-    background-image: url('images/bg_classroom.jpg');
+    background-image: url('images/bg_classroom.webp');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -47,7 +47,7 @@ html {
 /* --- Mobile Setting (Screens up to 768px) --- */
 @media screen and (max-width: 768px) {
     #game-view {
-        background-image: url('images/bg_classroom-mo.jpg');
+        background-image: url('images/bg_classroom-mo.webp');
         background-size: cover;
         background-position: center center;
     }

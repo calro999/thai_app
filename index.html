@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="canonical" href="https://jlpt.yui-yuto.com/index">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for JLPT with Gyaru" href="https://jlpt.yui-yuto.com/feed.xml" />
     <meta name="google-site-verification" content="DkCMrOjpxPVzY0T8G34bKQQDsDP9Biu83kk2wfz5hz4">
     <title>ติวญี่ปุ่นกับสาวแกล</title>
     <meta name="description" content="ติวข้อสอบ JLPT N5-N1 ครบวงจร พร้อมมินิゲームピアノ และการเรียนรู้ภาษาญี่ปุ่นกับสาวแกล">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/jpeg" href="images/icon_jlpt.jpg">
-    <link rel="apple-touch-icon" href="images/icon_jlpt.jpg">
+    <link rel="icon" type="image/jpeg" href="images/icon_jlpt.webp">
+    <link rel="apple-touch-icon" href="images/icon_jlpt.webp">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -59,7 +60,7 @@
             left: -5%;
             width: 110%;
             height: 110%;
-            background: url('gd_build/assets/images/bg_classroom_mo.jpg') center/cover no-repeat;
+            background: url('gd_build/assets/images/bg_classroom_mo.webp') center/cover no-repeat;
             filter: blur(8px) brightness(0.4);
             z-index: 1;
         }
@@ -493,7 +494,7 @@
 <body>
 
     <div id="thanks-overlay">
-        <img src="images/maid/maid_0001_nikkori.png" class="thanks-char" alt="Gyaru Smile">
+        <img src="images/maid/maid_0001_nikkori.webp" class="thanks-char" alt="Gyaru Smile">
         <div class="thanks-msg">
             <h3 style="margin:0 0 10px; color:#d81b60; font-size:22px;">ขอบคุณที่สนับสนุนนะคะ!</h3>
             <p style="margin:0 0 5px; font-weight:bold; font-size:18px;">応援ありがとう！これからもお勉強頑張ろうね！</p>
@@ -508,8 +509,8 @@
                 <div class="smartphone">
                     <div class="notch"></div>
                     <div class="mockup-screen">
-                        <img id="hero-bg" src="gd_build/assets/images/bg_classroom_mo.jpg" class="mockup-bg" alt="bg">
-                        <img id="hero-char" src="images/maid/maid_0001_nikkori.png" class="mockup-char" alt="gyaru">
+                        <img id="hero-bg" src="gd_build/assets/images/bg_classroom_mo.webp" class="mockup-bg" alt="bg">
+                        <img id="hero-char" src="images/maid/maid_0001_nikkori.webp" class="mockup-char" alt="gyaru">
                         <div id="hero-ui" class="mockup-ui">
                             <div class="mockup-name">สาวแกล</div>
                             <div id="hero-text-th" class="mockup-text">ยินดีต้อนรับกลับค่ะ นายท่าน! มาเริ่มเรียนกันเถอะ!
@@ -647,7 +648,7 @@
                     <div id="progress-fill"
                         style="position: absolute; left: 0; top: 0; bottom: 0; width: 0%; background: linear-gradient(90deg, #FF80AB, #F50057); border-radius: 8px; transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);">
                     </div>
-                    <img id="progress-icon" src="images/icon.png"
+                    <img id="progress-icon" src="images/icon.webp"
                         style="position: absolute; left: 0%; top: 50%; width: 36px; height: 36px; transform: translate(-50%, -50%); transition: left 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); z-index: 3; border-radius: 50%; box-shadow: 0 3px 8px rgba(0,0,0,0.2); background: white;">
                 </div>
             </div>
@@ -658,7 +659,7 @@
 
         <div id="game-view">
             <div class="character-container">
-                <img src="images/normal.png" alt="Character" id="heroine-img">
+                <img src="images/normal.webp" alt="Character" id="heroine-img">
             </div>
 
             <div class="ui-bottom-panel" id="lobby-ui">
@@ -707,7 +708,7 @@
                 <div class="mode-card" style="border-color: #FFD700; text-align: center;">
                     <h2 id="result-message" style="color: #D81B60; margin-bottom: 10px;">ยอดเยี่ยม!</h2>
                     <div style="height: 150px; margin-bottom: 15px;">
-                        <img id="result-img" src="images/normal.png" alt="Result" style="height: 100%; object-fit: contain;">
+                        <img id="result-img" src="images/normal.webp" alt="Result" style="height: 100%; object-fit: contain;">
                     </div>
                     <p id="result-score" style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">คะแนน: 10/10</p>
                     <button id="result-close" class="mode-btn highlight" onclick="document.getElementById('result-modal').style.display='none'; openModeSelect();">กลับไปหน้าหลัก (Home)</button>
@@ -752,7 +753,7 @@
             <div id="result-modal" class="overlay-menu" style="display:none;">
                 <div class="mode-card">
                     <h3>ยินดีด้วย! (Result)</h3>
-                    <img id="result-img" src="images/normal.png"
+                    <img id="result-img" src="images/normal.webp"
                         style="height: 150px; display: block; margin: 15px auto; object-fit: contain;">
                     <p id="result-message" style="font-weight: bold; margin-bottom: 5px; color: #666;"></p>
                     <p id="result-score" style="font-size: 2.2rem; font-weight: bold; color: #FF4081; margin: 10px 0;">0 / 10</p>
@@ -801,7 +802,7 @@
                             <p style="font-weight: bold; margin-bottom: 8px;">ตั้งค่าตัวละคร (Character Settings)</p>
                             <div class="preview-container">
                                 <div class="preview-img-wrapper" style="height: 150px; margin-bottom: 10px;">
-                                    <img id="settings-preview-img" src="images/normal.png" alt="Preview"
+                                    <img id="settings-preview-img" src="images/normal.webp" alt="Preview"
                                         style="height: 100%; object-fit: contain;">
                                 </div>
                                 <div class="preview-controls"
@@ -869,10 +870,10 @@
 
         // --- 2. タイトル画面のモックアップアニメーション ---
         const mockupData = [
-            { bg: 'gd_build/assets/images/bg_classroom_mo.jpg', img: 'images/maid/maid_0001_nikkori.png', th: "ยินดีต้อนรับกลับค่ะ นายท่าน! มาเริ่มเรียนกันเถอะ!", ja: "お帰りなさいませ、ご主人様！お勉強始めましょう！" },
-            { bg: 'gd_build/assets/images/bg_classroom_mo.jpg', img: 'images/miko/miko_0001_nikkori.png', th: "ให้เทพเจ้าคุ้มครองการสอบ JLPT ของคุณนะ!", ja: "JLPTの合格、神様にお祈りしておきますね！" },
-            { bg: 'gd_build/assets/images/bg_classroom_mo.jpg', img: 'images/yukata/yukata-nikkori.png', th: "เรียนเสร็จแล้วไปเที่ยวงานเทศกาลด้วยกันไหม?", ja: "お勉強が終わったら、一緒にお祭りに行きませんか？" },
-            { bg: 'gd_build/assets/images/bg_classroom_mo.jpg', img: 'images/gos/gos_0001_nikkori.png', th: "ความมืดมิดจะนำพาสติปัญญามาให้... ล้อเล่นน่า!", ja: "闇が知恵をもたらす……なんてね！" }
+            { bg: 'gd_build/assets/images/bg_classroom_mo.webp', img: 'images/maid/maid_0001_nikkori.webp', th: "ยินดีต้อนรับกลับค่ะ นายท่าน! มาเริ่มเรียนกันเถอะ!", ja: "お帰りなさいませ、ご主人様！お勉強始めましょう！" },
+            { bg: 'gd_build/assets/images/bg_classroom_mo.webp', img: 'images/miko/miko_0001_nikkori.webp', th: "ให้เทพเจ้าคุ้มครองการสอบ JLPT ของคุณนะ!", ja: "JLPTの合格、神様にお祈りしておきますね！" },
+            { bg: 'gd_build/assets/images/bg_classroom_mo.webp', img: 'images/yukata/yukata-nikkori.webp', th: "เรียนเสร็จแล้วไปเที่ยวงานเทศกาลด้วยกันไหม?", ja: "お勉強が終わったら、一緒にお祭りに行きませんか？" },
+            { bg: 'gd_build/assets/images/bg_classroom_mo.webp', img: 'images/gos/gos_0001_nikkori.webp', th: "ความมืดมิดจะนำพาสติปัญญามาให้... ล้อเล่นน่า!", ja: "闇が知恵をもたらす……なんてね！" }
         ];
 
         let currentIndex = 0;
