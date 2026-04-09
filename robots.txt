@@ -5,6 +5,15 @@ Disallow: /scripts/
 Disallow: /app.js.bak
 Disallow: /inject_*.py
 
+# Allow AdSense crawlers
+User-agent: Mediapartners-Google
+Allow: /
+
+# Allow Googlebot
+User-agent: Googlebot
+Allow: /
+
 Host: https://jlpt.yui-yuto.com
 Sitemap: https://jlpt.yui-yuto.com/sitemap.xml
 Sitemap: https://jlpt.yui-yuto.com/feed.xml
+
