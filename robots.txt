@@ -15,5 +15,5 @@ Allow: /
 
 Host: https://jlpt.yui-yuto.com
 Sitemap: https://jlpt.yui-yuto.com/sitemap.xml
-Sitemap: https://jlpt.yui-yuto.com/feed.xml
+Sitemap: https://jlpt.yui-yuto.com/rss.xml
 

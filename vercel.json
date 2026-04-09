@@ -1,5 +1,12 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/feed.xml",
+      "destination": "/rss.xml",
+      "permanent": true
+    }
+  ],
   "regions": ["sin1"],
   "headers": [
     {
@@ -63,7 +70,7 @@
       ]
     },
     {
-      "source": "/sitemap.xml",
+      "source": "/(sitemap.xml|rss.xml)",
       "headers": [
         {
           "key": "Content-Type",
