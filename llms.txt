@@ -1,0 +1,59 @@
+# JLPT Gyaru - ติวญี่ปุ่นกับสาวแกล
+
+> เว็บไซต์เรียนภาษาญี่ปุ่นสำหรับคนไทย เน้นการเตรียมสอบ JLPT N5-N1 ผ่านระบบมินิเกมอินเทอร์แอคทีฟ
+
+## เกี่ยวกับเว็บไซต์
+
+JLPT Gyaru (jlpt.yui-yuto.com) เป็นแพลตฟอร์มเรียนภาษาญี่ปุ่นออนไลน์ที่ออกแบบมาเพื่อผู้เรียนชาวไทยโดยเฉพาะ
+มีระบบมินิเกม Quiz ที่ช่วยให้จำคำศัพท์และไวยากรณ์ได้อย่างมีประสิทธิภาพ
+ใช้ตัวละครสาวแกล (Gyaru) เป็นตัวช่วยสอน พร้อมเสียงอ่าน Text-to-Speech ทุกประโยค
+
+## เนื้อหาหลัก
+
+- [หน้าแรก](https://jlpt.yui-yuto.com/): ภาพรวมและเข้าเล่นเกม
+- [Hub บทเรียน](https://jlpt.yui-yuto.com/hub): รวมทุกบทเรียน JLPT N5-N1
+- [เกมเปียโนฮิรางานะ](https://jlpt.yui-yuto.com/piano): ฝึกจำฮิรางานะผ่านดนตรี
+
+## คู่มือเตรียมสอบ JLPT
+
+- [JLPT N5](https://jlpt.yui-yuto.com/jlpt-pass-n5-guide): เตรียมสอบ N5 สำหรับมือใหม่
+- [JLPT N4](https://jlpt.yui-yuto.com/jlpt-pass-n4-guide): เตรียมสอบ N4 ระดับพื้นฐาน-กลาง
+- [JLPT N3](https://jlpt.yui-yuto.com/jlpt-pass-n3-guide): เตรียมสอบ N3 ระดับกลาง
+- [JLPT N2](https://jlpt.yui-yuto.com/jlpt-pass-n2-guide): เตรียมสอบ N2 ระดับสูง
+- [JLPT N1](https://jlpt.yui-yuto.com/jlpt-pass-n1-guide): เตรียมสอบ N1 ระดับมืออาชีพ
+
+## บทความเรียนภาษาญี่ปุ่น
+
+- [วิธีสอบผ่าน JLPT](https://jlpt.yui-yuto.com/jlpt-how-to-pass)
+- [วิธีเรียนภาษาญี่ปุ่นให้ได้ผล](https://jlpt.yui-yuto.com/jlpt-study-method)
+- [เรียนภาษาญี่ปุ่นสำหรับคนไทย](https://jlpt.yui-yuto.com/jlpt-thai-speakers)
+- [เทคนิคจำคำศัพท์ JLPT](https://jlpt.yui-yuto.com/jlpt-vocabulary-mastery)
+- [เรียนคันจิ JLPT](https://jlpt.yui-yuto.com/jlpt-kanji-skills)
+- [บทเรียนไวยากรณ์ JLPT](https://jlpt.yui-yuto.com/jlpt-grammar-lesson)
+- [เริ่มเรียนภาษาญี่ปุ่นจากศูนย์](https://jlpt.yui-yuto.com/jlpt-learn-japanese)
+- [เรียนภาษาญี่ปุ่นผ่านเกม](https://jlpt.yui-yuto.com/jlpt-game-learning-style)
+- [ฝึกสนทนาภาษาญี่ปุ่น](https://jlpt.yui-yuto.com/jlpt-japanese-conversation)
+- [ฝึกอ่านภาษาญี่ปุ่น](https://jlpt.yui-yuto.com/japanese-text-learning)
+
+## คำศัพท์เฉพาะทาง
+
+- [คำศัพท์อาหารญี่ปุ่น](https://jlpt.yui-yuto.com/japan-food-japanese-vocabulary)
+- [คำศัพท์ท่องเที่ยวญี่ปุ่น](https://jlpt.yui-yuto.com/japan-travel-japanese-vocabulary)
+- [คำศัพท์การแพทย์ภาษาญี่ปุ่น](https://jlpt.yui-yuto.com/japan-medical-japanese-vocabulary)
+- [คำศัพท์โอชิคาตสึ](https://jlpt.yui-yuto.com/oshikatsu-japanese-vocabulary)
+
+## ฝึกฟังภาษาญี่ปุ่น
+
+- [ฝึกฟัง N5](https://jlpt.yui-yuto.com/jlpt-n5-listening-practice)
+- [ฝึกฟัง N4](https://jlpt.yui-yuto.com/jlpt-n4-listening-practice)
+- [ฝึกฟัง N3](https://jlpt.yui-yuto.com/jlpt-n3-listening-practice)
+- [ฝึกฟัง N2](https://jlpt.yui-yuto.com/jlpt-n2-listening-practice)
+- [ฝึกฟัง N1](https://jlpt.yui-yuto.com/jlpt-n1-listening-practice)
+
+## ข้อมูลผู้ดำเนินการ
+
+- ชื่อ: YUI&YUTO
+- URL: https://jlpt.yui-yuto.com/
+- ติดต่อ: https://jlpt.yui-yuto.com/contact
+- กลุ่มเป้าหมาย: ผู้เรียนชาวไทยที่ต้องการสอบ JLPT หรือเรียนภาษาญี่ปุ่นเพื่อการทำงาน ท่องเที่ยว หรือวัฒนธรรม
+- ภาษา: ภาษาไทย (อธิบาย) + ภาษาญี่ปุ่น (เนื้อหา)
