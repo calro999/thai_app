@@ -1,50 +1,39 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="date" content="2026/03/14">
+    <meta name="date" content="2026/04/25">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>คอร์สเรียน JLPT N1 | สำนวนญี่ปุ่นขั้นสูง | JLPT Gyaru</title>
+    <title>สรุป JLPT N1: สำนวนภาษาญี่ปุ่นขั้นสูงและสุภาษิต Part 2 | Masterclass by YUI & YUTO</title>
     <link rel="canonical" href="https://jlpt.yui-yuto.com/jlpt-n1-advanced-japanese-idioms-part2">
     <link rel="icon" type="image/jpeg" href="images/icon_jlpt.webp">
     <link rel="apple-touch-icon" href="images/icon_jlpt.webp">
-    <meta name="description" content="เรียนสำนวนญี่ปุ่นขั้นสูงระดับ N1 พร้อมตัวอย่างประโยค เสียงอ่าน และแบบทดสอบสำหรับคนไทย">
+    <meta name="description"
+        content="ติวเข้ม JLPT N1 เจาะลึกสำนวนสุภาษิตและคำศัพท์ชั้นสูงที่แสดงถึงภูมิปัญญาญี่ปุ่น ตอนที่ 2 โดย YUI & YUTO มาสเตอร์คลาสที่จะช่วยให้คุณสื่อสารได้อย่างสง่างามและทรงพลัง">
     <link rel="stylesheet" href="jlpt_lp.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Kanit', sans-serif; background: #f5f0ff; color: #333; margin: 0; padding: 0; }
-        .hero { background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 50%, #ab47bc 100%); padding: 80px 5% 40px; text-align: center; color: white; margin-bottom: 40px; position: relative; overflow: hidden; }
-        .hero::before { content: 'N1'; position: absolute; font-size: 20rem; font-weight: bold; opacity: 0.05; right: -2rem; top: 50%; transform: translateY(-50%); line-height: 1; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; position: relative; }
+        body { font-family: 'Kanit', sans-serif; background: #fdfaf6; color: #333; margin: 0; padding: 0; }
+        .hero { background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%); padding: 80px 5% 40px; text-align: center; color: white; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
         .container { max-width: 900px; margin: 0 auto 50px; padding: 0 20px; }
-        .learning-card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(74,20,140,0.08); border-left: 5px solid #7b1fa2; }
-        .card-header { font-size: 1.5rem; color: #4a148c; margin-bottom: 15px; border-bottom: 1px dashed #ce93d8; padding-bottom: 10px; font-weight: 600; }
-        .text-th { font-size: 1.15rem; color: #555; margin-bottom: 15px; line-height: 1.7; background: #f3e5f5; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #ce93d8; }
-        .text-ja { font-size: 1.5rem; color: #4a148c; margin-bottom: 20px; font-weight: 600; background: #ede7f6; padding: 15px 20px; border-radius: 10px; border: 1px solid #ce93d8; line-height: 1.8; letter-spacing: 0.05em; }
-        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-top: 15px; }
-        .vocab-item { display: flex; align-items: center; background: #fff; padding: 12px; border-radius: 8px; border-left: 4px solid #ab47bc; box-shadow: 0 2px 5px rgba(74,20,140,0.06); transition: 0.2s; border-right: 1px solid #eee; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
-        .vocab-item.main-word { border-left: 4px solid #c2185b; background: #fce4ec; }
-        .vocab-item:hover { background: #f3e5f5; transform: translateX(3px); box-shadow: 0 4px 10px rgba(74,20,140,0.1); }
-        .vocab-item.main-word:hover { background: #f8bbd0; }
-        .tts-small-btn { background: #7b1fa2; color: white; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; margin-right: 12px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; transition: 0.3s; box-shadow: 0 2px 6px rgba(123,31,162,0.4); }
-        .vocab-item.main-word .tts-small-btn { background: #c2185b; box-shadow: 0 2px 6px rgba(194,24,91,0.4); }
-        .tts-small-btn:hover { opacity: 0.8; transform: scale(1.1); }
-        .tts-sentence-btn { background: transparent; color: #7b1fa2; border: 2px solid #7b1fa2; padding: 6px 16px; border-radius: 20px; cursor: pointer; font-size: 1rem; display: inline-flex; align-items: center; gap: 6px; transition: 0.3s; margin-top: 12px; font-family: 'Kanit', sans-serif; }
-        .tts-sentence-btn:hover { background: #7b1fa2; color: white; }
-        .vocab-content { display: flex; flex-direction: column; line-height: 1.3; }
-        .vocab-jp { font-weight: bold; color: #333; font-size: 1.1rem; }
-        .vocab-kana { color: #888; font-size: 0.78em; font-weight: normal; }
-        .vocab-th { color: #7b1fa2; font-size: 0.9em; margin-top: 3px; }
-        .main-word .vocab-th { color: #c2185b; }
-        .vocab-label { font-size: 0.72rem; background: #c2185b; color: white; padding: 1px 7px; border-radius: 10px; display: inline-block; margin-bottom: 4px; }
-        .card-count { font-size: 0.8rem; color: #ab47bc; font-weight: normal; margin-left: 10px; }
-        .next-page-container { text-align: center; margin-top: 50px; }
-        .next-btn { display: inline-block; background: linear-gradient(135deg, #4a148c, #7b1fa2); color: white; padding: 15px 40px; font-size: 1.3rem; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 5px 20px rgba(74,20,140,0.35); }
-        .next-btn:hover { box-shadow: 0 8px 25px rgba(74,20,140,0.5); transform: translateY(-5px); }
+        .next-btn { display: inline-block; background: #4a148c; color: white; padding: 15px 40px; font-size: 1.3rem; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 5px 15px rgba(74, 20, 140, 0.4); }
+        .next-btn:hover { opacity: 0.85; transform: translateY(-5px); }
         footer { background: #1a1a2e; color: #aaa; padding: 40px 5%; text-align: center; margin-top: 50px; }
-        .footer-links a { color: #ce93d8; margin: 0 10px; text-decoration: none; }
-        .tag-title { display: inline-block; background: #7b1fa2; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin-bottom: 10px; font-weight: bold; }
-        .level-badge { display: inline-block; background: linear-gradient(135deg, #4a148c, #c2185b); color: white; padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 12px; }
+        .footer-links a { color: #ff69b4; margin: 0 10px; text-decoration: none; }
+        .masterclass-card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); border-left: 5px solid #4a148c; position: relative; overflow: hidden; }
+        .index-label { position: absolute; top: 10px; right: 10px; font-size: 4rem; opacity: 0.05; color: #4a148c; font-weight: bold; }
+        .word-title { font-size: 1.6rem; color: #4a148c; margin-bottom: 15px; border-bottom: 2px solid #f3e5f5; padding-bottom: 10px; font-weight: 700; }
+        .insight-box { font-size: 1.1rem; color: #444; margin-bottom: 20px; background: #f8f9fa; padding: 15px; border-radius: 12px; border: 1px dashed #4a148c; line-height: 1.7; }
+        .insight-tag { display: inline-block; background: #4a148c; color: white; padding: 3px 12px; border-radius: 20px; font-size: 0.85rem; margin-bottom: 10px; font-weight: bold; }
+        .example-box { font-size: 1.3rem; color: #4a148c; margin-bottom: 20px; font-weight: 600; background: #f3e5f5; padding: 15px; border-radius: 10px; border: 1px solid #e1bee7; }
+        .breakdown-box { background: #fffaf0; padding: 15px; border-radius: 10px; border: 1px solid #ffe0b2; margin-top: 15px; }
+        .breakdown-title { color: #f57c00; margin-top: 0; font-size: 1rem; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+        .breakdown-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+        .breakdown-item { background: white; padding: 10px; border-radius: 8px; border: 1px solid #eee; display: flex; align-items: center; gap: 10px; transition: 0.2s; }
+        .breakdown-item:hover { border-color: #4a148c; transform: translateY(-2px); }
+        .audio-btn { background: #4a148c; color: white; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem; }
     </style>
     <script>
         function playTTS(text) {
@@ -52,1251 +41,1141 @@
                 window.speechSynthesis.cancel();
                 const msg = new SpeechSynthesisUtterance(text);
                 msg.lang = 'ja-JP';
-                msg.rate = 0.85;
+                msg.rate = 0.9;
                 window.speechSynthesis.speak(msg);
-            } else {
-                alert("เบราว์เซอร์ของคุณไม่รองรับระบบอ่านออกเสียง");
-            }
+            } else { alert("เบราว์เซอร์ของคุณไม่รองรับระบบอ่านออกเสียง"); }
         }
     </script>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jlpt.yui-yuto.com/jlpt-n1-advanced-japanese-idioms-part2">
-    <meta property="og:title" content="คอร์สเรียน JLPT N1: สำนวนและคำพังเพยญี่ปุ่น | JLPT Gyaru">
-    <meta property="og:description" content="ฝึกสำนวนและคำพังเพยญี่ปุ่นระดับ N1 ผ่านบทเรียนที่เข้าใจง่าย พร้อมเสียงอ่านและแบบฝึกหัด">
-    <meta property="og:image" content="images/ogp_jlpt.webp">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://jlpt.yui-yuto.com/jlpt-n1-advanced-japanese-idioms-part2">
-    <meta property="twitter:title" content="คอร์สเรียน JLPT N1: สำนวนและคำพังเพยญี่ปุ่น | JLPT Gyaru">
-    <meta property="twitter:description" content="ฝึกสำนวนและคำพังเพยญี่ปุ่นระดับ N1 ผ่านบทเรียนที่เข้าใจง่าย พร้อมเสียงอ่านและแบบฝึกหัด">
-    <meta property="twitter:image" content="images/ogp_jlpt.webp">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCYNPFD7PR"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-CCYNPFD7PR');
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "คอร์สเรียน JLPT N1 | สำนวนภาษาญี่ปุ่นขั้นสูงและสุภาษิต Part 2 | YUI & YUTO Masterclass",
+      "description": "บทเรียนภาษาญี่ปุ่นระดับสูงสุด (N1) เจาะลึกสำนวนที่สะท้อนถึงประวัติศาสตร์และวัฒนธรรมญี่ปุ่น เพื่อการสื่อสารที่ทรงพลังและสง่างาม",
+      "author": { "@type": "Organization", "name": "YUI & YUTO" },
+      "datePublished": "2026-03-14",
+      "dateModified": "2026-04-25"
+    }
     </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-<link rel="manifest" href="/manifest.json">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "คอร์สเรียน JLPT N1 | สำนวนญี่ปุ่นขั้นสูง | JLPT Gyaru",
-  "description": "เรียนสำนวนญี่ปุ่นขั้นสูงระดับ N1 พร้อมตัวอย่างประโยค เสียงอ่าน และแบบทดสอบสำหรับคนไทย",
-  "url": "https://jlpt.yui-yuto.com/jlpt-n1-advanced-japanese-idioms-part2",
-  "datePublished": "2026-03-14",
-  "dateModified": "2026-04-09",
-  "author": {
-    "@type": "Organization",
-    "name": "YUI&YUTO",
-    "url": "https://jlpt.yui-yuto.com/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "YUI&YUTO",
-    "url": "https://jlpt.yui-yuto.com/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://jlpt.yui-yuto.com/images/icon_jlpt.webp"
-    }
-  },
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://jlpt.yui-yuto.com/images/ogp_jlpt.webp",
-    "width": 1200,
-    "height": 630
-  },
-  "inLanguage": "th",
-  "about": {
-    "@type": "Thing",
-    "name": "JLPT",
-    "description": "Japanese Language Proficiency Test"
-  },
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Thai Japanese learners"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "หน้าแรก",
-      "item": "https://jlpt.yui-yuto.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "คอร์สเรียน JLPT N1",
-      "item": "https://jlpt.yui-yuto.com/jlpt-n1-advanced-japanese-idioms-part2"
-    }
-  ]
-}
-</script>
 </head>
+
 <body>
-    <header style="background: rgba(255,255,255,0.95); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 90%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(74,20,140,0.1); backdrop-filter: blur(5px);">
-        <a href="hub" style="font-size: 20px; font-weight: bold; color: #4a148c; text-decoration: none;">JLPT N1 Learning</a>
-        <a href="/" style="background: linear-gradient(135deg,#4a148c,#7b1fa2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px;">ย้อนกลับหน้าแรก</a>
-    </header>
     <div class="hero">
-        <span class="level-badge">JLPT N1 — ระดับสูงสุด</span>
-        <h1>คอร์สเรียน N1 Part 2: สำนวนภาษาญี่ปุ่นระดับสูงและการใช้จริง</h1>
-        <p>ฝึกอ่านและฟังสำนวน / คำศัพท์ระดับสูงสุด N1 พร้อมฟังเสียงรายคำ</p>
+        <h1>JLPT N1 Masterclass</h1>
+        <p>สำนวนขั้นสูงและสุภาษิต: ตอนที่ 2 (51-100)</p>
     </div>
     <div class="container">
-
-        <div class="learning-card">
-            <div class="card-header">No.6-51 | 獅子<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>สำนวน 'สิงโตโยนลูกลงเหว' หมายถึงการที่พ่อแม่หรือเจ้านายยอมเข้มงวดหรือผลักภาระที่หนักหน่วงให้ลูกหรือลูกน้อง เพื่อให้คนคนนั้นแข็งแกร่งและเติบโตขึ้นด้วยตัวเองครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                「獅子の子落とし」のつもりで。
-                <br><button class="tts-sentence-btn" onclick="playTTS('獅子の子落としのつもりで。')">🔊 ลองฟังดูอ่าน</button>
+        <!-- Word 51 -->
+        <div class="masterclass-card">
+            <div class="index-label">51</div>
+            <div class="word-title">Word: 獅子身中の虫 (しししんちゅうのむし)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นสำนวนที่ทรงพลังมากค่ะ! สื่อถึงคนที่ได้รับความไว้วางใจแต่กลับทำลายจากข้างใน (Internal Enemy) การเข้าใจสำนวนที่มาจากนิทานหรือคติสอนใจจะทำให้คุณมองเห็น "เนื้อแท้" ของความสัมพันธ์ในสังคมญี่ปุ่นได้อย่างลึกซึ้งค่ะ! <span style="color:#d81b60;">(Mimi: ห้ามเป็นหนอนบ่อนไส้นะพี้ว! 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 พอยต์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('ししこおとし')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">獅子 <span class="vocab-kana">(ししこおとし)</span></div>
-                    <div class="vocab-th">สำนวน 'สิงโตโยนลูกลงเหว' หมายถึงการที่พ่อแม่หรือเจ้านายยอมเข...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「獅子身中の虫」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('しししんちゅうのむし')">🔊</button>
+                        <div><b>獅子身中の虫</b><br><small>หนอนบ่อนไส้/ศัตรูที่อยู่ภายใน</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.6-52 | 呼<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 อธิบายสั้นๆ</span><br>หมายถึง 'น้ำล่อ' (น้ำที่ใส่ในปั๊มเพื่อให้สูบน้ำขึ้นมาได้) ในบริบทเศรษฐกิจหมายถึงการลงทุนหรือโครงการนำร่องที่ทำขึ้นเพื่อกระตุ้นให้เกิดการเคลื่อนไหวที่ใหญ่กว่าตามมาครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                外部からの「呼び水」が必要です。
-                <br><button class="tts-sentence-btn" onclick="playTTS('外部からの呼び水が必要です。')">🔊 ฟังสำเนียงญี่ปุ่น</button>
+        <!-- Word 52 -->
+        <div class="masterclass-card">
+            <div class="index-label">52</div>
+            <div class="word-title">Word: 呼応 (こおう)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "เรียก" และ "ตอบ" ค่ะ สื่อถึงการทำงานร่วมกันอย่างสมบูรณ์แบบ (Synchronicity) การมีพาร์ทเนอร์ในการเรียนที่สามารถ "Koou" หรือสอดประสานไอเดียกันได้จะทำให้การเรียน N1 ของคุณก้าวกระโดดอย่างรวดเร็วค่ะ! <span style="color:#d81b60;">(Mimi: มิมี่เรียกแล้วต้องตอบนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('よみず')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์หลัก</span>
-                    <div class="vocab-jp">呼 <span class="vocab-kana">(よみず)</span></div>
-                    <div class="vocab-th">หมายถึง 'น้ำล่อ' (น้ำที่ใส่ในปั๊มเพื่อให้สูบน้ำขึ้นมาได้) ใน...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「呼応」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('こおう')">🔊</button>
+                        <div><b>呼応</b><br><small>การตอบรับ/การสอดประสานกัน</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.6-53 | 丸投<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ความหมาย</span><br>หมายถึง 'การโยนงานทั้งหมดให้คนอื่นทำ' โดยที่ตัวเองไม่เข้าไปช่วยหรือรับผิดชอบในรายละเอียดเลยครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                彼に「丸投げ」するのは。
-                <br><button class="tts-sentence-btn" onclick="playTTS('彼に丸投げするのは。')">🔊 กดเพื่อฟังประโยค</button>
+        <!-- Word 53 -->
+        <div class="masterclass-card">
+            <div class="index-label">53</div>
+            <div class="word-title">Word: 丸投げ (まるなげ)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นคำเชิงตำหนิในที่ทำงานค่ะ (Irresponsibility) การเป็นคนที่มีความรับผิดชอบและไม่ "Marunage" ภาระให้เพื่อนร่วมงานจะสร้างความน่านับถือและเครดิตที่แข็งแกร่งให้แก่คุณในโลกของธุรกิจญี่ปุ่นค่ะ! <span style="color:#d81b60;">(Mimi: อย่าโยนงานมาให้มิมี่พี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 เจาะลึกศัพท์น่ารู้</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('まるなげ')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">丸投 <span class="vocab-kana">(まるなげ)</span></div>
-                    <div class="vocab-th">หมายถึง 'การโยนงานทั้งหมดให้คนอื่นทำ' โดยที่ตัวเองไม่เข้าไปช...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「丸投げ」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('まるなげ')">🔊</button>
+                        <div><b>丸投げ</b><br><small>การโยนงานทั้งหมดให้ผู้อื่นทำ</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.6-54 | 鼻<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>สำนวน 'ติดจมูก' หมายถึงความรู้สึกรำคาญหรือเอือมระอากับคำพูดหรือท่าทางของใครคนหนึ่งที่ทำซ้ำๆ จนรู้สึกไม่พอใจครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                店員の態度が「鼻につく」。
-                <br><button class="tts-sentence-btn" onclick="playTTS('店員の態度が鼻につく。')">🔊 กดเพื่อฟังประโยค</button>
+        <!-- Word 54 -->
+        <div class="masterclass-card">
+            <div class="index-label">54</div>
+            <div class="word-title">Word: 鼻につく (はなにつく)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "จมูก" และ "ติด" สื่อถึงกลิ่นที่รุนแรงจนทนไม่ไหวค่ะ (Disgusting Behavior) การใช้วาจาที่อ่อนน้อมและถ่อมตัวจะช่วยให้คุณห่างไกลจากการเป็นคนที่ "Hana ni tsuku" ในสายตาคนรอบข้างอย่างยั่งยืนค่ะ! <span style="color:#d81b60;">(Mimi: กลิ่นนี้มันขวางจมูกจังพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('はなにつく')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์เด่น</span>
-                    <div class="vocab-jp">鼻 <span class="vocab-kana">(はなにつく)</span></div>
-                    <div class="vocab-th">สำนวน 'ติดจมูก' หมายถึงความรู้สึกรำคาญหรือเอือมระอากับคำพูดห...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「鼻につく」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('はなにつく')">🔊</button>
+                        <div><b>鼻につく</b><br><small>น่ารำคาญ/เอียน/ขวางหูขวางตา</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.6-55 | 弁解<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>สำนวน 'ไม่มีที่ว่างให้แก้ตัว' หมายถึงการยอมรับผิดโดยดุษณีว่าสิ่งที่เกิดขึ้นเป็นความผิดของตนเองอย่างแท้จริงจนไม่สามารถหาข้อแก้ตัวใดๆ มาอ้างได้ครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                「弁解の余地」もございません。
-                <br><button class="tts-sentence-btn" onclick="playTTS('弁解の余地もございません。')">🔊 ฟังเสียงอ่าน</button>
+        <!-- Word 55 -->
+        <div class="masterclass-card">
+            <div class="index-label">55</div>
+            <div class="word-title">Word: 弁解の余地がない (べんかいのよちがない)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                แสดงถึงการยอมรับผิดอย่างเด็ดเดี่ยวและไร้ข้อกังขาค่ะ (Absolute Accountability) การกล้ายืดอกรับผิดโดยไม่หาข้ออ้างจะสร้างความประทับใจในความเป็นสุภาพบุรุษ/สุภาพสตรีให้แก่ผู้ฟังอย่างมหาศาลเลยล่ะค่ะ! <span style="color:#d81b60;">(Mimi: มิมี่ไม่มีข้อแก้ตัวพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 สรุปศัพท์สำคัญ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('べんかいよちがない')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์เด่น</span>
-                    <div class="vocab-jp">弁解 <span class="vocab-kana">(べんかいよちがない)</span></div>
-                    <div class="vocab-th">สำนวน 'ไม่มีที่ว่างให้แก้ตัว' หมายถึงการยอมรับผิดโดยดุษณีว่า...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「弁解の余地がない」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('べんかいのよちがない')">🔊</button>
+                        <div><b>弁解の余地がない</b><br><small>ไม่มีข้อแก้ตัว/ผิดเต็มประตู</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.6-56 | 逸<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ความหมาย</span><br>หมายถึง 'การพลาด' หรือ 'การเสียโอกาส' (to miss / to lose) ที่ควรจะได้ไปครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                チャンスを「逸する」わよ。
-                <br><button class="tts-sentence-btn" onclick="playTTS('チャンスを逸するわよ。')">🔊 ฟังเสียงอ่านอ่าน</button>
+        <!-- Word 56 -->
+        <div class="masterclass-card">
+            <div class="index-label">56</div>
+            <div class="word-title">Word: 逸脱 (いつだつ)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "หลบหลีก" และ "หลุด" ค่ะ มักใช้กับการกระทำที่ผิดไปจากมาตรฐานสังคม (Social Deviation) การรู้กรอบของภาษาและวัฒนธรรมจะทำให้คุณไม่ "Itsudatsu" และสามารถแสดงออกได้อย่างเหมาะสมในทุกสถานการณ์ค่ะ! <span style="color:#d81b60;">(Mimi: อย่าออกนอกลู่นอกทางนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 วิเคราะห์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('いっする')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">逸 <span class="vocab-kana">(いっする)</span></div>
-                    <div class="vocab-th">หมายถึง 'การพลาด' หรือ 'การเสียโอกาส' (to miss / to lose) ที...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「逸脱」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('いつだつ')">🔊</button>
+                        <div><b>逸脱</b><br><small>การเบี่ยงเบน/การออกนอกลู่นอกทาง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.6-57 | ちんぷんかんぷん<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 คำอธิบาย</span><br>เป็นคำสแลงที่หมายถึง 'การไม่เข้าใจเลยแม้แต่นิดเดียว' หรือฟังแล้วเหมือนเป็นภาษาต่างดาวที่จับใจความไม่ได้ครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                僕には「ちんぷんかんぷん」だったよ。
-                <br><button class="tts-sentence-btn" onclick="playTTS('僕にはちんぷんかんぷんだったよ。')">🔊 ลองฟังเสียงดู</button>
+        <!-- Word 57 -->
+        <div class="masterclass-card">
+            <div class="index-label">57</div>
+            <div class="word-title">Word: ちんぷんかんぷん (ちんぷんかんぷん)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นคำที่แสดงถึงความสับสนอย่างน่ารักและเป็นกันเองค่ะ (Total Confusion) อย่าท้อถ้าเจอไวยากรณ์ N1 ที่ทำให้คุณรู้สึก "Chinpun Kanpun" นะคะ เพราะมาสเตอร์คลาสของเราจะเปลี่ยนความสับสนนั้นให้เป็นความเข้าใจที่แจ่มแจ้งค่ะ! <span style="color:#d81b60;">(Mimi: มิมี่ฟังไม่รู้เรื่องเลยพี้ว! 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 มาดูศัพท์ในประโยคกัน</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('ちんぷんかんぷん')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">ちんぷんかんぷん <span class="vocab-kana">(ちんぷんかんぷん)</span></div>
-                    <div class="vocab-th">เป็นคำสแลงที่หมายถึง 'การไม่เข้าใจเลยแม้แต่นิดเดียว' หรือฟัง...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「ちんぷんかんぷん」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('ちんぷんかんぷん')">🔊</button>
+                        <div><b>ちんぷんかんぷん</b><br><small>ฟังไม่รู้เรื่อง/ภาษาต่างดาว</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.6-58 | へそを曲<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>สำนวน 'บิดสะดือ' หมายถึง 'การงอน' หรือการที่จู่ๆ ก็อารมณ์เสียแล้วไม่ยอมร่วมมือด้วยเพราะไม่พอใจบางอย่างครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                一度「へそを曲げる」と。
-                <br><button class="tts-sentence-btn" onclick="playTTS('一度へそを曲げると。')">🔊 สำเนียงญี่ปุ่นอ่าน</button>
+        <!-- Word 58 -->
+        <div class="masterclass-card">
+            <div class="index-label">58</div>
+            <div class="word-title">Word: へそを曲げる (へそをまげる)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "สะดือ" และ "งอ" ค่ะ เป็นการแสดงอาการแง่งอนแบบเด็กๆ (Crankiness) การเข้าใจอารมณ์ที่ซ่อนอยู่หลังสำนวนเปรียบเทียบจะทำให้คุณสื่อสารกับคนญี่ปุ่นได้อย่างเป็นธรรมชาติและมีความเป็นกันเองมากขึ้นค่ะ! <span style="color:#d81b60;">(Mimi: มิมี่งอนแล้วนะพี้ว! 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 เจาะลึกศัพท์น่ารู้</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('まげる')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">へそを曲 <span class="vocab-kana">(まげる)</span></div>
-                    <div class="vocab-th">สำนวน 'บิดสะดือ' หมายถึง 'การงอน' หรือการที่จู่ๆ ก็อารมณ์เสี...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「へそを曲げる」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('へそをまげる')">🔊</button>
+                        <div><b>へそを曲げる</b><br><small>งอน/โกรธจนไม่ยอมคุยด้วย</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.6-59 | 萎縮<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 อธิบายสั้นๆ</span><br>หมายถึง 'การหดตัว' หรือ 'การลีบเล็กลง' ในบริบทสังคมหมายถึงการที่ผู้คนไม่กล้าพูดหรือทำอะไรเพราะความหวาดกลัวครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                健全な議論を「萎縮」させます。
-                <br><button class="tts-sentence-btn" onclick="playTTS('健全な議論を萎縮させます。')">🔊 เสียงพากย์จากสาวแกล</button>
+        <!-- Word 59 -->
+        <div class="masterclass-card">
+            <div class="index-label">59</div>
+            <div class="word-title">Word: 萎縮 (いしゅく)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                สื่อถึงสภาวะที่ขาดความมั่นใจจนไม่สามารถแสดงความสามารถได้ค่ะ (Psychological Shrinking) จงยืดอกและเชื่อมั่นในตัวเองเข้าไว้ อย่าให้ความยากของ N1 มาทำให้คุณ "Ishuku" เพราะคุณมีความสามารถมากกว่าที่คิดค่ะ! <span style="color:#d81b60;">(Mimi: อย่าตัวสั่นเพราะกลัวนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 เจาะลึกศัพท์น่ารู้</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('いしゅく')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์หลัก</span>
-                    <div class="vocab-jp">萎縮 <span class="vocab-kana">(いしゅく)</span></div>
-                    <div class="vocab-th">หมายถึง 'การหดตัว' หรือ 'การลีบเล็กลง' ในบริบทสังคมหมายถึงกา...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「萎縮」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('いしゅく')">🔊</button>
+                        <div><b>萎縮</b><br><small>การหดตัว/ความกลัวจนตัวสั่น/การฝ่อตัว</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.6-60 | 想定外<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>หมายถึง 'เหนือความคาดหมาย' หรือสิ่งที่เกิดขึ้นอยู่นอกเหนือจากที่ได้ประเมินหรือคาดการณ์ไว้ล่วงหน้าครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                まさに「想定外」でした。
-                <br><button class="tts-sentence-btn" onclick="playTTS('まさに想定外でした。')">🔊 ลองฟังเสียงดู</button>
+        <!-- Word 60 -->
+        <div class="masterclass-card">
+            <div class="index-label">60</div>
+            <div class="word-title">Word: 想定外 (そうていがい)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                โลกปัจจุบันเต็มไปด้วยเรื่อง "Souteigai" ค่ะ (Unforeseen Events) การมีทัศนคติที่ยืดหยุ่นและพร้อมรับมือกับทุกสถานการณ์ที่คาดไม่ถึงจะทำให้คุณเป็นผู้ที่ประสบความสำเร็จได้อย่างยั่งยืนในทุกสนามชีวิตค่ะ! <span style="color:#d81b60;">(Mimi: เป็นเรื่องที่ไม่ได้วางแผนพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 พอยต์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('そうていがい')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์หลัก</span>
-                    <div class="vocab-jp">想定外 <span class="vocab-kana">(そうていがい)</span></div>
-                    <div class="vocab-th">หมายถึง 'เหนือความคาดหมาย' หรือสิ่งที่เกิดขึ้นอยู่นอกเหนือจา...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「想定外」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('そうていがい')">🔊</button>
+                        <div><b>想定外</b><br><small>เหนือความคาดหมาย/ไม่ได้วางแผนไว้</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.7-61 | 追随<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>หมายถึง 'การทำตาม' หรือการก้าวตามสิ่งที่คนอื่นหรือบริษัทอื่นนำไปก่อนครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                これに「追随」すべきかな。
-                <br><button class="tts-sentence-btn" onclick="playTTS('これに追随すべきかな。')">🔊 ฝึกฟังประโยคนี้</button>
+        <!-- Word 61 -->
+        <div class="masterclass-card">
+            <div class="index-label">61</div>
+            <div class="word-title">Word: 追随を許さない (ついずいをゆるさない)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นคำชมสำหรับผู้ที่มีความเป็นเลิศอย่างหาตัวจับยากค่ะ (Unrivaled Excellence) ขอให้ความมุ่งมั่นในการเรียนของคุณก้าวไปถึงระดับที่ "Tsuizui o yurusanai" เพื่ออนาคตที่สดใสและไร้ขีดจำกัดในโลกกว้างนะคะ! <span style="color:#d81b60;">(Mimi: มิมี่เก่งจนไม่มีใครตามทันพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 เจาะลึกศัพท์น่ารู้</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('ついずい')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์เด่น</span>
-                    <div class="vocab-jp">追随 <span class="vocab-kana">(ついずい)</span></div>
-                    <div class="vocab-th">หมายถึง 'การทำตาม' หรือการก้าวตามสิ่งที่คนอื่นหรือบริษัทอื่น...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「追随を許さない」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('ついずいをゆるさない')">🔊</button>
+                        <div><b>追随を許さない</b><br><small>ไม่มีใครเทียบเทียมได้/ทิ้งห่างคู่แข่ง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.7-62 | 脆弱<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ความหมาย</span><br>หมายถึง 'ความเปราะบาง' หรือความอ่อนแอที่พังพลายได้ง่ายครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                ネット上の繋がりは非常に「脆弱」なもの。
-                <br><button class="tts-sentence-btn" onclick="playTTS('ネット上の繋がりは非常に脆弱なもの。')">🔊 ลองฟังเสียงดู</button>
+        <!-- Word 62 -->
+        <div class="masterclass-card">
+            <div class="index-label">62</div>
+            <div class="word-title">Word: 脆弱 (ぜいじゃก)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "เปราะ" และ "อ่อน" ค่ะ มักใช้กับระบบหรือโครงสร้างที่ขาดความมั่นคง (Systemic Weakness) การสร้างรากฐานไวยากรณ์ที่แข็งแกร่งจะช่วยปกป้องคุณจากการมีทักษะทางภาษาที่ "Zeijaku" เมื่อต้องเจอโจทย์ที่ยากลำบากค่ะ! <span style="color:#d81b60;">(Mimi: มิมี่ดูเปราะบางจังพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('ぜいじゃく')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">脆弱 <span class="vocab-kana">(ぜいじゃく)</span></div>
-                    <div class="vocab-th">หมายถึง 'ความเปราะบาง' หรือความอ่อนแอที่พังพลายได้ง่ายครับ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「脆弱」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('ぜいじゃก')">🔊</button>
+                        <div><b>脆弱</b><br><small>เปราะบาง/อ่อนแอ</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.7-63 | 青天<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 อธิบายสั้นๆ</span><br>สำนวน 'สายฟ้าฟาดกลางวันแสกๆ' หมายถึงเหตุการณ์ที่เกิดขึ้นอย่างกะทันหันโดยไม่คาดคิดมาก่อนจนทำให้ตกใจมากครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                まさに「青天の霹靂」ね。
-                <br><button class="tts-sentence-btn" onclick="playTTS('まさに青天の霹靂ね。')">🔊 ตัวอย่างการออกเสียง</button>
+        <!-- Word 63 -->
+        <div class="masterclass-card">
+            <div class="index-label">63</div>
+            <div class="word-title">Word: 青天の霹靂 (せいてんのへきれき)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                สื่อถึงเหตุการณ์ที่เกิดขึ้นอย่างกะทันหันจนตั้งตัวไม่ทันค่ะ (Shocking Surprise) การฝึกสติให้มั่นคงจะช่วยให้คุณรับมือกับ "Seiten no Hekireki" ในชีวิตได้อย่างเยือกเย็นและสามารถหาทางออกที่ชาญฉลาดได้เสมอค่ะ! <span style="color:#d81b60;">(Mimi: ตกใจเหมือนฟ้าผ่าเลยพี้ว! 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 พอยต์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('せいてんへきれき')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">青天 <span class="vocab-kana">(せいてんへきれき)</span></div>
-                    <div class="vocab-th">สำนวน 'สายฟ้าฟาดกลางวันแสกๆ' หมายถึงเหตุการณ์ที่เกิดขึ้นอย่า...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「青天の霹靂」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('せいてんのへきれき')">🔊</button>
+                        <div><b>青天の霹靂</b><br><small>ฟ้าผ่ากลางวันแสกๆ/เรื่องที่ตกใจอย่างยิ่ง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.7-64 | 等閑<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 อธิบายสั้นๆ</span><br>หมายถึง 'การละเลย' หรือการทำอย่างขอไปที ไม่ให้ความสำคัญที่ควรจะให้ครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                リスク管理を「等閑」にした。
-                <br><button class="tts-sentence-btn" onclick="playTTS('リスク管理を等閑にした。')">🔊 ลองฟังเสียงดู</button>
+        <!-- Word 64 -->
+        <div class="masterclass-card">
+            <div class="index-label">64</div>
+            <div class="word-title">Word: 等閑に付す (とうかんにふす)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นคำเตือนใจเรื่องความประมาทค่ะ (Disregard) การไม่ "Toukan ni fusu" แม้แต่รายละเอียดที่เล็กที่สุด จะทำให้คุณเป็นคนที่รอบคอบและสามารถทำงานระดับสูงได้อย่างสมบูรณ์แบบและน่าภาคภูมิใจที่สุดค่ะ! <span style="color:#d81b60;">(Mimi: อย่าละเลยความรู้สึกมิมี่พี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 พอยต์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('なおざり')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">等閑 <span class="vocab-kana">(なおざり)</span></div>
-                    <div class="vocab-th">หมายถึง 'การละเลย' หรือการทำอย่างขอไปที ไม่ให้ความสำคัญที่คว...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「等閑に付す」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('とうかんにふす')">🔊</button>
+                        <div><b>等閑に付す</b><br><small>การละเลย/การไม่ใส่ใจ/การทำแบบขอไปที</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.7-65 | 羊頭<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>สำนวน 'แขวนหัวแพะขายเนื้อสุนัข' หมายถึงการโฆษณาชวนเชื่อที่เกินจริง หรือข้างนอกดูดีแต่ข้างในแย่ครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                「羊頭狗肉」とはまさにこのことだ。
-                <br><button class="tts-sentence-btn" onclick="playTTS('羊頭狗肉とはまさにこのことだ。')">🔊 ลองฟังเสียงดู</button>
+        <!-- Word 65 -->
+        <div class="masterclass-card">
+            <div class="index-label">65</div>
+            <div class="word-title">Word: 羊頭狗肉 (ようとうくにく)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นสำนวนที่สอนเรื่องความซื่อสัตย์ค่ะ (Deceptive Appearances) การมีเนื้อหาที่เปี่ยมไปด้วยคุณภาพจริงใจ ไม่ใช่แค่เปลือกนอกที่สวยงาม คือปรัชญาของมาสเตอร์คลาสเราที่จะมุ่งเน้นประโยชน์สูงสุดให้แก่คุณค่ะ! <span style="color:#d81b60;">(Mimi: ห้ามหลอกลวงผู้บริโภคนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('ようとうくにく')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์เด่น</span>
-                    <div class="vocab-jp">羊頭 <span class="vocab-kana">(ようとうくにく)</span></div>
-                    <div class="vocab-th">สำนวน 'แขวนหัวแพะขายเนื้อสุนัข' หมายถึงการโฆษณาชวนเชื่อที่เก...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「羊頭狗肉」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('ようとうくにく')">🔊</button>
+                        <div><b>羊頭狗肉</b><br><small>แขวนหัวแพะขายเนื้อสุนัข/การโฆษณาเกินจริง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.7-66 | 他愛<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>หมายถึง 'เรื่องไร้สาระ' หรือเรื่องเล็กๆ น้อยๆ ที่คุยกันเล่นๆ โดยไม่ได้มีจุดประสงค์จริงจังครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                交わされる「他愛ない」会話。
-                <br><button class="tts-sentence-btn" onclick="playTTS('交わされる他愛ない会話。')">🔊 ลองฟังเสียงดู</button>
+        <!-- Word 66 -->
+        <div class="masterclass-card">
+            <div class="index-label">66</div>
+            <div class="word-title">Word: 他愛もない (たあもない)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                สื่อถึงเรื่องราวที่ไม่มีพิษมีภัยและเบาสมองค่ะ (Simple and Innocent) ในวันเครียดๆ การได้คุยเรื่อง "Taai mo nai" กับเพื่อนฝูงคือยาชูกำลังที่ดีที่สุดที่จะช่วยเติมพลังให้คุณกลับมาสู้กับบทเรียน N1 ได้อีกครั้งค่ะ! <span style="color:#d81b60;">(Mimi: คุยเรื่องไร้สาระกันนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 สรุปศัพท์สำคัญ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('たあいない')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">他愛 <span class="vocab-kana">(たあいない)</span></div>
-                    <div class="vocab-th">หมายถึง 'เรื่องไร้สาระ' หรือเรื่องเล็กๆ น้อยๆ ที่คุยกันเล่นๆ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「他愛もない」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('たあもない')">🔊</button>
+                        <div><b>他愛もない</b><br><small>ไร้สาระ/เล็กๆ น้อยๆ/เรื่องเล่นๆ</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.7-67 | 不断<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>หมายถึง 'อย่างต่อเนื่อง' หรือ 'โดยไม่หยุดยั้ง' (Constant / Unremitting) ครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                この「不断」の努力こそが。
-                <br><button class="tts-sentence-btn" onclick="playTTS('この不断の努力こそが。')">🔊 ฟังสำเนียงญี่ปุ่น</button>
+        <!-- Word 67 -->
+        <div class="masterclass-card">
+            <div class="index-label">67</div>
+            <div class="word-title">Word: 不断の努力 (ふだんどりょく)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "ไม่ตัดขาด" ค่ะ คือหัวใจของความสำเร็จ (Constant Diligence) การก้าวเดินไปข้างหน้าทีละน้อยอย่างสม่ำเสมอคือพลังที่ยิ่งใหญ่ที่สุดที่จะพาคุณไปถึงยอดเขาแห่งความสำเร็จที่คุณฝันไว้อย่างแน่นอนค่ะ! <span style="color:#d81b60;">(Mimi: ความพยายามของมิมี่ไม่สิ้นสุดพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 พอยต์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('ふだん')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">不断 <span class="vocab-kana">(ふだん)</span></div>
-                    <div class="vocab-th">หมายถึง 'อย่างต่อเนื่อง' หรือ 'โดยไม่หยุดยั้ง' (Constant / U...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「不断の努力」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('ふだんどりょく')">🔊</button>
+                        <div><b>不断の努力</b><br><small>ความพยายามอย่างไม่ลดละ/ความเพียรที่ต่อเนื่อง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.7-68 | 泣<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>สำนวน 'ผึ้งต่อยบนหน้าที่กำลังร้องไห้' หมายถึงคราวซวยที่มาซ้ำเติมกันในเวลาที่แย่อยู่แล้ว (เคราะห์ซ้ำกรรมซัด) ครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                まさに「泣きっ面に蜂」ですね。
-                <br><button class="tts-sentence-btn" onclick="playTTS('まさに泣きっ面に蜂ですね。')">🔊 ฟังสำเนียงญี่ปุ่น</button>
+        <!-- Word 68 -->
+        <div class="masterclass-card">
+            <div class="index-label">68</div>
+            <div class="word-title">Word: 泣きっ面に蜂 (なきっつらにはち)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "หน้าคนร้องไห้" และ "ผึ้ง" ค่ะ เป็นการเปรียบเทียบที่เห็นภาพชัดเจนมาก (Double Trouble) เมื่อเจออุปสรรครุมเร้า อย่าเพิ่งท้อนะคะ เพราะพายุที่รุนแรงมักจะตามมาด้วยท้องฟ้าที่สดใสและสวยงามเสมอค่ะ! <span style="color:#d81b60;">(Mimi: ร้องไห้อยู่แล้วยังโดนผึ้งต่อยพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 เจาะลึกศัพท์น่ารู้</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('なつらはち')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์เด่น</span>
-                    <div class="vocab-jp">泣 <span class="vocab-kana">(なつらはち)</span></div>
-                    <div class="vocab-th">สำนวน 'ผึ้งต่อยบนหน้าที่กำลังร้องไห้' หมายถึงคราวซวยที่มาซ้ำ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「泣きっ面に蜂」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('なきっつらにはち')">🔊</button>
+                        <div><b>泣きっ面に蜂</b><br><small>พระศุกร์เข้าพระเสาร์แทรก/ซวยซ้ำซวยซ้อน</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.7-69 | 二転三転<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>หมายถึง 'การเปลี่ยนไปเปลี่ยนมา' หรือกลับคำพูดซ้ำแล้วซ้ำเล่าจนหาความแน่นอนไม่ได้ครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                指示がいつも「二転三転」して。
-                <br><button class="tts-sentence-btn" onclick="playTTS('指示がいつも二転三転して。')">🔊 กดเพื่อฟังอ่าน</button>
+        <!-- Word 69 -->
+        <div class="masterclass-card">
+            <div class="index-label">69</div>
+            <div class="word-title">Word: 二転三転 (じてんさんてん)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "กลิ้งสองรอบสามรอบ" ค่ะ สื่อถึงสถานการณ์ที่ผันผวนตลอดเวลา (Fluctuation) การฝึกฝนสมาธิให้มั่นคงจะช่วยให้คุณรับมือกับสถานการณ์ที่ "Jiten Santen" ได้อย่างมีสติและไม่หวั่นไหวไปกับความวุ่นวายรอบตัวค่ะ! <span style="color:#d81b60;">(Mimi: สถานการณ์เปลี่ยนไปมาจังพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 เจาะลึกศัพท์น่ารู้</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('にてんさんてん')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์หลัก</span>
-                    <div class="vocab-jp">二転三転 <span class="vocab-kana">(にてんさんてん)</span></div>
-                    <div class="vocab-th">หมายถึง 'การเปลี่ยนไปเปลี่ยนมา' หรือกลับคำพูดซ้ำแล้วซ้ำเล่าจ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「二転三転」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('じてんさんてん')">🔊</button>
+                        <div><b>二転三転</b><br><small>การเปลี่ยนไปเปลี่ยนมา/ความไม่แน่นอน</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.7-70 | 意気消沈<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ความหมาย</span><br>หมายถึง 'การหมดกำลังใจ' หรือความรู้สึกหดหู่เนื่องจากความล้มเหลวครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                「意気消沈」しているわね。
-                <br><button class="tts-sentence-btn" onclick="playTTS('意気消沈しているわね。')">🔊 กดเพื่อฟังประโยค</button>
+        <!-- Word 70 -->
+        <div class="masterclass-card">
+            <div class="index-label">70</div>
+            <div class="word-title">Word: 意気消沈 (いきしょうちん)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                แม้จะรู้สึก "Ikishouchin" ในบางครั้ง แต่ขอให้จำไว้ว่าคุณไม่ได้เดินเพียงลำพัง (Emotional Resilience) มาสเตอร์คลาสของเราพร้อมจะเป็นแรงใจและแสงสว่างที่ช่วยฉุดดึงคุณขึ้นมาจากความมืดมิดและพาคุณก้าวเดินต่อไปค่ะ! <span style="color:#d81b60;">(Mimi: มิมี่หมดกำลังใจแล้วพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 เจาะลึกศัพท์น่ารู้</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('いきしょうちん')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">意気消沈 <span class="vocab-kana">(いきしょうちん)</span></div>
-                    <div class="vocab-th">หมายถึง 'การหมดกำลังใจ' หรือความรู้สึกหดหู่เนื่องจากความล้มเ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「意気消沈」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('いきしょうちん')">🔊</button>
+                        <div><b>意気消沈</b><br><small>การหมดอาลัยตายอยาก/การท้อแท้อย่างยิ่ง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.8-71 | 二番煎<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>หมายถึง 'การทำซ้ำรอยเดิม' หรือ 'การลอกเลียนแบบ' ที่ไม่มีความสดใหม่เหมือนของเดิมครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                すぐに「二番煎じ」を出してくる。
-                <br><button class="tts-sentence-btn" onclick="playTTS('すぐに二番煎じを出してくる。')">🔊 ฟังเสียงอ่านอ่าน</button>
+        <!-- Word 71 -->
+        <div class="masterclass-card">
+            <div class="index-label">71</div>
+            <div class="word-title">Word: 二番煎じ (にばんせんじ)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                สื่อถึงสิ่งที่ขาดความคิดสร้างสรรค์และน่าเบื่อค่ะ (Lack of Originality) จงกล้าที่จะเป็นตัวของตัวเองและสร้างสรรค์สิ่งใหม่ๆ ให้แก่โลกใบนี้ เพราะความเป็นเอกลักษณ์ในตัวคุณคือคุณค่าที่ไม่มีอะไรสามารถมาทดแทนได้ค่ะ! <span style="color:#d81b60;">(Mimi: นี่มันของเก่าเล่าใหม่นี่พี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 มาดูศัพท์ในประโยคกัน</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('にばんせんじ')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์หลัก</span>
-                    <div class="vocab-jp">二番煎 <span class="vocab-kana">(にばんせんじ)</span></div>
-                    <div class="vocab-th">หมายถึง 'การทำซ้ำรอยเดิม' หรือ 'การลอกเลียนแบบ' ที่ไม่มีความ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「二番煎じ」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('にばんせんじ')">🔊</button>
+                        <div><b>二番煎じ</b><br><small>ของเก่าเล่าใหม่/การเลียนแบบที่ไม่มีอะไรใหม่</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.8-72 | 緩急<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ความหมาย</span><br>หมายถึง 'จังหวะเร็วช้า' หรือ 'ความตึงหย่อน' ในบริบทนี้คือการจัดการเวลาพักและเวลาทำงานให้เหมาะสมครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                意識的に「緩急」をつける。
-                <br><button class="tts-sentence-btn" onclick="playTTS('意識的に緩急をつける。')">🔊 กดเพื่อฟังประโยค</button>
+        <!-- Word 72 -->
+        <div class="masterclass-card">
+            <div class="index-label">72</div>
+            <div class="word-title">Word: 緩急自在 (かんきゅうじざい)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "ช้า" "เร็ว" และ "อิสระ" ค่ะ เป็นทักษะขั้นสูงของการจัดการ (Perfect Control) การรู้จักผ่อนหนักผ่อนเบาในชีวิตและการเรียนจะทำให้คุณมีความสุขและประสบความสำเร็จได้อย่างมั่นคงและยั่งยืนที่สุดค่ะ! <span style="color:#d81b60;">(Mimi: มิมี่ปรับตัวเก่งนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 สรุปศัพท์สำคัญ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('かんきゅう')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">緩急 <span class="vocab-kana">(かんきゅう)</span></div>
-                    <div class="vocab-th">หมายถึง 'จังหวะเร็วช้า' หรือ 'ความตึงหย่อน' ในบริบทนี้คือการ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「緩急自在」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('かんきゅうじざい')">🔊</button>
+                        <div><b>緩急自在</b><br><small>การปรับตัวได้ตามสถานการณ์/ความยืดหยุ่นที่สมบูรณ์แบบ</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.8-73 | 慙愧<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ความหมาย</span><br>หมายถึง 'ความรู้สึกละอายใจอย่างยิ่ง' เป็นคำที่เป็นทางการและหนักแน่นมากครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                「慙愧」に堪えません。
-                <br><button class="tts-sentence-btn" onclick="playTTS('慙愧に堪えません。')">🔊 ฟังสำเนียงญี่ปุ่น</button>
+        <!-- Word 73 -->
+        <div class="masterclass-card">
+            <div class="index-label">73</div>
+            <div class="word-title">Word: 慙愧に堪えない (ざんきにたえない)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นภาษาเขียนระดับสูงที่แสดงถึงความสำนึกผิดอย่างลึกซึ้ง (Profound Regret) การเข้าใจความละเอียดอ่อนของถ้อยคำที่แสดงถึง "ศักดิ์ศรีและความละอาย" จะทำให้คุณเข้าถึงแก่นแท้ของจิตวิญญาณแบบญี่ปุ่นได้อย่างแท้จริงค่ะ! <span style="color:#d81b60;">(Mimi: ละอายใจจังเลยพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('ざんき')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">慙愧 <span class="vocab-kana">(ざんき)</span></div>
-                    <div class="vocab-th">หมายถึง 'ความรู้สึกละอายใจอย่างยิ่ง' เป็นคำที่เป็นทางการและห...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「慙愧に堪えない」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('ざんきにたえない')">🔊</button>
+                        <div><b>慙愧に堪えない</b><br><small>รู้สึกละอายใจอย่างยิ่งจนทนไม่ได้</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.8-74 | 異<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>หมายถึง 'การแสดงความเห็นคัดค้าน' หรือการพูดโต้แย้งในสิ่งที่เห็นต่างออกไปครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                決断に「異を唱える」権利はない。
-                <br><button class="tts-sentence-btn" onclick="playTTS('決断に異を唱える権利はない。')">🔊 ลองฟังเสียงดู</button>
+        <!-- Word 74 -->
+        <div class="masterclass-card">
+            <div class="index-label">74</div>
+            <div class="word-title">Word: 異口同音 (いくどうおん)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "ปากต่าง" แต่ "เสียงเดียว" ค่ะ สื่อถึงความพร้อมเพรียง (Unanimous) เมื่อทุกคน "Iku Douon" เห็นพ้องในเรื่องดีๆ พลังแห่งความร่วมมือจะนำพาความสำเร็จที่ยิ่งใหญ่มาสู่ทุกคนในทีมอย่างแน่นอนค่ะ! <span style="color:#d81b60;">(Mimi: ทุกคนพูดเป็นเสียงเดียวกันพี้ว! 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 วิเคราะห์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('いとなえる')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">異 <span class="vocab-kana">(いとなえる)</span></div>
-                    <div class="vocab-th">หมายถึง 'การแสดงความเห็นคัดค้าน' หรือการพูดโต้แย้งในสิ่งที่เ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「異口同音」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('いくどうおん')">🔊</button>
+                        <div><b>異口同音</b><br><small>พูดเป็นเสียงเดียวกัน/ความเห็นเป็นเอกฉันท์</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.8-75 | 糾弾<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ความหมาย</span><br>หมายถึง 'การประณาม' หรือการตำหนิติเตียนความผิดของผู้อื่นอย่างรุนแรงครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                君の責任だと「糾弾」されても。
-                <br><button class="tts-sentence-btn" onclick="playTTS('君の責任だと糾弾されても。')">🔊 ฟังสำเนียงญี่ปุ่น</button>
+        <!-- Word 75 -->
+        <div class="masterclass-card">
+            <div class="index-label">75</div>
+            <div class="word-title">Word: 糾弾 (きゅうだん)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิสื่อถึงการสืบสวนและโจมตีค่ะ เป็นคำที่แสดงถึงความเด็ดขาดในการต่อสู้กับสิ่งที่ผิด (Censure) การมีจุดยืนที่ถูกต้องและกล้าหาญจะทำให้คุณเป็นคนที่น่านับถือและมีส่วนช่วยสร้างสรรค์สังคมให้ดียิ่งขึ้นได้ค่ะ! <span style="color:#d81b60;">(Mimi: ขอประณามการกระทำนี้พี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 มาดูศัพท์ในประโยคกัน</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('きゅうだん')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">糾弾 <span class="vocab-kana">(きゅうだん)</span></div>
-                    <div class="vocab-th">หมายถึง 'การประณาม' หรือการตำหนิติเตียนความผิดของผู้อื่นอย่า...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「糾弾」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('きゅうだん')">🔊</button>
+                        <div><b>糾弾</b><br><small>การประณาม/การกล่าวหาอย่างรุนแรง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.8-76 | 億劫<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ความหมาย</span><br>หมายถึง 'ความรู้สึกขี้เกียจ' หรือความรู้สึกว่าการทำสิ่งนั้นมันยุ่งยากจนไม่อยากทำครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                考えることが「億劫」になるよね。
-                <br><button class="tts-sentence-btn" onclick="playTTS('考えることが億劫になるよね。')">🔊 ตัวอย่างการออกเสียง</button>
+        <!-- Word 76 -->
+        <div class="masterclass-card">
+            <div class="index-label">76</div>
+            <div class="word-title">Word: 億劫 (おっくう)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เมื่อความ "Okkuu" เข้าครอบงำ ให้ลองเปลี่ยนบรรยากาศหรือหาแรงบันดาลใจใหม่ๆ (Motivation Recharge) ความสุขเพียงเล็กน้อยระหว่างวันจะช่วยขับไล่ความขี้เกียจและทำให้คุณกลับมามีพลังในการเรียนรู้อีกครั้งอย่างน่ามหัศจรรย์ค่ะ! <span style="color:#d81b60;">(Mimi: ยุ่งยากจังเลยนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 วิเคราะห์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('おっくう')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์เด่น</span>
-                    <div class="vocab-jp">億劫 <span class="vocab-kana">(おっくう)</span></div>
-                    <div class="vocab-th">หมายถึง 'ความรู้สึกขี้เกียจ' หรือความรู้สึกว่าการทำสิ่งนั้นม...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「億劫」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('おっくう')">🔊</button>
+                        <div><b>億劫</b><br><small>ความขี้เกียจที่เกิดจากความยุ่งยากใจ</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.8-77 | 立<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>หมายถึง 'ไปไม่รอด' หรือสถานการณ์ที่ไม่สามารถดำเนินต่อไปได้อีกแล้วครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                利益だけでは「立ち行かない」。
-                <br><button class="tts-sentence-btn" onclick="playTTS('利益だけでは立ち行かない。')">🔊 กดเพื่อฟังประโยค</button>
+        <!-- Word 77 -->
+        <div class="masterclass-card">
+            <div class="index-label">77</div>
+            <div class="word-title">Word: 立板に水 (たていたにみず)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "น้ำที่ไหลบนแผ่นไม้ที่วางตั้ง" ค่ะ สื่อถึงความคล่องแคล่วในการพูด (Eloquent) การฝึกฝนการออกเสียงจน "Tateita ni mizu" จะทำให้คุณสื่อสารได้อย่างมีเสน่ห์และสามารถโน้มน้าวใจผู้ฟังได้อย่างยอดเยี่ยมค่ะ! <span style="color:#d81b60;">(Mimi: พูดน้ำไหลไฟดับเลยนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 วิเคราะห์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('たゆかない')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">立 <span class="vocab-kana">(たゆかない)</span></div>
-                    <div class="vocab-th">หมายถึง 'ไปไม่รอด' หรือสถานการณ์ที่ไม่สามารถดำเนินต่อไปได้อี...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「立板に水」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('たていたにみず')">🔊</button>
+                        <div><b>立板に水</b><br><small>พูดน้ำไหลไฟดับ/พูดฉะฉานไม่มีสะดุด</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.8-78 | 物議<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>หมายถึง 'การก่อให้เกิดข้อถกเถียง' หรือการทำให้เกิดเสียงวิพากษ์วิจารณ์ในสังคมครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                社内では「物議を醸し」そうだね。
-                <br><button class="tts-sentence-btn" onclick="playTTS('社内では物議を醸しそうだね。')">🔊 กดเพื่อฟังประโยค</button>
+        <!-- Word 78 -->
+        <div class="masterclass-card">
+            <div class="index-label">78</div>
+            <div class="word-title">Word: 物議を醸す (ぶつぎをかもす)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิสื่อถึงการหมักบ่มความคิดเห็นที่หลากหลายค่ะ (Controversial) การวิเคราะห์ประเด็นที่ "Butsugi o kamosu" จะช่วยฝึกฝนความคิดเชิงวิพากษ์ของคุณและทำให้คุณเข้าใจความหลากหลายทางความคิดของสังคมญี่ปุ่นค่ะ! <span style="color:#d81b60;">(Mimi: ก่อให้เกิดเสียงวิจารณ์พี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('ぶつぎかもす')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">物議 <span class="vocab-kana">(ぶつぎかもす)</span></div>
-                    <div class="vocab-th">หมายถึง 'การก่อให้เกิดข้อถกเถียง' หรือการทำให้เกิดเสียงวิพาก...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「物議を醸す」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('ぶつぎをかもす')">🔊</button>
+                        <div><b>物議を醸す</b><br><small>การก่อให้เกิดเสียงวิพากษ์วิจารณ์/การทำให้เป็นประเด็นร้อน</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.8-79 | 沽券<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ความหมาย</span><br>หมายถึง 'กระทบต่อศักดิ์ศรี' หรือความเสียเกียรติของตนเองครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                白紙で出すのだけは「沽券」に関わる。
-                <br><button class="tts-sentence-btn" onclick="playTTS('白紙で出すのだけは沽券に関わる。')">🔊 ลองฟังดูอ่าน</button>
+        <!-- Word 79 -->
+        <div class="masterclass-card">
+            <div class="index-label">79</div>
+            <div class="word-title">Word: 沽券に関わる (こけんにかかわる)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                สื่อถึงการเสีย "เครดิต" ที่สั่งสมมาค่ะ (Damage to Reputation) การรักษาคำพูดและการกระทำที่สม่ำเสมอจะช่วยปกป้อง "Koken" ของคุณให้ยังคงสง่างามและน่าเชื่อถือในสายตาของทุกคนตลอดไปค่ะ! <span style="color:#d81b60;">(Mimi: เสียชื่อเสียงมิมี่หมดพี้ว! 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 พอยต์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('こけんかかわる')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์เด่น</span>
-                    <div class="vocab-jp">沽券 <span class="vocab-kana">(こけんかかわる)</span></div>
-                    <div class="vocab-th">หมายถึง 'กระทบต่อศักดิ์ศรี' หรือความเสียเกียรติของตนเองครับ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「沽券に関わる」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('こけんにかかわる')">🔊</button>
+                        <div><b>沽券に関わる</b><br><small>กระทบต่อศักดิ์ศรี/เสียชื่อเสียง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.8-80 | あるまじき<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>ไวยากรณ์หมายถึง 'ไม่ควรจะมี' หรือ 'ไม่ควรจะเกิดขึ้น' มักใช้ตำหนิพฤติกรรมที่ไม่เหมาะสมกับสถานภาพครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                社会人として「あるまじき」もの。
-                <br><button class="tts-sentence-btn" onclick="playTTS('社会人としてあるまじきもの。')">🔊 เสียงพากย์จากสาวแกล</button>
+        <!-- Word 80 -->
+        <div class="masterclass-card">
+            <div class="index-label">80</div>
+            <div class="word-title">Word: あるまじき (あるまじき)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นคำวิจารณ์การกระทำที่ขัดต่อจริยธรรมของอาชีพหรือตำแหน่งนั้นๆ (Unbecoming) การยึดมั่นในจรรยาบรรณจะทำให้คุณเป็นมืออาชีพที่ได้รับความเคารพและไว้วางใจจากเพื่อนร่วมงานและลูกค้าอย่างแท้จริงค่ะ! <span style="color:#d81b60;">(Mimi: เป็นเรื่องที่ไม่สมควรพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('あるまじき')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์หลัก</span>
-                    <div class="vocab-jp">あるまじき <span class="vocab-kana">(あるまじき)</span></div>
-                    <div class="vocab-th">ไวยากรณ์หมายถึง 'ไม่ควรจะมี' หรือ 'ไม่ควรจะเกิดขึ้น' มักใช้ต...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「あるまじき」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('あるまじき')">🔊</button>
+                        <div><b>あるまじき</b><br><small>เป็นเรื่องที่ไม่ควรเกิดขึ้น/ไม่สมควรอย่างยิ่ง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.9-81 | 以心伝心<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ความหมาย</span><br>หมายถึง 'การสื่อถึงกันด้วยใจ' โดยไม่ต้องใช้คำพูด เป็นความเข้าใจที่ตรงกันระหว่างผู้รับและผู้ส่งสารครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                以心伝心を前提とした美学。
-                <br><button class="tts-sentence-btn" onclick="playTTS('以心伝心を前提とした美学。')">🔊 เสียงพากย์จากสาวแกล</button>
+        <!-- Word 81 -->
+        <div class="masterclass-card">
+            <div class="index-label">81</div>
+            <div class="word-title">Word: 以心伝心 (いしんでんしん)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นเสน่ห์ของการสื่อสารแบบญี่ปุ่นที่เน้นการอ่านใจ (Non-verbal Understanding) การพัฒนาความฉลาดทางอารมณ์จะช่วยให้คุณ "Ishin Denshin" กับคู่สนทนาและสร้างสายสัมพันธ์ที่ลึกซึ้งและอบอุ่นใจอย่างไม่น่าเชื่อเลยล่ะค่ะ! <span style="color:#d81b60;">(Mimi: ใจมิมี่ถึงใจคุณนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 มาดูศัพท์ในประโยคกัน</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('いしんでんしん')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์หลัก</span>
-                    <div class="vocab-jp">以心伝心 <span class="vocab-kana">(いしんでんしん)</span></div>
-                    <div class="vocab-th">หมายถึง 'การสื่อถึงกันด้วยใจ' โดยไม่ต้องใช้คำพูด เป็นความเข้...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「以心伝心」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('いしんでんしん')">🔊</button>
+                        <div><b>以心伝心</b><br><small>การเข้าใจกันโดยไม่ต้องพูด/ใจถึงใจ</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.9-82 | 角<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 อธิบายสั้นๆ</span><br>สำนวนหมายถึง 'การพยายามแก้จุดบกพร่องเล็กๆ แต่กลับทำให้ส่วนสำคัญทั้งหมดพังพินาศ' ครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                角を矯めて牛を殺すことになりかねません。
-                <br><button class="tts-sentence-btn" onclick="playTTS('角を矯めて牛を殺すことになりかねません。')">🔊 ฟังสำเนียงญี่ปุ่น</button>
+        <!-- Word 82 -->
+        <div class="masterclass-card">
+            <div class="index-label">82</div>
+            <div class="word-title">Word: 角を立てる (かどをたてる)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "ทำให้เกิดมุม" ค่ะ สื่อถึงความไม่ราบรื่น (Social Abrasiveness) การใช้วาทศิลป์ที่นุ่มนวลจะช่วยไม่ให้ "Kado o tateru" และทำให้การสนทนาเป็นไปอย่างสันติและมีความสุขสำหรับทุกฝ่ายที่เกี่ยวข้องค่ะ! <span style="color:#d81b60;">(Mimi: อย่าพูดจาขวางหูมิมี่นะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 สรุปศัพท์สำคัญ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('つのたうしころす')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">角 <span class="vocab-kana">(つのたうしころす)</span></div>
-                    <div class="vocab-th">สำนวนหมายถึง 'การพยายามแก้จุดบกพร่องเล็กๆ แต่กลับทำให้ส่วนสำ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「角を立てる」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('かどをたてる')">🔊</button>
+                        <div><b>角を立てる</b><br><small>การทำให้เกิดความขัดแย้ง/การพูดจาขวางหู</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.9-83 | 身<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>หมายถึง 'การไม่รู้จักที่ต่ำที่สูง' หรือการกระทำที่เกินตัว เกินฐานะของตนเองครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                まさに身の程知らずですね。
-                <br><button class="tts-sentence-btn" onclick="playTTS('まさに身の程知らずですね。')">🔊 กดเพื่อฟังประโยค</button>
+        <!-- Word 83 -->
+        <div class="masterclass-card">
+            <div class="index-label">83</div>
+            <div class="word-title">Word: 身も蓋もない (みもふたもない)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "ไม่มีทั้งตัวและฝา" ค่ะ สื่อถึงความโล้นเลี่ยน (Too Direct) การมีความจริงใจเป็นเรื่องดี แต่การแฝงไปด้วยความเมตตาและกาลเทศะในการพูดจะทำให้ความจริงนั้นมีพลังในการสร้างสรรค์มากกว่าการทำลายความรู้สึกค่ะ! <span style="color:#d81b60;">(Mimi: พูดตรงเกินไปแล้วพี้ว! 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 พอยต์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('みほどしらず')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">身 <span class="vocab-kana">(みほどしらず)</span></div>
-                    <div class="vocab-th">หมายถึง 'การไม่รู้จักที่ต่ำที่สูง' หรือการกระทำที่เกินตัว เก...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「身も蓋もない」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('みもふたもない')">🔊</button>
+                        <div><b>身も蓋もない</b><br><small>พูดตรงเกินไปจนเสียความรู้สึก/ไร้ซึ่งศิลปะในการพูด</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.9-84 | 付<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>หมายถึง 'การฉวยโอกาส' หรือ 'การหาประโยชน์' จากจุดอ่อนหรือความไม่รู้ของผู้อื่นครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                消費者の無知に付け入る。
-                <br><button class="tts-sentence-btn" onclick="playTTS('消費者の無知に付け入る。')">🔊 ฝึกฟังประโยคนี้</button>
+        <!-- Word 84 -->
+        <div class="masterclass-card">
+            <div class="index-label">84</div>
+            <div class="word-title">Word: 付焼刃 (つけやきば)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                สื่อถึงความคมที่ฉาบไว้แค่ผิวหน้าของดาบค่ะ (Superficial Knowledge) มาสเตอร์คลาสของเราจะช่วยให้คุณห่างไกลจากความรู้แบบ "Tsukeyakiba" โดยเน้นการสร้างความเข้าใจที่ลึกซึ้งและมั่นคงถาวรในระยะยาวค่ะ! <span style="color:#d81b60;">(Mimi: อย่าเรียนแบบงูๆ ปลาๆ นะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 วิเคราะห์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('ついる')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">付 <span class="vocab-kana">(ついる)</span></div>
-                    <div class="vocab-th">หมายถึง 'การฉวยโอกาส' หรือ 'การหาประโยชน์' จากจุดอ่อนหรือควา...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「付焼刃」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('つけやきば')">🔊</button>
+                        <div><b>付焼刃</b><br><small>ความรู้แบบงูๆ ปลาๆ/ความรู้ที่อัดมาในเวลาสั้นๆ</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.9-85 | 万死<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>สำนวนหมายถึง 'ความผิดร้ายแรงจนสมควรตายหมื่นครั้ง' ใช้เพื่อแสดงการขอโทษอย่างสุดซึ้งครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                万死に値すると猛省しております。
-                <br><button class="tts-sentence-btn" onclick="playTTS('万死に値すると猛省しております。')">🔊 กดเพื่อฟังประโยค</button>
+        <!-- Word 85 -->
+        <div class="masterclass-card">
+            <div class="index-label">85</div>
+            <div class="word-title">Word: 万死に値する (ばんしにあたいする)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นสำนวนแสดงความโกรธหรือการตำหนิที่รุนแรงที่สุดค่ะ (Extreme Censure) การเข้าใจระดับความรุนแรงของภาษาจะทำให้คุณระมัดระวังในการใช้ชีวิตและการสื่อสารเพื่อให้เกิดความผิดพลาดที่น้อยที่สุดและน่าเกรงขามที่สุดค่ะ! <span style="color:#d81b60;">(Mimi: ความผิดนี้ร้ายแรงมากพี้ว! 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 พอยต์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('ばんしあたいする')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์เด่น</span>
-                    <div class="vocab-jp">万死 <span class="vocab-kana">(ばんしあたいする)</span></div>
-                    <div class="vocab-th">สำนวนหมายถึง 'ความผิดร้ายแรงจนสมควรตายหมื่นครั้ง' ใช้เพื่อแส...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「万死に値する」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('ばんしにあたいする')">🔊</button>
+                        <div><b>万死に値する</b><br><small>ความผิดร้ายแรงที่ควรตายหมื่นครั้ง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.9-86 | 墨守<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>หมายถึง 'การยึดถือเอาไว้อย่างเคร่งครัด' หรือการรักษาประเพณีเดิมไว้โดยไม่ยอมเปลี่ยนแปลงครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                伝統を墨守するのも大切だが。
-                <br><button class="tts-sentence-btn" onclick="playTTS('伝統を墨守するのも大切だが。')">🔊 ลองฟังเสียงดู</button>
+        <!-- Word 86 -->
+        <div class="masterclass-card">
+            <div class="index-label">86</div>
+            <div class="word-title">Word: 墨守 (ぼくしゅ)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                ในยุคที่โลกก้าวหน้าไปอย่างรวดเร็ว การยึดติดกับความสำเร็จในอดีตอาจกลายเป็นพันธนาการ (Stubbornness) จงเปิดใจรับนวัตกรรมและวิธีการเรียนรู้ใหม่ๆ เพื่อที่จะได้ไม่เป็นผู้ที่ "Bokushu" และสามารถก้าวทันโลกอยู่เสมอค่ะ! <span style="color:#d81b60;">(Mimi: อย่าเอาแต่ยึดของเดิมพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 มาดูศัพท์ในประโยคกัน</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('ぼくしゅする')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">墨守 <span class="vocab-kana">(ぼくしゅする)</span></div>
-                    <div class="vocab-th">หมายถึง 'การยึดถือเอาไว้อย่างเคร่งครัด' หรือการรักษาประเพณีเ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「墨守」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('ぼくしゅ')">🔊</button>
+                        <div><b>墨守</b><br><small>การยึดติดกับสิ่งเดิมโดยไม่ยอมเปลี่ยนแปลง (Repetition)</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.9-87 | 黒子<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>หมายถึง 'การทำหน้าที่เป็นผู้ปิดทองหลังพระ' คือการสนับสนุนอยู่เบื้องหลังโดยไม่ยอมปรากฏตัวครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                黒子に徹してチームを支える。
-                <br><button class="tts-sentence-btn" onclick="playTTS('黒子に徹してチームを支える。')">🔊 ฟังสำเนียงญี่ปุ่น</button>
+        <!-- Word 87 -->
+        <div class="masterclass-card">
+            <div class="index-label">87</div>
+            <div class="word-title">Word: 黒子 (くろこ)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นตัวละครในละคร Kabuki ที่ใส่ชุดดำค่ะ (Silent Support) การเห็นคุณค่าของคนที่ทำงานเป็น "Kuroko" จะทำให้คุณเป็นผู้นำที่ได้รับความรักและแรงสนับสนุนที่แข็งแกร่งจากทีมงานทุกคนอย่างแท้จริงและยั่งยืนค่ะ! <span style="color:#d81b60;">(Mimi: มิมี่คือผู้ปิดทองหลังพระพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('くろこてっする')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">黒子 <span class="vocab-kana">(くろこてっする)</span></div>
-                    <div class="vocab-th">หมายถึง 'การทำหน้าที่เป็นผู้ปิดทองหลังพระ' คือการสนับสนุนอยู...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「黒子」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('くろこ')">🔊</button>
+                        <div><b>黒子</b><br><small>ผู้ปิดทองหลังพระ/ผู้ที่ทำงานอยู่เบื้องหลัง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.9-88 | 薬石<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 อธิบายสั้นๆ</span><br>สำนวนหมายถึง 'รักษาไม่หาย' หรือ 'พยายามแก้ไขทุกวิถีทางแล้วแต่ก็ไม่เป็นผล' ครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                まさに薬石効なく。
-                <br><button class="tts-sentence-btn" onclick="playTTS('まさに薬石効なく。')">🔊 ลองฟังเสียงดู</button>
+        <!-- Word 88 -->
+        <div class="masterclass-card">
+            <div class="index-label">88</div>
+            <div class="word-title">Word: 薬石効なく (やくせきこうなく)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "ยาและหิน (เข็มฝังเข็ม)" ค่ะ มักใช้ในบริบทของการสูญเสียที่น่าเศร้า (In vain) ขอให้ความพยายามของคุณส่งผลลัพธ์ที่ยอดเยี่ยมเสมอ เพื่อที่จะไม่ต้องพบกับความรู้สึกที่ "Yakuseki Kou naku" ในวันที่สายเกินไปค่ะ! <span style="color:#d81b60;">(Mimi: รักษาเท่าไหร่ก็ไม่หายพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 เจาะลึกศัพท์น่ารู้</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('やくせきこうなく')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">薬石 <span class="vocab-kana">(やくせきこうなく)</span></div>
-                    <div class="vocab-th">สำนวนหมายถึง 'รักษาไม่หาย' หรือ 'พยายามแก้ไขทุกวิถีทางแล้วแต...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「薬石効なく」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('やくせきこうなく')">🔊</button>
+                        <div><b>薬石効なく</b><br><small>การรักษาที่ไม่ได้ผล/ความพยายามที่ไร้ผล</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.9-89 | 隠<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>ปกติคือเสื้อคลุมล่องหน ในเชิงเปรียบเทียบหมายถึง 'การใช้บางอย่างบังหน้า' เพื่อปกปิดจุดประสงค์ที่แท้จริงครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                匿名を隠れ蓑にして。
-                <br><button class="tts-sentence-btn" onclick="playTTS('匿名を隠れ蓑にして。')">🔊 ลองฟังเสียงดู</button>
+        <!-- Word 89 -->
+        <div class="masterclass-card">
+            <div class="index-label">89</div>
+            <div class="word-title">Word: 隠し味 (かくしあじ)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นสิ่งเล็กๆ ที่ขาดไม่ได้ซึ่งทำให้ผลลัพธ์ออกมาสมบูรณ์แบบ (Secret Element) ในบทเรียนของเรามี "Kakushi Aji" หรือเทคนิคพิเศษซ่อนอยู่มากมายที่จะช่วยให้คุณจำไวยากรณ์ยากๆ ได้อย่างรวดเร็วและแม่นยำอย่างอัศจรรย์ค่ะ! <span style="color:#d81b60;">(Mimi: เคล็ดลับความอร่อยคืออะไรพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 วิเคราะห์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('かくみの')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">隠 <span class="vocab-kana">(かくみの)</span></div>
-                    <div class="vocab-th">ปกติคือเสื้อคลุมล่องหน ในเชิงเปรียบเทียบหมายถึง 'การใช้บางอย...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「隠し味」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('かくしあじ')">🔊</button>
+                        <div><b>隠し味</b><br><small>รสชาติที่ซ่อนอยู่/เคล็ดลับความอร่อย</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.9-90 | 正念場<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>หมายถึง 'ช่วงเวลาที่สำคัญที่สุด' หรือ 'จุดชี้ขาด' ที่จะตัดสินผลลัพธ์ของงานครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                正念場ですね。
-                <br><button class="tts-sentence-btn" onclick="playTTS('正念場ですね。')">🔊 เสียงพากย์จากสาวแกล</button>
+        <!-- Word 90 -->
+        <div class="masterclass-card">
+            <div class="index-label">90</div>
+            <div class="word-title">Word: 正念場 (しょうねんば)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นฉากสำคัญที่สุดในละคร Kabuki ค่ะ (Crunch Time) เมื่อวันสอบมาถึง นั่นคือ "Shounenba" ของคุณ จงรวบรวมความกล้าและสติทั้งหมดที่มีเพื่อแสดงฝีมือให้ออกมาดีที่สุดเพื่อชัยชนะที่คุณคู่ควรที่สุดค่ะ! <span style="color:#d81b60;">(Mimi: ช่วงเวลาชี้เป็นชี้ตายแล้วพี้ว! 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 เจาะลึกศัพท์น่ารู้</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('しょうねんば')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">正念場 <span class="vocab-kana">(しょうねんば)</span></div>
-                    <div class="vocab-th">หมายถึง 'ช่วงเวลาที่สำคัญที่สุด' หรือ 'จุดชี้ขาด' ที่จะตัดสิ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「正念場」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('しょうねんば')">🔊</button>
+                        <div><b>正念場</b><br><small>ช่วงเวลาชี้เป็นชี้ตาย/บททดสอบสำคัญ</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.10-91 | 安逸<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ความหมาย</span><br>หมายถึง 'การลุ่มหลงอยู่กับความสบาย' โดยไม่คิดจะทำอะไรหรือพัฒนาตนเองครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                安逸を貪る生活は。
-                <br><button class="tts-sentence-btn" onclick="playTTS('安逸を貪る生活は。')">🔊 ตัวอย่างการออกเสียง</button>
+        <!-- Word 91 -->
+        <div class="masterclass-card">
+            <div class="index-label">91</div>
+            <div class="word-title">Word: 安逸 (あんいつ)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                ความสบายในวันนี้อาจกลายเป็นอุปสรรคในวันหน้าค่ะ (Comfort Zone Trap) จงกล้าที่จะก้าวออกจากความ "An-itsu" และเผชิญหน้ากับความท้าทายใหม่ๆ เพื่อที่จะได้เติบโตเป็นผู้ที่แข็งแกร่งและประสบความสำเร็จเหนือใครเพื่อนค่ะ! <span style="color:#d81b60;">(Mimi: อย่ามัวแต่รักความสบายนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('あんいつむさぼる')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์หลัก</span>
-                    <div class="vocab-jp">安逸 <span class="vocab-kana">(あんいつむさぼる)</span></div>
-                    <div class="vocab-th">หมายถึง 'การลุ่มหลงอยู่กับความสบาย' โดยไม่คิดจะทำอะไรหรือพัฒ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「安逸」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('あんいつ')">🔊</button>
+                        <div><b>安逸</b><br><small>ความสุขสบายที่ทำให้ขี้เกียจ/การรักความสบายเกินไป</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.10-92 | 人心<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>หมายถึง 'การกุมหัวใจคน' หรือการสามารถชนะใจคนและทำให้ผู้คนยอมตามด้วยความเต็มใจครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                人心を掌握する力がある。
-                <br><button class="tts-sentence-btn" onclick="playTTS('人心を掌握する力がある。')">🔊 ฝึกฟังประโยคนี้</button>
+        <!-- Word 92 -->
+        <div class="masterclass-card">
+            <div class="index-label">92</div>
+            <div class="word-title">Word: 人心掌握 (じんしんしょうあく)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นทักษะที่ยิ่งใหญ่ที่สุดของผู้นำค่ะ (Mastery of Human Relations) การใช้ภาษาที่เปี่ยมไปด้วยความเห็นอกเห็นใจจะช่วยให้คุณ "Jinshin Shouaku" และสร้างทีมงานที่พร้อมจะทุ่มเทและก้าวไปสู่จุดหมายที่ยิ่งใหญ่ร่วมกับคุณค่ะ! <span style="color:#d81b60;">(Mimi: การครองใจคนสำคัญที่สุดพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 วิเคราะห์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('じんしんしょうあくする')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์เด่น</span>
-                    <div class="vocab-jp">人心 <span class="vocab-kana">(じんしんしょうあくする)</span></div>
-                    <div class="vocab-th">หมายถึง 'การกุมหัวใจคน' หรือการสามารถชนะใจคนและทำให้ผู้คนยอม...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「人心掌握」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('じんしんしょうあく')">🔊</button>
+                        <div><b>人心掌握</b><br><small>การครองใจคน/การเข้าถึงใจคน</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.10-93 | 乾坤一擲<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 อธิบายสั้นๆ</span><br>สำนวนหมายถึง 'การเดิมพันครั้งใหญ่ที่ตัดสินชะตาชีวิต' (เหมือนการทอยลูกเต๋าตัดสินฟ้าดิน) ครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                まさに乾坤一擲の大勝負。
-                <br><button class="tts-sentence-btn" onclick="playTTS('まさに乾坤一擲の大勝負。')">🔊 กดเพื่อฟังประโยค</button>
+        <!-- Word 93 -->
+        <div class="masterclass-card">
+            <div class="index-label">93</div>
+            <div class="word-title">Word: 乾坤一擲 (けんこんいってき)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "ฟ้าดิน" และ "โยน" ค่ะ สื่อถึงความเด็ดเดี่ยวระดับตำนาน (The Big Gamble) การเตรียมตัวสอบ N1 คือการ "Kenkon Itteki" ของคุณที่จะเปลี่ยนอนาคตให้สดใส จงทุ่มเทหัวใจให้กับมันอย่างเต็มที่นะคะ! <span style="color:#d81b60;">(Mimi: ทุ่มสุดตัวเพื่อชะตาชีวิตพี้ว! 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 วิเคราะห์คำศัพท์</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('けんこんいってき')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">乾坤一擲 <span class="vocab-kana">(けんこんいってき)</span></div>
-                    <div class="vocab-th">สำนวนหมายถึง 'การเดิมพันครั้งใหญ่ที่ตัดสินชะตาชีวิต' (เหมือน...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「乾坤一擲」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('けんこんいってき')">🔊</button>
+                        <div><b>乾坤一擲</b><br><small>การทุ่มสุดตัวเพื่อตัดสินชะตาชีวิต/การเดิมพันครั้งใหญ่</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.10-94 | 等価交換<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 อธิบายสั้นๆ</span><br>หมายถึง 'การแลกเปลี่ยนด้วยมูลค่าที่เท่ากัน' เช่น การซื้อของด้วยราคาที่เหมาะสมครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                等価交換が原則ですが。
-                <br><button class="tts-sentence-btn" onclick="playTTS('等価交換が原則ですが。')">🔊 ฝึกฟังประโยคนี้</button>
+        <!-- Word 94 -->
+        <div class="masterclass-card">
+            <div class="index-label">94</div>
+            <div class="word-title">Word: 等価交換 (とうかこうかん)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นกฎของธรรมชาติและสังคมค่ะ (Fair Exchange) ทุกหยาดเหงื่อที่คุณเสียไปกับการเรียนจะถูก "Touka Koukan" เปลี่ยนเป็นความรู้และความสำเร็จที่ล้ำค่าคุ้มค่ากับความพยายามที่คุณทุ่มเทลงไปอย่างแน่นอนค่ะ! <span style="color:#d81b60;">(Mimi: การแลกเปลี่ยนที่เท่าเทียมพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 มาดูศัพท์ในประโยคกัน</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('とうかこうかん')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">等価交換 <span class="vocab-kana">(とうかこうかん)</span></div>
-                    <div class="vocab-th">หมายถึง 'การแลกเปลี่ยนด้วยมูลค่าที่เท่ากัน' เช่น การซื้อของด...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「等価交換」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('とうかこうかん')">🔊</button>
+                        <div><b>等価交換</b><br><small>การแลกเปลี่ยนด้วยมูลค่าที่เท่ากัน</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.10-95 | 水<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>สำนวน 'ปล่อยให้ไหลไปกับน้ำ' หมายถึงการให้อภัยและลืมความขัดแย้งในอดีตไปให้หมดครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                この雪解けを機に、水に流そう。
-                <br><button class="tts-sentence-btn" onclick="playTTS('この雪解けを機に、水に流そう。')">🔊 ฟังสำเนียงญี่ปุ่น</button>
+        <!-- Word 95 -->
+        <div class="masterclass-card">
+            <div class="index-label">95</div>
+            <div class="word-title">Word: 水の泡 (みずのあわ)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                อย่าปล่อยให้ความฝันของคุณต้องกลายเป็น "Mizu no Awa" เพราะความล้มเลิกกลางคัน (Futile Effort) จงอดทนและก้าวต่อไปอย่างมั่นคง เพื่อให้ทุกความฝันของคุณผลิดอกออกผลที่สวยงามและยั่งยืนตลอดไปในอนาคตค่ะ! <span style="color:#d81b60;">(Mimi: กลายเป็นฟองสบู่ไปแล้วพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 สรุปศัพท์สำคัญ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('みずながす')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์เด่น</span>
-                    <div class="vocab-jp">水 <span class="vocab-kana">(みずながす)</span></div>
-                    <div class="vocab-th">สำนวน 'ปล่อยให้ไหลไปกับน้ำ' หมายถึงการให้อภัยและลืมความขัดแย...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「水の泡」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('みずのあわ')">🔊</button>
+                        <div><b>水の泡</b><br><small>กลายเป็นฟองสบู่/สูญเปล่า</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.10-96 | 温故知新<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 อธิบายสั้นๆ</span><br>สำนวน 'เรียนรู้เรื่องเก่าเพื่อเข้าใจเรื่องใหม่' หมายถึงการศึกษาอดีตเพื่อนำมาประยุกต์ใช้ในปัจจุบันครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ประโยคสาธิต</span><br>
-                温故知新の精神こそが。
-                <br><button class="tts-sentence-btn" onclick="playTTS('温故知新の精神こそが。')">🔊 ตัวอย่างการออกเสียง</button>
+        <!-- Word 96 -->
+        <div class="masterclass-card">
+            <div class="index-label">96</div>
+            <div class="word-title">Word: 温故知新 (おんこちしん)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                เป็นสุภาษิตที่เป็นรากฐานของการพัฒนาค่ะ (Ancient Wisdom for the New) การศึกษาประวัติศาสตร์และพื้นฐานจะช่วยให้คุณเข้าใจเทคโนโลยีและแนวคิดในปัจจุบันได้อย่างลึกซึ้งและมีความคิดสร้างสรรค์ที่เหนือชั้นค่ะ! <span style="color:#d81b60;">(Mimi: เรียนรู้จากอดีตนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('おんこちしん')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์ที่ต้องจำ</span>
-                    <div class="vocab-jp">温故知新 <span class="vocab-kana">(おんこちしん)</span></div>
-                    <div class="vocab-th">สำนวน 'เรียนรู้เรื่องเก่าเพื่อเข้าใจเรื่องใหม่' หมายถึงการศึ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「温故知新」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('おんこちしん')">🔊</button>
+                        <div><b>温故知新</b><br><small>เรียนรู้เรื่องใหม่จากเรื่องเก่า/การนำอดีตมาเป็นบทเรียน</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.10-97 | 授業料<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>ในบริบทนี้หมายถึง 'บทเรียนราคาแพง' หรือสิ่งที่ต้องเสียไปเพื่อให้ได้มาซึ่งประสบการณ์ครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                輝かしい成功への「授業料」に過ぎない。
-                <br><button class="tts-sentence-btn" onclick="playTTS('輝かしい成功への授業料に過ぎない。')">🔊 ฟังสำเนียงญี่ปุ่น</button>
+        <!-- Word 97 -->
+        <div class="masterclass-card">
+            <div class="index-label">97</div>
+            <div class="word-title">Word: 授業料 (じゅぎょうりょう)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                ความผิดพลาดคือ "Jugyouryou" ที่คุ้มค่าถ้าคุณเรียนรู้จากมัน (Investment in Failure) อย่ากลัวที่จะทำผิด แต่จงใช้ทุกความผิดพลาดเป็นบันไดที่พาคุณไปสู่ความรอบรู้และความสำเร็จที่มั่นคงกว่าเดิมในทุกๆ วันค่ะ! <span style="color:#d81b60;">(Mimi: นี่คือบทเรียนราคาแพงพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('じゅぎょうりょう')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">授業料 <span class="vocab-kana">(じゅぎょうりょう)</span></div>
-                    <div class="vocab-th">ในบริบทนี้หมายถึง 'บทเรียนราคาแพง' หรือสิ่งที่ต้องเสียไปเพื่...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「授業料」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('じゅぎょうりょう')">🔊</button>
+                        <div><b>授業料</b><br><small>ค่าเล่าเรียน/บทเรียนราคาแพง (จากความผิดพลาด)</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.10-98 | 竜頭蛇尾<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 ข้อมูลเพิ่มเติม</span><br>สำนวน 'หัวมังกรหางงู' หมายถึงการเริ่มต้นอย่างยิ่งใหญ่แต่ตอนจบกลับล้มเหลวหรือไม่เอาไหนครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                結局は竜頭蛇尾に終わってしまった。
-                <br><button class="tts-sentence-btn" onclick="playTTS('結局は竜頭蛇尾に終わってしまった。')">🔊 ฝึกฟังประโยคนี้</button>
+        <!-- Word 198 -->
+        <div class="masterclass-card">
+            <div class="index-label">198</div>
+            <div class="word-title">Word: 竜頭蛇尾 (りゅうとうだび)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "หัวมังกรหางงู" ค่ะ เตือนสติเรื่องความสม่ำเสมอ (Falling off at the end) ขอให้ความตั้งใจเรียนของคุณเป็นมังกรที่สง่างามตั้งแต่ต้นจนจบ เพื่อให้ผลลัพธ์ออกมาเป็นความสำเร็จที่ยิ่งใหญ่และน่าภูมิใจที่สุดค่ะ! <span style="color:#d81b60;">(Mimi: อย่าเริ่มต้นใหญ่แต่จบเล็กนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 คำศัพท์ที่น่าสนใจ</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('りゅうとうだび')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">竜頭蛇尾 <span class="vocab-kana">(りゅうとうだび)</span></div>
-                    <div class="vocab-th">สำนวน 'หัวมังกรหางงู' หมายถึงการเริ่มต้นอย่างยิ่งใหญ่แต่ตอนจ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「竜頭蛇尾」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('りゅうとうだび')">🔊</button>
+                        <div><b>竜頭蛇尾</b><br><small>เริ่มต้นอย่างยิ่งใหญ่แต่จบลงอย่างน่าผิดหวัง</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.10-99 | 偏狭<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>หมายถึง 'ใจแคบ' หรือการมีมุมมองที่คับแคบและยึดติดอยู่แต่กับความคิดของตัวเองครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ตัวอย่างการใช้</span><br>
-                自分の偏狭な価値観が解体されていく。
-                <br><button class="tts-sentence-btn" onclick="playTTS('自分の偏狭な価値観が解体されていく。')">🔊 ฝึกฟังประโยคนี้</button>
+        <!-- Word 99 -->
+        <div class="masterclass-card">
+            <div class="index-label">99</div>
+            <div class="word-title">Word: 偏狭 (へんきょう)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                การมีจิตใจที่ "Henkyou" จะทำให้คุณพลาดโอกาสดีๆ ในโลกกว้างค่ะ (Narrowness) จงเปิดใจรับฟังความคิดเห็นที่แตกต่างและเรียนรู้วัฒนธรรมใหม่ๆ เพื่อที่จะได้มีวิสัยทัศน์ที่กว้างไกลและใช้ชีวิตได้อย่างมีความสุขและมั่นคงค่ะ! <span style="color:#d81b60;">(Mimi: อย่าเป็นคนใจแคบนะพี้ว 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 เจาะลึกศัพท์น่ารู้</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('へんきょう')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ ศัพท์หลัก</span>
-                    <div class="vocab-jp">偏狭 <span class="vocab-kana">(へんきょう)</span></div>
-                    <div class="vocab-th">หมายถึง 'ใจแคบ' หรือการมีมุมมองที่คับแคบและยึดติดอยู่แต่กับค...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「偏狭」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('へんきょう')">🔊</button>
+                        <div><b>偏狭</b><br><small>ใจแคบ/ความคิดที่คับแคบ</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="learning-card">
-            <div class="card-header">No.10-100 | 完遂<span class="card-count">(1 คำ)</span></div>
-            <div class="text-th"><span class="tag-title">🇹🇭 สรุปสาระ</span><br>หมายถึง 'การทำภารกิจให้สำเร็จลุล่วง' อย่างสมบูรณ์แบบครับ</div>
-            <div class="text-ja">
-                <span class="tag-title" style="background:#ab47bc;">🇯🇵 ลองใช้ในประโยค</span><br>
-                ついに大きな目標を完遂しました！
-                <br><button class="tts-sentence-btn" onclick="playTTS('ついに大きな目標を完遂しました！')">🔊 สำเนียงญี่ปุ่นอ่าน</button>
+        <!-- Word 100 -->
+        <div class="masterclass-card">
+            <div class="index-label">100</div>
+            <div class="word-title">Word: 完遂 (かんすい)</div>
+            <div class="insight-box">
+                <span class="insight-tag">💎 YUI's Masterclass Insight</span><br>
+                คันจิคือ "เสร็จสิ้น" และ "ตามมา" ค่ะ คือจุดหมายปลายทางของการทำงาน (Accomplishing a task) การ "Kansui" ภารกิจเรียนภาษาญี่ปุ่นจนถึงระดับ N1 จะเป็นความสำเร็จที่ยิ่งใหญ่ที่สุดที่เปลี่ยนชีวิตคุณไปตลอดกาลแน่นอนค่ะ! <span style="color:#d81b60;">(Mimi: ทำภารกิจให้สำเร็จลุล่วงนะพี้ว! 🐾)</span>
             </div>
-            <div class="vocab-section">
-                <h4 style="color:#4a148c;margin-top:0;padding-bottom:8px;border-bottom:2px dashed #ce93d8;">📝 มาดูศัพท์ในประโยคกัน</h4>
-                <div class="vocab-grid">
-            <div class="vocab-item main-word">
-                <button class="tts-small-btn" onclick="playTTS('かんすい')">🔊</button>
-                <div class="vocab-content">
-                    <span class="vocab-label">★ คำสำคัญ</span>
-                    <div class="vocab-jp">完遂 <span class="vocab-kana">(かんすい)</span></div>
-                    <div class="vocab-th">หมายถึง 'การทำภารกิจให้สำเร็จลุล่วง' อย่างสมบูรณ์แบบครับ...</div>
+            <div class="example-box">
+                <span class="insight-tag">🇯🇵 YUTO's Practical Sentence</span><br>
+                「完遂」という言葉を知ることは、日本の知性の深淵に触れる一歩です。
+            </div>
+            <div class="breakdown-box">
+                <h4 class="breakdown-title">📂 Step-by-Step Breakdown</h4>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <button class="audio-btn" onclick="playTTS('かんすい')">🔊</button>
+                        <div><b>完遂</b><br><small>การทำให้สำเร็จลุล่วงอย่างสมบูรณ์</small></div>
+                    </div>
                 </div>
-            </div></div>
             </div>
         </div>
-
-        <div class="next-page-container"><a href="jlpt-n1-complex-grammar-patterns-part3" class="next-btn">เรียนต่อ Part 3 ➔</a></div>
+        <div style="text-align:center;margin-top:50px;"><a href="jlpt-n1-complex-grammar-patterns-part3" class="next-btn">เรียนต่อ Part 3 ➔</a></div>
     </div>
 
-<!-- Klook Widget -->
-<div style="margin: 20px 0; text-align: center;">
-<ins class="klk-aff-widget"  data-wid="115246" data-height="340px"  data-adid="1233369" data-lang="th" data-prod="search_vertical" data-currency="THB"><a href="//www.klook.com/?aid=">Klook.com</a></ins>
-<script type="text/javascript">
-  (function (d, sc, u) {
-    var s = d.createElement(sc),
-      p = d.getElementsByTagName(sc)[0];
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = u;
-    p.parentNode.insertBefore(s, p);
-  })(
-    document,
-    "script",
-    "https://affiliate.klook.com/widget/fetch-iframe-init.js"
-  );
-</script>
-</div>
-<!-- /Klook Widget -->
-
-        <div class="deep-dive" style="margin-top: 30px; padding: 25px; border: 2px dashed #9c27b0; border-radius: 12px; color: #f3e5f5; background: rgba(156, 39, 176, 0.05);">
-            <h3 style="color: #ba68c8; margin-bottom: 15px;">🔍 เจาะลึกเพิ่ม: พลังของ "การทบทวนแบบเว้นระยะ" (Spaced Repetition)</h3>
-            <p>การเรียนหนักๆ วันเดียวแล้วพักยาว คือสูตรสำเร็จของการลืมครับ! เคล็ดลับของการสอบผ่าน JLPT คือการทบทวนสิ่งเดิมในเวลาที่ "กำลังจะลืม" ครับ</p>
-            <p><strong>- เทคนิคของ Yui:</strong> ให้ใช้ Flashcard หรือแอปที่รองรับระบบ SRS ในการจดจำคำศัพท์ยากๆ ค่ะ ถ้าคำไหนจำได้แล้วให้เว้นช่วงไปนานๆ ถ้าคำไหนจำไม่ได้ให้เอากลับมาทวนซ้ำในวันถัดไปทันที การทำแบบนี้จะทำให้ความรู้ย้ายจากความจำระยะสั้นไปยัง "ความจำระยะยาว" ได้อย่างถาวรเลยล่ะ!</p>
-            <p><strong>- การอ่านบทความจริง:</strong> ลองเปลี่ยนจากการอ่านตำรามาเป็นการอ่านทวิตเตอร์ (X) ของคนญี่ปุ่นหรือบล็อกสั้นๆ ดูครับ จะได้เห็นการใช้ไวยากรณ์ในชีวิตจริงที่ข้อสอบชอบเอามาออกเป็นโจทย์หลอกเราครับ!</p>
-        </div>
-    
-
     <footer>
-        <div class="footer-links" style="margin-bottom: 20px;"><a href="/">Home</a><a href="top">Top</a><a href="lp">LP</a><a href="hub">Hub</a><a href="sitemap">Sitemap</a>
+        <div class="footer-links" style="margin-bottom:20px;">
+            <a href="/">Home</a><a href="top">Top</a><a href="lp">LP</a><a href="hub">Hub</a><a href="sitemap">Sitemap</a>
             <a href="privacy-policy">Privacy Policy</a>
             <a href="terms">Terms of Use</a>
             <a href="contact">Contact Us</a>
-            </div>
+        </div>
         <p>&copy; 2026 YUI&YUTO. All rights reserved.</p>
     </footer>
-    
 </body>
 </html>
