@@ -7,7 +7,6 @@
       "permanent": true
     }
   ],
-  "regions": ["sin1"],
   "headers": [
     {
       "source": "/(.*)",
