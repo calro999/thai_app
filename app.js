@@ -484,41 +484,39 @@ function openModeSelect() {
         btn.className = 'mode-btn';
         if (unlocked) btn.classList.add('highlight');
 
+        // Course specific styling for premium look
+        if (unlocked) {
+            if (id === 'hiragana') { btn.style.background = '#FCE4EC'; btn.style.borderColor = '#F06292'; btn.style.color = '#880E4F'; }
+            else if (id === 'katakana') { btn.style.background = '#F3E5F5'; btn.style.borderColor = '#BA68C8'; btn.style.color = '#4A148C'; }
+            else if (id === 'n5') { btn.style.background = '#E8F5E9'; btn.style.borderColor = '#66BB6A'; btn.style.color = '#1B5E20'; }
+            else if (id === 'n4') { btn.style.background = '#E3F2FD'; btn.style.borderColor = '#42A5F5'; btn.style.color = '#0D47A1'; }
+            else if (id === 'n3') { btn.style.background = '#FFF3E0'; btn.style.borderColor = '#FFB74D'; btn.style.color = '#E65100'; }
+        }
+
         let label = info.name;
         if (!unlocked) {
-            label = `🔑 ${info.name}<br><small>(${info.price})</small>`;
+            label = `🔑 ${info.name}<br><small style="font-size:10px; opacity:0.8;">(${info.price})</small>`;
+        } else {
+            const icons = {
+                hiragana: '🌸', katakana: '💎', n5: '🔰', n4: '📘', n3: '📙',
+                oshikatsu: '💖', special_travel: '✈️', special_food: '🍱', special_medical: '🏥', listening: '🎧'
+            };
+            label = `${icons[id] || ''} ${info.name}`;
         }
 
         btn.innerHTML = label;
+        
         if (id === 'listening') {
             btn.style.gridColumn = "span 2";
-            btn.style.borderColor = "#4FC3F7"; btn.style.color = "#0277BD"; btn.style.background = "#E1F5FE";
-            btn.innerHTML = "🎧 การฟัง (Listening)";
+            btn.style.borderColor = "#4FC3F7"; btn.style.color = "#01579B"; btn.style.background = "#E1F5FE";
+            btn.style.fontSize = "1.1rem";
         }
-        if (id === 'oshikatsu') {
+        if (['oshikatsu', 'special_travel', 'special_food', 'special_medical'].includes(id)) {
             btn.style.gridColumn = "span 2";
-            btn.style.borderColor = "#FF80AB"; btn.style.color = "#D81B60";
-            btn.style.background = unlocked ? "#FCE4EC" : "white";
-            btn.innerHTML = unlocked ? "กิจกรรมของโอตาคุ (Oshikatsu)" : `🔑 กิจกรรมของโอตาคุ<br><small>(สุ่ม Shopee Gacha)</small>`;
+            btn.style.borderColor = "#FF80AB"; btn.style.color = "#C2185B";
+            btn.style.background = unlocked ? "#FFF0F5" : "white";
         }
-        if (id === 'special_travel') {
-            btn.style.gridColumn = "span 2";
-            btn.style.borderColor = "#FF80AB"; btn.style.color = "#D81B60";
-            btn.style.background = unlocked ? "#FCE4EC" : "white";
-            btn.innerHTML = unlocked ? "เที่ยวญี่ปุ่นซับไววัล (Travel Survival)" : `🔑 เที่ยวญี่ปุ่นซับไววัล<br><small>(สุ่ม Shopee Gacha)</small>`;
-        }
-        if (id === 'special_food') {
-            btn.style.gridColumn = "span 2";
-            btn.style.borderColor = "#FF80AB"; btn.style.color = "#D81B60";
-            btn.style.background = unlocked ? "#FCE4EC" : "white";
-            btn.innerHTML = unlocked ? "ร้านอาหารและกูร์เมต์ (Food & Gourmet)" : `🔑 ร้านอาหารและกูร์เมต์<br><small>(สุ่ม Shopee Gacha)</small>`;
-        }
-        if (id === 'special_medical') {
-            btn.style.gridColumn = "span 2";
-            btn.style.borderColor = "#FF80AB"; btn.style.color = "#D81B60";
-            btn.style.background = unlocked ? "#FCE4EC" : "white";
-            btn.innerHTML = unlocked ? "แจ้งอาการป่วย (Medical & Pharmacy)" : `🔑 แจ้งอาการป่วยและซื้อยา<br><small>(สุ่ม Shopee Gacha)</small>`;
-        }
+
         btn.onclick = () => selectCourse(id);
         grid.appendChild(btn);
     });

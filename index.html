@@ -60,7 +60,7 @@
             left: -5%;
             width: 110%;
             height: 110%;
-            background: url('gd_build/assets/images/bg_classroom_mo.webp') center/cover no-repeat;
+            background: url('images/bg_classroom-mo.webp') center/cover no-repeat;
             filter: blur(8px) brightness(0.4);
             z-index: 1;
         }
@@ -221,19 +221,20 @@
         .title-btn {
             width: 100%;
             max-width: 350px;
-            padding: 12px;
-            margin: 8px auto;
+            padding: 15px;
+            margin: 10px auto;
             font-size: 24px;
             font-weight: bold;
             color: white;
-            background: linear-gradient(45deg, #8a2be2, #4b0082);
-            border: 2px solid #fff;
-            border-radius: 30px;
+            background: linear-gradient(135deg, #ff69b4, #d81b60);
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(216, 27, 96, 0.3);
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             line-height: 1.2;
             display: block;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
         .title-btn:hover {
@@ -589,7 +590,7 @@
                 <div class="smartphone">
                     <div class="notch"></div>
                     <div class="mockup-screen">
-                        <img id="hero-bg" src="gd_build/assets/images/bg_classroom_mo.webp" class="mockup-bg" alt="bg" loading="lazy">
+                        <img id="hero-bg" src="images/bg_classroom-mo.webp" class="mockup-bg" alt="bg" loading="lazy">
                         <img id="hero-char" src="images/maid/maid_0001_nikkori.webp" class="mockup-char" alt="gyaru" loading="lazy">
                         <div id="hero-ui" class="mockup-ui">
                             <div class="mockup-name">สาวแกล</div>
@@ -796,7 +797,7 @@
             </div>
 
             <div id="shopee-gacha-modal" class="overlay-menu" style="display:none;">
-                <div style="max-width: 380px; margin: auto; padding: 18px; border: 2px dashed #ff4500; border-radius: 15px; background-color: #ffffff; text-align: center; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-shadow: 0 4px 15px rgba(0,0,0,0.05); position: relative;">
+                <div style="width: 92%; max-width: 380px; margin: auto; padding: 18px; border: 2px dashed #ff4500; border-radius: 15px; background-color: #ffffff; text-align: center; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-shadow: 0 4px 15px rgba(0,0,0,0.05); position: relative;">
                     
                     <p style="font-size: 16px; font-weight: bold; color: #ff4500; margin-bottom: 8px;">
                         🇯🇵 สุ่มขนมญี่ปุ่นยอดฮิตที่แนะนำโดยผู้พัฒนา!
@@ -950,10 +951,10 @@
 
         // --- 2. タイトル画面のモックアップアニメーション ---
         const mockupData = [
-            { bg: 'gd_build/assets/images/bg_classroom_mo.webp', img: 'images/maid/maid_0001_nikkori.webp', th: "ยินดีต้อนรับกลับค่ะ นายท่าน! มาเริ่มเรียนกันเถอะ!", ja: "お帰りなさいませ、ご主人様！お勉強始めましょう！" },
-            { bg: 'gd_build/assets/images/bg_classroom_mo.webp', img: 'images/miko/miko_0001_nikkori.webp', th: "ให้เทพเจ้าคุ้มครองการสอบ JLPT ของคุณนะ!", ja: "JLPTの合格、神様にお祈りしておきますね！" },
-            { bg: 'gd_build/assets/images/bg_classroom_mo.webp', img: 'images/yukata/yukata-nikkori.webp', th: "เรียนเสร็จแล้วไปเที่ยวงานเทศกาลด้วยกันไหม?", ja: "お勉強が終わったら、一緒にお祭りに行きませんか？" },
-            { bg: 'gd_build/assets/images/bg_classroom_mo.webp', img: 'images/gos/gos_0001_nikkori.webp', th: "ความมืดมิดจะนำพาสติปัญญามาให้... ล้อเล่นน่า!", ja: "闇が知恵をもたらす……なんてね！" }
+            { bg: 'images/bg_classroom-mo.webp', img: 'images/maid/maid_0001_nikkori.webp', th: "ยินดีต้อนรับกลับค่ะ นายท่าน! มาเริ่มเรียนกันเถอะ!", ja: "お帰りなさいませ、ご主人様！お勉強始めましょう！" },
+            { bg: 'images/bg_classroom-mo.webp', img: 'images/miko/miko_0001_nikkori.webp', th: "ให้เทพเจ้าคุ้มครองการสอบ JLPT のคุณนะ!", ja: "JLPTの合格、神様にお祈りしておきますね！" },
+            { bg: 'images/bg_classroom-mo.webp', img: 'images/yukata/yukata-nikkori.webp', th: "เรียนเสร็จแล้วไปเที่ยวงานเทศกาลด้วยกันไหม?", ja: "お勉強が終わったら、一緒にお祭りに行きませんか？" },
+            { bg: 'images/bg_classroom-mo.webp', img: 'images/gos/gos_0001_nikkori.webp', th: "ความมืดมิดจะนำพาสติปัญญามาให้... ล้อเล่นน่า!", ja: "闇が知恵をもたらす……なんてね！" }
         ];
 
         let currentIndex = 0;
