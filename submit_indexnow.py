@@ -33,7 +33,7 @@ def main():
         print("No URLs found, exiting.")
         return
 
-    domain = "jlpt-with-gyaru.vercel.app"
+    domain = "jlpt.yui-yuto.com"
 
     # Search for an existing key file
     existing_key = None
