@@ -138,5 +138,129 @@
 </div>
 <p>© 2026 YUI&amp;YUTO. All rights reserved.</p>
 </footer>
+
+<!-- Dynamic Ad Banner -->
+<script>
+(function() {
+  function initAdBanner() {
+    var path = window.location.pathname.toLowerCase();
+    if (path === '/' || path === '/index.html' || path.indexOf('play') !== -1 || path.indexOf('index') !== -1) {
+      return; 
+    }
+    
+    var isMobile = window.innerWidth <= 768;
+    var klookWidget = '';
+    if (isMobile) {
+      klookWidget = '<ins class="klk-aff-widget" data-wid="115246" data-bgtype="Shinkansen" data-adid="1305318" data-lang="th" data-prod="banner" data-width="468" data-height="60"><a href="//www.klook.com/?aid=">Klook.com</a></ins>';
+    } else {
+      klookWidget = '<ins class="klk-aff-widget" data-wid="115246" data-height="340px" data-adid="1305242" data-lang="th" data-prod="search_vertical" data-currency="THB"><a href="//www.klook.com/?aid=">Klook.com</a></ins>';
+    }
+
+    var adHtml = '<button id="close-ad-banner" style="position: absolute; top: -10px; left: -10px; background: #334155; border: 2px solid #0f172a; color: white; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 100000; box-shadow: 0 2px 5px rgba(0,0,0,0.3); padding: 0;">✕</button>' +
+                 '<div class="ad-text" style="font-size: 12px; color: #00e5ff; margin-bottom: 6px; font-weight: bold; font-family: \'Outfit\', \'Noto Sans Thai\', sans-serif; position: relative; z-index: 2; text-align: center;">เช็คราคาตั๋วไปญี่ปุ่นได้ที่นี่! ✈️</div>' +
+                 '<div class="klook-wrapper" style="width: 100%; display: flex; justify-content: center; position: relative;">' + klookWidget + '</div>';
+    
+    var adContainer = document.createElement('div');
+    adContainer.id = 'dynamic-sticky-ad-banner';
+    adContainer.innerHTML = adHtml;
+    
+    var style = document.createElement('style');
+    style.innerHTML = 
+      '#dynamic-sticky-ad-banner {' +
+      '  position: fixed;' +
+      '  right: 20px;' +
+      '  bottom: 20px;' +
+      '  z-index: 99999;' +
+      '  background: rgba(15, 23, 42, 0.95);' +
+      '  border: 1px solid rgba(255, 255, 255, 0.1);' +
+      '  border-radius: 12px;' +
+      '  padding: 10px;' +
+      '  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);' +
+      '  text-align: center;' +
+      '  display: flex;' +
+      '  flex-direction: column;' +
+      '  align-items: center;' +
+      '  width: 320px;' +
+      '  transform-origin: bottom right;' +
+      '  transform: scale(0.85);' +
+      '}' +
+      '#dynamic-sticky-ad-banner ins {' +
+      '  width: 100%;' +
+      '}' +
+      '@media (max-width: 768px) {' +
+      '  #dynamic-sticky-ad-banner {' +
+      '    bottom: 75px;' +
+      '    right: 5px;' +
+      '    left: 5px;' +
+      '    width: calc(100% - 10px);' +
+      '    border-radius: 12px;' +
+      '    transform: none;' +
+      '    flex-direction: column;' +
+      '    align-items: center;' +
+      '    height: auto;' +
+      '    padding: 10px 5px 5px;' +
+      '  }' +
+      '  #dynamic-sticky-ad-banner .ad-text {' +
+      '    margin: 0 0 6px 0 !important;' +
+      '    font-size: 12px !important;' + 
+      '    text-align: center;' +
+      '    width: 100%;' +
+      '  }' +
+      '  .klook-wrapper {' +
+      '    width: 100% !important;' + 
+      '    height: 42px;' +
+      '    position: relative;' +
+      '    overflow: hidden;' +
+      '  }' +
+      '  .klook-wrapper ins {' +
+      '    position: absolute;' +
+      '    top: 0;' +
+      '    left: 50%;' +
+      '    width: 468px !important;' +
+      '    transform: translateX(-50%) scale(0.7);' +
+      '    transform-origin: top center;' +
+      '    display: block;' +
+      '  }' +
+      '  #close-ad-banner {' +
+      '    top: -10px !important;' +
+      '    left: -5px !important;' +
+      '    width: 28px !important;' +
+      '    height: 28px !important;' +
+      '    font-size: 14px !important;' +
+      '  }' +
+      '}';
+    
+    document.head.appendChild(style);
+    document.body.appendChild(adContainer);
+    
+    var closeBtn = document.getElementById('close-ad-banner');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        adContainer.style.display = 'none';
+      });
+    }
+    
+    (function (d, sc, u) {
+      var s = d.createElement(sc),
+        p = d.getElementsByTagName(sc)[0];
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = u;
+      p.parentNode.insertBefore(s, p);
+    })(
+      document,
+      "script",
+      "https://affiliate.klook.com/widget/fetch-iframe-init.js"
+    );
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAdBanner);
+  } else {
+    initAdBanner();
+  }
+})();
+
+</script>
 </body>
 </html>
