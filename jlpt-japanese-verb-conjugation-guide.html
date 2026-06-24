@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2026/06/24">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือการผันคำกริยาภาษาญี่ปุ่นอย่างละเอียด | เรียนรูป ます, て, ない และทุกรูปแบบที่ต้องรู้สำหรับ JLPT | JLPT Gyaru</title>
+    <link rel="canonical" href="https://jlpt.yui-yuto.com/jlpt-japanese-verb-conjugation-guide">
+    <link rel="icon" type="image/jpeg" href="images/icon_jlpt.webp">
+    <link rel="apple-touch-icon" href="images/icon_jlpt.webp">
+    <meta name="description" content="คู่มืออธิบายการผันคำกริยาภาษาญี่ปุ่น (Doushi) ทุกรูปแบบอย่างละเอียดที่สุดสำหรับคนไทย เรียนรู้วิธีการแบ่งกลุ่มคำกริยา 1, 2, 3 และกฎการผันรูป ます, รูป て, รูป ない, รูป た, รูปสามารถ, รูปตั้งใจ, รูปเงื่อนไข และรูปคำสั่ง พร้อมตารางสรุปแบบเข้าใจง่ายเพื่อสอบผ่าน JLPT N5-N3">
+    <link rel="stylesheet" href="jlpt_lp.css">
+    <style>
+        .hero { 
+            background: linear-gradient(135deg, #E0F2FE 0%, #F5F3FF 100%); 
+        }
+        .custom-section { 
+            margin-bottom: 50px; 
+            padding: 30px; 
+            background: #fff; 
+            border-radius: 16px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .word-card { 
+            background: #F0FDF4; 
+            border-left: 5px solid #22C55E; 
+            padding: 20px; 
+            margin: 20px 0; 
+            border-radius: 4px 12px 12px 4px; 
+        }
+        .warning-card { 
+            background: #FFF7ED; 
+            border-left: 5px solid #F97316; 
+            padding: 20px; 
+            margin: 20px 0; 
+            border-radius: 4px 12px 12px 4px; 
+        }
+        .example-block { 
+            background: #F8FAFC; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin-top: 12px; 
+            font-family: 'Outfit', 'Anuphan', sans-serif; 
+            font-size: 1rem; 
+            line-height: 1.6; 
+            color: #1E293B; 
+            border: 1px solid #E2E8F0;
+        }
+        header { 
+            z-index: 2147483647 !important; 
+        }
+        .emphasis-box { 
+            background: #FEF9C3; 
+            border-left: 5px solid #EAB308; 
+            padding: 20px; 
+            margin: 20px 0; 
+            border-radius: 4px; 
+        }
+        .contrast-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 25px 0; 
+            font-size: 0.95rem;
+        }
+        .contrast-table th, .contrast-table td { 
+            border: 1px solid #E2E8F0; 
+            padding: 12px 14px; 
+            text-align: left; 
+        }
+        .contrast-table th { 
+            background-color: #F1F5F9; 
+            color: #0F172A; 
+            font-weight: 700;
+        }
+        .contrast-table tr:nth-child(even) {
+            background-color: #F8FAFC;
+        }
+        .scrollable-table {
+            overflow-x: auto;
+            width: 100%;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+        }
+        .roleplay-container {
+            background: #FAF5FF;
+            border: 1px solid #E9D5FF;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .roleplay-line {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+        .speaker-thai {
+            font-weight: bold;
+            color: #7E22CE;
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .speaker-officer {
+            font-weight: bold;
+            color: #0369A1;
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .roleplay-text {
+            font-size: 1.05rem;
+            color: #0F172A;
+        }
+        .roleplay-translation {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-top: 4px;
+            border-top: 1px dashed #E2E8F0;
+            padding-top: 4px;
+        }
+        .teachers-tip {
+            display: flex;
+            gap: 20px;
+            background: #FFF1F2;
+            border: 1px solid #FECDD3;
+            padding: 25px;
+            border-radius: 16px;
+            margin: 40px 0;
+        }
+        .teachers-tip-avatar {
+            font-size: 2.5rem;
+            align-self: flex-start;
+        }
+        .teachers-tip-content h4 {
+            color: #E11D48;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .teachers-tip-content p {
+            margin: 0;
+            font-size: 1rem;
+            color: #4C0519;
+            line-height: 1.7;
+        }
+        .faq-card {
+            background: #FFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .faq-question {
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+        .faq-answer {
+            color: #334155;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+        .page-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 12px 20px;
+            background: #F1F5F9;
+            color: #334155;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            border: 1px solid #E2E8F0;
+        }
+        .nav-btn:hover {
+            background: #E2E8F0;
+            color: #0F172A;
+        }
+        @media (max-width: 768px) {
+            .teachers-tip {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCYNPFD7PR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-CCYNPFD7PR');
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="manifest" href="/manifest.json">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "คู่มือการผันคำกริยาภาษาญี่ปุ่นอย่างละเอียด | เรียนรูป ます, て, ない และทุกรูปแบบที่ต้องรู้สำหรับ JLPT | JLPT Gyaru",
+  "description": "คู่มืออธิบายการผันคำกริยาภาษาญี่ปุ่น (Doushi) ทุกรูปแบบอย่างละเอียดที่สุดสำหรับคนไทย เรียนรู้วิธีการแบ่งกลุ่มคำกริยา 1, 2, 3 และกฎการผันรูป ます, รูป て, รูป ない, รูป た, รูปสามารถ, รูปตั้งใจ, รูปเงื่อนไข และรูปคำสั่ง พร้อมตารางสรุปแบบเข้าใจง่ายเพื่อสอบผ่าน JLPT N5-N3",
+  "url": "https://jlpt.yui-yuto.com/jlpt-japanese-verb-conjugation-guide",
+  "datePublished": "2026-06-24",
+  "dateModified": "2026-06-24",
+  "author": {
+    "@type": "Organization",
+    "name": "YUI & YUTO เซนเซ",
+    "url": "https://jlpt.yui-yuto.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "YUI & YUTO เซนเซ",
+    "url": "https://jlpt.yui-yuto.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jlpt.yui-yuto.com/images/icon_jlpt.webp"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://jlpt.yui-yuto.com/images/ogp_jlpt.webp",
+    "width": 1200,
+    "height": 630
+  },
+  "inLanguage": "th",
+  "about": {
+    "@type": "Thing",
+    "name": "JLPT",
+    "description": "Japanese Language Proficiency Test"
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Thai Japanese learners"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "หน้าแรก",
+      "item": "https://jlpt.yui-yuto.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "คอร์สทั้งหมด",
+      "item": "https://jlpt.yui-yuto.com/hub"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "คู่มือการผันคำกริยาภาษาญี่ปุ่นอย่างละเอียด",
+      "item": "https://jlpt.yui-yuto.com/jlpt-japanese-verb-conjugation-guide"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">JLPT Gyaru</a>
+        <a href="/hub" class="cta-button" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">กลับหน้าคอร์ส</a>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1 class="animate-fade" style="color: #1E3A8A;">คู่มือการผันคำกริยาภาษาญี่ปุ่นอย่างละเอียด (Japanese Verb Conjugation Guide)</h1>
+            <p class="animate-fade" style="color: #3B82F6;">เจาะลึกวิธีแบ่งคำกริยา 3 กลุ่ม และหลักการผันทุกรูปสำคัญ เช่น ます, て, ない, た, รูปตั้งใจ, รูปสามารถ, รูปเงื่อนไข และรูปคำสั่ง เข้าใจง่ายจำแม่นสำหรับคนไทย</p>
+            <a href="/" class="cta-button animate-fade" style="font-size:1.2rem; padding: 1.2rem 3rem; background: #2563EB;">เริ่มต้นฝึกคำกริยาในเกม VN</a>
+        </div>
+
+        <div class="content-wrapper">
+            <article>
+                <section class="custom-section">
+                    <h2 style="color:#1E3A8A; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #BFDBFE; padding-bottom:10px;">ทำไม "การผันคำกริยา" ถึงเป็นหัวใจสำคัญของไวยากรณ์ภาษาญี่ปุ่น?</h2>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#1E293B;">หากคุณเพิ่งเริ่มต้นเรียนภาษาญี่ปุ่นและต้องการยกระดับความสามารถในการสื่อสารและการสอบวัดระดับภาษาญี่ปุ่น (JLPT) ตั้งแต่ N5 ขึ้นไป สิ่งที่เป็น "กำแพงสูงใหญ่" ด่านแรกที่คุณต้องข้ามผ่านให้ได้ก็คือ <strong>"การผันคำกริยา" (動詞の活用 - Doushi no Katsuyou)</strong> นั่นเองค่ะ หลายคนอาจเคยสงสัยว่า ทำไมภาษาญี่ปุ่นถึงต้องผันคำกริยาให้ซับซ้อน? ในภาษาไทย คำว่า "กิน" ไม่ว่าจะเป็นอดีต ปัจจุบัน อนาคต สั่ง ชักชวน หรือแสดงความสามารถ ก็ยังคงใช้คำว่า "กิน" เหมือนเดิมโดยเติมคำช่วยอื่น ๆ เข้าไป เช่น "กินแล้ว" "กำลังกิน" "กินได้" หรือ "กินกันเถอะ"</p>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#1E293B;">แต่ภาษาญี่ปุ่นต่างออกไปอย่างสิ้นเชิงค่ะ ภาษาญี่ปุ่นเป็นภาษาที่มีการเปลี่ยนแปลงรูปคำที่ส่วนท้าย (Inflective Language) หมายความว่า <strong>"ความหมายของประโยค เช่น กาลเวลา (Tense), ความรู้สึก (Mood), ความสามารถ (Potential), หรือน้ำเสียงที่เป็นทางการและไม่เป็นทางการ จะระบุด้วยการเปลี่ยนรูปทรงที่ปลายเสียงของตัวกริยานั้น ๆ"</strong> หากคุณผันคำกริยาผิดรูป ความหมายจะเพี้ยนทันที เช่น จากคำว่า "จะกิน" อาจกลายเป็น "กินไม่ได้" "ห้ามกิน" หรือ "ถูกกิน" ซึ่งอาจนำไปสู่ความเข้าใจผิดอย่างรุนแรงในการคุยกับคนญี่ปุ่นหรือสูญเสียคะแนนในห้องสอบ</p>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#1E293B;">วันนี้ ยุยเซนเซและยูโตะเซนเซได้รวบรวมเนื้อหาการผันคำกริยาภาษาญี่ปุ่นทั้งหมดมาอธิบายให้อย่างเป็นระบบ ตั้งแต่วิธีแบ่งกลุ่มคำกริยาที่ถูกต้อง (ซึ่งเป็นจุดเริ่มต้นที่สำคัญที่สุด) ไปจนถึงสูตรการผันคำกริยาพื้นฐานและขั้นสูง 8 รูปแบบยอดนิยม พร้อมตารางตัวอย่างที่จะทำให้เพื่อน ๆ จำสัญลักษณ์เหล่านี้ได้อย่างขึ้นใจและสามารถนำไปปรับใช้ในเกมหรือชีวิตจริงได้ทันทีค่ะ!</p>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#1E3A8A; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #BFDBFE; padding-bottom:10px;">บทเรียนที่ 1: เคล็ดลับการแยกแยะ "กลุ่มคำกริยา 3 กลุ่ม" (Verb Groups)</h2>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#1E293B;">ก่อนที่คุณจะลงมือผันคำกริยาเป็นรูปต่าง ๆ สิ่งที่คุณ <strong>"ห้ามทำผิดพลาดอย่างเด็ดขาด"</strong> คือการจำแนกว่าคำกริยาคำนั้นอยู่ในกลุ่มใดใน 3 กลุ่มหลักนี้ เพราะถ้าแบ่งกลุ่มผิด กฎการผันที่ใช้ก็จะผิดตามไปด้วยค่ะ ในพจนานุกรมภาษาญี่ปุ่น คำกริยาทุกคำจะปรากฏอยู่ในรูปดั้งเดิมที่เรียกว่า "รูปพจนานุกรม" (辞書形 - Jishokei) หรือรูปทั่วไปที่ลงท้ายด้วยเสียงแถว <strong>"U" (อุ, คุ, สุ, ทุ, นุ, บุ, มุ, รุ)</strong> เสมอ โดยเรามีวิธีแยกแยะดังนี้ค่ะ:</p>
+                    
+                    <h3 style="color:#2563EB; font-size:1.4rem; margin-top:20px;">1. คำกริยากลุ่มที่ 1 (五段動詞 - Godan Doushi / กริยา 5 ขั้น)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">คำกริยากลุ่มที่ 1 เป็นกลุ่มที่มีจำนวนคำมากที่สุดในภาษาญี่ปุ่น สังเกตได้ง่าย ๆ จากส่วนท้ายของรูปพจนานุกรมดังนี้:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px; font-size: 1.1rem; color: #1E293B; line-height: 1.8;">
+                        <li>ลงท้ายด้วยเสียงพยางค์แถว U อื่น ๆ ที่ไม่ใช่ る เช่น <strong>う (u), く (ku), ぐ (gu), す (su), つ (tsu), ぬ (nu), ぶ (bu), む (mu)</strong></li>
+                        <li>ลงท้ายด้วย <strong>る (ru)</strong> แต่เสียงสะกดพยางค์ข้างหน้า る เป็นเสียงแถว <strong>A, U, O</strong> (อา, อู, โอ)</li>
+                    </ul>
+                    <div class="word-card">
+                        <strong style="color: #166534;">ตัวอย่างคำกริยากลุ่มที่ 1:</strong>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>買う (ka-u) = ซื้อ (ลงท้ายด้วย う)</li>
+                            <li>書く (ka-ku) = เขียน (ลงท้ายด้วย く)</li>
+                            <li>話す (hana-su) = พูดคุย (ลงท้ายด้วย す)</li>
+                            <li>待つ (ma-tsu) = รอ (ลงท้ายด้วย つ)</li>
+                            <li>飲む (no-mu) = ดื่ม (ลงท้ายด้วย む)</li>
+                            <li>終わる (owa-ru) = เสร็จ/จบ (ลงท้ายด้วย る ข้างหน้าเป็นเสียง wa แถว A)</li>
+                            <li>作る (tsuku-ru) = ทำ/สร้าง (ลงท้ายด้วย る ข้างหน้าเป็นเสียง ku แถว U)</li>
+                            <li>取る (to-ru) = หยิบ/จับ (ลงท้ายด้วย る ข้างหน้าเป็นเสียง to แถว O)</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="color:#2563EB; font-size:1.4rem; margin-top:20px;">2. คำกริยากลุ่มที่ 2 (一段動詞 - Ichidan Doushi / กริยา 1 ขั้น)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">คำกริยากลุ่มที่ 2 สังเกตได้จากการลงท้ายด้วย <strong>る (ru)</strong> เสมอ และเสียงสะกดพยางค์ข้างหน้า る จะต้องเป็นเสียงแถว <strong>I หรือ E</strong> (อิ หรือ เอะ) เท่านั้น (สะกดด้วย -iru หรือ -eru)</p>
+                    <div class="word-card">
+                        <strong style="color: #166534;">ตัวอย่างคำกริยากลุ่มที่ 2:</strong>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>食べる (tabe-ru) = กิน (ลงท้ายด้วย る ข้างหน้าเป็น be แถว E)</li>
+                            <li>見る (mi-ru) = ดู (ลงท้ายด้วย る ข้างหน้าเป็น mi แถว I)</li>
+                            <li>起きる (oki-ru) = ตื่นนอน (ลงท้ายด้วย る ข้างหน้าเป็น ki แถว I)</li>
+                            <li>教える (oshie-ru) = สอน (ลงท้ายด้วย る ข้างหน้าเป็น shie แถว E)</li>
+                            <li>寝る (ne-ru) = นอน (ลงท้ายด้วย る ข้างหน้าเป็น ne แถว E)</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="color:#2563EB; font-size:1.4rem; margin-top:20px;">🚨 ข้อควรระวังสูงสุด: คำกริยากลุ่มที่ 1 รูปทรงเลียนแบบกลุ่ม 2 (คำกริยายกเว้น)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">มีคำกริยากลุ่มที่ 1 บางคำที่ลงท้ายด้วย <strong>る</strong> และมีเสียงข้างหน้าเป็น I หรือ E ซึ่งดูภายนอกเหมือนกลุ่ม 2 ทุกประการ แต่ตามหลักภาษาศาสตร์คำเหล่านี้จัดเป็น <strong>"กลุ่มที่ 1"</strong> และต้องผันตามกฎกลุ่ม 1 เท่านั้นค่ะ คำศัพท์เหล่านี้พบเจอได้บ่อยมากในชีวิตประจำวันและในการสอบ JLPT ได้แก่:</p>
+                    <div class="warning-card">
+                        <strong style="color: #9A3412;">คำกริยายกเว้นที่ต้องท่องจำเป็นพิเศษ (หน้าตากลุ่ม 2 แต่ผันตามกลุ่ม 1):</strong>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>帰る (kaeru)</strong> = กลับบ้าน (ออกเสียง e-ru แต่เป็นกลุ่ม 1)</li>
+                            <li><strong>入る (hairu)</strong> = เข้า (ออกเสียง i-ru แต่เป็นกลุ่ม 1)</li>
+                            <li><strong>走る (hashiru)</strong> = วิ่ง (ออกเสียง i-ru แต่เป็นกลุ่ม 1)</li>
+                            <li><strong>知る (shiru)</strong> = รู้จัก (ออกเสียง i-ru แต่เป็นกลุ่ม 1)</li>
+                            <li><strong>切る (kiru)</strong> = ตัด (ออกเสียง i-ru แต่เป็นกลุ่ม 1)</li>
+                            <li><strong>ขำจำง่าย ๆ:</strong> "กลับบ้าน (帰る) ไปเข้าห้อง (入る) วิ่ง (走る) ไปถามผู้รู้ (知る) แล้วโดนมีดบาดตัด (切る)" ทั้ง 5 คำหลักนี้เป็นกลุ่ม 1 เสมอนะคะ!</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="color:#2563EB; font-size:1.4rem; margin-top:20px;">3. คำกริยากลุ่มที่ 3 (不規則動詞 - Fukisoku Doushi / กริยาไม่ปกติ)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">คำกริยากลุ่มที่ 3 เป็นกลุ่มที่ง่ายที่สุดเพราะมีอยู่เพียง <strong>2 คำหลักเท่านั้น</strong> ในภาษาญี่ปุ่น คือคำว่า:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px; font-size: 1.1rem; color: #1E293B; line-height: 1.8;">
+                        <li><strong>する (suru)</strong> = ทำ (รวมถึงคำนามอาการที่ต่อท้ายด้วย する เช่น 勉強する benkyou suru = เรียนหนังสือ)</li>
+                        <li><strong>来る (kuru)</strong> = มา</li>
+                    </ul>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#1E293B;">คำสองคำนี้ไม่มีกฎเกณฑ์การผันที่สม่ำเสมอ เพื่อน ๆ จะต้องใช้วิธีจดจำรูปแบบการผันของพวกมันโดยตรงค่ะ</p>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#1E3A8A; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #BFDBFE; padding-bottom:10px;">บทเรียนที่ 2: เจาะลึกสูตรการผัน 4 รูปแบบหลักขั้นพื้นฐาน (ます, て, ない, た)</h2>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#1E293B;">เมื่อเข้าใจการแยกกลุ่มคำกริยาเป็นอย่างดีแล้ว ขั้นตอนต่อไปคือการเข้าสู่สูตรการผันคำกริยาขั้นพื้นฐาน 4 รูปแบบที่จะต้องใช้บ่อยที่สุดในประโยคภาษาญี่ปุ่น ได้แก่:</p>
+
+                    <!-- รูปที่ 1 ます -->
+                    <h3 style="color:#2563EB; font-size:1.5rem; margin-top:30px; border-left: 4px solid #3B82F6; padding-left: 10px;">1. รูป ます (Polite Form / รูปสุภาพใช้ในชีวิตประจำวัน)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">รูป ます เป็นรูปที่เราใช้พูดคุยกับผู้ใหญ่ คนที่ไม่สนิท หรือในที่ทำงานเพื่อแสดงความสุภาพและรักษาระยะห่างที่เหมาะสม มีวิธีการผันดังนี้:</p>
+                    <div class="example-block">
+                        <strong>● คำกริยากลุ่มที่ 1:</strong> เปลี่ยนเสียงท้ายแถว U ของรูปพจนานุกรม ให้กลายเป็นเสียงแถว <strong>I</strong> แล้วเติม <strong>ます (masu)</strong><br>
+                        - 買う (kau) → 買<strong>い</strong>ます (kaimasu) [ซื้อ]<br>
+                        - 書く (kaku) → 書<strong>き</strong>ます (kakimasu) [เขียน]<br>
+                        - 帰る (kaeru - ยกเว้น) → 帰<strong>り</strong>ます (kaerimasu) [กลับ]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 2:</strong> ตัด <strong>る (ru)</strong> ออกแล้วเติม <strong>ます (masu)</strong> ได้ทันที<br>
+                        - 食べる (taberu) → 食べます (tabemasu) [กิน]<br>
+                        - 見る (miru) → 見ます (mimasu) [ดู]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 3:</strong> ผันพิเศษเฉพาะตัว<br>
+                        - する (suru) → <strong>します (shimasu)</strong> [ทำ]<br>
+                        - 来る (kuru) → <strong>来ます (kimasu)</strong> [มา]
+                    </div>
+
+                    <!-- รูปที่ 2 て -->
+                    <h3 style="color:#2563EB; font-size:1.5rem; margin-top:30px; border-left: 4px solid #3B82F6; padding-left: 10px;">2. รูป て (Te-form / รูปเชื่อมประโยค, ขอร้อง, หรือสั่งการ)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">รูป て เป็นรูปที่มีประโยชน์อย่างมหาศาลในภาษาญี่ปุ่น ใช้เชื่อมประโยคหลายประโยคเข้าด้วยกัน หรือใช้ประกอบไวยากรณ์อื่น ๆ เช่น ขอร้อง (...てください), กำลังทำอยู่ (...ています) หรืออนุญาต (...てもいいです) วิธีการผันของกลุ่มที่ 1 ค่อนข้างซับซ้อนแต่มีทริคจำดังนี้ค่ะ:</p>
+                    <div class="emphasis-box">
+                        <strong style="font-size: 1.2rem; color: #854D0E;">💡 ทริคเพลงจำสูตรผันรูป て สำหรับกลุ่มที่ 1:</strong>
+                        <p style="margin-top: 10px; font-size: 1.1rem; color: #713F12; line-height: 1.6;">
+                            "อุ つ る (u, tsu, ru) ผันเป็น <strong>って (tte)</strong>"<br>
+                            "มุ ぶ ぬ (mu, bu, nu) ผันเป็น <strong>んで (nde)</strong>"<br>
+                            "คุ (ku) เป็น <strong>いて (ite)</strong> / กุ (gu) เป็น <strong>いで (ide)</strong>"<br>
+                            "สุ (su) ผันเป็น <strong>して (shite)</strong>"<br>
+                            *คำยกเว้นพิเศษ: <strong>行く (iku = ไป) → 行って (itte)</strong> (ห้ามผันเป็น iite เด็ดขาด!)
+                        </p>
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างการผันกลุ่มที่ 1 ตามทริคจำ:</strong><br>
+                        - 買う (ka-u) → 買<strong>ette</strong> (katte)<br>
+                        - 待つ (ma-tsu) → 待<strong>tte</strong> (matte)<br>
+                        - 帰る (kae-ru) → 帰<strong>tte</strong> (kaette)<br>
+                        - 読む (yo-mu) → 読<strong>nde</strong> (yonde)<br>
+                        - 遊ぶ (asobu) → 遊<strong>nde</strong> (asonde)<br>
+                        - 書く (ka-ku) → 書<strong>ite</strong> (kaite)<br>
+                        - 急ぐ (isogu) → 急<strong>ide</strong> (isoide)<br>
+                        - 話す (hana-su) → 話<strong>shite</strong> (hanashite)
+                    </div>
+                    <div class="example-block" style="margin-top: 10px;">
+                        <strong>● คำกริยากลุ่มที่ 2:</strong> ตัด <strong>る (ru)</strong> ออกแล้วเติม <strong>て (te)</strong> ได้ทันที ง่ายมากค่ะ!<br>
+                        - 食べる (taberu) → 食べ<strong>て</strong> (tabete)<br>
+                        - 見る (miru) → 見<strong>て</strong> (mite)<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 3:</strong> ผันพิเศษเฉพาะตัว<br>
+                        - する (suru) → <strong>して (shite)</strong><br>
+                        - 来る (kuru) → <strong>来て (kite)</strong>
+                    </div>
+
+                    <!-- รูปที่ 3 ない -->
+                    <h3 style="color:#2563EB; font-size:1.5rem; margin-top:30px; border-left: 4px solid #3B82F6; padding-left: 10px;">3. รูป ない (Negative Form / รูปปฏิเสธแบบเป็นกันเอง)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">ใช้แสดงการปฏิเสธในชีวิตประจำวัน เช่น "ไม่กิน" "ไม่ทำ" หรือประกอบไวยากรณ์สั่งห้ามเช่น ห้ามทำ (...ないเดะคุไซ) หรือต้องทำ (...なければなりません) มีสูตรผันดังนี้:</p>
+                    <div class="example-block">
+                        <strong>● คำกริยากลุ่มที่ 1:</strong> เปลี่ยนเสียงท้ายแถว U ให้กลายเป็นเสียงแถว <strong>A (อา)</strong> แล้วเติม <strong>ない (nai)</strong><br>
+                        *ข้อควรระวังพิเศษ: หากลงท้ายด้วย <strong>う (u)</strong> ตัวเดียว ให้เปลี่ยนเป็น <strong>わ (wa)</strong> ไม่ใช่ あ นะคะ!<br>
+                        - 買う (ka-u) → 買<strong>わ</strong>ない (kawanai) [ไม่ซื้อ]<br>
+                        - 書く (ka-ku) → 書<strong>か</strong>ない (kawanai) [ไม่เขียน]<br>
+                        - 話す (hana-su) → 話<strong>さ</strong>ない (hanasanai) [ไม่พูด]<br>
+                        - 帰る (kae-ru) → 帰<strong>ら</strong>ない (kaeranai) [ไม่กลับ]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 2:</strong> ตัด <strong>る (ru)</strong> ออกแล้วเติม <strong>ない (nai)</strong><br>
+                        - 食べる (taberu) → 食べ<strong>ない</strong> (tabenai) [ไม่กิน]<br>
+                        - 見る (miru) → 見<strong>ない</strong> (minai) [ไม่ดู]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 3:</strong> ผันพิเศษเฉพาะตัว<br>
+                        - する (suru) → <strong>しない (shinai)</strong> [ไม่ทำ]<br>
+                        - 来る (kuru) → <strong>来ない (konai)</strong> (ระวัง: อ่านเสียงคันจิตัวนี้เปลี่ยนเป็น <strong>ko-nai</strong> นะคะ!)
+                    </div>
+
+                    <!-- รูปที่ 4 た -->
+                    <h3 style="color:#2563EB; font-size:1.5rem; margin-top:30px; border-left: 4px solid #3B82F6; padding-left: 10px;">4. รูป た (Past Form / รูปอดีตแบบเป็นกันเอง)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">ใช้บอกเล่าเรื่องราวในอดีตที่เกิดขึ้นจบไปแล้ว เช่น "กินแล้ว" "ไปมาแล้ว" หรือใช้ประกอบโครงสร้างประโยคบอกประสบการณ์ เช่น เคยทำ (...たことがあります) วิธีการผันของรูป た <strong>"จะเลียนแบบกฎการผันของรูป て ทุกประการ"</strong> เพียงแค่เปลี่ยนจาก て เป็น た และเปลี่ยนจาก んで เป็น んだ เท่านั้นค่ะ!</p>
+                    <div class="example-block">
+                        <strong>● คำกริยากลุ่มที่ 1:</strong> ผันตามกฎรูป て แต่เปลี่ยนปลายคำ<br>
+                        - 買う (kau) → 買<strong>った</strong> (katta) [ซื้อแล้ว]<br>
+                        - 読む (yomu) → 読<strong>んだ</strong> (yonda) [อ่านแล้ว]<br>
+                        - 書く (kaku) → 書<strong>いた</strong> (kaita) [เขียนแล้ว]<br>
+                        - 行く (iku) → 行<strong>った</strong> (itta) [ไปแล้ว]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 2:</strong> ตัด <strong>る (ru)</strong> ออกแล้วเติม <strong>た (ta)</strong><br>
+                        - 食べる (taberu) → 食べ<strong>た</strong> (tabeta) [กินแล้ว]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 3:</strong> ผันพิเศษเฉพาะตัว<br>
+                        - する (suru) → <strong>した (shita)</strong> [ทำแล้ว]<br>
+                        - 来る (kuru) → <strong>来た (kita)</strong> (อ่านเสียงคันจิเป็น <strong>ki-ta</strong>)
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#1E3A8A; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #BFDBFE; padding-bottom:10px;">บทเรียนที่ 3: การผันกริยาขั้นกลางถึงระดับสูงสำหรับการสื่อสารที่ลึกซึ้ง</h2>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#1E293B;">หลังจากที่เชี่ยวชาญการผัน 4 รูปพื้นฐานแล้ว เมื่อก้าวเข้าสู่ไวยากรณ์ระดับ N4 และ N3 เพื่อน ๆ จะต้องรู้จักรูปแบบการผันที่มีมิติมากขึ้นเพื่อแสดงอารมณ์ความรู้สึกและความสามารถในภาษาญี่ปุ่นอย่างเต็มที่ค่ะ ได้แก่:</p>
+
+                    <!-- รูปที่ 5 意向形 -->
+                    <h3 style="color:#2563EB; font-size:1.4rem; margin-top:20px;">1. รูปตั้งใจ/ชักชวน (意向形 - Ikoukei / Volitional Form)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">ใช้เมื่อต้องการเสนอแนะ ชักชวนเพื่อนทำบางสิ่งบางอย่างอย่างเป็นกันเอง (แปลว่า "กันเถอะ") หรือระบุความตั้งใจที่คิดไว้ในหัว เช่น "ตั้งใจว่าจะ..." (...ようと思っています) มีวิธีผันดังนี้:</p>
+                    <div class="example-block">
+                        <strong>● คำกริยากลุ่มที่ 1:</strong> เปลี่ยนเสียงท้ายแถว U ให้กลายเป็นเสียงแถว <strong>O (โอ)</strong> แล้วเติม <strong>う (u)</strong><br>
+                        - 買う (kau) → 買<strong>おう</strong> (kaou) [ซื้อกันเถอะ]<br>
+                        - 書く (kaku) → 書<strong>こ</strong>う (kakou) [เขียนกันเถอะ]<br>
+                        - 帰る (kaeru) → 帰<strong>ろ</strong>う (kaerou) [กลับกันเถอะ]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 2:</strong> ตัด <strong>る (ru)</strong> ออกแล้วเติม <strong>よう (you)</strong><br>
+                        - 食べる (taberu) → 食べ<strong>よう</strong> (tabeyou) [กินกันเถอะ]<br>
+                        - 見る (miru) → 見<strong>よう</strong> (miyou) [ดูกันเถอะ]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 3:</strong> ผันพิเศษเฉพาะตัว<br>
+                        - する (suru) → <strong>しよう (shiyou)</strong> [ทำกันเถอะ]<br>
+                        - 来る (kuru) → <strong>来よう (koyou)</strong> (อ่านเสียงคันจิเป็น <strong>ko-you</strong>)
+                    </div>
+
+                    <!-- รูปที่ 6 可能形 -->
+                    <h3 style="color:#2563EB; font-size:1.4rem; margin-top:20px;">2. รูปสามารถ (可能形 - Kanoukei / Potential Form)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">ใช้แสดงความสามารถของบุคคลว่า "สามารถทำสิ่งนี้ได้" หรือสถานการณ์เอื้ออำนวยให้ทำได้ มีวิธีการเปลี่ยนรูปดังกริยาตัวช่วยดังนี้:</p>
+                    <div class="example-block">
+                        <strong>● คำกริยากลุ่มที่ 1:</strong> เปลี่ยนเสียงท้ายแถว U ให้กลายเป็นเสียงแถว <strong>E (เอะ)</strong> แล้วเติม <strong>る (ru)</strong> (คำกริยาที่ผันเสร็จแล้วจะกลายสภาพเป็นกริยากลุ่ม 2 ทันที)<br>
+                        - 買う (kau) → 買<strong>える</strong> (kaeru) [ซื้อได้]<br>
+                        - 書く (kaku) → 書<strong>ける</strong> (kakeru) [เขียนได้]<br>
+                        - 話す (hanasu) → 話<strong>せる</strong> (hanaseru) [พูดได้]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 2:</strong> ตัด <strong>る (ru)</strong> ออกแล้วเติม <strong>られる (rareru)</strong> (ในภาษาพูดปัจจุบัน คนญี่ปุ่นนิยมละเสียง "รา" เหลือแค่ <strong>れる (reru)</strong> เพื่อการออกเสียงที่เร็วขึ้น เรียกว่า ら抜き言葉)<br>
+                        - 食べる (taberu) → 食べ<strong>られる</strong> (taberareru) หรือ 食べ<strong>れる</strong> (tabereru) [กินได้]<br>
+                        - 見る (miru) → 見<strong>られる</strong> (mirareru) หรือ 見<strong>れる</strong> (mireru) [ดูได้]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 3:</strong> ผันพิเศษเฉพาะตัว<br>
+                        - する (suru) → <strong>できる (dekiru)</strong> (เปลี่ยนหน้าตาไปอย่างสิ้นเชิง ท่องจำเลยนะคะ!)<br>
+                        - 来る (kuru) → <strong>来られる (korareru)</strong> หรือ <strong>来れる (koreru)</strong> (คันจิอ่านออกเสียงว่า <strong>ko-rareru</strong> / <strong>ko-reru</strong>)
+                    </div>
+
+                    <!-- รูปที่ 7 条件形 -->
+                    <h3 style="color:#2563EB; font-size:1.4rem; margin-top:20px;">3. รูปเงื่อนไข (条件形 - Joukenkei / Conditional Form ば -ba)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">ใช้สร้างประโยคสมมติเงื่อนไขในอุดมคติ แปลว่า "ถ้าหาก...แล้วละก็" โครงสร้างประโยคนี้มีความตรงไปตรงมาและมีโครงสร้างไวยากรณ์ที่แน่นอนดังนี้:</p>
+                    <div class="example-block">
+                        <strong>● คำกริยากลุ่มที่ 1:</strong> เปลี่ยนเสียงท้ายแถว U ให้กลายเป็นเสียงแถว <strong>E (เอะ)</strong> แล้วเติม <strong>ば (ba)</strong><br>
+                        - 買う (kau) → 買<strong>えば</strong> (kaeba) [ถ้าซื้อ]<br>
+                        - 書く (kaku) → 書<strong>けば</strong> (kakeba) [ถ้าเขียน]<br>
+                        - 読む (yomu) → 読<strong>めば</strong> (yomeba) [ถ้าอ่าน]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 2:</strong> ตัด <strong>る (ru)</strong> ออกแล้วเติม <strong>れば (reba)</strong><br>
+                        - 食べる (taberu) → 食べ<strong>れば</strong> (tabereba) [ถ้ากิน]<br>
+                        - 見る (miru) → 見<strong>れば</strong> (mireba) [ถ้าดู]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 3:</strong> ผันพิเศษเฉพาะตัว<br>
+                        - する (suru) → <strong>すれば (sureba)</strong> [ถ้าทำ]<br>
+                        - 来る (kuru) → <strong>来れば (kureba)</strong> (ระวัง: อ่านเสียงคันจิตัวนี้เป็น <strong>ku-reba</strong>)
+                    </div>
+
+                    <!-- รูปที่ 8 命令形 -->
+                    <h3 style="color:#2563EB; font-size:1.4rem; margin-top:20px;">4. รูปคำสั่ง (命令形 - Meireikei / Imperative Form)</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">รูปนี้ใช้ในการสั่งการอย่างเด็ดขาดโดยผู้มีอำนาจเหนือกว่า เช่น พ่อแม่สั่งลูก หัวหน้าคนงานสั่งพนักงาน หรือใช้ในป้ายจราจรเตือนภัยและสถานการณ์ฉุกเฉิน รวมถึงแฟนคลับตะโกนเชียร์กีฬาและคอนเสิร์ต (เชียร์แบบฮาร์ดคอร์) มีสูตรผันดังนี้:</p>
+                    <div class="example-block">
+                        <strong>● คำกริยากลุ่มที่ 1:</strong> เปลี่ยนเสียงท้ายแถว U ให้กลายเป็นเสียงแถว <strong>E (เอะ)</strong> แล้วจบทันที (ไม่มีอะไรต่อท้าย)<br>
+                        - 買う (kau) → 買<strong>え</strong> (kae) [จงซื้อ!]<br>
+                        - 書く (kaku) → 書<strong>け</strong> (kake) [จงเขียน!]<br>
+                        - 走る (hashiru - ยกเว้น) → 走<strong>れ</strong> (hashire) [จงวิ่ง!]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 2:</strong> ตัด <strong>る (ru)</strong> ออกแล้วเติม <strong>ろ (ro)</strong> หรือ <strong>よ (yo)</strong> (คำหลังมักใช้ในภาษาเขียนหนังสือ)<br>
+                        - 食べる (taberu) → 食べ<strong>ろ</strong> (tabero) [จงกิน!]<br>
+                        - 見る (miru) → 見<strong>ろ</strong> (miro) [จงดู!]<br>
+                        <br>
+                        <strong>● คำกริยากลุ่มที่ 3:</strong> ผันพิเศษเฉพาะตัว<br>
+                        - する (suru) → <strong>しろ (shiro)</strong> หรือ <strong>せよ (seyo)</strong> [จงทำ!]<br>
+                        - 来る (kuru) → <strong>来い (koi)</strong> (จงมานี่! คันจิออกเสียงว่า <strong>ko-i</strong>)
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#1E3A8A; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #BFDBFE; padding-bottom:10px;">บทเรียนที่ 4: ตารางสรุปการผันคำกริยาภาษาญี่ปุ่นทุกรูปแบบ (Conjugation Cheat Sheet)</h2>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#1E293B;">เพื่อช่วยให้เพื่อน ๆ เห็นภาพรวมการเปลี่ยนแปลงแบบเป็นระบบ ยุยเซนเซและยูโตะเซนเซได้สรุปตารางตัวแทนคำกริยาจากกลุ่มต่าง ๆ มาไว้ที่นี่เพื่อความสะดวกในการเปิดศึกษาทบทวนระหว่างเรียนและเขียนตอบประโยคค่ะ:</p>
+                    
+                    <div class="scrollable-table">
+                        <table class="contrast-table">
+                            <thead>
+                                <tr>
+                                    <th>กลุ่มกริยา</th>
+                                    <th>รูปพจนานุกรม</th>
+                                    <th>คำแปล</th>
+                                    <th>รูป ます (สุภาพ)</th>
+                                    <th>รูป て (เชื่อม)</th>
+                                    <th>รูป ない (ปฏิเสธ)</th>
+                                    <th>รูป た (อดีต)</th>
+                                    <th>รูปตั้งใจ (ชักชวน)</th>
+                                    <th>รูปสามารถ (ทำได้)</th>
+                                    <th>รูปเงื่อนไข (ถ้าหาก)</th>
+                                    <th>รูปคำสั่ง (จงทำ)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Group 1 -->
+                                <tr>
+                                    <td rowspan="7" style="background-color: #F8FAFC; font-weight: bold; color: #1E3A8A; text-align: center; vertical-align: middle;">กลุ่มที่ 1 (Godan)</td>
+                                    <td>買う (kau)</td>
+                                    <td>ซื้อ</td>
+                                    <td>買います</td>
+                                    <td>買って</td>
+                                    <td>買わない</td>
+                                    <td>買った</td>
+                                    <td>買おう</td>
+                                    <td>買える</td>
+                                    <td>買えば</td>
+                                    <td>買え</td>
+                                </tr>
+                                <tr>
+                                    <td>書く (kaku)</td>
+                                    <td>เขียน</td>
+                                    <td>書きます</td>
+                                    <td>書いて</td>
+                                    <td>書かない</td>
+                                    <td>書いた</td>
+                                    <td>書こう</td>
+                                    <td>書ける</td>
+                                    <td>書けば</td>
+                                    <td>書け</td>
+                                </tr>
+                                <tr>
+                                    <td>話す (hanasu)</td>
+                                    <td>พูดคุย</td>
+                                    <td>話します</td>
+                                    <td>話して</td>
+                                    <td>話さない</td>
+                                    <td>話した</td>
+                                    <td>話そう</td>
+                                    <td>話せる</td>
+                                    <td>話せば</td>
+                                    <td>話せ</td>
+                                </tr>
+                                <tr>
+                                    <td>待つ (matsu)</td>
+                                    <td>รอ</td>
+                                    <td>待ちます</td>
+                                    <td>待って</td>
+                                    <td>待たない</td>
+                                    <td>待った</td>
+                                    <td>待とう</td>
+                                    <td>待てる</td>
+                                    <td>待てば</td>
+                                    <td>待て</td>
+                                </tr>
+                                <tr>
+                                    <td>読む (yomu)</td>
+                                    <td>อ่าน</td>
+                                    <td>読みます</td>
+                                    <td>読んで</td>
+                                    <td>読まない</td>
+                                    <td>読んだ</td>
+                                    <td>読もう</td>
+                                    <td>読める</td>
+                                    <td>読めば</td>
+                                    <td>読め</td>
+                                </tr>
+                                <tr>
+                                    <td>帰る (kaeru) *ยกเว้น</td>
+                                    <td>กลับ</td>
+                                    <td>帰ります</td>
+                                    <td>帰って</td>
+                                    <td>帰らない</td>
+                                    <td>帰った</td>
+                                    <td>帰ろう</td>
+                                    <td>帰れる</td>
+                                    <td>帰れば</td>
+                                    <td>帰れ</td>
+                                </tr>
+                                <tr>
+                                    <td>行く (iku) *ยกเว้น</td>
+                                    <td>ไป</td>
+                                    <td>行きます</td>
+                                    <td>行って</td>
+                                    <td>行かない</td>
+                                    <td>行った</td>
+                                    <td>行こう</td>
+                                    <td>行ける</td>
+                                    <td>行けば</td>
+                                    <td>行け</td>
+                                </tr>
+                                <!-- Group 2 -->
+                                <tr>
+                                    <td rowspan="2" style="background-color: #F8FAFC; font-weight: bold; color: #166534; text-align: center; vertical-align: middle;">กลุ่มที่ 2 (Ichidan)</td>
+                                    <td>食べる (taberu)</td>
+                                    <td>กิน</td>
+                                    <td>食べます</td>
+                                    <td>食べて</td>
+                                    <td>食べない</td>
+                                    <td>食べた</td>
+                                    <td>食べよう</td>
+                                    <td>食べられる</td>
+                                    <td>食べれば</td>
+                                    <td>食べろ</td>
+                                </tr>
+                                <tr>
+                                    <td>見る (miru)</td>
+                                    <td>ดู</td>
+                                    <td>見ます</td>
+                                    <td>見て</td>
+                                    <td>見ない</td>
+                                    <td>見た</td>
+                                    <td>見よう</td>
+                                    <td>見られる</td>
+                                    <td>見れば</td>
+                                    <td>見ろ</td>
+                                </tr>
+                                <!-- Group 3 -->
+                                <tr>
+                                    <td rowspan="2" style="background-color: #F8FAFC; font-weight: bold; color: #9A3412; text-align: center; vertical-align: middle;">กลุ่มที่ 3 (Irregular)</td>
+                                    <td>する (suru)</td>
+                                    <td>ทำ</td>
+                                    <td>します</td>
+                                    <td>して</td>
+                                    <td>しない</td>
+                                    <td>した</td>
+                                    <td>しよう</td>
+                                    <td>できる</td>
+                                    <td>すれば</td>
+                                    <td>しろ</td>
+                                </tr>
+                                <tr>
+                                    <td>来る (kuru)</td>
+                                    <td>มา</td>
+                                    <td>来ます</td>
+                                    <td>来て</td>
+                                    <td>来ない</td>
+                                    <td>来た</td>
+                                    <td>来よう</td>
+                                    <td>来られる</td>
+                                    <td>来れば</td>
+                                    <td>来い</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#1E3A8A; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #BFDBFE; padding-bottom:10px;">บทเรียนที่ 5: บทสนทนาจำลองในชีวิตประจำวันเพื่อฝึกใช้การผันกริยา (Roleplays)</h2>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#1E293B;">ลองมาดูตัวอย่างบทสนทนาจำลองการใช้ชีวิตประจำวันในญี่ปุ่นของสาวยูอิ (นักเรียนไทย) และพี่ฮารุโตะ (หนุ่มแกลสุดหล่อฝ่ายญี่ปุ่น) เพื่อดูว่าในโลกแห่งความเป็นจริงคนญี่ปุ่นเลือกใช้การผันกริยาอย่างไรกันบ้างค่ะ:</p>
+                    
+                    <div class="roleplay-container">
+                        <h4 style="color:#7E22CE; margin-bottom:15px; border-bottom: 1px solid #E9D5FF; padding-bottom: 5px;">ฉากที่ 1: การชวนไปคาเฟ่และพูดคุยอย่างสนิทสนม (Scene 1: Invitations & Casual Chats)</h4>
+                        
+                        <div class="roleplay-line" style="background: rgba(126, 34, 206, 0.05);">
+                            <span class="speaker-thai">ยูอิ (YUI - ฝ่ายไทย)</span>
+                            <div class="roleplay-text">ハルト先輩、今週の土曜日、時間ありますか？新しくできたタピオカ屋に一緒に行きませんか？</div>
+                            <div class="roleplay-translation">พี่ฮารุโตะคะ วันเสาร์นี้พอจะมีเวลาว่างไหมคะ? ไปร้านชานมไข่มุกเปิดใหม่ด้วยกันไหมคะ? (ใช้รูป ます เพื่อความสุภาพแต่แสดงความเป็นกันเอง)</div>
+                        </div>
+
+                        <div class="roleplay-line" style="background: rgba(3, 105, 161, 0.05);">
+                            <span class="speaker-officer">ฮารุโตะ (HARUTO - ฝ่ายญี่ปุ่น)</span>
+                            <div class="roleplay-text">土曜日？うん、行こう！実は僕もその店に行きたいと思っていたんだ。タピオカ、めっちゃ好きだし！</div>
+                            <div class="roleplay-translation">วันเสาร์เหรอ? อื้ม ไปกันเถอะ! (ใช้รูปตั้งใจ 行こう) ความจริงพี่ก็คิดอยากจะไปร้านนั้นอยู่เหมือนกัน ชานมไข่มุกนี่ชอบสุด ๆ ไปเลยล่ะ!</div>
+                        </div>
+
+                        <div class="roleplay-line" style="background: rgba(126, 34, 206, 0.05);">
+                            <span class="speaker-thai">ยูอิ (YUI - ฝ่ายไทย)</span>
+                            <div class="roleplay-text">やった！嬉しいです。じゃあ、私が席を予約しておきますね。</div>
+                            <div class="roleplay-translation">เย้! ดีใจจังเลยค่ะ งั้นเดี๋ยวหนูจองที่นั่งไว้ล่วงหน้าก่อนนะคะ (ใช้รูป ておきます เพื่อเตรียมการล่วงหน้า)</div>
+                        </div>
+                    </div>
+
+                    <div class="roleplay-container">
+                        <h4 style="color:#7E22CE; margin-bottom:15px; border-bottom: 1px solid #E9D5FF; padding-bottom: 5px;">ฉากที่ 2: ในห้องสมุดมหาวิทยาลัยก่อนสอบข้อเขียน (Scene 2: Studying in the Library)</h4>
+                        
+                        <div class="roleplay-line" style="background: rgba(126, 34, 206, 0.05);">
+                            <span class="speaker-thai">ยูอิ (YUI - ฝ่ายไทย)</span>
+                            <div class="roleplay-text">先輩、この漢字の読み方が全然分からなくて…。教えてくれませんか？</div>
+                            <div class="roleplay-translation">พี่คะ หนูไม่เข้าใจวิธีการอ่านคันจิตัวนี้เลยค่ะ... ช่วยสอนให้หนูหน่อยได้ไหมคะ? (ใช้รูป て + くれませんか เพื่อขอความช่วยเหลืออย่างสุภาพ)</div>
+                        </div>
+
+                        <div class="roleplay-line" style="background: rgba(3, 105, 161, 0.05);">
+                            <span class="speaker-officer">ฮารุโตะ (HARUTO - ฝ่ายญี่ปุ่น)</span>
+                            <div class="roleplay-text">どれどれ？ああ、これは「活用」って読むんだよ。毎日練習すれば、絶対に覚えられるよ！</div>
+                            <div class="roleplay-translation">ไหนขอพี่ดูหน่อยสิ? อ๋อ ตัวนี้อ่านว่า 'คัตสึโย' (การผัน) ไงล่ะ ถ้าหากซ้อมอยู่ทุกวัน (รูปเงื่อนไข 練習すれば) ละก็ จะต้องจำได้อย่างแน่นอนเลย! (รูปสามารถ 覚えられる)</div>
+                        </div>
+
+                        <div class="roleplay-line" style="background: rgba(126, 34, 206, 0.05);">
+                            <span class="speaker-thai">ยูอิ (YUI - ฝ่ายไทย)</span>
+                            <div class="roleplay-text">そうですね。諦めないで、毎日コツコツ書いて練習します！</div>
+                            <div class="roleplay-translation">จริงด้วยสินะคะ หนูจะไม่ยอมแพ้ (รูปปฏิเสธ ない) และตั้งหน้าตั้งตาเขียนฝึกซ้อมมันทุกวันเลยค่ะ!</div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="teachers-tip">
+                    <div class="teachers-tip-avatar">🌸</div>
+                    <div class="teachers-tip-content">
+                        <h4>ข้อแนะนำสำคัญจาก YUI &amp; YUTO เซนเซ</h4>
+                        <p>
+                            สวัสดีค่ะเพื่อน ๆ ทุกคน สำหรับผู้เรียนชาวไทยแล้ว เคล็ดลับการจำ <strong>"รูป て (Te-form)"</strong> ที่ดีที่สุดคือการเปลี่ยนกฎการผันให้เป็น <strong>"จังหวะเพลงหรือง่าย ๆ ในหัว"</strong> ค่ะ ยุยเซนเซแนะนำให้ร้องเพลงทำนองคลาสสิกของเล่นเด็ก เช่น ทำนองเพลง "กิ่งก้านใบชะชะใบก้านกิ่ง" หรือเพลงคริสต์มาส "Jingle Bells" มาใส่สูตร "อิตเตะ นิเตะ ชิเตะ..." จะทำให้กล้ามเนื้อปากและสมองทำงานประสานกันได้ดีขึ้นมากเมื่อต้องการเรียกใช้งานกริยาตัวนั้นกระทันหันค่ะ นอกจากนี้ เวลาเจอคำกริยาใหม่ ๆ ในเกมจีบสาวหรืออ่านการ์ตูน อย่าเพิ่งเปิดหาความหมายอย่างเดียวนะคะ ให้ลองสืบย้อนกลับไปว่า "รูปพจนานุกรม" ของมันคืออะไรและสังเกตว่ามันเปลี่ยนรูปทรงมาอย่างไร วิธีนี้จะช่วยสร้างเครือข่ายความจำถาวรในสมอง ทำให้สอบผ่านระดับ N4-N3 ได้ง่ายขึ้นมากเลยค่ะ!
+                        </p>
+                    </div>
+                </div>
+
+                <section class="custom-section">
+                    <h2 style="color:#1E3A8A; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #BFDBFE; padding-bottom:10px;">คำถามที่พบบ่อย (FAQs) เกี่ยวกับการผันคำกริยาภาษาญี่ปุ่น</h2>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#1E293B;">รวมประเด็นข้อสงสัยยอดฮิตที่นักเรียนไทยชอบมาปรึกษากับเซนเซในห้องเรียนบ่อยที่สุดค่ะ:</p>
+
+                    <div class="faq-card">
+                        <div class="faq-question">Q1: มีหลักการสังเกตคำกริยายกเว้นกลุ่ม 1 (ที่ดูเหมือนกลุ่ม 2) อย่างไรไม่ให้จำสับสนเวลาสอบ?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUTO เซนเซ:</strong> โดยทั่วไปแล้วในตัวอักษรคันจิ หากอักษรคันจิตัวนั้นควบรวมเสียงแถว I หรือ E ไปอยู่ในฝั่งคันจิ และเหลืออักษรฮิรางานะต่อท้ายเพียงตัวเดียวคือ <strong>「る」</strong> มักจะเป็นกลุ่มที่ 1 ครับ เช่น 帰る (ka-e-ru คันจิตัว 帰 ครอบคลุมเสียง ka-e และโผล่แค่ る) หรือ 入る (ha-i-ru คันจิครอบคลุมเสียง ha-i และโผล่แค่ る) ต่างจากกลุ่ม 2 แท้ ๆ ที่มักจะโผล่ตัวอักษรฮิรางานะอื่น ๆ ข้างหน้า る ออกมาด้วย เช่น 食べる (ta-be-ru โผล่ตัว be ออกมานอกคันจิ) หรือ 起きる (o-ki-ru โผล่ตัว ki ออกมา) แม้กฎนี้จะไม่ได้ถูกต้อง 100% แต่ใช้เอาตัวรอดในการเดาข้อสอบได้สูงถึง 90% เลยทีเดียวครับ! ที่เหลือแนะนำให้จำเป็นกลุ่มคำศัพท์คู่หู 5 คำหลักที่เซนเซสรุปไว้ข้างต้นครับ
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">Q2: ทำไมรูปปฏิเสธ (รูป ない) ของคำว่า 買う (kau) ถึงผันเป็น 買わない (kawanai) ทำไมถึงไม่ใช้ 買わない (ka-a-nai) ตามหลักเสียง A?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUI เซนเซ:</strong> เป็นข้อสังเกตที่ดีและยอดเยี่ยมมากค่ะ! ในอดีตภาษาญี่ปุ่นดั้งเดิม คำกริยาที่ลงท้ายด้วยเสียง う เช่น 買う (kau), 会う (au) มีเสียงสะกดโบราณแฝงอยู่คือเสียงตัว W (ว) เมื่อต้องการผันเข้าสู่เสียงแถว A จึงยังคงรูปการคงตัวอักษร <strong>「わ」 (wa)</strong> ไว้เพื่อช่วยในการออกเสียงเว้นระยะที่ราบรื่นและไม่ให้คำพูดติดขัดค่ะ ดังนั้น คำกริยากลุ่ม 1 ทุกคำที่มีรูปดั้งเดิมลงท้ายด้วยเสียงตัวอักษร <strong>「う」เดี่ยว ๆ</strong> เมื่อผันเป็นรูปปฏิเสธจะต้องเปลี่ยนเป็น <strong>「わ」</strong> เสมอค่ะ ห้ามใส่ あ นะคะ เช่น 会う → 会わない, 言う → 言わない ค่ะ
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">Q3: รูป て และรูป た มีความเกี่ยวข้องกันอย่างไร สามารถเรียนทางลัดควบคู่กันได้ไหม?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUTO เซนเซ:</strong> เกี่ยวข้องกันอย่างสมบูรณ์แบบ 100% เลยครับ! เพราะกฎทางไวยากรณ์และกลไกเสียงในการผันของรูป <strong>て (Te-form)</strong> และรูป <strong>た (Ta-form)</strong> นั้นถอดแบบมาจากระบบเดียวกันทุกประการครับ หากคุณผันรูป て ได้คล่องแคล่วแล้ว เมื่อต้องการผันรูป た คุณเพียงแค่เปลี่ยนอักษรสุดท้ายจาก <strong>て (te) → た (ta)</strong> หรือเปลี่ยนจาก <strong>de (de) → だ (da)</strong> เท่านั้นครับ เช่น 待って (matte) → 待った (katta), 読んで (yonde) → 読んだ (yonda) ดังนั้น หากเริ่มหัดผัน แนะนำให้ซ้อมกฎรูป て ให้แม่นยำก่อนเป็นด่านแรก แล้วรูป た จะตามมาเองแบบอัตโนมัติโดยแทบไม่ต้องจำกฎใหม่เลยครับ
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">Q4: ทำไมการจำแนกคำกริยากลุ่ม 3 (する, 来る) ถึงสำคัญมากในระดับขั้นสูง?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUI เซนเซ:</strong> เพราะคำกริยากลุ่ม 3 โดยเฉพาะคำว่า <strong>する (suru)</strong> ทำหน้าที่เป็น "ตัวขับเคลื่อนสำคัญ" ในการแปลงคำนามธรรมดาให้กลายเป็นคำกริยาค่ะ ภาษาญี่ปุ่นมีคำนามยืมจากภาษาจีนและภาษาตะวันตกมากมาย (เช่น 勉強 benkyou = การเรียน, コピー kopii = การถ่ายเอกสาร) ซึ่งเมื่อเรานำคำว่า する ไปต่อท้าย จะกลายเป็นคำกริยาทันที (勉強する = เรียนหนังสือ, コピーする = ถ่ายเอกสาร) และคำกริยาผสมเหล่านี้ทั้งหมดจะถูกผันตามกฎกริยากลุ่ม 3 เสมอค่ะ หากเราเข้าใจการผัน する เราจะสามารถควบคุมคำกริยาใหม่ ๆ นับหมื่นคำในภาษาญี่ปุ่นระดับสูงได้อย่างง่ายดายค่ะ
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">Q5: การผันรูปสามารถ (可能形) มีรูปแบบประโยคที่ส่งผลต่อการเลือกใช้คำช่วยเปลี่ยนไปด้วยใช่ไหมคะ?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUI เซนเซ:</strong> ใช่เลยค่ะ! เป็นคำถามที่สำคัญมากในการสอบวัดระดับไวยากรณ์ค่ะ เมื่อเราผันกริยาธรรมดาให้กลายเป็น "รูปสามารถ" (เช่น 読む → 読める, 食べる → 食べられる) คำช่วยที่ใช้ชี้กรรมของประโยคจากเดิมที่ใช้ <strong>「を」 (wo)</strong> จะถูกเปลี่ยนมานิยมใช้คำช่วย <strong>「が」 (ga)</strong> เพื่อเน้นสภาพและความสามารถของกรรมตัวนั้นแทนค่ะ เช่น:<br>
+                            - 本<strong>を</strong>読む (hon wo yomu) = อ่านหนังสือ (ประโยคปกติ)<br>
+                            - 本<strong>が</strong>読める (hon ga yomeru) = สามารถอ่านหนังสือได้ (ประโยคแสดงความสามารถ)<br>
+                            ดังนั้น อย่าลืมสังเกตการเปลี่ยนแปลงของคำช่วยในข้อสอบ JLPT ควบคู่ไปกับรูปคำกริยาด้วยนะคะ!
+                        </div>
+                    </div>
+                </section>
+
+                <div class="page-nav">
+                    <a class="nav-btn" href="/">🎮 ย้อนกลับหน้าแรก</a>
+                    <a class="nav-btn" href="japanese-text-learning">รวมคอร์สทั้งหมด 📖</a>
+                    <a class="nav-btn" href="hub">คอร์สเรียน Hub 🏠</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 YUI &amp; YUTO เซนเซ. สงวนลิขสิทธิ์ทั้งหมด</p>
+        <p style="margin-top: 10px;">
+            <a href="/" style="color: #94A3B8; text-decoration: none; margin: 0 10px;">หน้าหลัก</a> | 
+            <a href="hub" style="color: #94A3B8; text-decoration: none; margin: 0 10px;">คอร์สเรียนทั้งหมด</a> | 
+            <a href="sitemap" style="color: #94A3B8; text-decoration: none; margin: 0 10px;">แผนผังเว็บไซต์ (Sitemap)</a> |
+            <a href="privacy-policy" style="color: #94A3B8; text-decoration: none; margin: 0 10px;">นโยบายความเป็นส่วนตัว</a>
+        </p>
+    </footer>
+
+    <!-- Dynamic Ad Banner -->
+    <script>
+    (function() {
+      function initAdBanner() {
+        var path = window.location.pathname.toLowerCase();
+        if (path === '/' || path === '/index.html' || path.indexOf('play') !== -1 || path.indexOf('index') !== -1) {
+          return; 
+        }
+        
+        var isMobile = window.innerWidth <= 768;
+        var klookWidget = '';
+        if (isMobile) {
+          klookWidget = '<ins class="klk-aff-widget" data-wid="115246" data-bgtype="Shinkansen" data-adid="1305318" data-lang="th" data-prod="banner" data-width="468" data-height="60"><a href="//www.klook.com/?aid=">Klook.com</a></ins>';
+        } else {
+          klookWidget = '<ins class="klk-aff-widget" data-wid="115246" data-height="340px" data-adid="1305242" data-lang="th" data-prod="search_vertical" data-currency="THB"><a href="//www.klook.com/?aid=">Klook.com</a></ins>';
+        }
+
+        var adHtml = '<button id="close-ad-banner" style="position: absolute; top: -10px; left: -10px; background: #334155; border: 2px solid #0f172a; color: white; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 100000; box-shadow: 0 2px 5px rgba(0,0,0,0.3); padding: 0;">✕</button>' +
+                     '<div class="ad-text" style="font-size: 12px; color: #00e5ff; margin-bottom: 6px; font-weight: bold; font-family: \'Outfit\', \'Noto Sans Thai\', sans-serif; position: relative; z-index: 2; text-align: center;">เช็คราคาตั๋วไปญี่ปุ่นได้ที่นี่! ✈️</div>' +
+                     '<div class="klook-wrapper" style="width: 100%; display: flex; justify-content: center; position: relative;">' + klookWidget + '</div>';
+        
+        var adContainer = document.createElement('div');
+        adContainer.id = 'dynamic-sticky-ad-banner';
+        adContainer.innerHTML = adHtml;
+        
+        var style = document.createElement('style');
+        style.innerHTML = 
+          '#dynamic-sticky-ad-banner {' +
+          '  position: fixed;' +
+          '  right: 20px;' +
+          '  bottom: 20px;' +
+          '  z-index: 99999;' +
+          '  background: rgba(15, 23, 42, 0.95);' +
+          '  border: 1px solid rgba(255, 255, 255, 0.1);' +
+          '  border-radius: 12px;' +
+          '  padding: 10px;' +
+          '  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);' +
+          '  text-align: center;' +
+          '  display: flex;' +
+          '  flex-direction: column;' +
+          '  align-items: center;' +
+          '  width: 320px;' +
+          '  transform-origin: bottom right;' +
+          '  transform: scale(0.85);' +
+          '}' +
+          '#dynamic-sticky-ad-banner ins {' +
+          '  width: 100%;' +
+          '}' +
+          '@media (max-width: 768px) {' +
+          '  #dynamic-sticky-ad-banner {' +
+          '    bottom: 75px;' +
+          '    right: 5px;' +
+          '    left: 5px;' +
+          '    width: calc(100% - 10px);' +
+          '    border-radius: 12px;' +
+          '    transform: none;' +
+          '    flex-direction: column;' +
+          '    align-items: center;' +
+          '    height: auto;' +
+          '    padding: 10px 5px 5px;' +
+          '  }' +
+          '  #dynamic-sticky-ad-banner .ad-text {' +
+          '    margin: 0 0 6px 0 !important;' +
+          '    font-size: 12px !important;' + 
+          '    text-align: center;' +
+          '    width: 100%;' +
+          '  }' +
+          '  .klook-wrapper {' +
+          '    width: 100% !important;' + 
+          '    height: 42px;' +
+          '    position: relative;' +
+          '    overflow: hidden;' +
+          '  }' +
+          '  .klook-wrapper ins {' +
+          '    position: absolute;' +
+          '    top: 0;' +
+          '    left: 50%;' +
+          '    width: 468px !important;' +
+          '    transform: translateX(-50%) scale(0.7);' +
+          '    transform-origin: top center;' +
+          '    display: block;' +
+          '  }' +
+          '  #close-ad-banner {' +
+          '    top: -10px !important;' +
+          '    left: -5px !important;' +
+          '    width: 28px !important;' +
+          '    height: 28px !important;' +
+          '    font-size: 14px !important;' +
+          '  }' +
+          '}';
+        
+        document.head.appendChild(style);
+        document.body.appendChild(adContainer);
+        
+        var closeBtn = document.getElementById('close-ad-banner');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function() {
+            adContainer.style.display = 'none';
+          });
+        }
+        
+        (function (d, sc, u) {
+          var s = d.createElement(sc),
+            p = d.getElementsByTagName(sc)[0];
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = u;
+          p.parentNode.insertBefore(s, p);
+        })(
+          document,
+          "script",
+          "https://affiliate.klook.com/widget/fetch-iframe-init.js"
+        );
+      }
+      
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAdBanner);
+      } else {
+        initAdBanner();
+      }
+    })();
+    </script>
+</body>
+</html>
