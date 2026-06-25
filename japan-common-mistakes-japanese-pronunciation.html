@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2026/06/25">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 จุดผิดพลาดภาษาญี่ปุ่นที่คนไทยใช้ผิดบ่อยที่สุด! พร้อมวิธีแก้ไขให้ถูกต้องเป๊ะ | JLPT Gyaru</title>
+    <link rel="canonical" href="https://jlpt.yui-yuto.com/japan-common-mistakes-japanese-pronunciation">
+    <link rel="icon" type="image/jpeg" href="images/icon_jlpt.webp">
+    <link rel="apple-touch-icon" href="images/icon_jlpt.webp">
+    <meta name="description" content="คัมภีร์เจาะลึก 10 จุดผิดพลาดภาษาญี่ปุ่นที่คนไทยมักใช้ผิดและออกเสียงเพี้ยนบ่อยที่สุด เรียนรู้วิธีการใช้คำช่วย は vs が, การใช้กริยาช่วย あげる/もらう/くれる และวิธีฝึกออกเสียง つ (tsu), ざ (za) ให้เป๊ะเหมือนคนญี่ปุ่นแท้ๆ เพื่อพิชิตคะแนนสอบ JLPT ทุกระดับ!">
+    <link rel="stylesheet" href="jlpt_lp.css">
+    <style>
+        .hero { background: linear-gradient(135deg, #FFF5F8 0%, #E3F2FD 100%); }
+        .custom-section { margin-bottom: 60px; padding: 25px; background: #fff; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .word-card { background: #FFF3E0; border-left: 5px solid #FF9800; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+        .example-block { background: #F5F5F5; padding: 12px; border-radius: 6px; margin-top: 10px; font-family: monospace; font-size: 0.95rem; line-height: 1.5; color: #333; }
+        header { z-index: 2147483647 !important; }
+        .emphasis-box { background: #FFEBEE; border-left: 5px solid #E91E63; padding: 15px; margin: 15px 0; border-radius: 4px; }
+        .contrast-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .contrast-table th, .contrast-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .contrast-table th { background-color: #FCE4EC; color: #C2185B; font-weight: bold; }
+        
+        /* Teacher avatars */
+        .teachers-tip {
+            display: flex;
+            background: #FFF9C4;
+            border-left: 5px solid #FBC02D;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        .teachers-tip-avatar {
+            font-size: 2.5rem;
+            background: #FFF;
+            padding: 10px;
+            border-radius: 50%;
+            border: 2px solid #FBC02D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+        }
+        .teachers-tip-content h4 {
+            margin-top: 0;
+            color: #F57F17;
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+        }
+        .teachers-tip-content p {
+            margin: 0;
+            font-size: 1rem;
+            color: #5d4037;
+            line-height: 1.6;
+        }
+
+        /* Vocab cards */
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .vocab-card {
+            background-color: #FFF;
+            border: 1px solid #FFD54F;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        .vocab-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 152, 0, 0.2);
+            border-color: #FF9800;
+        }
+        .vocab-word-jp {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .vocab-word-kana {
+            font-size: 0.95rem;
+            color: #E65100;
+            margin-bottom: 15px;
+        }
+        .vocab-word-th {
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 15px;
+            border-left: 3px solid #FF9800;
+            padding-left: 10px;
+        }
+        .tts-btn {
+            background: #FF9800;
+            border: 1px solid #FFB74D;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            align-self: flex-start;
+            transition: 0.2s;
+        }
+        .tts-btn:hover {
+            background: #F57C00;
+        }
+
+        /* Quiz Box */
+        .quiz-container {
+            background: #E8F5E9;
+            border: 2px solid #81C784;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 35px 0;
+        }
+        .quiz-title {
+            color: #2E7D32;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quiz-question {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #4CAF50;
+        }
+        .quiz-q-text {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .quiz-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .quiz-opt {
+            background: #f1f8e9;
+            border: 1px solid #c5e1a5;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+        .quiz-opt:hover {
+            background: #dcedc8;
+            border-color: #9ccc65;
+        }
+        .quiz-explanation {
+            margin-top: 10px;
+            padding: 10px;
+            background: #e8f5e9;
+            border: 1px dashed #81c784;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #2e7d32;
+            display: none;
+        }
+
+        /* FAQ block */
+        .faq-card {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #1E293B;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .faq-answer {
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Page Nav */
+        .page-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            background: #FFF;
+            border: 2px solid #E2E8F0;
+            color: #475569;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .nav-btn:hover {
+            border-color: #FF3366;
+            color: #FF3366;
+            background: #FFF5F8;
+        }
+
+        @media (max-width: 768px) {
+            .vocab-grid {
+                grid-template-columns: 1fr;
+            }
+            .teachers-tip {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+    
+    <script>
+        function playTTS(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const msg = new SpeechSynthesisUtterance(text);
+                msg.lang = 'ja-JP';
+                msg.rate = 0.82;
+                window.speechSynthesis.speak(msg);
+            }
+        }
+
+        function toggleExplanation(id) {
+            const exp = document.getElementById(id);
+            if (exp.style.display === 'none' || exp.style.display === '') {
+                exp.style.display = 'block';
+            } else {
+                exp.style.display = 'none';
+            }
+        }
+    </script>
+    <link href="/manifest.json" rel="manifest"/>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "10 จุดผิดพลาดภาษาญี่ปุ่นที่คนไทยใช้ผิดบ่อยที่สุด! พร้อมวิธีแก้ไขให้ถูกต้องเป๊ะ | JLPT Gyaru",
+      "description": "คู่มือวิเคราะห์ 10 จุดผิดพลาดภาษาญี่ปุ่นที่คนไทยมักเข้าใจผิดและใช้ผิดบ่อย ทั้งเรื่องหลักไวยากรณ์ คำช่วย は vs が, การใช้กริยาช่วย あげる/もらう/くれる และวิธีแก้ไขการออกเสียง つ (tsu), ざ (za) ให้ถูกต้องเหมือนเจ้าของภาษา",
+      "url": "https://jlpt.yui-yuto.com/japan-common-mistakes-japanese-pronunciation",
+      "datePublished": "2026-06-25",
+      "dateModified": "2026-06-25",
+      "author": {
+        "@type": "Organization",
+        "name": "YUI & YUTO เซนเซ",
+        "url": "https://jlpt.yui-yuto.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "YUI & YUTO เซนเซ",
+        "url": "https://jlpt.yui-yuto.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://jlpt.yui-yuto.com/images/icon_jlpt.webp"
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jlpt.yui-yuto.com/images/ogp_jlpt.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "inLanguage": "th",
+      "about": {
+        "@type": "Thing",
+        "name": "JLPT",
+        "description": "Japanese Language Proficiency Test"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Thai Japanese learners"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "หน้าแรก",
+          "item": "https://jlpt.yui-yuto.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "คอร์สทั้งหมด",
+          "item": "https://jlpt.yui-yuto.com/hub"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "10 จุดผิดพลาดภาษาญี่ปุ่นยอดฮิต",
+          "item": "https://jlpt.yui-yuto.com/japan-common-mistakes-japanese-pronunciation"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">JLPT Gyaru</a>
+        <a href="/hub" class="cta-button" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">กลับหน้าคอร์ส</a>
+    </header>
+
+    <main>
+        <div class="hero">
+            <span class="hero-tag" style="background: rgba(194, 24, 91, 0.1); border-color: #c2185b; color: #c2185b;">Common Mistakes &amp; Pronunciation</span>
+            <h1 class="animate-fade" style="color: #c2185b;">10 จุดผิดพลาดภาษาญี่ปุ่นที่คนไทยใช้ผิดบ่อยที่สุด!</h1>
+            <p class="animate-fade" style="color: #880e4f;">คัมภีร์วิเคราะห์หลักไวยากรณ์ คำช่วย และเทคนิคการออกเสียงที่ถูกต้องสำหรับผู้เรียนคนไทยโดยเฉพาะ</p>
+            <a href="/" class="cta-button animate-fade" style="font-size:1.2rem; padding: 1.2rem 3rem; background: linear-gradient(135deg, #c2185b 0%, #880e4f 100%);">เริ่มฝึกในเกมเลย</a>
+        </div>
+
+        <div class="content-wrapper">
+            <article>
+                <section class="custom-section">
+                    <h2 style="color:#c2185b; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">ทำไมผู้เรียนคนไทยจึงมักติดกับดัก "ภาษาญี่ปุ่นเพี้ยน"?</h2>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#333;">การเรียนภาษาญี่ปุ่นให้สามารถนำไปใช้งานจริงได้นั้น ไม่ใช่แค่เรื่องของการท่องจำคลังคำศัพท์และหลักไวยากรณ์ในตำราเรียนเพื่อนำไปทำข้อสอบวัดระดับ (JLPT) เท่านั้นค่ะ แต่สิ่งที่ยากยิ่งกว่าคือการปรับระบบความคิดและการออกเสียงของตัวเราให้เข้ากับธรรมชาติของเจ้าของภาษาชาวญี่ปุ่นอย่างแท้จริง</p>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#333;">สาเหตุหลักที่ทำให้นักเรียนไทยจำนวนมาก ตั้งแต่ระดับเริ่มต้น N5 ไปจนถึงระดับสูง N2 หรือ N1 มักจะเผลอพูดภาษาญี่ปุ่นที่ "แปร่งๆ" หรือที่คนญี่ปุ่นมักเรียกว่า <strong>"ภาษาญี่ปุ่นสไตล์คนไทย" (タイ人の日本語)</strong> เกิดจากปรากฏการณ์ที่เรียกว่า <strong>L1 Interference (การแทรกแซงของภาษาแม่)</strong> เนื่องจากภาษาไทยและภาษาญี่ปุ่นมีโครงสร้างไวยากรณ์ วิธีคิดเรื่องมุมมองบุคคล ตลอดจนระบบเสียงสระและพยัญชนะที่แตกต่างกันอย่างสิ้นเชิง</p>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#333;">เมื่อเราพยายามแปลประโยคจากภาษาไทยเป็นภาษาญี่ปุ่นแบบคำต่อคำ (Literal Translation) หรือพยายามแทนเสียงพยัญชนะญี่ปุ่นที่ไม่มีในไทยด้วยเสียงภาษาไทยที่ใกล้เคียงที่สุด ผลลัพธ์ที่ได้จึงกลายเป็นประโยคที่คนญี่ปุ่นอาจจะเข้าใจได้ยาก ฟังแล้วรู้สึกไม่เป็นธรรมชาติ หรือแย่ที่สุดคือทำให้เกิดการเข้าใจผิดอย่างรุนแรงในบริบทการทำงานหรือชีวิตประจำวัน</p>
+                    
+                    <div class="teachers-tip">
+                        <div class="teachers-tip-avatar">🌸</div>
+                        <div class="teachers-tip-content">
+                            <h4>ข้อแนะนำพิเศษจาก YUI เซนเซ</h4>
+                            <p>ยุยอยากบอกว่า ปัญหาเหล่านี้เป็นเรื่องปกติมากๆ ค่ะ ไม่ต้องเขินอายเลยนะ! คนญี่ปุ่นเองเวลาเรียนภาษาไทยก็สับสนกับระบบวรรณยุกต์และตัวสะกดของเราเหมือนกัน สิ่งสำคัญคือเมื่อเราทราบว่าจุดไหนที่เรามักพลาดบ่อยๆ เราจะสามารถระมัดระวังและปรับปรุงแก้ไขเพื่อพัฒนาทักษะของเราให้ดีขึ้นได้อย่างรวดเร็วค่ะ มาเรียนรู้ไปพร้อมกันเลยน้า!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#c2185b; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">ส่วนที่ 1: 5 จุดผิดพลาดด้านหลักไวยากรณ์และการใช้คำ (Grammar &amp; Vocabulary Pitfalls)</h2>
+                    
+                    <h3 style="color:#880e4f; font-size:1.5rem; margin-top:30px;">จุดที่ 1: การใช้คำช่วย は (Wa) VS が (Ga) สลับกันในฐานะประธาน</h3>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">นี่คือปัญหาอันดับหนึ่งยอดฮิตตลอดกาล เนื่องจากในภาษาไทยเมื่อเรากล่าวถึงประธาน เราจะวางคำนั้นไว้หน้าประโยคโดยไม่ต้องมีเครื่องหมายหรือ "คำช่วย" ใดๆ บ่งบอกหน้าหน้าที่ แต่ในภาษาญี่ปุ่น คำช่วยสองตัวนี้มีบทบาทที่ต่างกันมากในการนำเสนอข้อมูล</p>
+                    
+                    <div class="emphasis-box">
+                        <strong style="color:#C2185B;">กฎเหล็กในการแยกแยะ:</strong><br>
+                        <ul>
+                            <li><strong>は (Wa)</strong> เน้นข้อมูลที่อยู่ <strong>ข้างหลัง</strong> คำช่วย เป็นการพูดเพื่อระบุหัวข้อเรื่อง เช่น "พูดถึงเรื่องฉันนะ... ฉันเป็นคนไทย"</li>
+                            <li><strong>が (Ga)</strong> เน้นประธานที่อยู่ <strong>ข้างหน้า</strong> คำช่วย มักใช้เพื่อให้ข้อมูลใหม่ ระบุตัวตนเฉพาะเจาะจง หรือตอบคำถามประเภท "ใคร/อะไร"</li>
+                        </ul>
+                    </div>
+
+                    <div class="vocab-grid">
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge badge-skill">は (Wa)</span>
+                                <div class="vocab-word-jp">私はタイ人です。</div>
+                                <div class="vocab-word-kana">わたしはたいじんです。</div>
+                                <div class="vocab-word-th">ฉันน่ะหรอ (หัวข้อ) เป็นคนไทยค่ะ</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('私はタイ人です。')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge badge-skill">が (Ga)</span>
+                                <div class="vocab-word-jp">私がタイ人です。</div>
+                                <div class="vocab-word-kana">わたしがたいじんです。</div>
+                                <div class="vocab-word-th">ฉันนี่แหละ (เน้นตัวประธาน) ที่เป็นคนไทย</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('私がタイ人です。')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                    </div>
+
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">หากคนญี่ปุ่นถามว่า <code>「だれがタイ人ですか？」 (ใครเป็นคนไทยคะ?)</code> ประโยคคำตอบที่ถูกต้องตามธรรมชาติและถูกหลักไวยากรณ์คือ <code>「私がタイ人です。」</code> (ตัวฉันนี่แหละค่ะที่เป็นคนไทย) การใช้ <code>「私はタイ人です。」</code> ในสถานการณ์นี้จะฟังดูขัดเขินทันทีเนื่องจากเราจงใจเน้นข้อมูลที่ผิดตำแหน่ง</p>
+
+                    <h3 style="color:#880e4f; font-size:1.5rem; margin-top:35px;">จุดที่ 2: ความสับสนเรื่องผู้รับและผู้ส่งในคำกริยา "あげる", "もらう", "くれる"</h3>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">ในภาษาไทย คำว่า "ให้" สามารถใช้ได้ในทุกสถานการณ์ ไม่ว่าจะเป็นการที่เราให้ผู้อื่น หรือผู้อื่นมาให้เราก็ตาม เช่น "ฉันให้กิฟต์การ์ดเพื่อน" และ "เพื่อนให้ของขวัญฉัน" ทั้งสองประโยคใช้คำว่า "ให้" เหมือนกันทั้งหมด แต่ในภาษาญี่ปุ่น <strong>ทิศทางของการให้และมุมมองของความสัมพันธ์เป็นตัวตัดสินคำกริยาค่ะ</strong></p>
+
+                    <table class="contrast-table">
+                        <thead>
+                            <tr>
+                                <th>คำกริยา</th>
+                                <th>โครงสร้างประโยค</th>
+                                <th>ความหมายและการใช้งาน</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>あげる (Ageru)</td>
+                                <td>[ผู้ให้] が [ผู้รับ] に [สิ่งของ] をあげる</td>
+                                <td>ฉัน (หรือคนของฉัน) ให้สิ่งของกับคนอื่น</td>
+                            </tr>
+                            <tr>
+                                <td>くれる (Kureru)</td>
+                                <td>[ผู้ให้] が [ฉัน/คนในครอบครัว] に [สิ่งของ] をくれる</td>
+                                <td>คนอื่น ให้สิ่งของกับฉัน (ทิศทางพุ่งเข้าหาตัวเอง)</td>
+                            </tr>
+                            <tr>
+                                <td>もらう (Morau)</td>
+                                <td>[ผู้รับ] が [ผู้ให้] に/から [สิ่งของ] をもらう</td>
+                                <td>ฉัน (หรือคนอื่น) ได้รับสิ่งของจากผู้อื่น</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">ข้อผิดพลาดที่พบบ่อยมากที่สุดของคนไทยคือการใช้ <strong>あげる (Ageru)</strong> เมื่อคนอื่นให้สิ่งของกับตนเอง ตัวอย่างเช่นประโยคต่อไปนี้:</p>
+                    
+                    <div class="emphasis-box" style="background:#FFF3E0; border-left: 5px solid #FF9800;">
+                        <span style="color:#D84315; font-weight:bold;">❌ ประโยคที่ผิดธรรมชาติ:</span><br>
+                        <code>先生は私にプレゼントをあげました。</code> (Sensei wa watashi ni purezento wa agemashita.)<br>
+                        <span style="color:#E65100; font-size:0.95rem;">*ความหมายที่เผลอสื่อ: อาจารย์ให้ของขวัญฉัน (แต่เป็นการใช้ あげる ผิดบริบทอย่างรุนแรง เนื่องจากผู้รับเป็นตัวเราเอง)</span><br><br>
+                        <span style="color:#2E7D32; font-weight:bold;">✔️ ประโยคที่ถูกต้อง:</span><br>
+                        <code>先生は私にプレゼントをくれました。</code> (Sensei wa watashi ni purezento o kuremashita.)<br>
+                        <code>私は先生にプレゼントをもらいました。</code> (Watashi wa sensei ni purezento o moraimashita.)
+                    </div>
+
+                    <h3 style="color:#880e4f; font-size:1.5rem; margin-top:35px;">จุดที่ 3: การใช้กริยาเคลื่อนที่ "行く" (Iku - ไป) VS "来る" (Kuru - มา) ผิดมุมมอง</h3>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">นี่คือตัวอย่างเด่นชัดของความต่างด้านมุมมองความคิดในภาษาค่ะ ภาษาไทยใช้ตัวผู้พูดเป็นศูนย์กลางเสมอ ส่วนภาษาญี่ปุ่นใช้ตำแหน่งของคู่สนทนาและทิศทางการเคลื่อนไหวเป็นหลัก</p>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">ตัวอย่างสถานการณ์ยอดฮิตคือ เพื่อนโทรศัพท์มาถามว่า <code>「今どこ？もう着いた？」(ตอนนี้อยู่ไหน? ถึงหรือยัง?)</code> และเราต้องการจะบอกว่า <code>「กำลังไปเดี๋ยวนี้แหละ」</code></p>
+
+                    <div class="emphasis-box" style="background:#ECEFF1; border-left: 5px solid #607D8B;">
+                        <strong style="color:#37474F;">วิธีคิดเรื่องทิศทางในภาษาญี่ปุ่น:</strong><br>
+                        <ul>
+                            <li><strong>行く (Iku):</strong> เคลื่อนที่ออกจากจุดที่ตัวเองอยู่ ไปยังสถานที่อื่น</li>
+                            <li><strong>来る (Kuru):</strong> เคลื่อนที่เข้าหาจุดที่ผู้พูด (หรือคู่สนทนาในบริบทนั้น) อยู่</li>
+                        </ul>
+                    </div>
+
+                    <div class="vocab-grid">
+                        <div class="vocab-card" style="border-color: #e53935;">
+                            <div>
+                                <span class="level-badge badge-skill" style="background:#e53935;">❌ เผลอแปลตรงตัว</span>
+                                <div class="vocab-word-jp">今、来ます。</div>
+                                <div class="vocab-word-kana">いま、きます。</div>
+                                <div class="vocab-word-th">แปลตรงตัวจาก "ตอนนี้กำลังมา" (ผิด!)</div>
+                            </div>
+                            <button class="tts-btn" style="background:#e53935; border-color:#ef5350;" onclick="playTTS('今、来ます。')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                        <div class="vocab-card" style="border-color: #43a047;">
+                            <div>
+                                <span class="level-badge badge-skill" style="background:#43a047;">✔️ ถูกต้องเป๊ะ</span>
+                                <div class="vocab-word-jp">今、行きます。</div>
+                                <div class="vocab-word-kana">いま、いきます。</div>
+                                <div class="vocab-word-th">กำลังเดินทางไปหาเธอเดี๋ยวนี้แหละ (ถูก!)</div>
+                            </div>
+                            <button class="tts-btn" style="background:#43a047; border-color:#66bb6a;" onclick="playTTS('今、行きます。')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                    </div>
+
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">จำไว้เสมอว่า หากเรากำลังเคลื่อนที่ไปหาคู่สนทนา แม้ในภาษาไทยเราจะพูดว่า "เดี๋ยวฉันมานะ / กำลังมานะ" แต่ in Japanese คุณต้องใช้คำว่า <code>「行きます」 (Iku)</code> เสมอค่ะ เพราะทิศทางนั้นเป็นการเคลื่อนออกจากที่ตั้งของคุณไปหาอีกคน</p>
+
+                    <h3 style="color:#880e4f; font-size:1.5rem; margin-top:35px;">จุดที่ 4: การละเลยความต่างของ อัตโนมัติกริยา (自動詞) และ สกรรมกริยา (他動詞)</h3>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">ในภาษาไทย คำกริยาหนึ่งคำสามารถทำงานได้หลายแบบและบอกสถานะด้วยการเติมคำวิเศษณ์ เช่น คำว่า "เปิด" ในประโยค "ฉันเปิดประตู" (เราทำ) และ "ประตูเปิดอยู่" (ประตูเป็นประธาน) แต่ในภาษาญี่ปุ่น <strong>กริยาสองลักษณะนี้เป็นคนละคำกันโดยสิ้นเชิงและผันไม่เหมือนกันค่ะ</strong></p>
+
+                    <table class="contrast-table">
+                        <thead>
+                            <tr>
+                                <th>สถานการณ์ / ความต่าง</th>
+                                <th>สกรรมกริยา (他動詞 - Tadoushi)</th>
+                                <th>อัตโนมัติกริยา (自動詞 - Jidoushi)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>คำอธิบายหลัก</strong></td>
+                                <td>เน้นที่ <strong>"การกระทำของมนุษย์"</strong> ที่จงใจทำกับกรรม</td>
+                                <td>เน้นที่ <strong>"สภาพการณ์/ผลลัพธ์"</strong> ที่เกิดขึ้นเองตามธรรมชาติ</td>
+                            </tr>
+                            <tr>
+                                <td><strong>คำช่วยที่ต้องใช้</strong></td>
+                                <td>ใช้คำช่วย <strong>を (o)</strong></td>
+                                <td>ใช้คำช่วย <strong>が (ga)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>คู่คำกริยา 1 (เปิด)</strong></td>
+                                <td>ドアを<strong>開ける</strong> (เปิดประตู)</td>
+                                <td>ドアが<strong>開く</strong> (ประตูเปิดอยู่)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>คู่คำกริยา 2 (ปิด)</strong></td>
+                                <td>ドアを<strong>閉める</strong> (ปิดประตู)</td>
+                                <td>ドアが<strong>閉まる</strong> (ประตูปิดอยู่)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>คู่คำกริยา 3 (ลบ/ดับ)</strong></td>
+                                <td>電気を<strong>消す</strong> (ปิดไฟ/ดับไฟ)</td>
+                                <td>電気が<strong>消える</strong> (ไฟดับเอง)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">ความสับสนที่พบบ่อยคือนักเรียนไทยมักจะสับสนคู่คำกริยานี้เวลาพูดประโยคแสดงสภาพการณ์ เช่น เผลอพูดว่า <code>「ドアが開けました」</code> ซึ่งผิดไวยากรณ์เนื่องจาก <code>開ける (Akeru)</code> เป็นสกรรมกริยาต้องการคนเปิด ประโยคที่ถูกต้องคือ <code>「ドアが開きました」 (Doa ga akimashita)</code></p>
+
+                    <h3 style="color:#880e4f; font-size:1.5rem; margin-top:35px;">จุดที่ 5: ความสับสนระหว่าจุดเวลา "〜時" (Ji) และระยะเวลา "〜時間" (Jikan)</h3>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">ในภาษาไทย คำว่า "ชั่วโมง" และ "โมง" มักจะใช้สลับที่กันได้ในภาษาพูดทั่วไป เช่น "ฉันเรียน 3 โมง" (จุดของเวลา) และ "ฉันเรียน 3 ชั่วโมง" (ระยะเวลา) ทำให้นักเรียนไทยนำความเคยชินนี้ไปใช้สับสนในภาษาญี่ปุ่น</p>
+
+                    <div class="emphasis-box" style="background:#FFFDE7; border-left: 5px solid #FBC02D;">
+                        <strong>การแบ่งประเภทอย่างชัดเจน:</strong><br>
+                        <ul>
+                            <li><strong>〜時 (Ji - โมง):</strong> บอกเวลา ณ เข็มนาฬิกาชี้ (Time Point) เสมอ เช่น <code>3時 (San-ji - บ่ายสามโมง)</code></li>
+                            <li><strong>〜時間 (Jikan - ชั่วโมง):</strong> บอกระยะเวลา ความยาวนานของเหตุการณ์ (Duration) เช่น <code>3時間 (San-jikan - เป็นเวลา 3 ชั่วโมง)</code></li>
+                        </ul>
+                    </div>
+
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">ลองเปรียบเทียบประโยคตัวอย่างนี้ดูนะคะ:</p>
+                    <div class="example-block">
+                        <strong>ตัวอย่าง A (จุดของเวลา):</strong> 毎日3時に勉強します。 (Mainichi san-ji ni benkyou shimasu.)<br>
+                        <span style="color:#FF3366;">ความหมาย:</span> เรียนหนังสือตอนบ่ายสามโมงตรงของทุกวัน (เน้นชี้เป้าด้วยคำช่วย に)<br><br>
+                        <strong>ตัวอย่าง B (ระยะเวลา):</strong> 毎日3時間勉強します。 (Mainichi san-jikan benkyou shimasu.)<br>
+                        <span style="color:#FF3366;">ความหมาย:</span> เรียนหนังสือเป็นระยะเวลายาวนานถึง 3 ชั่วโมงทุกวัน (ไม่มีคำช่วย に ตามหลังระยะเวลา)
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#c2185b; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">ส่วนที่ 2: 5 จุดผิดพลาดด้านการออกเสียง (Pronunciation Pitfalls &amp; Correction)</h2>
+                    
+                    <div class="teachers-tip" style="background: #E0F2FE; border-left-color: #0288D1;">
+                        <div class="teachers-tip-avatar" style="border-color:#0288D1;">🦊</div>
+                        <div class="teachers-tip-content">
+                            <h4 style="color:#0288D1;">คำเตือนจาก YUTO เซนเซ</h4>
+                            <p>ผู้เรียนชาวไทยมักออกเสียงภาษาญี่ปุ่นโดยพึ่งพา "ตัวอักษรคาราโอเกะภาษาไทย" เป็นหลัก เช่น การจำเสียง つ ด้วยอักษร "ซึ" ซึ่งทำให้เกิดการออกเสียงที่เพี้ยนจากต้นฉบับครับ เพราะในความจริง เสียงพยัญชนะญี่ปุ่นบางเสียงไม่มีเสียงเทียบเคียงในไทยเลย มาปรับการวางลิ้นและรูปปากกันใหม่ เพื่อการออกเสียงที่เป๊ะเว่อร์เหมือนเนทีฟกันครับ!</p>
+                        </div>
+                    </div>
+
+                    <h3 style="color:#880e4f; font-size:1.5rem; margin-top:30px;">จุดที่ 6: ออกเสียง "つ" (tsu) เป็น "ซึ" (su) หรือ "ชุ" (chu)</h3>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">เสียงตัวอักษร <strong>つ (tsu)</strong> เป็นเสียงปราบเซียนที่สุดเสียงหนึ่งของคนไทย เนื่องจากเสียงนี้คือ **เสียงพ่นลมผ่านปุ่มเหงือกแบบไร้เสียง (Voiceless alveolar affricate)** ซึ่งไม่มีเสียงนี้อยู่เลยในระบบภาษาไทย</p>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">นักเรียนไทยมักแทนเสียงนี้ด้วย "ซึ" (ทำให้คนญี่ปุ่นได้ยินเป็น す - su) หรือ "ชึ" (ทำให้คนญี่ปุ่นได้ยินเป็น ちゅ - chu) ซึ่งการสลับเสียงนี้สามารถเปลี่ยนความหมายของคำได้ เช่น คำว่า <code>待つ (Matsu - รอ)</code> หากออกเสียงเป็น <code>Masu (ます)</code> ก็จะกลายเป็นคำลงท้ายประโยคแทน</p>
+
+                    <div class="emphasis-box">
+                        <strong style="color:#C2185B;">วิธีฝึกออกเสียง つ ให้ถูกต้อง:</strong><br>
+                        <ol>
+                            <li>แตะปลายลิ้นที่บริเวณปุ่มเหงือก (หลังฟันบน) คล้ายเวลาเรากำลังจะออกเสียงตัว "ท" (T)</li>
+                            <li>กักลมไว้ชั่วครู่ จากนั้นค่อยๆ ปล่อยลมให้แทรกผ่านปลายลิ้นออกมาเหมือนตัว "ส" (S)</li>
+                            <li>เสียงที่ได้จะเป็นส่วนผสมของ "ท + ส" เป็นเสียง "ทสึ" (tsu) สั้นๆ ไม่ใช่ "ซึ" ยาวๆ</li>
+                        </ol>
+                    </div>
+
+                    <div class="vocab-grid">
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge badge-skill">tsu</span>
+                                <div class="vocab-word-jp">机 (Tsukue)</div>
+                                <div class="vocab-word-th">โต๊ะเขียนหนังสือ</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('机')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge badge-skill">tsu</span>
+                                <div class="vocab-word-jp">待つ (Matsu)</div>
+                                <div class="vocab-word-th">รอคอย</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('待つ')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                    </div>
+
+                    <h3 style="color:#880e4f; font-size:1.5rem; margin-top:35px;">จุดที่ 7: เสียงวรรณยุกต์และพยัญชนะซี่รี่ส์ "ざ・じ・ず・ぜ・ぞ" (za/ji/zu/ze/zo) เพี้ยน</h3>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">ในภาษาไทยไม่มีเสียง **พยัญชนะมีเสียงประเภทเสียดแทรก (Voiced fricatives)** เช่น เสียงตัว Z ในภาษาอังกฤษ นักเรียนไทยส่วนใหญ่จึงมักจะออกเสียงอักษรแถว <code>ざ (za)</code> ด้วยเสียง <code>จะ (ja)</code> หรือ <code>ยะ (ya)</code> แทน</p>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">ตัวอย่างเช่นคำว่า <code>風 (Kaze - ลม)</code> มักถูกออกเสียงเพี้ยนเป็น <code>Kaje (คาเจ)</code> หรือ <code>จิชิน (じしัน - แผ่นดินไหว)</code> ออกเสียงคล้ายกันแต่ต้องสั่นลำคอ</p>
+
+                    <div class="emphasis-box" style="background:#ECEFF1; border-left: 5px solid #607D8B;">
+                        <strong style="color:#37474F;">วิธีฝึกการออกเสียงแบบสั่นลำคอ (Voiced):</strong><br>
+                        วางมือสองนิ้วสัมผัสที่บริเวณลูกกระเดือกของตัวเองขณะออกเสียง <code>ざ (za)</code> คอของคุณจะต้องเกิดอาการ "สั่นสะเทือน" ตลอดความยาวของเสียง หากเสียงที่เปล่งออกมาคอไม่สั่น แสดงว่าคุณกำลังออกเสียงเป็น <code>さ (sa)</code> หรือเสียงไร้เสียงปกติอยู่ค่ะ
+                    </div>
+
+                    <div class="vocab-grid">
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge badge-skill">ze</span>
+                                <div class="vocab-word-jp">風 (Kaze)</div>
+                                <div class="vocab-word-th">สายลม</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('風')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge badge-skill">zu</span>
+                                <div class="vocab-word-jp">地図 (Chizu)</div>
+                                <div class="vocab-word-th">แผนที่</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('地図')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                    </div>
+
+                    <h3 style="color:#880e4f; font-size:1.5rem; margin-top:35px;">จุดที่ 8: การออกเสียงสะกดสะดุด (促音 -っ) และสะกดตัวสะกดอักษร ん (撥音) สั้นเกินไป</h3>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">ภาษาญี่ปุ่นเป็นภาษาที่มีระบบจังหวะแบบ <strong>โมรา (Mora-timed language)</strong> ซึ่งคำแต่ละตัวอักษรจะมีความยาวเสียงที่เท่ากันอย่างสม่ำเสมอ รวมไปถึงตัวสะกดหยุดหายใจหรืออักษรซ้อนอย่าง <code>っ (tsu ตัวเล็ก)</code> และอักษร <code>ん (n)</code> ด้วยค่ะ</p>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">นักเรียนไทยที่พูดจังหวะเร็วตามสไตล์ภาษาไทย มักจะตัดความยาวของเสียงสะดุด <code>っ</code> ให้สั้นเกินไปจนคนญี่ปุ่นฟังไม่ออก เช่น คำว่า <code>切符 (Kippu - ตั๋ว)</code> หากออกเสียงสั้นจะถูกฟังเป็น <code>Kipu</code> หรือคำว่า <code>学校 (Gakkou - โรงเรียน)</code> กลายเป็น <code>Gakou</code></p>
+
+                    <div class="emphasis-box" style="background:#FFF8E1; border-left:5px solid #FFC107;">
+                        <strong>เทคนิคการฝึกเคาะจังหวะ:</strong><br>
+                        ลองตบมือเคาะจังหวะไปตามโมราของแต่ละคำ เช่น คำว่า <code>きっぷ (Kippu)</code> มีความยาว 3 โมรา (คิ - เคาะหยุด - ปุ) ให้เคาะมือสามครั้งสม่ำเสมอ การฝึกฝนแบบนี้จะช่วยป้องกันปัญหาการพูดเสียงสั้นและเพี้ยนได้อย่างมีประสิทธิภาพค่ะ
+                    </div>
+
+                    <h3 style="color:#880e4f; font-size:1.5rem; margin-top:35px;">จุดที่ 9: ความเข้าใจผิดเรื่องเสียงสูง-ต่ำ (Pitch Accent) กับวรรณยุกต์ (Tonal Language)</h3>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">เนื่องจากภาษาไทยมีระบบวรรณยุกต์ 5 เสียงชัดเจน (สามัญ เอก โท ตรี จัตวา) ซึ่งทำหน้าที่ระบุความหมายของคำเดี่ยวๆ แต่วิธีการควบคุมเสียงสูงต่ำในภาษาญี่ปุ่นนั้นไม่เหมือนกันค่ะ ภาษาญี่ปุ่นใช้ระบบ **ระดับเสียงสูง-ต่ำในแต่ละพยายาม (Pitch Accent)**</p>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">การใช้เสียงวรรณยุกต์ไทยไปสวมทับกับการพูดภาษาญี่ปุ่น จะทำให้สำเนียงการพูดฟังดูไม่เป็นธรรมชาติ และอาจจำสับสนความหมายของคำคู่เหมือนได้ เช่น:</p>
+
+                    <table class="contrast-table">
+                        <thead>
+                            <tr>
+                                <th>คำศัพท์</th>
+                                <th>การวางระดับเสียง (Pitch Accent)</th>
+                                <th>ความหมายภาษาไทย</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>あめ (Ame)</td>
+                                <td><strong>สูง - ต่ำ</strong> (A-me)</td>
+                                <td>ฝน (Rain) 🌧️</td>
+                            </tr>
+                            <tr>
+                                <td>あめ (Ame)</td>
+                                <td><strong>ต่ำ - สูง</strong> (a-ME)</td>
+                                <td>ลูกอม / ขนมหวาน (Candy) 🍬</td>
+                            </tr>
+                            <tr>
+                                <td>はし (Hashi)</td>
+                                <td><strong>สูง - ต่ำ</strong> (Ha-shi)</td>
+                                <td>ตะเกียบ (Chopsticks) 🥢</td>
+                            </tr>
+                            <tr>
+                                <td>はし (Hashi)</td>
+                                <td><strong>ต่ำ - สูง</strong> (ha-SHI)</td>
+                                <td>สะพาน (Bridge) 🌉</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">การเรียนรู้วิธีการออกระดับเสียงสูง-ต่ำที่ถูกต้องจะช่วยให้คู่สนทนาคนญี่ปุ่นเข้าใจประโยคของเราได้ทันทีโดยไม่ต้องพยายามเดาความหมายจากบริบทแวดล้อมให้เหนื่อยค่ะ</p>
+
+                    <h3 style="color:#880e4f; font-size:1.5rem; margin-top:35px;">จุดที่ 10: การละเลยเสียงยาว (長音 - Chouon) ทำให้ออกเสียงสั้นและเข้าใจผิด</h3>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">อีกหนึ่งจุดสำคัญคือ การแยกแยะเสียงสั้นและเสียงยาว ซึ่งเป็นอีกเรื่องที่ทำร้ายระบบความเข้าใจระหว่างคนไทยกับคนญี่ปุ่นบ่อยมากๆ ค่ะ ในภาษาไทยเสียงสั้นยาวอาจจะไม่ถึงกับเปลี่ยนคำไปคนละทิศละทางในหลายบริบท แต่ในภาษาญี่ปุ่น <strong>ความต่างเพียง 1 โมราจะเปลี่ยนความหมายทันที</strong></p>
+
+                    <div class="vocab-grid">
+                        <div class="vocab-card" style="border-color:#e91e63;">
+                            <div>
+                                <span class="level-badge badge-skill" style="background:#e91e63;">เสียงสั้น (1 โมรา)</span>
+                                <div class="vocab-word-jp">おばさん (Obasan)</div>
+                                <div class="vocab-word-th">คุณป้า / คุณน้าผู้หญิง</div>
+                            </div>
+                            <button class="tts-btn" style="background:#e91e63; border-color:#ec407a;" onclick="playTTS('おばさん')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                        <div class="vocab-card" style="border-color:#4caf50;">
+                            <div>
+                                <span class="level-badge badge-skill" style="background:#4caf50;">เสียงยาว (2 โมรา)</span>
+                                <div class="vocab-word-jp">おばあさん (Obaasan)</div>
+                                <div class="vocab-word-th">คุณย่า / คุณยาย</div>
+                            </div>
+                            <button class="tts-btn" style="background:#4caf50; border-color:#66bb6a;" onclick="playTTS('おばあさん')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                    </div>
+
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">ลองจินตนาการดูนะคะว่า ถ้าเราต้องการจะทักทายคุณป้าแถวบ้านอย่างเป็นกันเอง แต่เราดันออกเสียงลากยาวเกินไปเป็น <code>おばอ้าさん (Obaasan)</code> เขาอาจจะน้อยใจที่ถูกเรียกเป็น "คุณยาย" ก็ได้นะคะ! ดังนั้น เรื่องสั้นยาวห้ามละเลยเด็ดขาดค่ะ</p>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#c2185b; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">ส่วนที่ 3: แบบทดสอบเช็คความเข้าใจ (Interactive Challenge Quiz)</h2>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">มาทดสอบระดับความเข้าใจไวยากรณ์และการออกเสียงภาษาญี่ปุ่นที่เรียนไปข้างต้นกันเถอะค่ะ! ลองกดเลือกข้อที่คุณคิดว่าถูกต้องแล้วคลิกปุ่มตรวจคำตอบได้เลยน้า</p>
+                    
+                    <div class="quiz-container">
+                        <div class="quiz-title">✏️ แบบทดสอบประจำบทเรียน</div>
+                        
+                        <!-- Question 1 -->
+                        <div class="quiz-question">
+                            <div class="quiz-q-text">คำถามข้อที่ 1: หากคุณต้องการตอบคำถามอาจารย์ว่า "ตัวฉันเป็นคนเปิดหน้าต่างเองค่ะ (ไม่ได้เปิดเองตามธรรมชาติ)" ควรใช้ประโยคไหน?</div>
+                            <div class="quiz-options">
+                                <button class="quiz-opt" onclick="toggleExplanation('q1-exp1')">A) 窓が開きました。 (Mado ga akimashita.)</button>
+                                <button class="quiz-opt" onclick="toggleExplanation('q1-exp2')">B) 私は窓を開けました。 (Watashi wa mado o akemashita.)</button>
+                            </div>
+                            <div id="q1-exp1" class="quiz-explanation">
+                                ❌ ยังไม่ถูกต้องค่ะ! <code>開く (Aku)</code> เป็นกริยาอัตโนมัติ (Jidoushi) บอกสภาพของหน้าต่างที่เปิดขึ้นเอง แต่โจทย์เน้นย้ำถึง "การกระทำของตัวผู้พูดที่เป็นคนเปิด" ค่ะ
+                            </div>
+                            <div id="q1-exp2" class="quiz-explanation" style="background:#E8F5E9; border-color:#81C784; color:#2E7D32;">
+                                🎉 ถูกต้องค่ะ! <code>開ける (Akeru)</code> เป็นสกรรมกริยา (Tadoushi) ใช้ระบุการกระทำของบุคคลที่ทำกับกรรม (หน้าต่าง) เพื่อบอกว่าตัวเราเป็นคนเปิดนั่นเองค่ะ
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="quiz-question">
+                            <div class="quiz-q-text">คำถามข้อที่ 2: ถ้าเพื่อนสนิทชาวญี่ปุ่นซื้อขนมมาฝากคุณที่บ้าน ประโยคในข้อใดที่พูดขอบคุณได้ถูกต้องและเป็นธรรมชาติที่สุด?</div>
+                            <div class="quiz-options">
+                                <button class="quiz-opt" onclick="toggleExplanation('q2-exp1')">A) お土産をあげて、ありがとう！ (Omiyage o agete, arigatou!)</button>
+                                <button class="quiz-opt" onclick="toggleExplanation('q2-exp2')">B) お土産をくれて、ありがとう！ (Omiyage o kurete, arigatou!)</button>
+                            </div>
+                            <div id="q2-exp1" class="quiz-explanation">
+                                ❌ ยังไม่ถูกต้องค่ะ! เพราะ <code>あげる (Ageru)</code> คือทิศทางการส่งออกจากตัวเราไปให้คนอื่น การใช้คำนี้ขอบคุณคนที่เอาของมาให้เราจึงผิดความหมายอย่างยิ่งค่ะ
+                            </div>
+                            <div id="q2-exp2" class="quiz-explanation" style="background:#E8F5E9; border-color:#81C784; color:#2E7D32;">
+                                🎉 ถูกต้องเป๊ะเลยค่ะ! เมื่อคนอื่นนำของมาให้ตัวเรา ทิศทางพุ่งเข้าหาตัวผู้พูด ต้องใช้รูป <code>〜てくれる (kureru)</code> เสมอค่ะ ประโยคนี้จึงน่ารักและตรงใจคนญี่ปุ่นที่สุด
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#c2185b; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">คำถามที่พบบ่อย (FAQs) - เคลียร์ทุกข้อสงสัยคาใจนักเรียนไทย</h2>
+                    
+                    <div class="faq-card">
+                        <div class="faq-question">Q1: มีทริคในการจำคำช่วย は (Wa) และ が (Ga) แบบเร่งด่วนเพื่อสอบ JLPT ไหมคะ?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUI เซนเซ:</strong> ทริคง่ายๆ ในห้องสอบคือ ลองหาตัวประโยคคำถามค่ะ หากประโยคข้างหน้าเป็นคำระบุคำถาม เช่น <code>何 (อะไร), だれ (ใคร), どこ (ที่ไหน)</code> คำช่วยที่ต้องตามหลังคำเหล่านั้นจะเป็น <strong>が (Ga)</strong> เสมอค่ะ เพราะเป็นข้อมูลที่ไม่ชี้เฉพาะเจาะจงมาก่อน เช่น <code>だれが来ましたか？ (ใครมาหรอ?)</code> ส่วนคำช่วย <strong>は (Wa)</strong> จะใช้กับข้อมูลที่เป็นที่รู้จักกันดีอยู่แล้วค่ะ
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">Q2: พยายามฝึกออกเสียงตัว つ (tsu) มานานมากแต่คนญี่ปุ่นก็ยังฟังไม่ออก ทำอย่างไรดีครับ?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUTO เซนเซ:</strong> เทคนิคส่วนตัวของผมคือ ลองเริ่มฝึกออกเสียงตัวสะกด "ท" สั้นๆ ค้างไว้ก่อนครับ เช่น ทำปากเตรียมออกเสียง "กัด" (แต่ไม่ต้องออกเสียง ด) แล้วพ่นลมฟืดออกมาทางซอกฟันให้เกิดเสียง "ทสึ..." ทันที วิธีนี้จะช่วยปรับระดับลิ้นไม่ให้แตะโดนฟันล่างแบบเสียง "ซ" ปกติ ลองฝึกวันละ 5 นาที หน้ากระจกรับรองว่าดีขึ้นแน่นอนครับ
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">Q3: คำศัพท์อย่าง "あげる" สามารถใช้กับคนที่เราเคารพมากๆ เช่น เจ้านายหรือลูกค้าได้ไหม?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUI เซนเซ:</strong> ไม่เหมาะสมอย่างยิ่งค่ะ! เพราะ <code>あげる (Ageru)</code> มีลักษณะทิศทางให้ที่แฝงความรู้สึกมองจากบนลงล่างเล็กน้อย หากผู้รับเป็นผู้ใหญ่ เจ้านาย หรือลูกค้า เราต้องหลีกเลี่ยงไปใช้คำสุภาพระดับสูง (Keigo) เช่น <strong>差し上げる (Sashiageru)</strong> หรือปรับไปใช้รูปกริยาสุภาพแบบอื่นเพื่อรักษาความเคารพค่ะ
+                        </div>
+                    </div>
+                </section>
+
+                <div class="page-nav">
+                    <a class="nav-btn" href="/">🎮 ย้อนกลับหน้าแรก</a>
+                    <a class="nav-btn" href="hub">คอร์สเรียน Hub 🏠</a>
+                    <a class="nav-btn" href="sitemap">แผนผังเว็บไซต์ 📖</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 YUI &amp; YUTO เซนเซ. สงวนลิขสิทธิ์ทั้งหมด</p>
+        <p style="margin-top: 10px;">
+            <a href="/">หน้าหลัก</a> | 
+            <a href="hub">คอร์สเรียนทั้งหมด</a> | 
+            <a href="sitemap">แผนผังเว็บไซต์ (Sitemap)</a> |
+            <a href="privacy-policy">นโยบายความเป็นส่วนตัว</a>
+        </p>
+    </footer>
+
+    <!-- Dynamic Ad Banner -->
+    <script>
+    (function() {
+      function initAdBanner() {
+        var path = window.location.pathname.toLowerCase();
+        if (path === '/' || path === '/index.html' || path.indexOf('play') !== -1 || path.indexOf('index') !== -1) {
+          return; 
+        }
+        
+        var isMobile = window.innerWidth <= 768;
+        var klookWidget = '';
+        if (isMobile) {
+          klookWidget = '<ins class="klk-aff-widget" data-wid="115246" data-bgtype="Shinkansen" data-adid="1305318" data-lang="th" data-prod="banner" data-width="468" data-height="60"><a href="//www.klook.com/?aid=">Klook.com</a></ins>';
+        } else {
+          klookWidget = '<ins class="klk-aff-widget" data-wid="115246" data-height="340px" data-adid="1305242" data-lang="th" data-prod="search_vertical" data-currency="THB"><a href="//www.klook.com/?aid=">Klook.com</a></ins>';
+        }
+
+        var adHtml = '<button id="close-ad-banner" style="position: absolute; top: -10px; left: -10px; background: #334155; border: 2px solid #0f172a; color: white; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 100000; box-shadow: 0 2px 5px rgba(0,0,0,0.3); padding: 0;">✕</button>' +
+                     '<div class="ad-text" style="font-size: 12px; color: #00e5ff; margin-bottom: 6px; font-weight: bold; font-family: \'Outfit\', \'Noto Sans Thai\', sans-serif; position: relative; z-index: 2; text-align: center;">เช็คราคาตั๋วไปญี่ปุ่นได้ที่นี่! ✈️</div>' +
+                     '<div class="klook-wrapper" style="width: 100%; display: flex; justify-content: center; position: relative;">' + klookWidget + '</div>';
+        
+        var adContainer = document.createElement('div');
+        adContainer.id = 'dynamic-sticky-ad-banner';
+        adContainer.innerHTML = adHtml;
+        
+        var style = document.createElement('style');
+        style.innerHTML = 
+          '#dynamic-sticky-ad-banner {' +
+          '  position: fixed;' +
+          '  right: 20px;' +
+          '  bottom: 20px;' +
+          '  z-index: 99999;' +
+          '  background: rgba(15, 23, 42, 0.95);' +
+          '  border: 1px solid rgba(255, 255, 255, 0.1);' +
+          '  border-radius: 12px;' +
+          '  padding: 10px;' +
+          '  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);' +
+          '  text-align: center;' +
+          '  display: flex;' +
+          '  flex-direction: column;' +
+          '  align-items: center;' +
+          '  width: 320px;' +
+          '  transform-origin: bottom right;' +
+          '  transform: scale(0.85);' +
+          '}' +
+          '#dynamic-sticky-ad-banner ins {' +
+          '  width: 100%;' +
+          '}' +
+          '@media (max-width: 768px) {' +
+          '  #dynamic-sticky-ad-banner {' +
+          '    bottom: 75px;' +
+          '    right: 5px;' +
+          '    left: 5px;' +
+          '    width: calc(100% - 10px);' +
+          '    border-radius: 12px;' +
+          '    transform: none;' +
+          '    flex-direction: column;' +
+          '    align-items: center;' +
+          '    height: auto;' +
+          '    padding: 10px 5px 5px;' +
+          '  }' +
+          '  #dynamic-sticky-ad-banner .ad-text {' +
+          '    margin: 0 0 6px 0 !important;' +
+          '    font-size: 12px !important;' + 
+          '    text-align: center;' +
+          '    width: 100%;' +
+          '  }' +
+          '  .klook-wrapper {' +
+          '    width: 100% !important;' + 
+          '    height: 42px;' +
+          '    position: relative;' +
+          '    overflow: hidden;' +
+          '  }' +
+          '  .klook-wrapper ins {' +
+          '    position: absolute;' +
+          '    top: 0;' +
+          '    left: 50%;' +
+          '    width: 468px !important;' +
+          '    transform: translateX(-50%) scale(0.7);' +
+          '    transform-origin: top center;' +
+          '    display: block;' +
+          '  }' +
+          '  #close-ad-banner {' +
+          '    top: -10px !important;' +
+          '    left: -5px !important;' +
+          '    width: 28px !important;' +
+          '    height: 28px !important;' +
+          '    font-size: 14px !important;' +
+          '  }' +
+          '}';
+        
+        document.head.appendChild(style);
+        document.body.appendChild(adContainer);
+        
+        var closeBtn = document.getElementById('close-ad-banner');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function() {
+            adContainer.style.display = 'none';
+          });
+        }
+        
+        (function (d, sc, u) {
+          var s = d.createElement(sc),
+            p = d.getElementsByTagName(sc)[0];
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = u;
+          p.parentNode.insertBefore(s, p);
+        })(
+          document,
+          "script",
+          "https://affiliate.klook.com/widget/fetch-iframe-init.js"
+        );
+      }
+      
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAdBanner);
+      } else {
+        initAdBanner();
+      }
+    })();
+    </script>
+</body>
+</html>
