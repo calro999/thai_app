@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2026/06/27">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เจาะลึกไวยากรณ์เงื่อนไขภาษาญี่ปุ่น (Conditional Expressions) | วิธีแยกแยะและใช้ たら, ば, と, なら อย่างถูกต้อง | JLPT Gyaru</title>
+    <link rel="canonical" href="https://jlpt.yui-yuto.com/jlpt-japanese-conditionals-tara-ba-to-nara">
+    <link rel="icon" type="image/jpeg" href="images/icon_jlpt.webp">
+    <link rel="apple-touch-icon" href="images/icon_jlpt.webp">
+    <meta name="description" content="สรุปไวยากรณ์ประโยคเงื่อนไขภาษาญี่ปุ่น (ถ้า...) วิธีแยกแยะความต่างของ たら (Tara), ば (Ba), と (To) และ なら (Nara) อย่างละเอียด กฎข้อจำกัดของประโยคหลังที่เป็นจุดออกสอบ JLPT N4-N3 มากที่สุด พร้อมตัวอย่างแปลไทยและทริคช่วยจำจากเซนเซ!">
+    <link rel="stylesheet" href="jlpt_lp.css">
+    <style>
+        .hero { background: linear-gradient(135deg, #FFF5F8 0%, #FFFDE7 100%); }
+        .custom-section { margin-bottom: 60px; padding: 25px; background: #fff; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .word-card { background: #FFFDE7; border-left: 5px solid #FBC02D; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+        .example-block { background: #F5F5F5; padding: 12px; border-radius: 6px; margin-top: 10px; font-family: monospace; font-size: 0.95rem; line-height: 1.5; color: #333; }
+        header { z-index: 2147483647 !important; }
+        .emphasis-box { background: #FFF9C4; border-left: 5px solid #FBC02D; padding: 15px; margin: 15px 0; border-radius: 4px; }
+        .contrast-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .contrast-table th, .contrast-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .contrast-table th { background-color: #FFF9C4; color: #F57F17; font-weight: bold; }
+        
+        /* Teacher avatars */
+        .teachers-tip {
+            display: flex;
+            background: #FFF9C4;
+            border-left: 5px solid #FBC02D;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        .teachers-tip-avatar {
+            font-size: 2.5rem;
+            background: #FFF;
+            padding: 10px;
+            border-radius: 50%;
+            border: 2px solid #FBC02D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+        }
+        .teachers-tip-content h4 {
+            margin-top: 0;
+            color: #F57F17;
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+        }
+        .teachers-tip-content p {
+            margin: 0;
+            font-size: 1rem;
+            color: #5d4037;
+            line-height: 1.6;
+        }
+
+        /* Vocab cards */
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .vocab-card {
+            background-color: #FFF;
+            border: 1px solid #FBC02D;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        .vocab-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(251, 192, 45, 0.2);
+            border-color: #FBC02D;
+        }
+        .vocab-word-jp {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .vocab-word-kana {
+            font-size: 0.95rem;
+            color: #E65100;
+            margin-bottom: 15px;
+        }
+        .vocab-word-th {
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 15px;
+            border-left: 3px solid #FBC02D;
+            padding-left: 10px;
+        }
+        .tts-btn {
+            background: #FBC02D;
+            border: 1px solid #FFE082;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            align-self: flex-start;
+            transition: 0.2s;
+        }
+        .tts-btn:hover {
+            background: #F57F17;
+        }
+
+        /* Quiz Box */
+        .quiz-container {
+            background: #ECEFF1;
+            border: 2px solid #B0BEC5;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 35px 0;
+        }
+        .quiz-title {
+            color: #37474F;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quiz-question {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #78909C;
+        }
+        .quiz-q-text {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .quiz-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .quiz-opt {
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+        .quiz-opt:hover {
+            background: #eeeeee;
+            border-color: #bdbdbd;
+        }
+        .quiz-explanation {
+            margin-top: 10px;
+            padding: 10px;
+            background: #eceff1;
+            border: 1px dashed #b0bec5;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #37474f;
+            display: none;
+        }
+
+        /* FAQ block */
+        .faq-card {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #1E293B;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .faq-answer {
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Page Nav */
+        .page-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            background: #FFF;
+            border: 2px solid #E2E8F0;
+            color: #475569;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .nav-btn:hover {
+            border-color: #FBC02D;
+            color: #FBC02D;
+            background: #FFFDE7;
+        }
+
+        @media (max-width: 768px) {
+            .vocab-grid {
+                grid-template-columns: 1fr;
+            }
+            .teachers-tip {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+    
+    <script>
+        function playTTS(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const msg = new SpeechSynthesisUtterance(text);
+                msg.lang = 'ja-JP';
+                msg.rate = 0.82;
+                window.speechSynthesis.speak(msg);
+            }
+        }
+
+        function toggleExplanation(id) {
+            const exp = document.getElementById(id);
+            if (exp.style.display === 'none' || exp.style.display === '') {
+                exp.style.display = 'block';
+            } else {
+                exp.style.display = 'none';
+            }
+        }
+    </script>
+    <link href="/manifest.json" rel="manifest"/>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "เจาะลึกไวยากรณ์เงื่อนไขภาษาญี่ปุ่น (Conditional Expressions) | วิธีแยกแยะและใช้ たら, ば, と, なら อย่างถูกต้อง",
+      "description": "เจาะลึกไวยากรณ์เงื่อนไข (Conditional Clause) ในภาษาญี่ปุ่น วิธีวิเคราะห์ความต่างและหลักการใช้ たら, ば, と และ なら อย่างถูกต้องสำหรับการเขียนและการสอบ JLPT",
+      "url": "https://jlpt.yui-yuto.com/jlpt-japanese-conditionals-tara-ba-to-nara",
+      "datePublished": "2026-06-27",
+      "dateModified": "2026-06-27",
+      "author": {
+        "@type": "Organization",
+        "name": "YUI & YUTO เซนเซ",
+        "url": "https://jlpt.yui-yuto.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "YUI & YUTO เซนเซ",
+        "url": "https://jlpt.yui-yuto.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://jlpt.yui-yuto.com/images/icon_jlpt.webp"
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jlpt.yui-yuto.com/images/ogp_jlpt.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "inLanguage": "th",
+      "about": {
+        "@type": "Thing",
+        "name": "JLPT",
+        "description": "Japanese Language Proficiency Test"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Thai Japanese learners"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "หน้าแรก",
+          "item": "https://jlpt.yui-yuto.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "คอร์สทั้งหมด",
+          "item": "https://jlpt.yui-yuto.com/hub"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "คู่มือไวยากรณ์เงื่อนไขภาษาญี่ปุ่น",
+          "item": "https://jlpt.yui-yuto.com/jlpt-japanese-conditionals-tara-ba-to-nara"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">JLPT Gyaru</a>
+        <a href="/hub" class="cta-button" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">กลับหน้าคอร์ส</a>
+    </header>
+
+    <main>
+        <div class="hero">
+            <span class="hero-tag" style="background: rgba(251, 192, 45, 0.1); border-color: #FBC02D; color: #F57F17;">Conditionals (条件表現 - โจเคน เฮียวเกน)</span>
+            <h1 class="animate-fade" style="color: #F57F17;">คู่มือไวยากรณ์เงื่อนไขภาษาญี่ปุ่น (たら, ば, と, なら)</h1>
+            <p class="animate-fade" style="color: #5d4037;">ไขข้อข้องใจประโยคสมมติ "ถ้า..." ในภาษาญี่ปุ่น แยกแยะความแตกต่าง วิธีการใช้งานแต่ละตัว และข้อพึงระวังในการสร้างประโยคตอบรับอย่างถูกต้องตามหลักไวยากรณ์วัดระดับ!</p>
+            <a href="/" class="cta-button animate-fade" style="font-size:1.2rem; padding: 1.2rem 3rem; background: linear-gradient(135deg, #FBC02D 0%, #F57F17 100%);">เริ่มฝึกในเกมเลย</a>
+        </div>
+
+        <div class="content-wrapper">
+            <article>
+                <section class="custom-section">
+                    <h2 style="color:#F57F17; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #ffe082; padding-bottom:10px;">บทนำ: โลกของประโยค "ถ้า..." ที่ไม่ตรงไปตรงมาในภาษาญี่ปุ่น</h2>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#333;">ในภาษาไทยของเรา เวลาที่เราต้องการสมมติสถานการณ์บางอย่างขึ้นมา เช่น "ถ้าฝนตก ฉันจะไม่ไปนะ" หรือ "ถ้าไปญี่ปุ่น ซื้อขนมมาฝากด้วยนะ" หรือ "ถ้ากดปุ่มนี้ น้ำร้อนจะไหลออกมา" พวกเราจะใช้คำว่า <strong>"ถ้า..."</strong> คำเดียวประดับไว้หน้าประโยคเสมอใช่ไหมคะ? มันช่างสะดวกสบายและเรียบง่ายสุดๆ เลยค่ะ</p>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#333;">แต่ทว่า! พอข้ามมาเรียนภาษาญี่ปุ่น ปัญหาก็ปรากฏทันทีค่ะ เพราะคำว่า "ถ้า..." ในภาษาญี่ปุ่นไม่ได้มีเพียงคำเดียว แต่แยกย่อยออกเป็น 4 รูปแบบหลัก คือ <strong>たら (Tara), ば (Ba), と (To), และ なら (Nara)</strong> ซึ่งแต่ละคำมีเงื่อนไข กฎกติกา ข้อห้าม และข้อจำกัดที่เข้มงวดมาก ตัวอย่างเช่น ในบางประโยคเราสามารถขอร้องคนอื่นได้ แต่บางประโยคถ้าใช้จะผิดหลักภาษาทันที! วันนี้ยุ้ยเซนเซและยูโตะคุงจะพาทุกคนไปจำลัดวิธีการแยกแยะเงื่อนไขเหล่านี้ในเวลาสั้นๆ รับประกันว่าอ่านจบแล้วจะเห็นภาพรวมสว่างโล่งเลยค่ะ!</p>
+                    
+                    <div class="teachers-tip">
+                        <div class="teachers-tip-avatar">🐱</div>
+                        <div class="teachers-tip-content">
+                            <h4>เกร็ดความรู้จาก YUI เซนเซ</h4>
+                            <p>จำทริคลัดขั้นแรกก่อนลุยลึกนะคะ: หากทุกคนไม่อยากจำกฎเยอะๆ ยามไปคุยเล่นกับคนญี่ปุ่น ให้เลือกใช้ <strong>たら (tara)</strong> เป็นตัวหลักไว้ก่อนเลยค่ะ เพราะ <code>たら</code> เป็นคำเงื่อนไขที่ <strong>"สารพัดประโยชน์ที่สุด"</strong> และมีข้อจำกัดด้านหลังน้อยที่สุดในหมู่เพื่อนๆ ทั้ง 4 ตัวเลยค่ะ!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#F57F17; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #ffe082; padding-bottom:10px;">ส่วนที่ 1: เจาะลึกความหมายและการใช้งานของเงื่อนไขทั้ง 4 รูปแบบ</h2>
+                    <p style="font-size:1.1rem; line-height:1.8; color:#333;">มาเริ่มต้นเจาะรายละเอียดทีละตัวเพื่อดูว่าคำใดเหมากับสถานการณ์ประเภทไหนกันนะคะ:</p>
+                    
+                    <h3 style="color:#E65100; font-size:1.5rem; margin-top:25px; margin-bottom:10px;">1. ~たら (~tara) - เงื่อนไขสมมติหลังเกิดเหตุการณ์ / ภาษาพูดทั่วไป</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#333;">ผันมาจากคำกริยารูปอดีต (た) แล้วเติม <code>ら</code> เป็นคำเงื่อนไขที่เป็นมิตรและครอบจักรวาลที่สุด ใช้ได้ทั้งการสมมติในอนาคต เรื่องไม่จริงในอดีต หรือเหตุการณ์ที่จะทำต่อเมื่อเรื่องแรกเสร็จสิ้นลงแล้ว</p>
+                    <div class="emphasis-box" style="background:#FFF9C4; border-left-color:#FBC02D;">
+                        <strong>การใช้งานเด่น:</strong> ด้านหลังประโยค <strong>สามารถตามด้วยคำสั่ง ขอร้อง ร้องขอ หรือแสดงความตั้งใจได้เต็มที่</strong> (ไม่มีข้อจำกัด)
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 1.1:</strong><br>
+                        安かっ<strong>たら</strong>、買いたいです。<br>
+                        (Yasukattara, kaitai desu.)<br>
+                        *แปล: ถ้ามันราคาถูกล่ะก็ อยากจะซื้อค่ะ (สมมติอนาคต)
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 1.2 (เมื่อทำสิ่งแรกสำเร็จ):</strong><br>
+                        駅に着い<strong>たら</strong>、電話してください。<br>
+                        (Eki ni tsuitara, denwa shite kudasai.)<br>
+                        *แปล: ถ้าถึงสถานีรถไฟแล้ว กรุณาโทรศัพท์หาฉันด้วยนะ (ทำภารกิจแรกเสร็จแล้วค่อยโทร)
+                    </div>
+
+                    <h3 style="color:#E65100; font-size:1.5rem; margin-top:25px; margin-bottom:10px;">2. ~ば (~ba) - เงื่อนไขตรรกะ / ภาษาทางการและภาษาเขียน</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#333;">เน้นความสัมพันธ์ในเชิงเหตุเป็นผลเชิงตรรกะ มักพบในสุภาษิต เอกสารทางการ คู่มือสอนงาน หรือสูตรคำนวณต่างๆ</p>
+                    <div class="emphasis-box" style="background:#FFF9C4; border-left-color:#FBC02D;">
+                        <strong>ข้อจำกัดเหล็ก:</strong> หากประโยคส่วนหน้าใช้คำกริยาแสดงการกระทำ (Active Verb) ประโยคส่วนหลัง <strong>ห้ามแสดงเจตจำนง ความตั้งใจ ขอร้อง หรือคำสั่ง</strong> เด็ดขาด! (ยกเว้นกรณีที่ประโยคส่วนหน้าเป็นคำคุณศัพท์ หรือกริยาสภาพ)
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 2.1 (เชิงตรรกะทั่วไป):</strong><br>
+                        雨が降れ<strong>ば</strong>、道が濡れます。<br>
+                        (Ame ga fureba, michi ga nuremasu.)<br>
+                        *แปล: ถ้าฝนตก ถนนย่อมเปียก (ตรรกะธรรมชาติเชิงเหตุผล)
+                    </div>
+
+                    <h3 style="color:#E65100; font-size:1.5rem; margin-top:25px; margin-bottom:10px;">3. ~と (~to) - เงื่อนไขเกิดผลลัพธ์แน่นอน 100% / สัจธรรม / การบอกทาง</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#333;">ใช้กับเหตุการณ์ที่ <strong>"เมื่อเกิดสิ่งแรกแล้ว สิ่งที่สองจะเกิดขึ้นตามมาโดยอัตโนมัติอย่างหลีกเลี่ยงไม่ได้ 100%"</strong> เช่น กฎฟิสิกส์ การทำงานของเครื่องจักร เครื่องใช้ไฟฟ้า หรือการบอกทิศทางแผนที่เดินทาง</p>
+                    <div class="emphasis-box" style="background:#FFF9C4; border-left-color:#FBC02D;">
+                        <strong>ข้อจำกัดเหล็ก:</strong> ประโยคหลัง <strong>ห้ามเป็นความรู้สึกส่วนตัว ห้ามเป็นคำสั่ง ขอร้อง ชักชวน หรือขออนุญาต</strong> เนื่องจากเหตุการณ์หลังเกิดขึ้นแบบเป็นธรรมชาติตายตัว
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 3.1 (การทํางานของเครื่องจักร):</strong><br>
+                        このボタンを押す<strong>と</strong>、水が出ます。<br>
+                        (Kono botan o osu to, mizu ga demasu.)<br>
+                        *แปล: ถ้ากดปุ่มนี้ น้ำจะไหลออกมา (กดปุ่มแล้วน้ำไหลออกมาทันทีตามระบบกลไก)
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 3.2 (การบอกทาง):</strong><br>
+                        まっすぐ行く<strong>と</strong>、右側に交番があります。<br>
+                        (Massugu iku to, migigawa ni kouban ga arimasu.)<br>
+                        *แปล: ถ้าเดินตรงไป จะเจอสถานีตำรวจอยู่ทางด้านขวามือครับ (เป็นแผนที่ถาวรที่ไม่มีการเปลี่ยนทิศ)
+                    </div>
+
+                    <h3 style="color:#E65100; font-size:1.5rem; margin-top:25px; margin-bottom:10px;">4. ~なら (~nara) - เงื่อนไขการรับข้อมูลมาพูดต่อ / คำแนะนำ</h3>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#333;">ใช้เมื่อคู่สนทนาเอ่ยประเด็นใดขึ้นมา แล้วเรา <strong>ดึงหัวข้อนั้นมาขยายความเพื่อแสดงความสมมติและให้คำแนะนำ</strong> หรือเสนอไอเดียในฝั่งของเรา</p>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 4.1:</strong><br>
+                        日本へ行く<strong>なら</strong>、カメラを買ったほうがいいです。<br>
+                        (Nihon e iku nara, kamera o katta hou ga ii desu.)<br>
+                        *แปล: ถ้าเรื่องของการจะไปญี่ปุ่นล่ะก็ ซื้อกล้องติดตัวไปด้วยจะดีกว่านะ (ดึงคีย์เวิร์ด "ไปญี่ปุ่น" มาให้ข้อเสนอแนะ)
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#F57F17; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #ffe082; padding-bottom:10px;">ส่วนที่ 2: ตารางสรุปเปรียบเทียบกฎข้อห้ามของ 4 รูปเงื่อนไข</h2>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#333;">ตารางเปรียบเทียบต่อไปนี้จะแสดงให้เห็นชัดเจนว่า รูปแบบใดบ้างที่อนุญาตให้ตามหลังด้วยคำพูดแสดงกิริยาเจตจำนง (คำสั่ง ชักชวน ขอร้อง ความต้องการ) ของประธานได้ค่ะ:</p>
+                    
+                    <table class="contrast-table">
+                        <thead>
+                           <tr>
+                               <th>ประเภทตัวแสดงเงื่อนไข</th>
+                               <th>รูปประโยคตัวอย่าง</th>
+                               <th>กริยาหลังเป็นความตั้งใจ/ชักชวน/คำสั่ง ได้ไหม?</th>
+                               <th>วัตถุประสงค์หลักการใช้งาน</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>〜たら (tara)</strong></td>
+                                <td>安かっ<strong>たら</strong>買ってください。</td>
+                                <td style="color:#2E7D32; font-weight:bold;">🟢 ได้ดีเยี่ยม (ไม่มีเงื่อนไขใดๆ)</td>
+                                <td>ใช้สมมติทั่วไปในชีวิตประจำวัน (เน้นภาษาพูด)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>〜ば (ba)</strong></td>
+                                <td>安ければ買います。</td>
+                                <td style="color:#c2185b; font-weight:bold;">🔴 ไม่ได้ (ยกเว้นประโยคหน้าเป็น Adj. หรือ สภาพ)</td>
+                                <td>ใช้สรุปข้อคิดเหตุผล ตรรกะ เชิงระบบ</td>
+                            </tr>
+                            <tr>
+                                <td><strong>〜と (to)</strong></td>
+                                <td>春になる<strong>と</strong>桜が咲く。</td>
+                                <td style="color:#c2185b; font-weight:bold;">🔴 ห้ามเด็ดขาด (เพราะเกิดขึ้นตามธรรมชาติ 100%)</td>
+                                <td>กลไกเครื่องจักร ปรากฏการณ์ธรรมชาติ บอกแผนที่</td>
+                            </tr>
+                            <tr>
+                                <td><strong>〜なら (nara)</strong></td>
+                                <td>行く<strong>なら</strong>私も行きたい。</td>
+                                <td style="color:#2E7D32; font-weight:bold;">🟢 ได้ดีเยี่ยม</td>
+                                <td>รับหัวข้อมาเสนอแนะ ต่อยอดความเห็น</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="teachers-tip">
+                        <div class="teachers-tip-avatar">🦊</div>
+                        <div class="teachers-tip-content">
+                            <h4>ข้อคิดจาก YUTO เซนเซ</h4>
+                            <p>ข้อสอบ JLPT N4 ชอบหลอกจุดนี้มากครับ เช่น โครงสร้างประโยคที่มีคำสั่ง <strong>「ください」(kudasai)</strong> ปิดท้ายประโยค หากด้านหน้าเป็นรูป <strong>と (to)</strong> จะถือว่าผิดกฎทันทีครับ! ถ้าเห็นคำลงท้ายที่มีความรู้สึกของตัวบุคคล ให้มองหา <strong>たら (tara)</strong> หรือ <strong>なら (nara)</strong> ไว้เป็นอันดับแรกในกระดาษคำถามครับ</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Interactive Dialogue Section -->
+                <section class="custom-section" style="background:#FFF9C4; border: 1px solid #fbc02d;">
+                    <h2 style="color:#f57f17; font-size:1.8rem; margin-bottom:15px; border-bottom: 2px solid #fbc02d; padding-bottom:8px;">🌸 บทสนทนาจำลองในชีวิตจริง (YUI & YUTO Conditional Talk)</h2>
+                    <p style="font-size:1.05rem; color:#555; margin-bottom:20px;">มาติดตามดูการถกเถียงเรื่องแผนทัศนศึกษาและการหาของกินอร่อยๆ ของทั้งสองคนกันนะคะ:</p>
+                    
+                    <div style="font-size:1.1rem; line-height:1.9; color:#333; padding:15px; background:#fff; border-radius:10px;">
+                        <span style="color:#E91E63; font-weight:bold;">🌸 YUI:</span> ยูโตะคุง! <strong>ถ้าพรุ่งนี้ฝนตก (雨が降ったら)</strong> พวกเรายังจะไปสวนสนุกกันอยู่ป่าวอ่ะ? หรือจะยกเลิกไปเลย?<br>
+                        (Yuto-kun! <strong>Tha prung nee fon tok</strong>พวกเรายังจะไปสวนสนุกกันอยู่ป่าวอ่ะ? หรือจะยกเลิกไปเลย?)<br>
+                        <span style="color:#C2185B; font-size:0.95rem;">*แปลญี่ปุ่น: ユートくん、明日の遠足、<strong>雨が降ったら</strong>中止にするの？ (Yuto-kun, ashita no ensoku, ame ga futtara chuushi ni suru no?)</span>
+                        <br><br>
+                        
+                        <span style="color:#1976D2; font-weight:bold;">🦊 YUTO:</span> <strong>ถ้าฝนตกหนัก (雨が降れば)</strong> กิจกรรมกลางแจ้งทั้งหมดก็คงต้องยกเลิกไปตามตรรกะครับ แต่<strong>ถ้ายกเลิกจริง (中止なら)</strong> พวกเราแวะไปพิพิธภัณฑ์ศิลปะแทนดีไหมครับ? ร่มรื่นแถมแห้งสนิทด้วยนะ<br>
+                        (<strong>Tha fon tok nak</strong> กิจกรรมกลางแจ้งทั้งหมดก็คงต้องยกเลิกครับ แต่<strong>ถ้าต้องยกเลิกจริง</strong> พวกเราแวะไปพิพิธภัณฑ์ศิลปะแทนดีไหมครับ?)<br>
+                        <span style="color:#0D47A1; font-size:0.95rem;">*แปลญี่ปุ่น: 大雨が<strong>降れば</strong>中止になりますね。でも、<strong>中止なら</strong>美術館に行きませんか？ (Ooame ga fureba chuushi ni narimasu ne. Demo, chuushi nara bijutsukan ni ikimasen ka?)</span>
+                        <br><br>
+                        
+                        <span style="color:#E91E63; font-weight:bold;">🌸 YUI:</span> พิพิธภัณฑ์เหรอ? ดีเลย! เพราะว่าร้านขนมปังฝรั่งเศสแถวนั้นน่ะ <strong>ถ้าได้ลองไปชิมสักครั้ง (一度食べると)</strong> จะติดใจจนลืมไม่ลงเลยล่ะ!<br>
+                        (Phiphithaphan rhor? Dee loei! Pror wa ran khanom pang farangsetแถวนั้นน่ะ <strong>tha dai long pai chim sak krang</strong> จะติดใจจนลืมไม่ลงเลยล่ะ!)<br>
+                        <span style="color:#C2185B; font-size:0.95rem;">*แปลญี่ปุ่น: 美術館？いいね！あそこのパン、<strong>一度食べると</strong>病みつきになるんだよ！ (Bijutsukan? Iine! Asoko no pan, ichido taberu to yamitsuki ni naru nda yo!)</span>
+                    </div>
+                </section>
+
+                <!-- Vocabulary Cards (TTS Enabled) -->
+                <section class="custom-section">
+                    <h2 style="color:#F57F17; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #ffe082; padding-bottom:10px;">คำศัพท์และตัวชี้สมมติ (Vocab Cards)</h2>
+                    <p style="font-size:1.1rem; margin-bottom:20px; color:#555;">มาฝึกออกเสียงและเรียนความหมายของคำศัพท์กลุ่มสมมติประโยคเงื่อนไขกันค่ะ:</p>
+                    
+                    <div class="vocab-grid">
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#ffb300; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N5</span>
+                                <div class="vocab-word-jp">もし</div>
+                                <div class="vocab-word-kana">もし (Moshi)</div>
+                                <div class="vocab-word-th">สมมติว่า... (วางต้นประโยคเพื่อส่งสัญญาณการใช้เงื่อนไข)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('もし')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#ffb300; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N4</span>
+                                <div class="vocab-word-jp">そうすると</div>
+                                <div class="vocab-word-kana">そうすると (Sou suru to)</div>
+                                <div class="vocab-word-th">ถ้าทำอย่างนั้นแล้วล่ะก็... (คำเชื่อมประโยคถัดไป)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('そうすると')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#ff8a65; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N5</span>
+                                <div class="vocab-word-jp">押すと</div>
+                                <div class="vocab-word-kana">おすと (Osu to)</div>
+                                <div class="vocab-word-th">ถ้ากดแล้ว... (ใช้ชี้สัจจะกลไกการป้อนข้อมูล)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('押すと')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#ffb300; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N4</span>
+                                <div class="vocab-word-jp">〜なければならない</div>
+                                <div class="vocab-word-kana">〜なければならない (Nake reba naranai)</div>
+                                <div class="vocab-word-th">ต้อง... (สร้างจากรูปเงื่อนไข -ba แปลว่า ถ้าไม่ทำจะไม่ได้)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('なければならない')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#ffb300; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N4</span>
+                                <div class="vocab-word-jp">〜たらいい</div>
+                                <div class="vocab-word-kana">〜たらいい (Tara ii)</div>
+                                <div class="vocab-word-th">ทำ... น่าจะดี / ควรทำ... (สำนวนให้คำแนะนำแก่ผู้อื่น)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('たらいい')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#ffb300; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N4</span>
+                                <div class="vocab-word-jp">天気予報によると</div>
+                                <div class="vocab-word-kana">てんきよほうによると (Tenki yohou ni yoru to)</div>
+                                <div class="vocab-word-th">ตามรายงานพยากรณ์อากาศแล้ว... (เงื่อนไขการอ้างอิง)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('天気予報によると')">🔊 ฟังเสียงอ่าน</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Interactive Quiz Section -->
+                <section class="quiz-container">
+                    <div class="quiz-title">
+                        <span>📝</span> แบบทดสอบไวยากรณ์สมมติเงื่อนไข (Conditionals Quiz)
+                    </div>
+                    
+                    <!-- Question 1 -->
+                    <div class="quiz-question">
+                        <div class="quiz-q-text">คำถามข้อที่ 1: เติมรูปคำในช่องว่างให้กลายเป็นประโยคสั่งห้ามทางเดินทางตรงที่ถูกต้องตามหลักสัจธรรม: 「まっすぐ進む（　　）、左に駅が見えます。」 (ถ้าเดินตรงไปข้างหน้า จะพบสถานีเห็นอยู่ฝั่งซ้ายมือ)</div>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" onclick="toggleExplanation('q1-ans1')">A) なら (nara)</button>
+                            <button class="quiz-opt" onclick="toggleExplanation('q1-ans2')">B) と (to)</button>
+                            <button class="quiz-opt" onclick="toggleExplanation('q1-ans3')">C) ば (ba)</button>
+                        </div>
+                        <div id="q1-ans1" class="quiz-explanation">
+                           ❌ คำชี้ なら จะใช้ก็ต่อเมื่อมีการจับใจความประเด็นพูดต่อในเชิงคำตอบรับเสนอแนะ แต่นี่คือแผนที่ทางเดินที่มีความเสถียร 100% จึงไม่เหมาะสมค่ะ
+                        </div>
+                        <div id="q1-ans2" class="quiz-explanation" style="background:#E8F5E9; border-color:#81C784; color:#2E7D32;">
+                           🎉 ถูกต้องที่สุดยอดเลยค่ะ! การชี้ทางภูมิศาสตร์ แผนที่เดินทางที่ถ้าเดินไปแล้วจะต้องพบเห็นสถานีแน่นอน 100% ตัวเชื่อมทางไวยากรณ์ที่ใช้จึงต้องเป็น <code>と (to)</code> เท่านั้นค่ะ!
+                        </div>
+                        <div id="q1-ans3" class="quiz-explanation">
+                           ❌ คำเชื่อม ば มีทิศทางตรรกะทางการเกินไปสำหรับภาษาบอกทาง และการผัน 進めば ในชีวิตประจำวันสู้ความชัดเจนของ と ไม่ได้ค่ะ
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="quiz-question">
+                        <div class="quiz-q-text">คำถามข้อที่ 2: ประโยคใดในชีวิตประจำวันเขียนผิดหลักข้อห้ามเรื่องกริยาเจตจำนง (เช่น ความตั้งใจ คำชี้แนะ คำสั่ง)?</div>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" onclick="toggleExplanation('q2-ans1')">A) 安かったら買いたい。(Yasukattara kaitai.)</button>
+                            <button class="quiz-opt" onclick="toggleExplanation('q2-ans2')">B) 日本に行くならカメラを買ってください。(Nihon ni iku nara kamera o katte kudasai.)</button>
+                            <button class="quiz-opt" onclick="toggleExplanation('q2-ans3')">C) 春になるとお花見に行きましょう。(Haru ni naru to ohanami ni ikimashou.)</button>
+                        </div>
+                        <div id="q2-ans1" class="quiz-explanation">
+                           ❌ ประโยคนี้ถูกต้องดีเลิศค่ะ! เพราะรูป <code>たら (tara)</code> ไม่มีข้อบังคับการตัดเจตจำนง (อยากซื้อ 買いたい) หลังประโยคเลยค่ะ
+                        </div>
+                        <div id="q2-ans2" class="quiz-explanation">
+                           ❌ ประโยคนี้เขียนถูกต้องตามกฎค่ะ! เพราะรูป <code>なら (nara)</code> อนุญาตให้ใช้ประโยคขอร้อง (ください) ต่อท้ายได้ในการให้คำชี้แนะไอเดีย
+                        </div>
+                        <div id="q2-ans3" class="quiz-explanation" style="background:#E8F5E9; border-color:#81C784; color:#2E7D32;">
+                           🎉 ยอดเยี่ยมมากค่ะ! นี่คือประโยคที่ผิดหลักไวยากรณ์อย่างแท้จริง เพราะรูป <code>と (to)</code> <strong>ห้ามชักชวน (いきましょう)</strong> ต่อท้ายอย่างเด็ดขาด เนื่องจากเป็นกฎธรรมชาติ! หากอยากชวนเพื่อนไปชมดอกไม้ ต้องเลี่ยงใช้รูปอื่นแทนค่ะ!
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="custom-section">
+                    <h2 style="color:#F57F17; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #ffe082; padding-bottom:10px;">คำถามที่พบบ่อย (FAQs) - ไขข้อข้องใจไวยากรณ์เงื่อนไข</h2>
+                    
+                    <div class="faq-card">
+                        <div class="faq-question">Q1: ถ้าเกิดในชีวิตประจำวันผมเผลอพูดสับสนนำ "と" ไปบอกประโยคคำสั่ง เช่น 「押すと入ってください」 คนญี่ปุ่นจะฟังเข้าใจไหมครับ?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUTO เซนเซ:</strong> เขาจะสามารถคาดเดาความหมายและเข้าใจความต้องการของคุณได้ครับ แต่ในเชิงหลักภาษามันจะฟังดูขัดหูและทำให้ดูขาดทักษะทางไวยากรณ์ไปมากครับ ในการทำข้อสอบวัดระดับ JLPT N4 จุดนี้จะโดนหักคะแนนโดยทันที ดังนั้นพยายามระมัดระวังเลี่ยงใช้ให้เคยชินนะครับ
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">Q2: มีทริคเพิ่มเติมยามจะสร้างรูปปฏิเสธ "ถ้าไม่..." ของคำกริยาเหล่านั้นไหมคะ?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUI เซนเซ:</strong> มีแน่นอนค่ะ! วิธีการสร้างประโยคปฏิเสธ "ถ้าไม่..." ที่นิยมที่สุดในชีวิตประจําวันคือ ให้ผันคำกริยาเป็นรูปปฏิเสธ <code>ない (nai)</code> แล้วตัด <code>い</code> เปลี่ยนเป็น <strong>〜なかったら (nakattara)</strong> ค่ะ เช่น <code>行かない (ikanai)</code> -> <code>行かなかったら (ikanakattara - ถ้าไม่ไป)</code> ใช้ง่ายและสุภาพปลอดภัยที่สุดค่ะ!
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">Q3: คำว่า もし (moshi) มีความจำเป็นต้องใส่หน้าประโยคเปรียบเทียบเงื่อนไขเสมอไปหรือเปล่าครับ?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUTO เซนเซ:</strong> ไม่จำเป็นต้องใส่ทุกครั้งครับ! เพราะตัวชี้บ่งบอกเงื่อนไขอยู่ที่หางเสียงกริยา (たら, ば, と, なら) เรียบร้อยแล้ว แต่การใส่ <code>もし</code> ไว้ที่หัวประโยค จะช่วยเป็น <strong>"สัญญาณเตือนภัย"</strong> ให้ผู้ฟังชาวญี่ปุ่นทราบตั้งแต่วินาทีแรกว่า ประโยคที่กำลังพูดยังไม่ใช่เรื่องจริง แต่เป็นการสมมติเงื่อนไขขึ้นมาครับ
+                        </div>
+                    </div>
+                </section>
+
+                <div class="page-nav">
+                    <a class="nav-btn" href="/">🎮 ย้อนกลับหน้าแรก</a>
+                    <a class="nav-btn" href="hub">คอร์สเรียน Hub 🏠</a>
+                    <a class="nav-btn" href="sitemap">แผนผังเว็บไซต์ 📖</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 YUI &amp; YUTO เซนเซ. สงวนลิขสิทธิ์ทั้งหมด</p>
+        <p style="margin-top: 10px;">
+            <a href="/">หน้าหลัก</a> | 
+            <a href="hub">คอร์สเรียนทั้งหมด</a> | 
+            <a href="sitemap">แผนผังเว็บไซต์ (Sitemap)</a> |
+            <a href="privacy-policy">นโยบายความเป็นส่วนตัว</a>
+        </p>
+    </footer>
+
+    <!-- Dynamic Ad Banner -->
+    <script>
+    (function() {
+      function initAdBanner() {
+        var path = window.location.pathname.toLowerCase();
+        if (path === '/' || path === '/index.html' || path.indexOf('play') !== -1 || path.indexOf('index') !== -1) {
+          return; 
+        }
+        
+        var isMobile = window.innerWidth <= 768;
+        var klookWidget = '';
+        if (isMobile) {
+          klookWidget = '<ins class="klk-aff-widget" data-wid="115246" data-bgtype="Shinkansen" data-adid="1305318" data-lang="th" data-prod="banner" data-width="468" data-height="60"><a href="//www.klook.com/?aid=">Klook.com</a></ins>';
+        } else {
+          klookWidget = '<ins class="klk-aff-widget" data-wid="115246" data-height="340px" data-adid="1305242" data-lang="th" data-prod="search_vertical" data-currency="THB"><a href="//www.klook.com/?aid=">Klook.com</a></ins>';
+        }
+
+        var adHtml = '<button id="close-ad-banner" style="position: absolute; top: -10px; left: -10px; background: #334155; border: 2px solid #0f172a; color: white; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 100000; box-shadow: 0 2px 5px rgba(0,0,0,0.3); padding: 0;">✕</button>' +
+                     '<div class="ad-text" style="font-size: 12px; color: #00e5ff; margin-bottom: 6px; font-weight: bold; font-family: \'Outfit\', \'Noto Sans Thai\', sans-serif; position: relative; z-index: 2; text-align: center;">เช็คราคาตั๋วไปญี่ปุ่นได้ที่นี่! ✈️</div>' +
+                     '<div class="klook-wrapper" style="width: 100%; display: flex; justify-content: center; position: relative;">' + klookWidget + '</div>';
+        
+        var adContainer = document.createElement('div');
+        adContainer.id = 'dynamic-sticky-ad-banner';
+        adContainer.innerHTML = adHtml;
+        
+        var style = document.createElement('style');
+        style.innerHTML = 
+          '#dynamic-sticky-ad-banner {' +
+          '  position: fixed;' +
+          '  right: 20px;' +
+          '  bottom: 20px;' +
+          '  z-index: 99999;' +
+          '  background: rgba(15, 23, 42, 0.95);' +
+          '  border: 1px solid rgba(255, 255, 255, 0.1);' +
+          '  border-radius: 12px;' +
+          '  padding: 10px;' +
+          '  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);' +
+          '  text-align: center;' +
+          '  display: flex;' +
+          '  flex-direction: column;' +
+          '  align-items: center;' +
+          '  width: 320px;' +
+          '  transform-origin: bottom right;' +
+          '  transform: scale(0.85);' +
+          '}' +
+          '#dynamic-sticky-ad-banner ins {' +
+          '  width: 100%;' +
+          '}' +
+          '@media (max-width: 768px) {' +
+          '  #dynamic-sticky-ad-banner {' +
+          '    bottom: 75px;' +
+          '    right: 5px;' +
+          '    left: 5px;' +
+          '    width: calc(100% - 10px);' +
+          '    border-radius: 12px;' +
+          '    transform: none;' +
+          '    flex-direction: column;' +
+          '    align-items: center;' +
+          '    height: auto;' +
+          '    padding: 10px 5px 5px;' +
+          '  }' +
+          '  #dynamic-sticky-ad-banner .ad-text {' +
+          '    margin: 0 0 6px 0 !important;' +
+          '    font-size: 12px !important;' + 
+          '    text-align: center;' +
+          '    width: 100%;' +
+          '  }' +
+          '  .klook-wrapper {' +
+          '    width: 100% !important;' + 
+          '    height: 42px;' +
+          '    position: relative;' +
+          '    overflow: hidden;' +
+          '  }' +
+          '  .klook-wrapper ins {' +
+          '    position: absolute;' +
+          '    top: 0;' +
+          '    left: 50%;' +
+          '    width: 468px !important;' +
+          '    transform: translateX(-50%) scale(0.7);' +
+          '    transform-origin: top center;' +
+          '    display: block;' +
+          '  }' +
+          '  #close-ad-banner {' +
+          '    top: -10px !important;' +
+          '    left: -5px !important;' +
+          '    width: 28px !important;' +
+          '    height: 28px !important;' +
+          '    font-size: 14px !important;' +
+          '  }' +
+          '}';
+        
+        document.head.appendChild(style);
+        document.body.appendChild(adContainer);
+        
+        var closeBtn = document.getElementById('close-ad-banner');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function() {
+            adContainer.style.display = 'none';
+          });
+        }
+        
+        (function (d, sc, u) {
+          var s = d.createElement(sc),
+            p = d.getElementsByTagName(sc)[0];
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = u;
+          p.parentNode.insertBefore(s, p);
+        })(
+          document,
+          "script",
+          "https://affiliate.klook.com/widget/fetch-iframe-init.js"
+        );
+      }
+      
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAdBanner);
+      } else {
+        initAdBanner();
+      }
+    })();
+    </script>
+</body>
+</html>
