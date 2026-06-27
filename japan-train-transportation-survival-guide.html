@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2026/06/28">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือขึ้นรถไฟและระบบขนส่งญี่ปุ่น | คำศัพท์การเดินทาง บัตร IC Card และวิธีรับมือเมื่อลืมของ | JLPT Gyaru</title>
+    <link rel="canonical" href="https://jlpt.yui-yuto.com/japan-train-transportation-survival-guide">
+    <link rel="icon" type="image/jpeg" href="images/icon_jlpt.webp">
+    <link rel="apple-touch-icon" href="images/icon_jlpt.webp">
+    <meta name="description" content="คู่มือภาษาญี่ปุ่นสำหรับการเดินทางด้วยรถไฟและระบบขนส่งในญี่ปุ่น รวบรวมคำศัพท์ประเภทรถไฟ การใช้บัตร Suica/PASMO ใบรับรองรถไฟล่าช้า (Chien Shōmeisho) และบทสนทนาเมื่อลืมของบนรถไฟ">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jlpt.yui-yuto.com/japan-train-transportation-survival-guide">
+    <meta property="og:title" content="คู่มือขึ้นรถไฟและระบบขนส่งญี่ปุ่น | คำศัพท์การเดินทาง บัตร IC Card และวิธีรับมือเมื่อลืมของ | JLPT Gyaru">
+    <meta property="og:description" content="คู่มือภาษาญี่ปุ่นสำหรับการเดินทางด้วยรถไฟและระบบขนส่งในญี่ปุ่น รวบรวมคำศัพท์ประเภทรถไฟ การใช้บัตร Suica/PASMO และบทสนทนาเมื่อลืมของบนรถไฟ">
+    <meta property="og:image" content="images/ogp_jlpt.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jlpt.yui-yuto.com/japan-train-transportation-survival-guide">
+    <meta property="twitter:title" content="คู่มือขึ้นรถไฟและระบบขนส่งญี่ปุ่น | JLPT Gyaru">
+    <meta property="twitter:description" content="คู่มือภาษาญี่ปุ่นสำหรับการเดินทางด้วยรถไฟและระบบขนส่งในญี่ปุ่น รวบรวมคำศัพท์ บัตร IC Card และวิธีรับมือเมื่อของหาย">
+    <meta property="twitter:image" content="images/ogp_jlpt.webp">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Outfit:wght@400;600;800&family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --container-bg: #1e293b;
+            --primary: #10b981;
+            --primary-hover: #059669;
+            --accent: #fff;
+            --highlight: #34d399;
+            --text-primary: #ffffff;
+            --text-secondary: #a7f3d0;
+            --card-bg: rgba(16, 185, 129, 0.15);
+            --card-border: rgba(52, 211, 153, 0.3);
+            --dialogue-interviewer-bg: rgba(16, 185, 129, 0.25);
+            --dialogue-candidate-bg: rgba(255, 255, 255, 0.08);
+            --font-main: 'Kanit', 'Noto Sans Thai', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.8;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span { color: #fff; }
+
+        .header-btn {
+            background: linear-gradient(135deg, var(--primary), #047857);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .header-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+        }
+
+        .hero {
+            padding: 140px 5% 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.2) 0%, rgba(15, 23, 42, 1) 70%);
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--highlight);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        .intro-section {
+            background: var(--container-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .intro-text {
+            font-size: 1.15rem;
+            color: #ffffff;
+            line-height: 1.9;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--highlight);
+            margin: 50px 0 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 40px;
+            background: var(--container-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+        }
+
+        .vocab-table th {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 16px;
+            text-align: left;
+            font-size: 1.05rem;
+        }
+
+        .vocab-table td {
+            padding: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            color: #ffffff;
+        }
+
+        .vocab-table tr:hover {
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .jp-text {
+            font-weight: 700;
+            color: var(--highlight);
+            font-size: 1.1rem;
+        }
+
+        .kana-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .dialogue-box {
+            background: var(--container-bg);
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 1px solid var(--card-border);
+        }
+
+        .dialogue-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .speaker-a {
+            background: var(--dialogue-interviewer-bg);
+            border-left: 4px solid var(--primary);
+        }
+
+        .speaker-b {
+            background: var(--dialogue-candidate-bg);
+            border-left: 4px solid #fff;
+        }
+
+        .speaker-name {
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--highlight);
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .info-card h4 {
+            color: var(--highlight);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .faq-item {
+            background: var(--container-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid var(--card-border);
+        }
+
+        .faq-q {
+            font-weight: 700;
+            color: var(--highlight);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .faq-a {
+            color: #ffffff;
+            line-height: 1.8;
+        }
+
+        .related-links {
+            background: var(--container-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 60px;
+            border: 1px solid var(--card-border);
+        }
+
+        .related-links h3 {
+            color: var(--highlight);
+            margin-bottom: 20px;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .link-card {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .link-card:hover {
+            background: var(--card-bg);
+            border-color: var(--primary);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #090d16;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-secondary);
+        }
+
+        footer a { color: var(--primary); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .vocab-table { font-size: 0.9rem; }
+            .vocab-table th, .vocab-table td { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="logo" href="/">JLPT <span>Gyaru Academy</span></a>
+        <div>
+            <a class="header-btn" href="/">หน้าแรก / เล่นเกม</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-tag">Japan Transportation & Travel Guide</div>
+        <h1>คู่มือขึ้นรถไฟและระบบขนส่งญี่ปุ่น 🚃</h1>
+        <p>ตะลุยการเดินทางด้วยรถไฟญี่ปุ่นอย่างมั่นใจ รวบรวมคำศัพท์ประเภทรถไฟ การใช้บัตร IC Card (Suica/PASMO) การขอใบรับรองรถไฟล่าช้า และบทสนทนาเอาตัวรอดเมื่อลืมของบนรถไฟ</p>
+    </div>
+
+    <div class="container">
+        <div class="intro-section">
+            <p class="intro-text">สวัสดีค่ะทุกคน! ยินดีต้อนรับเข้าสู่บทเรียนภาษาญี่ปุ่นเพื่อการเดินทางและการใช้ชีวิตกับ <strong>YUI & YUTO センセ</strong> ค่ะ! ถ้าพูดถึงเส้นเลือดใหญ่ในการเดินทางของประเทศญี่ปุ่น ก็คงหนีไม่พ้น <strong>"ระบบรถไฟ (電車 - Densha)"</strong> ที่มีความตรงต่อเวลาและครอบคลุมทั่วประเทศนั่นเองค่ะ!</p>
+            <br>
+            <p class="intro-text">อย่างไรก็ตาม ระบบรถไฟในญี่ปุ่นโดยเฉพาะตามเมืองใหญ่ๆ อย่างโตเกียวหรือโอซาก้านั้น มีความซับซ้อน มีประเภทรถไฟหลายระดับ และมีคำศัพท์เฉพาะทางบนป้ายบอกทางค่อนข้างมาก บทความนี้จะช่วยให้ทุกคนเดินทางได้อย่างราบรื่น ไร้กังวลเหมือนคนท้องถิ่นเลยค่ะ!</p>
+        </div>
+
+        <h2 class="section-title">1. คำศัพท์เกี่ยวกับชนิดของรถไฟและสถานี (สถานีและประเภทรถไฟ)</h2>
+        <p style="margin-bottom: 15px;">เวลาที่เรายืนรอรถไฟที่ชานชลา (ホーム - Hōmu) การดูประเภทรถไฟบนป้ายไฟเป็นสิ่งสำคัญมาก เพราะรถไฟแต่ละประเภทจะจอดจำนวนสถานีไม่เท่ากันค่ะ!</p>
+
+        <table class="vocab-table">
+            <thead>
+                <tr>
+                    <th>คำศัพท์ภาษาญี่ปุ่น</th>
+                    <th>คำอ่าน (Hiragana/Romaji)</th>
+                    <th>คำแปลภาษาไทย</th>
+                    <th>ลักษณะการจอดและคำอธิบาย</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="jp-text">各駅停車 / 普通</td>
+                    <td class="kana-text">かくえきていしゃ / ふつう</td>
+                    <td>รถไฟธรรมดา (Kakueki / Futsū)</td>
+                    <td>จอดทุกๆ สถานีตามเส้นทาง เหมาะสำหรับการเดินทางระยะสั้นหรือสถานีขนาดเล็ก</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">快速</td>
+                    <td class="kana-text">かいそく (Kaisoku)</td>
+                    <td>รถไฟกึ่งเร็ว (Rapid)</td>
+                    <td>ข้ามสถานีขนาดเล็กบางแห่ง จอดเฉพาะสถานีสำคัญช่วยประหยัดเวลาเดินทาง</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">急行</td>
+                    <td class="kana-text">きゅうこう (Kyūkō)</td>
+                    <td>รถไฟด่วน (Express)</td>
+                    <td>วิ่งเร็วกว่า kaisoku จอดเฉพาะสถานีใหญ่ๆ ที่มีคนสัญจรมาก</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">特急</td>
+                    <td class="kana-text">とっきゅう (Tokkyū)</td>
+                    <td>รถไฟด่วนพิเศษ (Limited Express)</td>
+                    <td>วิ่งเร็วที่สุด จอดน้อยสถานีมาก (มักต้องซื้อตั๋วตั๋วพิเศษเพิ่ม)</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">新幹線</td>
+                    <td class="kana-text">しんかんせん (Shinkansen)</td>
+                    <td>รถไฟความเร็วสูง (ชินคันเซ็น)</td>
+                    <td>เชื่อมต่อระหว่างภูมิภาคและเมืองใหญ่ด้วยความเร็วสูงและสะดวกสบาย</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">改札口</td>
+                    <td class="kana-text">かいさつぐち (Kaisatsuguchi)</td>
+                    <td>ช่องแตะบัตร / ประตูตรวจตั๋ว</td>
+                    <td>จุดแตะบัตร IC Card หรือเสียบตั๋วเพื่อเข้า-ออกจากสถานีรถไฟ</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">乗り換え</td>
+                    <td class="kana-text">のりかえ (Norikae)</td>
+                    <td>การเปลี่ยนสายรถไฟ (Transit)</td>
+                    <td>การเปลี่ยนไปขึ้นรถไฟสายอื่นหรือเปลี่ยนบริษัทรถไฟ</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">行き</td>
+                    <td class="kana-text">ゆき / いき (Yuki / Iki)</td>
+                    <td>มุ่งหน้าสู่... (เช่น 東京行き = มุ่งหน้าไปโตเกียว)</td>
+                    <td>ระบุสถานีปลายทางของรถไฟขบวนนั้นๆ</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">始発 / 終電</td>
+                    <td class="kana-text">しはつ / しゅうでん</td>
+                    <td>รถไฟเที่ยวแรก / รถไฟเที่ยวสุดท้าย</td>
+                    <td>เที่ยวแรกตอนเช้ามืด (ประมาณ 04:30-05:00 น.) และเที่ยวสุดท้ายของคืนนั้น</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">満員電車</td>
+                    <td class="kana-text">まんいんでんしゃ (Man'in Densha)</td>
+                    <td>รถไฟแน่นขนัดชั่วโมงเร่งด่วน</td>
+                    <td>สภาพรถไฟที่อัดแน่นไปด้วยผู้คนในช่วงเช้าและเย็นของวันทำงาน</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">みだれ / 遅延</td>
+                    <td class="kana-text">ちえん (Chien)</td>
+                    <td>รถไฟล่าช้า / ระบบเดินรถขัดข้อง</td>
+                    <td>สถานะการล่าช้าของรถไฟจากกำหนดการปกติ</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">運休</td>
+                    <td class="kana-text">うんきゅう (Unkyū)</td>
+                    <td>งดเดินรถชั่วคราว</td>
+                    <td>การหยุดวิ่งของรถไฟเนื่องจากพายุ พายุหิมะ หรืออุบัติเหตุใหญ่</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">2. คู่มือการใช้บัตร IC Card (Suica / PASMO / ICOCA)</h2>
+        <p style="margin-bottom: 15px;">การเดินทางในญี่ปุ่นให้สะดวกที่สุดคือการใช้ <strong>"บัตร IC Card (交通系ICカード)"</strong> แตะผ่านประตูตรวจตั๋วอัตโนมัติค่ะ มาเรียนรู้คำศัพท์การใช้งานกันค่ะ</p>
+
+        <table class="vocab-table">
+            <thead>
+                <tr>
+                    <th>คำศัพท์ภาษาญี่ปุ่น</th>
+                    <th>คำอ่าน (Romaji)</th>
+                    <th>คำแปลภาษาไทยและการใช้งาน</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="jp-text">チャージ</td>
+                    <td class="kana-text">Chāji</td>
+                    <td>การเติมเงินเข้าบัตร IC Card (ที่ตู้ตั๋วอัตโนมัติหรือคอนบินิ)</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">残高</td>
+                    <td class="kana-text">Zandaka</td>
+                    <td>ยอดเงินคงเหลือในบัตร (จะแสดงบนหน้าจอประตูตรวจตั๋วเวลาแตะผ่าน)</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">精算機 / 乗り越し精算</td>
+                    <td class="kana-text">Seisanki / Norikoshi Seisan</td>
+                    <td>ตู้ปรับยอดเงินตั๋ว (กรณีเงินในบัตรไม่พอออก หรือนั่งเลยสถานี)</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">定期券</td>
+                    <td class="kana-text">Teikiken</td>
+                    <td>ตั๋วรายเดือน / บัตรผ่านประจำทาง (สำหรับนักเรียนและคนทำงาน)</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">モバイルSuica</td>
+                    <td class="kana-text">Mobairu Suica</td>
+                    <td>บริการซุยกะบนสมาร์ทโฟน (Apple Wallet / Google Pay) ผูกบัตรเครดิตแตะจ่ายได้ทันที</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">デポジット</td>
+                    <td class="kana-text">Depozitto</td>
+                    <td>เงินมัดจำบัตร (มักเท่ากับ 500 เยนตอนซื้อบัตรพลาสติกครั้งแรก)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">3. บทสนทนาซื้อตั๋ว ถามทาง และการเปลี่ยนสาย (駅でのสนทนา)</h2>
+        <p style="margin-bottom: 15px;">หากต้องการถามทางเจ้าหน้าที่สถานี (駅員 - Ekiin) หรือเพื่อนร่วมทางคนญี่ปุ่น สามารถใช้ประโยคเหล่านี้ได้เลยค่ะ</p>
+
+        <div class="dialogue-box">
+            <div class="dialogue-item speaker-b">
+                <div class="speaker-name">🙋‍♀️ ผู้โดยสาร (คนไทย):</div>
+                <p class="jp-text">すみません、新宿駅へ行くにはどの電車に乗ればいいですか？</p>
+                <p class="kana-text">Sumimasen, Shinjuku-eki e iku ni wa dono densha ni noreba ii desu ka?</p>
+                <p>ขอโทษนะคะ ถ้าจะไปสถานีชินจูกุ ต้องขึ้นรถไฟขบวนไหนคะ?</p>
+            </div>
+            <div class="dialogue-item speaker-a">
+                <div class="speaker-name">👮‍♂️ เจ้าหน้าที่สถานี (駅員 - Ekiin):</div>
+                <p class="jp-text">2番線の山手線に乗ってください。15分ほどで到着しますよ。</p>
+                <p class="kana-text">Niban-sen no Yamanotesen ni notte kudasai. Jūgofun hodo de tōchaku shimasu yo.</p>
+                <p>ให้ขึ้นรถไฟสายยามาโนเตะ ชานชลาหมายเลข 2 ครับ ประมาณ 15 นาทีก็จะถึงครับ</p>
+            </div>
+            <div class="dialogue-item speaker-b">
+                <div class="speaker-name">🙋‍♀️ ผู้โดยสาร:</div>
+                <p class="jp-text">ありがとうございます！乗り換えは必要ですか？</p>
+                <p class="kana-text">Arigatō gozaimasu! Norikae wa hitsuyō desu ka?</p>
+                <p>ขอบคุณมากค่ะ! ต้องเปลี่ยนสายรถไฟไหมคะ?</p>
+            </div>
+            <div class="dialogue-item speaker-a">
+                <div class="speaker-name">👮‍♂️ เจ้าหน้าที่สถานี:</div>
+                <p class="jp-text">いいえ、直通（ちょくつう）ですので乗り換えなしで行けますよ。</p>
+                <p class="kana-text">Iie, chokutsū desu node norikae nashi de ikemasu yo.</p>
+                <p>ไม่ต้องครับ ขบวนนี้วิ่งตรง (Chokutsū) ไปถึงได้โดยไม่ต้องเปลี่ยนสายครับ</p>
+            </div>
+            <div class="dialogue-item speaker-b">
+                <div class="speaker-name">🙋‍♀️ ผู้โดยสาร:</div>
+                <p class="jp-text">次の電車は何時に来ますか？</p>
+                <p class="kana-text">Tsugi no densha wa nanji ni kimasu ka?</p>
+                <p>รถไฟขบวนถัดไปจะมาถึงกี่โมงเหรอคะ?</p>
+            </div>
+            <div class="dialogue-item speaker-a">
+                <div class="speaker-name">👮‍♂️ เจ้าหน้าที่สถานี:</div>
+                <p class="jp-text">あと3分で参ります。まもなく到着いたします。</p>
+                <p class="kana-text">Ato sanfun de mairimasu. Mamonaku tōchaku itashimasu.</p>
+                <p>อีก 3 นาทีจะมาถึงครับ กำลังจะเข้าเทียบชานชลาในไม่ช้านี้ครับ</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">4. บทสนทนาเมื่อลืมของไว้บนรถไฟ (ของหายในรถไฟ)</h2>
+        <p style="margin-bottom: 15px;">หากเผลอลืมกระเป๋า ร่ม หรือโทรศัพท์ไว้บนรถไฟ ไม่ต้องตกใจนะคะ! คนญี่ปุ่นมีระบบ <strong>"ศูนย์รับแจ้งของหาย (忘れ物取扱所 - Wasuremono Toriatsukaijo)"</strong> ที่มีโอกาสได้คืนสูงมากค่ะ มาดูตัวอย่างบทสนทนากันค่ะ</p>
+
+        <div class="dialogue-box">
+            <div class="dialogue-item speaker-b">
+                <div class="speaker-name">🙋‍♂️ ผู้โดยสาร (คนไทย):</div>
+                <p class="jp-text">すみません、電車の中に忘れ物をしてしまいました。</p>
+                <p class="kana-text">Sumimasen, densha no naka ni wasuremono o shite shimaimashita.</p>
+                <p>ขอโทษครับ พอดีผมลืมของไว้บนรถไฟครับ</p>
+            </div>
+            <div class="dialogue-item speaker-a">
+                <div class="speaker-name">👮‍♂️ เจ้าหน้าที่สถานี:</div>
+                <p class="jp-text">どのようなものですか？いつ頃、どの列車に乗られましたか？</p>
+                <p class="kana-text">Donoyō na mono desu ka? Itsugoro, dono ressha ni noraremashita ka?</p>
+                <p>ของที่ลืมคืออะไรครับ? ลืมไว้ประมาณตอนไหน และขึ้นรถไฟขบวนไหนครับ?</p>
+            </div>
+            <div class="dialogue-item speaker-b">
+                <div class="speaker-name">🙋‍♂️ ผู้โดยสาร:</div>
+                <p class="jp-text">10分くらい前に到着した山手線の車内に、黒いリュックサックを網棚の上に忘れました。</p>
+                <p class="kana-text">Juppun kurai mae ni tōchaku shita Yamanotesen no shanai ni, kuroi ryukkusakku o amidana no ue ni wasuremashita.</p>
+                <p>ลืมกระเป๋าเป้สีดำไว้บนชั้นวางของเหนือศีรษะ ในรถไฟสายยามาโนเตะที่เพิ่งมาถึงเมื่อประมาณ 10 นาทีที่แล้วครับ</p>
+            </div>
+            <div class="dialogue-item speaker-a">
+                <div class="speaker-name">👮‍♂️ เจ้าหน้าที่สถานี:</div>
+                <p class="jp-text">かしこまりました。終着駅の駅員に連絡してみます。お名前とお電話番号を教えてください。</p>
+                <p class="kana-text">Kashikomarimashita. Shūchakueki no ekiin ni renraku shimasu. Oname to denwabangō o oshiete kudasai.</p>
+                <p>เข้าใจแล้วครับ เดี๋ยวผมจะติดต่อเจ้าหน้าที่ประจำสถานีปลายทางให้นะครับ ขอทราบชื่อและเบอร์โทรศัพท์ติดต่อไว้ด้วยครับ</p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h4>📄 รู้จักกับ "ใบรับรองรถไฟล่าช้า (遅延証明書 - Chien Shōmeisho)"</h4>
+            <p>หากวันไหนรถไฟญี่ปุ่นเกิดล่าช้าเนื่องจากอุบัติเหตุหรือสภาพอากาศเกิน 5-10 นาทีขึ้นไป เราสามารถขอ <strong>遅延証明書 (Chien Shōmeisho)</strong> จากเจ้าหน้าที่หน้าประตูตรวจตั๋ว หรือกดดาวน์โหลดจากเว็บไซต์ของบริษัทรถไฟได้ค่ะ ใบนี้ใช้เป็นหลักฐานยื่นให้โรงเรียนหรือบริษัทเพื่อยืนยันว่าเราไม่ได้ตั้งใจสาย แต่สายเพราะระบบขนส่งล่าช้าค่ะ!</p>
+        </div>
+
+        <h2 class="section-title">5. รวมศัพท์ป้ายเตือนและประกาศในสถานีรถไฟ (駅の標識・アナウンス)</h2>
+        <p style="margin-bottom: 15px;">เมื่อเดินในสถานีรถไฟ เราจะเห็นป้ายเตือนและได้ยินเสียงประกาศอยู่ตลอดเวลา มาดูความหมายกันค่ะ</p>
+
+        <table class="vocab-table">
+            <thead>
+                <tr>
+                    <th>ป้ายเตือน / ประกาศ</th>
+                    <th>คำอ่าน (Romaji)</th>
+                    <th>คำแปลและข้อควรระวัง</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="jp-text">黄色い線の内側でお待ちください</td>
+                    <td class="kana-text">Kīroi sen no uchigawa de omachi kudasai</td>
+                    <td>กรุณารออยู่หลังเส้นสีเหลืองบนชานชลาเพื่อความปลอดภัยขณะรถไฟกำลังวิ่งเข้าเทียบ</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">駆け込み乗車はおやめください</td>
+                    <td class="kana-text">Kakekomi jōsha wa oyame kudasai</td>
+                    <td>โปรดอย่ารีบวิ่งแทรกเข้าประตูรถไฟขณะกำลังปิด เพื่อป้องกันอันตรายจากการถูกหนีบ</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">電車とホームの間が空いております</td>
+                    <td class="kana-text">Densha to hōmu no aida ga aiteru</td>
+                    <td>โปรดระมัดระวังช่องว่างระหว่างตัวรถไฟกับชานชลาขณะก้าวขึ้น-ลงรถไฟ</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">優先席 (ゆうせんせき)</td>
+                    <td class="kana-text">Yūsenseki</td>
+                    <td>ที่นั่งสำรองสำหรับผู้สูงอายุ ผู้พิการ สตรีมีครรภ์ และผู้ป่วยที่มีบาดแผล</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">女性専用車両</td>
+                    <td class="kana-text">Josei Sen'yō Sharyō</td>
+                    <td>โบกี้รถไฟสำหรับสุภาพสตรีเท่านั้น (เฉพาะชั่วโมงเร่งด่วนในตอนเช้าและเย็น)</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">ドアにご注意ください</td>
+                    <td class="kana-text">Doa ni gochūi kudasai</td>
+                    <td>โปรดระมัดระวังประตูรถไฟกำลังจะเปิดหรือปิด</td>
+                </tr>
+                <tr>
+                    <td class="jp-text">歩きスマホはおやめください</td>
+                    <td class="kana-text">Aruki sumaho wa oyame kudasai</td>
+                    <td>โปรดอย่าก้มหน้าเล่นสมาร์ทโฟนขณะกำลังเดินภายในสถานีรถไฟเพื่อป้องกันอุบัติเหตุชนผู้อื่น</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">6. คำถามที่พบบ่อย (FAQ) เรื่องการเดินทางในญี่ปุ่น</h2>
+        
+        <div class="faq-item">
+            <div class="faq-q">Q: ขึ้นรถไฟผิดขบวน หรือนั่งเลยสถานี ต้องทำอย่างไร?</div>
+            <div class="faq-a">A: หากรู้ตัวว่านั่งผิดขบวนหรือเลยสถานี ให้ลงที่สถานีถัดไปทันที แล้วเดินข้ามชานชลาไปฝั่งตรงข้ามเพื่อขึ้นรถไฟย้อนกลับมาค่ะ หากใช้บัตร IC Card ตอนออกประตูระบบจะคิดค่าบริการตามจริงตามระยะทางค่ะ</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Q: การใช้รถประจำทาง (バス - Basu) ในญี่ปุ่น ต้องขึ้นประตูด้านไหน?</div>
+            <div class="faq-a">A: รถバス ในเมืองส่วนใหญ่ (เช่น เกียวโต) จะขึ้นประตูกลาง/หลัง และลงประตูหน้าตอนจ่ายเงินค่ะ แต่ในบางพื้นที่เช่น โตเกียว จะขึ้นประตูหน้าจ่ายเงินก่อน แล้วลงประตูกลางค่ะ ให้สังเกตจุดแตะบัตร IC Card บริเวณประตูขึ้นค่ะ</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Q: บนรถไฟญี่ปุ่น มีข้อห้ามอะไรที่ต้องระวังเป็นพิเศษบ้าง?</div>
+            <div class="faq-a">A: ข้อห้ามสำคัญบนรถไฟญี่ปุ่นคือ ห้ามคุยโทรศัพท์สายตรง (ให้เปิด Manā Mōdo - マナーモード สั่นไว้), ไม่คุยเสียงดังกับเพื่อน และหลีกเลี่ยงการรับประทานอาหารที่มีกลิ่นฉุนบนรถไฟธรรมดา (ยกเว้นบนชินคันเซ็นหรือรถไฟด่วนพิเศษที่มีโต๊ะวางอาหาร) ค่ะ!</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Q: ซื้อตั๋ว Shinkansen อย่างไร และเลือกระหว่าง 指定席 กับ 自由席 อย่างไร?</div>
+            <div class="faq-a">A: 指定席 (Shiteiseki) คือตั๋วแบบระบุเลขที่นั่งแน่นอน ไม่ต้องกลัวไม่มีที่นั่ง ส่วน 自由席 (Jiyūseki) คือตั๋วแบบไม่ระบุที่นั่ง สามารถเดินไปเลือกนั่งในตู้โบกี้ที่เป็นอิสระได้ตามใจชอบ ราคาจะถูกกว่าเล็กน้อยค่ะ สามารถซื้อตั๋วได้ที่ตู้สีเขียว (Midori no Madoguchi) หรือแอปพลิเคชันค่ะ</div>
+        </div>
+
+        
+        <div class="faq-item">
+            <div class="faq-q">Q: การเปลี่ยนสายรถไฟระหว่าง JR กับ Subways (地下鉄) ต้องทำอย่างไร?</div>
+            <div class="faq-a">A: หากต้องเปลี่ยนบริษัทรถไฟ เช่น จาก JR ไปยัง Tokyo Metro หรือ Toei Subway เราต้องแตะบัตรออกจากประตูตรวจตั๋วของบริษัทเดิมก่อน แล้วเดินตามป้ายบอกทางไปยังสถานีของบริษัทใหม่เพื่อแตะบัตรเข้าอีกครั้งค่ะ หากใช้บัตร IC Card ระบบจะหักเงินสะสมและมีส่วนลดค่าเปลี่ยนสายให้อัตโนมัติค่ะ</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Q: หากขึ้นรถไฟแล้วเจอคนเป็นลมหรือต้องการความช่วยเหลือฉุกเฉิน ต้องกดปุ่มไหน?</div>
+            <div class="faq-a">A: ภายในโบกี้รถไฟจะมีปุ่มแจ้งเหตุฉุกเฉินเรียกว่า <strong>非常ボタン (Hijō Botan)</strong> หรือ <strong>SOSボタン</strong> ติดตั้งอยู่บริเวณข้างประตูและใกล้ที่นั่งสำรอง สามารถกดเพื่อพูดคุยแจ้งสถานการณ์กับคนขับหรือเจ้าหน้าที่รถไฟได้ทันทีค่ะ</div>
+        </div>
+
+<div class="related-links">
+            <h3>📚 คอร์สเรียนและบทความภาษาญี่ปุ่นที่เกี่ยวข้อง</h3>
+            <div class="links-grid">
+                <a href="japan-travel-japanese-vocabulary" class="link-card">
+                    <strong>ภาษาญี่ปุ่นการท่องเที่ยว</strong><br>
+                    คำศัพท์และประโยคจำเป็นสำหรับท่องเที่ยวในญี่ปุ่น
+                </a>
+                <a href="japan-living-survival-japanese-vocabulary" class="link-card">
+                    <strong>คู่มือเอาตัวรอดในญี่ปุ่น</strong><br>
+                    คำศัพท์ประโยคจำเป็นสำหรับการใช้ชีวิตประจำวัน
+                </a>
+                <a href="japan-convenience-store-supermarket-guide" class="link-card">
+                    <strong>คู่มือช้อปปิ้งคอนบินิ & ซูเปอร์</strong><br>
+                    ประโยคที่เคาน์เตอร์และสติ๊กเกอร์ลดราคา
+                </a>
+                <a href="jlpt-n5-basic-grammar-vocabulary-part1" class="link-card">
+                    <strong>ติวสอบ JLPT N5</strong><br>
+                    สรุปไวยากรณ์และศัพท์พื้นฐาน N5
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 YUI & YUTO センセ. สงวนลิขสิทธิ์ทั้งหมด</p>
+        <p style="margin-top: 10px;">
+            <a href="/">หน้าหลัก</a> | 
+            <a href="hub">คอร์สเรียนทั้งหมด</a> | 
+            <a href="sitemap">แผนผังเว็บไซต์ (Sitemap)</a> |
+            <a href="privacy-policy">นโยบายความเป็นส่วนตัว</a>
+        </p>
+    </footer>
+</body>
+</html>
