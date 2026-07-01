@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2026/07/02">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สรุปวิธีผันและใช้รูปถูกกระทำ (Passive), รูปให้ทำ (Causative) และรูปถูกบังคับให้ทำ (Causative-Passive) ในภาษาญี่ปุ่นอย่างละเอียด | JLPT Gyaru</title>
+    <link rel="canonical" href="https://jlpt.yui-yuto.com/jlpt-japanese-passive-causative-grammar-guide">
+    <link rel="icon" type="image/jpeg" href="images/icon_jlpt.webp">
+    <link rel="apple-touch-icon" href="images/icon_jlpt.webp">
+    <meta name="description" content="คู่มือเรียนไวยากรณ์ภาษาญี่ปุ่นรูปถูกกระทำ (Ukemi), รูปให้ทำ (Shieki) และรูปถูกบังคับให้ทำ (Shieki-Ukemi) อย่างละเอียด วิธีผันคำกริยาทั้ง 3 กลุ่ม ตัวอย่างประโยคแปลไทย ทริคข้อควรระวังในการสอบ JLPT N4-N3 ที่คนไทยสับสนมากที่สุด!">
+    <link rel="stylesheet" href="jlpt_lp.css">
+    <style>
+        .hero { background: linear-gradient(135deg, #FFF0F5 0%, #F5F5DC 100%); }
+        .custom-section { margin-bottom: 60px; padding: 25px; background: #fff; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .word-card { background: #FFFDE7; border-left: 5px solid #E91E63; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+        .example-block { background: #F5F5F5; padding: 12px; border-radius: 6px; margin-top: 10px; font-family: monospace; font-size: 0.95rem; line-height: 1.5; color: #333; }
+        header { z-index: 2147483647 !important; }
+        .emphasis-box { background: #FCE4EC; border-left: 5px solid #E91E63; padding: 15px; margin: 15px 0; border-radius: 4px; }
+        .contrast-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .contrast-table th, .contrast-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .contrast-table th { background-color: #FCE4EC; color: #C2185B; font-weight: bold; }
+        
+        .teachers-tip {
+            display: flex;
+            background: #FFF9C4;
+            border-left: 5px solid #FBC02D;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        .teachers-tip-avatar {
+            font-size: 2.5rem;
+            background: #FFF;
+            padding: 10px;
+            border-radius: 50%;
+            border: 2px solid #FBC02D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+        }
+        .teachers-tip-content h4 {
+            margin-top: 0;
+            color: #F57F17;
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+        }
+        .teachers-tip-content p {
+            margin: 0;
+            font-size: 1rem;
+            color: #5d4037;
+            line-height: 1.6;
+        }
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .vocab-card {
+            background-color: #FFF;
+            border: 1px solid #E91E63;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        .vocab-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.2);
+            border-color: #E91E63;
+        }
+        .vocab-word-jp {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            font-family: 'Outfit', sans-serif;
+        }
+        .vocab-word-kana {
+            font-size: 0.95rem;
+            color: #C2185B;
+            margin-bottom: 15px;
+        }
+        .vocab-word-th {
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 15px;
+            border-left: 3px solid #E91E63;
+            padding-left: 10px;
+        }
+        .tts-btn {
+            background: #E91E63;
+            border: 1px solid #F8BBD0;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            align-self: flex-start;
+            transition: 0.2s;
+        }
+        .tts-btn:hover {
+            background: #C2185B;
+        }
+
+        .quiz-container {
+            background: #ECEFF1;
+            border: 2px solid #B0BEC5;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 35px 0;
+        }
+        .quiz-title {
+            color: #37474F;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quiz-question {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #78909C;
+        }
+        .quiz-q-text {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .quiz-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .quiz-opt {
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+        .quiz-opt:hover {
+            background: #eeeeee;
+            border-color: #bdbdbd;
+        }
+        .quiz-explanation {
+            margin-top: 10px;
+            padding: 10px;
+            background: #eceff1;
+            border: 1px dashed #b0bec5;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #37474f;
+            display: none;
+        }
+
+        .faq-card {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #1E293B;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .faq-answer {
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .page-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            background: #FFF;
+            border: 2px solid #E2E8F0;
+            color: #475569;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .nav-btn:hover {
+            border-color: #E91E63;
+            color: #E91E63;
+            background: #FFF5F8;
+        }
+
+        @media (max-width: 768px) {
+            .vocab-grid {
+                grid-template-columns: 1fr;
+            }
+            .teachers-tip {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+    
+    <script>
+        function playTTS(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const msg = new SpeechSynthesisUtterance(text);
+                msg.lang = 'ja-JP';
+                msg.rate = 0.82;
+                window.speechSynthesis.speak(msg);
+            }
+        }
+
+        function toggleExplanation(id) {
+            const exp = document.getElementById(id);
+            if (exp.style.display === 'none' || exp.style.display === '') {
+                exp.style.display = 'block';
+            } else {
+                exp.style.display = 'none';
+            }
+        }
+    </script>
+    <link href="/manifest.json" rel="manifest"/>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "สรุปวิธีผันและใช้รูปถูกกระทำ (Passive), รูปให้ทำ (Causative) และรูปถูกบังคับให้ทำ (Causative-Passive) ในภาษาญี่ปุ่นอย่างละเอียด",
+      "description": "เจาะลึกไวยากรณ์ภาษาญี่ปุ่น รูปถูกกระทำ (Ukemi) รูปให้ทำ (Shieki) และรูปถูกบังคับให้ทำ (Shieki-Ukemi) วิธีผันของกริยา 3 กลุ่ม ตัวอย่างการใช้งาน และข้อควรระวังในการสอบ JLPT",
+      "url": "https://jlpt.yui-yuto.com/jlpt-japanese-passive-causative-grammar-guide",
+      "datePublished": "2026-07-02",
+      "dateModified": "2026-07-02",
+      "author": {
+        "@type": "Organization",
+        "name": "YUI & YUTO เซนเซ",
+        "url": "https://jlpt.yui-yuto.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "YUI & YUTO เซนเซ",
+        "url": "https://jlpt.yui-yuto.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://jlpt.yui-yuto.com/images/icon_jlpt.webp"
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jlpt.yui-yuto.com/images/ogp_jlpt.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "inLanguage": "th",
+      "about": {
+        "@type": "Thing",
+        "name": "JLPT",
+        "description": "Japanese Language Proficiency Test"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Thai Japanese learners"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "หน้าแรก",
+          "item": "https://jlpt.yui-yuto.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "คอร์สทั้งหมด",
+          "item": "https://jlpt.yui-yuto.com/hub"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "สรุปวิธีผันรูปถูกกระทำและรูปให้ทำ",
+          "item": "https://jlpt.yui-yuto.com/jlpt-japanese-passive-causative-grammar-guide"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">JLPT Gyaru</a>
+        <a href="/hub" class="cta-button" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">กลับหน้าคอร์ส</a>
+    </header>
+
+    <main>
+        <div class="hero">
+            <span class="hero-tag" style="background: rgba(233, 30, 99, 0.1); border-color: #E91E63; color: #C2185B;">Grammar Master (ไวยากรณ์ขั้นสูง N4-N3)</span>
+            <h1 class="animate-fade" style="color: #C2185B;">คู่มือผันกริยา 3 ยอดฮิต: รูปถูกกระทำ · รูปให้ทำ · รูปถูกบังคับ</h1>
+            <p class="animate-fade" style="color: #5d4037;">พิชิตไวยากรณ์ภาษาญี่ปุ่นสุดหินสำหรับคนไทย เข้าใจความต่างของรูปประโยค Ukemi, Shieki และ Shieki-Ukemi แบบเคลียร์ชัด พร้อมตัวอย่าง บทสนทนา และแบบทดสอบวัดระดับ!</p>
+            <a href="/" class="cta-button animate-fade" style="font-size:1.2rem; padding: 1.2rem 3rem; background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%);">เข้าสู่เกมเรียนฟรี</a>
+        </div>
+
+        <div class="content-wrapper">
+            <article>
+                <section class="custom-section">
+                    <h2 style="color:#C2185B; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">บทนำ: ทำไมคนไทยถึงสับสนการผันรูปประโยคทับซ้อนเหล่านี้?</h2>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#333;">สวัสดีค่ะทุกคน! ยุ้ยเซนเซคนดีคนเดิมมารายงานตัวแล้วค่ะ! วันนี้พวกเราจะมาคุยเรื่องที่ทุกคนบ่นกันบ่อยมากๆ ว่า <i>"ยากจนอยากจะกรีดร้อง!"</i> นั่นก็คือเรื่องของ <strong>รูปถูกกระทำ (受身形 - Ukemi-kei)</strong>, <strong>รูปให้ทำ/รูปใช้ (使役形 - Shieki-kei)</strong> และการฟิวชั่นขั้นสุดยอดอย่าง <strong>รูปถูกบังคับให้ทำ (使役受身形 - Shieki-Ukemi-kei)</strong> นั่นเองค่ะ!</p>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#333;">ทำไมพวกเราคนไทยถึงสับสนเวลาแปลหรือผันคำพวกนี้กันล่ะ? นั่นก็เพราะในภาษาไทย เวลาที่พวกเราพูดว่า "แม่สั่งให้ฉันล้างจาน" หรือ "ฉันโดนหมาดุ" พวกเราแค่เอาคำว่า "สั่งให้" หรือ "โดน/ถูก" ไปวางไว้หน้าคำกริยาธรรมดาเฉยๆ ใช่ไหมคะ? มันง่ายดายและตรงไปตรงมามาก แต่ในภาษาญี่ปุ่น ลำดับคำช่วยจะเปลี่ยนไปอย่างสิ้นเชิง และคำกริยาก็ต้องผันเสียงหางยาวๆ ออกไปอีกจนหน้าตาแทบไม่เหลือเค้าเดิม แถมบางรูปยังออกเสียงคล้ายกันมาก เช่น <code>たべられる (Taberareru)</code> กับ <code>たべさせる (Tabesaseru)</code> และ <code>たべさせられる (Tabesaserareu)</code> ทำเอาสับสนไปหมดเวลาสอบ JLPT!</p>
+                    
+                    <div class="teachers-tip">
+                        <div class="teachers-tip-avatar">🐱</div>
+                        <div class="teachers-tip-content">
+                            <h4>ทริคลับจาก YUI เซนเซ</h4>
+                            <p>จำไว้เสมอนะคะ: คีย์เวิร์ดหลักของสามรูปนี้คือการมองหา <strong>"ใครเป็นคนกระทำกริยาจริง"</strong> และ <strong>"คำช่วยชี้ตัวบุคคลเปลี่ยนไปอย่างไร"</strong> ถ้าทุกคนแม่นกฎการจับคู่คำช่วยหลักในการสอบ การทำคะแนนในพาร์ทไวยากรณ์จะกลายเป็นของกล้วยๆ เลยค่ะ!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#C2185B; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">ส่วนที่ 1: เจาะลึกรูปถูกกระทำ 〜れる / 〜られる (Ukemi-kei)</h2>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#333;">ใช้เมื่อประธานในประโยคได้รับผลกระทบจากการกระทำของผู้อื่น มักมีความหมายแฝงในแง่ร้ายหรือรู้สึกเดือดร้อน (แต่ก็มีกรณีที่แปลว่าถูกทำโดยทั่วไปในแง่บวกหรือความเป็นกลางได้เช่นกัน)</p>
+                    
+                    <h3 style="color:#C2185B; font-size:1.4rem; margin-top:20px;">วิธีการผันรูปถูกกระทำ (Ukemi)</h3>
+                    <p style="font-size:1.05rem; line-height:1.6; color:#333;">แบ่งคำกริยาออกเป็น 3 กลุ่มตามปกติ:</p>
+                    <ul style="line-height: 1.8; font-size: 1.05rem; padding-left: 20px;">
+                        <li><strong>กลุ่มที่ 1 (กริยาเสียง -i):</strong> เปลี่ยนเสียงท้ายแถว i เป็นแถว a แล้วเติม <code>れる (reru)</code><br>
+                            เช่น: <code>書く (Kaku - เขียน)</code> ➔ <code>書かれる (Kakareru - ถูกเขียน)</code><br>
+                            เช่น: <code>呼ぶ (Yobu - เรียก)</code> ➔ <code>呼ばれる (Yobareru - ถูกเรียก)</code><br>
+                            เช่น: <code>言う (Iu - พูด)</code> ➔ <code>言われる (Iwareru - ถูกพูด/โดนว่า)</code> *จำดีๆ นะคะ u ➔ wa</li>
+                        <li><strong>กลุ่มที่ 2 (กริยาเสียง -e หรือเสียงพิเศษ):</strong> ตัด <code>る (ru)</code> ทิ้งแล้วเติม <code>られる (rareru)</code><br>
+                            เช่น: <code>食べる (Taberu - กิน)</code> ➔ <code>食べられる (Taberareru - ถูกกิน)</code> *ระวังเสียงซ้อนกันนะคะ<br>
+                            เช่น: <code>褒める (Homeru - ชมเชย)</code> ➔ <code>褒められる (Homerareru - ถูกชม)</code></li>
+                        <li><strong>กลุ่มที่ 3 (กริยาพิเศษ):</strong> ผันตามกฎเฉพาะ<br>
+                            เช่น: <code>する (Suru - ทำ)</code> ➔ <code>される (Saru - ถูกทำ)</code><br>
+                            เช่น: <code>来る (Kuru - มา)</code> ➔ <code>来られる (Korareru - ถูกมา)</code> *ระวังเสียงอ่าน ko เปลี่ยนเป็น ko-rareru</li>
+                    </ul>
+
+                    <div class="emphasis-box">
+                        <strong>โครงสร้างประโยคถูกกระทำหลัก:</strong><br>
+                        <code>[ผู้ถูกกระทำ/ผู้เดือดร้อน] は [ผู้กระทำ] に [กริยารูปถูกกระทำ]</code>
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 1.1:</strong><br>
+                        私は先生<strong>に</strong>褒められました。<br>
+                        (Watashi wa sensei ni homeraremashita.)<br>
+                        *แปล: ฉันได้รับการชมเชยจากคุณครู (ฉันถูกคุณครูชม - แง่ดี)
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 1.2 (แบบเดือดร้อน):</strong><br>
+                        泥棒<strong>に</strong>財布を盗まれました。<br>
+                        (Dorobou ni saifu o nusumaremashita.)<br>
+                        *แปล: ฉันโดนขโมยกระเป๋าเงิน (โดยโจร) / โจรขโมยกระเป๋าเงินของฉันไป (ประธานเดือดร้อน)
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#C2185B; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">ส่วนที่ 2: เจาะลึกรูปให้ทำ/รูปใช้ 〜せる / 〜させる (Shieki-kei)</h2>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#333;">ใช้แสดงการออกคำสั่ง บังคับ หรืออนุญาตให้ผู้อื่นทำสิ่งใดสิ่งหนึ่ง มักใช้โดยผู้ที่มีฐานะสูงกว่าสั่งผู้ที่มีฐานะต่ำกว่า (เช่น พ่อแม่สั่งลูก, หัวหน้าสั่งลูกน้อง, เจ้าของสั่งสัตว์เลี้ยง)</p>
+                    
+                    <h3 style="color:#C2185B; font-size:1.4rem; margin-top:20px;">วิธีการผันรูปให้ทำ (Shieki)</h3>
+                    <ul style="line-height: 1.8; font-size: 1.05rem; padding-left: 20px;">
+                        <li><strong>กลุ่มที่ 1:</strong> เปลี่ยนเสียงท้ายแถว i เป็นแถว a แล้วเติม <code>せる (seru)</code><br>
+                            เช่น: <code>行く (Iku - ไป)</code> ➔ <code>行かせる (Ikaseru - สั่งให้ไป/ปล่อยให้ไป)</code><br>
+                            เช่น: <code>読む (Yomu - อ่าน)</code> ➔ <code>読ませる (Yomaseru - ให้分别อ่าน)</code><br>
+                            เช่น: <code>買う (Kau - ซื้อ)</code> ➔ <code>買わせる (Kawaseru - ให้ซื้อ)</code></li>
+                        <li><strong>กลุ่มที่ 2:</strong> ตัด <code>る (ru)</code> ทิ้งแล้วเติม <code>させる (saseru)</code><br>
+                            เช่น: <code>食べる (Taberu - กิน)</code> ➔ <code>食べさせる (Tabesaseru - ให้กิน/ป้อน)</code><br>
+                            เช่น: <code>調べる (Shiraberu - ตรวจสอบ)</code> ➔ <code>調べさせる (Shirabesaseru - ให้ตรวจสอบ)</code></li>
+                        <li><strong>กลุ่มที่ 3:</strong> ผันตามกฎเฉพาะ<br>
+                            เช่น: <code>する (Suru - ทำ)</code> ➔ <code>させる (Saseru - ให้ทำ)</code><br>
+                            เช่น: <code>来る (Kuru - มา)</code> ➔ <code>来させる (Kosaseru - ให้มา)</code> *ระวังเสียงอ่าน ko-saseru</li>
+                    </ul>
+
+                    <div class="emphasis-box">
+                        <strong>โครงสร้างประโยครูปให้ทำ (ขึ้นอยู่กับประเภทคำกริยา):</strong><br>
+                        1. สำหรับกริยาไม่มีกรรม (Intransitive Verb เช่น 行く, 来る):<br>
+                        <code>[ผู้สั่ง] は [ผู้กระทำ] を [กริยารูปให้ทำ]</code><br>
+                        2. สำหรับกริยามีกรรม (Transitive Verb เช่น 食べる, 読む):<br>
+                        <code>[ผู้สั่ง] は [ผู้กระทำ] に [สิ่งของ] を [กริยารูปให้ทำ]</code>
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 2.1 (บังคับให้ไป - สกรรมกริยา):</strong><br>
+                        社長は社員<strong>を</strong>出張に行かせました。<br>
+                        (Shachou wa shain o shucchou ni ikasemashita.)<br>
+                        *แปล: ท่านประธานสั่งให้พนักงานไปทำงานนอกสถานที่ (社員 ชี้ด้วย を เพราะ 行く เป็นกริยาไม่ต้องการกรรม)
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 2.2 (ป้อนอาหาร/ให้กิน - อกรรมกริยา):</strong><br>
+                        母は子供<strong>に</strong>野菜を食べさせました。<br>
+                        (Haha wa kodomo ni yasai o tabesasemashita.)<br>
+                        *แปล: คุณแม่บังคับให้ลูกกินผัก (子供 ชี้ด้วย に เพราะ 食べる เป็นกริยาต้องการกรรม)
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#C2185B; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">ส่วนที่ 3: ขั้นสุดของการรวมร่าง: รูปถูกบังคับให้ทำ 〜させられる (Shieki-Ukemi-kei)</h2>
+                    <p style="font-size:1.1rem; line-height:1.7; color:#333;">นี่แหละค่ะคือฝันร้ายของทุกคน! ประโยครูปถูกบังคับให้ทำเกิดจากการเอา <strong>"รูปให้ทำ (Shieki)"</strong> มารวมเข้ากับ <strong>"รูปถูกกระทำ (Ukemi)"</strong> มีความหมายว่า <strong>"ถูกบังคับให้ทำสิ่งนั้นโดยที่ไม่อยากทำเลย (รู้สึกอึดอัด รำคาญ หรือไม่เต็มใจ)"</strong> มักเจอบ่อยมากในสถานการณ์เรียนหนังสือ ทำงาน หรือชีวิตประจำวันในญี่ปุ่นค่ะ</p>
+                    
+                    <h3 style="color:#C2185B; font-size:1.4rem; margin-top:20px;">วิธีการผันรูปถูกบังคับให้ทำ (Shieki-Ukemi)</h3>
+                    <p style="font-size:1.05rem; line-height:1.6; color:#333;">จำสูตรง่ายๆ ลัดคิวจำได้ไวขึ้นดังนี้นะคะ:</p>
+                    <ul style="line-height: 1.8; font-size: 1.05rem; padding-left: 20px;">
+                        <li><strong>กลุ่มที่ 1 (สูตรพิเศษแบบย่อ):</strong> เปลี่ยนเสียงท้ายแถว i เป็นแถว a แล้วเติม <code>される (sareru)</code> (ยกเว้นตัวสะกด す)<br>
+                            เช่น: <code>書く (Kaku)</code> ➔ <code>書かされる (Kakasaru - โดนบังคับให้เขียน)</code><br>
+                            เช่น: <code>待つ (Matsu)</code> ➔ <code>待たされる (Matasareru - โดนปล่อยให้รอ)</code> *เจอบ่อยมากในข้อสอบ!<br>
+                            *กริยาที่ลงท้ายด้วย <code>す (su)</code> ต้องผันเต็มย่อไม่ได้: <code>話す (Hanasu)</code> ➔ <code>話させられる (Hanasaserareru)</code></li>
+                        <li><strong>กลุ่มที่ 2 (ผันยาวเต็มขั้น):</strong> ตัด <code>る (ru)</code> ทิ้งแล้วเติม <code>させられる (saserareru)</code><br>
+                            เช่น: <code>食べる (Taberu)</code> ➔ <code>食べさせられる (Tabesaserareru - โดนบังคับให้กิน)</code><br>
+                            เช่น: <code>覚える (Oboeru)</code> ➔ <code>覚えさせられる (Oboesaserareru - โดนบังคับให้จำ)</code></li>
+                        <li><strong>กลุ่มที่ 3 (ผันเฉพาะ):</strong><br>
+                            เช่น: <code>する (Suru)</code> ➔ <code>させられる (Saserareru - โดนบังคับให้ทำ)</code><br>
+                            เช่น: <code>来る (Kuru)</code> ➔ <code>来させられる (Kosaserareru - โดนบังคับให้มา)</code> *ออกเสียง ko-saserareru</li>
+                    </ul>
+
+                    <div class="emphasis-box">
+                        <strong>โครงสร้างประโยคถูกบังคับให้ทำ:</strong><br>
+                        <code>[ผู้ถูกบังคับ (ตัวเรา)] は [ผู้สั่ง/ผู้บังคับ] に [กรรมของประโยค] を [กริยารูปถูกบังคับให้ทำ]</code>
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 3.1 (โดนสั่งงาน):</strong><br>
+                        私は部長<strong>に</strong>残業をさせられました。<br>
+                        (Watashi wa buchou ni zangyou o saseraremashita.)<br>
+                        *แปล: ฉันโดนหัวหน้าบังคับให้ทำงานล่วงเวลา (OT) (รู้สึกเศร้าหมองและไม่เต็มใจ)
+                    </div>
+                    <div class="example-block">
+                        <strong>ตัวอย่างที่ 3.2 (โดนทิ้งให้รอ):</strong><br>
+                        私は彼女<strong>に</strong>2時間も待たされました。<br>
+                        (Watashi wa kanojo ni nijikan mo matasaremashita.)<br>
+                        *แปล: ฉันโดนแฟนสาวปล่อยให้รอตั้ง 2 ชั่วโมงแหนะ (待つ ➔ 待たされる)
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#C2185B; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">ส่วนที่ 4: ตารางสรุปการผันเปรียบเทียบคำกริยาตัวอย่าง</h2>
+                    <p style="font-size:1.15rem; line-height:1.8; color:#333;">มาดูตารางเปรียบเทียบกริยาที่เราใช้บ่อยๆ ในชีวิตประจำวันกันค่ะ เพื่อช่วยในการจดจำแบบกระชับรวดเร็ว:</p>
+                    
+                    <table class="contrast-table">
+                        <thead>
+                           <tr>
+                               <th>คำกริยาตั้งต้น</th>
+                               <th>รูปถูกกระทำ (Ukemi)</th>
+                               <th>รูปให้ทำ (Shieki)</th>
+                               <th>รูปถูกบังคับให้ทำ (Shieki-Ukemi)</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>行く (Iku - ไป)</strong></td>
+                                <td>行かれる (Ikareru)</td>
+                                <td>行かせる (Ikaseru)</td>
+                                <td>行かされる (Ikasareru)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>飲む (Nomu - ดื่ม)</strong></td>
+                                <td>飲まれる (Nomareru)</td>
+                                <td>飲ませる (Nomaseru)</td>
+                                <td>飲まされる (Nomasareru)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>話す (Hanasu - พูด)</strong></td>
+                                <td>話される (Hanasareru)</td>
+                                <td>話させる (Hanasaseru)</td>
+                                <td>話させられる (Hanasaserareru)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>見る (Miru - ดู)</strong></td>
+                                <td>見られる (Mirareru)</td>
+                                <td>見させる (Misaseru)</td>
+                                <td>見させられる (Misaserareru)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>する (Suru - ทำ)</strong></td>
+                                <td>される (Sareru)</td>
+                                <td>させる (Saseru)</td>
+                                <td>させられる (Saserareru)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="teachers-tip" style="background:#ECEFF1; border-left-color:#607D8B;">
+                        <div class="teachers-tip-avatar">🦊</div>
+                        <div class="teachers-tip-content">
+                            <h4 style="color:#37474F;">ข้อสังเกตจาก YUTO เซนเซ</h4>
+                            <p>สังเกตที่รูปกริยากลุ่ม 1 ให้ดีนะครับ รูปย่อ <code>〜される (-sareru)</code> ของกริยากลุ่ม 1 ในรูปถูกบังคับ มักสับสนกับรูปถูกกระทำธรรมดา เช่น <code>書かされる (Kakasareru - ถูกบังคับให้เขียน)</code> กับ <code>書かれる (Kakareru - ถูกเขียน)</code> ให้จำว่ามีเสียง <strong>"さ (-sa)"</strong> โผล่ขึ้นมาก่อนเสียง <strong>"ら (-ra)"</strong> เสมอสำหรับรูปถูกบังคับครับ!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="custom-section" style="background:#FFF5F8; border: 1px solid #f8bbd0;">
+                    <h2 style="color:#C2185B; font-size:1.8rem; margin-bottom:15px; border-bottom: 2px solid #f8bbd0; padding-bottom:8px;">🌸 บทสนทนาชีวิตวัยรุ่น (YUI & YUTO Grammar Talk)</h2>
+                    <p style="font-size:1.05rem; color:#555; margin-bottom:20px;">ลองอ่านบทสนทนาระหว่างยุ้ยจังและยูโตะคุงที่บ่นเรื่องการไปร้านกินดื่มราตรีและการถูกเจ้านายสั่งงานกันค่ะ:</p>
+                    
+                    <div style="font-size:1.1rem; line-height:1.9; color:#333; padding:15px; background:#fff; border-radius:10px;">
+                        <span style="color:#E91E63; font-weight:bold;">🌸 YUI:</span> ยูโตะคุง! เมื่อวานได้ไปงานปาร์ตี้ของที่ทำงานป่าวอ่ะ? ยุ้ยนะเซ็งสุดๆ โดนรุ่นพี่<strong>บังคับให้ดื่มเหล้าตั้งเยอะแยะ (お酒をたくさん飲まされたの)</strong> แทบอ้วกเลยล่ะ!<br>
+                        (Yuto-kun! Muer wan dai pai ngan party kong tee tam ngan pao ah? Yui na seng sud-sud don run-pee <strong>bang-kab hai duem lao tang yoe-yae</strong>แทบอ้วกเลยล่ะ!)<br>
+                        <span style="color:#C2185B; font-size:0.95rem;">*แปลญี่ปุ่น: ユートくん、昨日の飲み会行った？私、先輩に<strong>お酒をたくさん飲まされた</strong>の。最悪だった！(Yuto-kun, kino no nomikai itta? Watashi, senpai ni osake o takusan nomasareta no. Saiaku datta!)</span>
+                        <br><br>
+                        
+                        <span style="color:#1976D2; font-weight:bold;">🦊 YUTO:</span> โห น่าเห็นใจจังครับ ส่วนผมนะยิ่งแย่กว่านั้นอีก โดนหัวหน้างาน<strong>บังคับให้อ่านเอกสารรายงานภาษาอังกฤษ (英語の報告書を読ませられた)</strong> ทั้งคืน แถมยังโดนเพื่อนๆ <strong>หัวเราะเยาะ (笑われた)</strong> ตอนสะกดผิดในที่ประชุมเช้าวันนี้อีกต่างหากครับ<br>
+                        (Ho nah hen jai jang krub. Suan phom na ying yae kwa nan eek don hua-na ngan <strong>bang-kab hai arn ek-ka-sarn raingan phasa angkrit</strong> tang kuen taem yang don phuen-phuen <strong>hua-rao-yoh</strong> torn sa-kot phid nai tee pra-chum chao wan nee eek tang-hak krub.)<br>
+                        <span style="color:#0D47A1; font-size:0.95rem;">*แปลญี่ปุ่น: それは大変でしたね。僕は部長に<strong>英語 of 報告書を読まされました</strong>よ。それに今日の朝の会議で、漢字の間違いをみんなに<strong>笑われました</strong>。(Sore wa taihen deshita ne. Boku wa buchou ni eigo no houkokusho o yomasaremashita yo. Soreni kyou no asa no kaigi de, kanji no machigai o minna ni warawaremashita.)</span>
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#C2185B; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">คำศัพท์ที่เกี่ยวข้องกับการบังคับและการสั่งการ (Vocab Cards)</h2>
+                    <p style="font-size:1.1rem; margin-bottom:20px; color:#555;">ฝึกออกเสียงและจำความหมายของกริยาที่เจอบ่อยที่สุดในข้อสอบรูปแบบทับซ้อนนี้นะคะ:</p>
+                    
+                    <div class="vocab-grid">
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#C2185B; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N4</span>
+                                <div class="vocab-word-jp">叱る</div>
+                                <div class="vocab-word-kana">しかる (Shikaru) -> 叱られる (โดนดุ)</div>
+                                <div class="vocab-word-th">ดุ / ว่ากล่าว (มักใช้ในรูปถูกกระทำเพื่อบอกว่าโดนดุ)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('叱られる')">🔊 ฟังเสียง</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#C2185B; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N4</span>
+                                <div class="vocab-word-jp">頼む</div>
+                                <div class="vocab-word-kana">たのむ (Tanomu) -> 頼まれる (ไหว้วาน)</div>
+                                <div class="vocab-word-th">ขอร้อง / ไหว้วาน (โดนคนอื่นขอร้องให้ช่วยทำสิ่งใดสิ่งหนึ่ง)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('頼まれる')">🔊 ฟังเสียง</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#C2185B; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N4</span>
+                                <div class="vocab-word-jp">怒る</div>
+                                <div class="vocab-word-kana">おこる (Okoru) -> 怒らせる (ทำให้โกรธ)</div>
+                                <div class="vocab-word-th">โกรธ / แสดงความโกรธ (รูปให้ทำแปลว่าไปทำให้คนอื่นโกรธ)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('怒らせる')">🔊 ฟังเสียง</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#C2185B; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N4</span>
+                                <div class="vocab-word-jp">泣く</div>
+                                <div class="vocab-word-kana">なく (Naku) -> 泣かせる (ทำให้น้ำตาซึม)</div>
+                                <div class="vocab-word-th">ร้องไห้ (ใช้กับเหตุการณ์ทำให้น้ำตาซึมหรือทำให้คนอื่นร้องไห้)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('泣かせる')">🔊 ฟังเสียง</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#C2185B; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N4</span>
+                                <div class="vocab-word-jp">待つ</div>
+                                <div class="vocab-word-kana">まつ (Matsu) -> 待たされる (โดนให้รอ)</div>
+                                <div class="vocab-word-th">รอ (มักออกสอบบ่อยแปลว่าโดนคนอื่นปล่อยทิ้งให้รอเวลานาน)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('待たされる')">🔊 ฟังเสียง</button>
+                        </div>
+                        <div class="vocab-card">
+                            <div>
+                                <span class="level-badge" style="background:#C2185B; color:white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">N3</span>
+                                <div class="vocab-word-jp">驚く</div>
+                                <div class="vocab-word-kana">おどろく (Odoroku) -> 驚かせる (ทำให้ตกใจ)</div>
+                                <div class="vocab-word-th">ตกใจ (ทำให้เซอร์ไพรส์หรือไปแกล้งทำให้คนอื่นตกใจกลัว)</div>
+                            </div>
+                            <button class="tts-btn" onclick="playTTS('驚かせる')">🔊 ฟังเสียง</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="quiz-container">
+                    <div class="quiz-title">
+                        <span>📝</span> แบบทดสอบความเชี่ยวชาญรูปประโยค Ukemi & Shieki
+                    </div>
+                    
+                    <!-- Question 1 -->
+                    <div class="quiz-question">
+                        <div class="quiz-q-text">คำถามข้อที่ 1: เลือกรูปผันของกริยา <code>待つ (Matsu)</code> เพื่อใส่ในประโยคที่รู้สึกเดือดร้อน: 「彼女が遅れたので、私は雨の中で1時間も（　　）。」 (เนื่องจากแฟนสาวมาสาย ฉันจึงโดนปล่อยให้ยืนรอท่ามกลางสายฝนตั้ง 1 ชั่วโมง)</div>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" onclick="toggleExplanation('q1-ans1')">A) 待たれました (Mataremashita)</button>
+                            <button class="quiz-opt" onclick="toggleExplanation('q1-ans2')">B) 待たせました (Matasemashita)</button>
+                            <button class="quiz-opt" onclick="toggleExplanation('q1-ans3')">C) 待たされました (Matasaremashita)</button>
+                        </div>
+                        <div id="q1-ans1" class="quiz-explanation">
+                            ❌ ผิดค่ะ 待たれました คือรูปถูกกระทำ ซึ่งกริยา 待つ ไม่นิยมใช้รูปนี้เพื่อบอกว่าโดนปล่อยให้รอค่ะ
+                        </div>
+                        <div id="q1-ans2" class="quiz-explanation">
+                            ❌ ผิดค่ะ 待たせました คือรูปให้ทำ แปลว่า "ฉันสั่งให้เขารอ" ซึ่งขัดกับความหมายในประโยคที่แฟนมาสายแล้วเราต้องเป็นคนรอค่ะ
+                        </div>
+                        <div id="q1-ans3" class="quiz-explanation" style="background:#E8F5E9; border-color:#81C784; color:#2E7D32;">
+                            🎉 ถูกต้องอย่างยอดเยี่ยมเลยค่ะ! <code>待たされました (Matasaremashita)</code> แปลว่า "โดนบังคับให้รอ / โดนทิ้งให้รอ" ซึ่งเข้ากับบริบทประเด็นเดือดร้อนของประธานที่โดนปล่อยให้คอยท่ามกลางสายฝนได้เป๊ะที่สุดค่ะ!
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="quiz-question">
+                        <div class="quiz-q-text">คำถามข้อที่ 2: เติมคำช่วยในช่องว่างให้ถูกต้องตามกฎรูปถูกกระทำ: 「私は先生（　）日本語の作文を褒められました。」 (ฉันได้รับการชื่นชมเรียงความภาษาญี่ปุ่นจากคุณครู)</div>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" onclick="toggleExplanation('q2-ans1')">A) を (o)</button>
+                            <button class="quiz-opt" onclick="toggleExplanation('q2-ans2')">B) に (ni)</button>
+                            <button class="quiz-opt" onclick="toggleExplanation('q2-ans3')">C) が (ga)</button>
+                        </div>
+                        <div id="q2-ans1" class="quiz-explanation">
+                            ❌ คำช่วย を จะใช้ชี้สิ่งของที่เป็นกรรมของการชมชื่น (作文を) ซึ่งมีอยู่แล้วในประโยคค่ะ จึงใช้ซ้ำกับตัวบุคคลไม่ได้
+                        </div>
+                        <div id="q2-ans2" class="quiz-explanation" style="background:#E8F5E9; border-color:#81C784; color:#2E7D32;">
+                            🎉 ถูกต้องสุดๆ เลยค่ะ! ในประโยคถูกกระทำ ตัวบุคคลผู้ทำการกระทำ (ในที่นี้คือ 先生) จะต้องระบุชี้ด้วยคำช่วย <code>に (ni)</code> เสมอค่ะ!
+                        </div>
+                        <div id="q2-ans3" class="quiz-explanation">
+                            ❌ คำช่วย が จะเป็นตัวชี้ประธานของประเด็นหลัก (私は) ซึ่งใช้ไปแล้วที่ต้นประโยคค่ะ
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="quiz-question">
+                        <div class="quiz-q-text">คำถามข้อที่ 3: ข้อใดต่อไปนี้ใช้รูปให้ทำ (Causative) ในความหมายแฝง "การอนุญาต / ปล่อยให้ทำ" ได้ถูกต้อง?</div>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" onclick="toggleExplanation('q3-ans1')">A) 子どもがやりたいと言ったので、やらせてみました。(Kodomo ga yaritai to itta node, yarasetemimashita.)</button>
+                            <button class="quiz-opt" onclick="toggleExplanation('q3-ans2')">B) 早くご飯を食べさせなさい。(Hayaku gohan o tabesasenaisai.)</button>
+                            <button class="quiz-opt" onclick="toggleExplanation('q3-ans3')">C) 先生を学校に来させられました。(Sensei o gakkou ni kosaseraremashita.)</button>
+                        </div>
+                        <div id="q3-ans1" class="quiz-explanation" style="background:#E8F5E9; border-color:#81C784; color:#2E7D32;">
+                            🎉 ยอดเยี่ยมมากค่ะ! ประโยคนี้บอกว่า "เพราะลูกบอกว่าอยากทำ เลยลองปล่อยให้ทำดู" เป็นการใช้รูปให้ทำ (やらせる) ในความหมายของการ "อนุญาต" ได้สละสลวยถูกต้องที่สุดเลยค่ะ!
+                        </div>
+                        <div id="q3-ans2" class="quiz-explanation">
+                            ❌ ประโยคนี้มีความหมายเชิญชวนแกมบังคับสั่งการ ("จงรีบกินข้าวซะ") ไม่ใช่ความหมายเชิงให้โอกาสหรืออนุญาตค่ะ
+                        </div>
+                        <div id="q3-ans3" class="quiz-explanation">
+                            ❌ ประโยคนี้เป็นรูปถูกบังคับให้ทำแถมยังสลับลำดับความสุภาพอีกด้วยค่ะ ไม่ใช่ความหมายการอนุญาตแน่ๆ
+                        </div>
+                    </div>
+                </section>
+
+                <section class="custom-section">
+                    <h2 style="color:#C2185B; font-size:2rem; margin-bottom:15px; border-bottom: 3px solid #f8bbd0; padding-bottom:10px;">คำถามที่พบบ่อย (FAQs)</h2>
+                    
+                    <div class="faq-card">
+                        <div class="faq-question">Q1: มีหลักการจำง่ายๆ ไหมคะว่าเมื่อไหร่ควรใช้ "รูปถูกกระทำธรรมดา" กับ "รูปถูกบังคับให้ทำ"?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUI เซนเซ:</strong> จุดนี้สังเกตได้จากความกระตือรือร้นของตัวเราค่ะ! ถ้าเป็นกริยาที่คนอื่นมาทำอะไรใส่เราตรงๆ เช่น ตี, ดุ, ชก, ลักขโมย เราใช้ <code>รูปถูกกระทำธรรมดา (-reru / -rareru)</code> ได้เลยค่ะ แต่ถ้าเจ้านายหรือพ่อแม่สั่งให้เรา <strong>"ลงมือทำอะไรบางอย่างด้วยตัวเอง"</strong> โดยที่เราไม่ยินยอม เช่น ทำงานล่วงเวลา, ล้างจาน, ท่องคันจิ แบบนี้ตัวเราเป็นคนเคลื่อนไหวร่างทำสิ่งนั้นเอง จึงต้องใช้ <code>รูปถูกบังคับให้ทำ (-saserareru)</code> ค่ะ!
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">Q2: ทำไมรูปถูกกระทำของกริยากลุ่ม 2 (กิน 食べられる) ถึงหน้าตาเหมือนกับรูปแสดงความสามารถ (สามารถกินได้) เป๊ะเลยล่ะครับ? แล้วเราจะแยกแยะยังไงดี?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUTO เซนเซ:</strong> เป็นคำถามที่ดีมากครับ! ในทางทฤษฎีคือรูปมันซ้อนกันเป๊ะเลยครับ วิธีการแยกแยะคือ <strong>"ดูจากบริบทแวดล้อมและคำช่วย"</strong> ครับ ถ้าเป็นรูปสามารถกินได้ มักใช้กับคำช่วย <code>が (ga)</code> เช่น <code>納豆が食べられる (กินนัตโตะได้)</code> แต่ถ้าเป็นรูปถูกกระทำ (ถูกกิน) มักใช้กับคำช่วย <code>に (ni)</code> และมีตัวกระทำเช่น <code>猫に魚を食べられた (ปลาโดนแมวกินไปซะแล้ว)</code> นอกจากนี้ คนญี่ปุ่นยุคใหม่มักตัด <code>ら (ra)</code> ทิ้งในรูปสามารถ (เรียกว่า ら抜き言葉) เหลือแค่ <code>食べれる (Tabereru)</code> ทำให้การแยกแยะในภาษาพูดง่ายขึ้นครับ
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">Q3: คำว่า 〜させていただく (Sase te itadaku) ที่ได้ยินพนักงานร้านค้าพูดบ่อยๆ คืออะไรเหรอครับ?</div>
+                        <div class="faq-answer">
+                            <strong>คำตอบจาก YUTO เซนเซ:</strong> นี่คือการเอา <code>รูปให้ทำ (させ)</code> มารวมเข้ากับคำกริยาสุภาพแสดงการรับของเอื้อเฟื้อ <code>いただく (Itadaku)</code> ครับ แปลตรงตัวคือ "ขออนุญาตได้รับการให้ทำสิ่งนั้น" หรือพูดภาษาไทยง่ายๆ คือ <strong>"ขออนุญาตทำ... นะครับ/คะ"</strong> เป็นสำนวนสุภาพขั้นสูงสุดในวงการธุรกิจของญี่ปุ่น เช่น <code>説明させていただきます (ขออนุญาตอธิบายนะครับ)</code> นั่นเองครับ
+                        </div>
+                    </div>
+                </section>
+
+                <div class="page-nav">
+                    <a class="nav-btn" href="/">🎮 ย้อนกลับหน้าแรก</a>
+                    <a class="nav-btn" href="hub">คอร์สเรียน Hub 🏠</a>
+                    <a class="nav-btn" href="sitemap">แผนผังเว็บไซต์ 📖</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 YUI &amp; YUTO เซนเซ. สงวนลิขสิทธิ์ทั้งหมด</p>
+        <p style="margin-top: 10px;">
+            <a href="/">หน้าหลัก</a> | 
+            <a href="hub">คอร์สเรียนทั้งหมด</a> | 
+            <a href="sitemap">แผนผังเว็บไซต์ (Sitemap)</a> |
+            <a href="privacy-policy">นโยบายความเป็นส่วนตัว</a>
+        </p>
+    </footer>
+
+    <!-- Dynamic Ad Banner -->
+    <script>
+    (function() {
+      function initAdBanner() {
+        var path = window.location.pathname.toLowerCase();
+        if (path === '/' || path === '/index.html' || path.indexOf('play') !== -1 || path.indexOf('index') !== -1) {
+          return; 
+        }
+        
+        var isMobile = window.innerWidth <= 768;
+        var klookWidget = '';
+        if (isMobile) {
+          klookWidget = '<ins class="klk-aff-widget" data-wid="115246" data-bgtype="Shinkansen" data-adid="1305318" data-lang="th" data-prod="banner" data-width="468" data-height="60"><a href="//www.klook.com/?aid=">Klook.com</a></ins>';
+        } else {
+          klookWidget = '<ins class="klk-aff-widget" data-wid="115246" data-height="340px" data-adid="1305242" data-lang="th" data-prod="search_vertical" data-currency="THB"><a href="//www.klook.com/?aid=">Klook.com</a></ins>';
+        }
+
+        var adHtml = '<button id="close-ad-banner" style="position: absolute; top: -10px; left: -10px; background: #334155; border: 2px solid #0f172a; color: white; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 100000; box-shadow: 0 2px 5px rgba(0,0,0,0.3); padding: 0;">✕</button>' +
+                     '<div class="ad-text" style="font-size: 12px; color: #00e5ff; margin-bottom: 6px; font-weight: bold; font-family: \'Outfit\', \'Noto Sans Thai\', sans-serif; position: relative; z-index: 2; text-align: center;">เช็คราคาตั๋วไปญี่ปุ่นได้ที่นี่! ✈️</div>' +
+                     '<div class="klook-wrapper" style="width: 100%; display: flex; justify-content: center; position: relative;">' + klookWidget + '</div>';
+        
+        var adContainer = document.createElement('div');
+        adContainer.id = 'dynamic-sticky-ad-banner';
+        adContainer.innerHTML = adHtml;
+        
+        var style = document.createElement('style');
+        style.innerHTML = 
+          '#dynamic-sticky-ad-banner {' +
+          '  position: fixed;' +
+          '  right: 20px;' +
+          '  bottom: 20px;' +
+          '  z-index: 99999;' +
+          '  background: rgba(15, 23, 42, 0.95);' +
+          '  border: 1px solid rgba(255, 255, 255, 0.1);' +
+          '  border-radius: 12px;' +
+          '  padding: 10px;' +
+          '  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);' +
+          '  text-align: center;' +
+          '  display: flex;' +
+          '  flex-direction: column;' +
+          '  align-items: center;' +
+          '  width: 320px;' +
+          '  transform-origin: bottom right;' +
+          '  transform: scale(0.85);' +
+          '}' +
+          '#dynamic-sticky-ad-banner ins {' +
+          '  width: 100%;' +
+          '}' +
+          '@media (max-width: 768px) {' +
+          '  #dynamic-sticky-ad-banner {' +
+          '    bottom: 75px;' +
+          '    right: 5px;' +
+          '    left: 5px;' +
+          '    width: calc(100% - 10px);' +
+          '    border-radius: 12px;' +
+          '    transform: none;' +
+          '    flex-direction: column;' +
+          '    align-items: center;' +
+          '    height: auto;' +
+          '    padding: 10px 5px 5px;' +
+          '  }' +
+          '  #dynamic-sticky-ad-banner .ad-text {' +
+          '    margin: 0 0 6px 0 !important;' +
+          '    font-size: 12px !important;' + 
+          '    text-align: center;' +
+          '    width: 100%;' +
+          '  }' +
+          '  .klook-wrapper {' +
+          '    width: 100% !important;' + 
+          '    height: 42px;' +
+          '    position: relative;' +
+          '    overflow: hidden;' +
+          '  }' +
+          '  .klook-wrapper ins {' +
+          '    position: absolute;' +
+          '    top: 0;' +
+          '    left: 50%;' +
+          '    width: 468px !important;' +
+          '    transform: translateX(-50%) scale(0.7);' +
+          '    transform-origin: top center;' +
+          '    display: block;' +
+          '  }' +
+          '  #close-ad-banner {' +
+          '    top: -10px !important;' +
+          '    left: -5px !important;' +
+          '    width: 28px !important;' +
+          '    height: 28px !important;' +
+          '    font-size: 14px !important;' +
+          '  }' +
+          '}';
+        
+        document.head.appendChild(style);
+        document.body.appendChild(adContainer);
+        
+        var closeBtn = document.getElementById('close-ad-banner');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function() {
+            adContainer.style.display = 'none';
+          });
+        }
+        
+        (function (d, sc, u) {
+          var s = d.createElement(sc),
+            p = d.getElementsByTagName(sc)[0];
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = u;
+          p.parentNode.insertBefore(s, p);
+        })(
+          document,
+          "script",
+          "https://affiliate.klook.com/widget/fetch-iframe-init.js"
+        );
+      }
+      
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAdBanner);
+      } else {
+        initAdBanner();
+      }
+    })();
+    </script>
+</body>
+</html>
